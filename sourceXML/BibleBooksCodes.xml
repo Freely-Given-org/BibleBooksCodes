@@ -3,7 +3,8 @@
 <!--
 This file gives a table of Bible booknames codes including
 these four compulsory fields:
-    An English book name (as a comment only)
+    An original language (Hebrew/Greek) book name
+    An English book name (as a guide or comment only)
     A three-character reference code (upper case, no spaces, begins with a letter)
         This reference code should reflect book contents (not book names) and is used to link to other tables.
         These reference codes are guaranteed to be stable after V1.00
@@ -89,13 +90,14 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
                 <!ELEMENT identifier (#PCDATA)>
                     <!ATTLIST identifier type (URL) #REQUIRED>
                 <!ELEMENT rights (#PCDATA)>
-        <!ELEMENT BibleBookCodes (nameEnglish,referenceAbbreviation,referenceNumber,sequenceNumber,expectedChapters?,
+        <!ELEMENT BibleBookCodes (bookName,bookNameEnglishGuide,referenceAbbreviation,referenceNumber,sequenceNumber,expectedChapters?,
                         SBLAbbreviation?,OSISAbbreviation?,SwordAbbreviation?,CCELNumber?,USFMAbbreviation?,USFMNumber?,
                         USXNumber?,UnboundCode?,BibleditNumber?,NETBibleAbbreviation?,DrupalBibleAbbreviation?,
                         BibleWorksAbbreviation?, ByzantineAbbreviation?,
                         possibleAlternativeAbbreviations?,possibleAlternativeBooks?,
                         typicalSection)>
-            <!ELEMENT nameEnglish (#PCDATA)>
+            <!ELEMENT bookName (#PCDATA)>
+            <!ELEMENT bookNameEnglishGuide (#PCDATA)>
             <!ELEMENT referenceAbbreviation (#PCDATA)>
             <!ELEMENT referenceNumber (#PCDATA)>
             <!ELEMENT sequenceNumber (#PCDATA)>
@@ -122,8 +124,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
 
   <header>
     <work>
-      <version>0.81</version>
-      <date>2021-04-29</date>
+      <version>0.82</version>
+      <date>2022-02-05</date>
       <title>Bible books codes list</title>
       <contributor role="com">Robert Hunt</contributor>
       <identifier type="URL">http://www.sbl-site.org/publications/publishingwithsbl.aspx</identifier>
@@ -141,7 +143,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
 
 <!-- Old Testament -->
   <BibleBookCodes>
-    <nameEnglish>Genesis / 1 Moses</nameEnglish>
+    <bookName>בְּרֵאשִׁית</bookName>
+    <bookNameEnglishGuide>Genesis / 1 Moses</bookNameEnglishGuide>
     <referenceAbbreviation>GEN</referenceAbbreviation>
     <referenceNumber>1</referenceNumber>
     <sequenceNumber>20</sequenceNumber>
@@ -162,7 +165,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Exodus / 2 Moses</nameEnglish>
+    <bookName>שְׁמֹות</bookName>
+    <bookNameEnglishGuide>Exodus / 2 Moses</bookNameEnglishGuide>
     <referenceAbbreviation>EXO</referenceAbbreviation>
     <referenceNumber>2</referenceNumber>
     <sequenceNumber>22</sequenceNumber>
@@ -183,7 +187,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Leviticus / 3 Moses</nameEnglish>
+    <bookName>וַיִּקְרָא</bookName>
+    <bookNameEnglishGuide>Leviticus / 3 Moses</bookNameEnglishGuide>
     <referenceAbbreviation>LEV</referenceAbbreviation>
     <referenceNumber>3</referenceNumber>
     <sequenceNumber>24</sequenceNumber>
@@ -204,7 +209,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Numbers / 4 Moses</nameEnglish>
+    <bookName>בְּמִדְבַּר</bookName>
+    <bookNameEnglishGuide>Numbers / 4 Moses</bookNameEnglishGuide>
     <referenceAbbreviation>NUM</referenceAbbreviation>
     <referenceNumber>4</referenceNumber>
     <sequenceNumber>26</sequenceNumber>
@@ -225,7 +231,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Deuteronomy / 5 Moses</nameEnglish>
+    <bookName>דְּבָרִים</bookName>
+    <bookNameEnglishGuide>Deuteronomy / 5 Moses</bookNameEnglishGuide>
     <referenceAbbreviation>DEU</referenceAbbreviation>
     <referenceNumber>5</referenceNumber>
     <sequenceNumber>28</sequenceNumber>
@@ -246,7 +253,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Joshua / Joshua son of Nun</nameEnglish> <!-- See also Joshua A and Joshua B -->
+    <bookName>יְהוֹשֻעַ</bookName>
+    <bookNameEnglishGuide>Joshua / Joshua son of Nun</bookNameEnglishGuide> <!-- See also Joshua A and Joshua B -->
     <referenceAbbreviation>JOS</referenceAbbreviation>
     <referenceNumber>6</referenceNumber>
     <sequenceNumber>30</sequenceNumber>
@@ -268,7 +276,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Judges</nameEnglish> <!-- See also Judges A and Judges B -->
+    <bookName>שֹׁפְטִים</bookName>
+    <bookNameEnglishGuide>Judges</bookNameEnglishGuide> <!-- See also Judges A and Judges B -->
     <referenceAbbreviation>JDG</referenceAbbreviation>
     <referenceNumber>7</referenceNumber>
     <sequenceNumber>32</sequenceNumber>
@@ -290,7 +299,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Ruth</nameEnglish>
+    <bookName>רוּת</bookName>
+    <bookNameEnglishGuide>Ruth</bookNameEnglishGuide>
     <referenceAbbreviation>RUT</referenceAbbreviation>
     <referenceNumber>8</referenceNumber>
     <sequenceNumber>34</sequenceNumber>
@@ -311,7 +321,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>1 Samuel / 1 Kingdoms / 1 Kings</nameEnglish>
+    <bookName>שְׁמוּאֵל א</bookName>
+    <bookNameEnglishGuide>1 Samuel / 1 Kingdoms / 1 Kings</bookNameEnglishGuide>
     <referenceAbbreviation>SA1</referenceAbbreviation>
     <referenceNumber>9</referenceNumber>
     <sequenceNumber>38</sequenceNumber>
@@ -331,7 +342,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>2 Samuel / 2 Kingdoms / 2 Kings</nameEnglish>
+    <bookName>שְׁמוּאֵל ב</bookName>
+    <bookNameEnglishGuide>2 Samuel / 2 Kingdoms / 2 Kings</bookNameEnglishGuide>
     <referenceAbbreviation>SA2</referenceAbbreviation>
     <referenceNumber>10</referenceNumber>
     <sequenceNumber>40</sequenceNumber>
@@ -351,7 +363,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>1 Kings / 3 Kingdoms / 3 Kings</nameEnglish>
+    <bookName>מְלָכִים א</bookName>
+    <bookNameEnglishGuide>1 Kings / 3 Kingdoms / 3 Kings</bookNameEnglishGuide>
     <referenceAbbreviation>KI1</referenceAbbreviation>
     <referenceNumber>11</referenceNumber>
     <sequenceNumber>44</sequenceNumber>
@@ -372,7 +385,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>2 Kings / 4 Kingdoms / 4 Kings</nameEnglish>
+    <bookName>מְלָכִים ב</bookName>
+    <bookNameEnglishGuide>2 Kings / 4 Kingdoms / 4 Kings</bookNameEnglishGuide>
     <referenceAbbreviation>KI2</referenceAbbreviation>
     <referenceNumber>12</referenceNumber>
     <sequenceNumber>46</sequenceNumber>
@@ -393,7 +407,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>1 Chronicles / 1 Paralipomenon</nameEnglish>
+    <bookName>דִּבְרֵי הַיָּמִים א</bookName>
+    <bookNameEnglishGuide>1 Chronicles / 1 Paralipomenon</bookNameEnglishGuide>
     <referenceAbbreviation>CH1</referenceAbbreviation>
     <referenceNumber>13</referenceNumber>
     <sequenceNumber>50</sequenceNumber>
@@ -413,7 +428,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>2 Chronicles / 2 Paralipomenon</nameEnglish>
+    <bookName>דִּבְרֵי הַיָּמִים ב</bookName>
+    <bookNameEnglishGuide>2 Chronicles / 2 Paralipomenon</bookNameEnglishGuide>
     <referenceAbbreviation>CH2</referenceAbbreviation>
     <referenceNumber>14</referenceNumber>
     <sequenceNumber>52</sequenceNumber>
@@ -434,7 +450,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   </BibleBookCodes>
   <BibleBookCodes>
     <!-- Don't use this for combined Ezra-Nehemiah (use EZN) -->
-    <nameEnglish>Ezra / 1 Ezra / 1 Esdras</nameEnglish>
+    <bookName>עֶזְרָא</bookName>
+    <bookNameEnglishGuide>Ezra / 1 Ezra / 1 Esdras</bookNameEnglishGuide>
     <referenceAbbreviation>EZR</referenceAbbreviation>
     <referenceNumber>15</referenceNumber>
     <sequenceNumber>60</sequenceNumber>
@@ -455,7 +472,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Nehemiah / 2 Ezra / 2 Esdras</nameEnglish>
+    <bookName>נְחֶמְיָה</bookName>
+    <bookNameEnglishGuide>Nehemiah / 2 Ezra / 2 Esdras</bookNameEnglishGuide>
     <referenceAbbreviation>NEH</referenceAbbreviation>
     <referenceNumber>16</referenceNumber>
     <sequenceNumber>70</sequenceNumber>
@@ -477,7 +495,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Esther</nameEnglish>
+    <bookName>אֶסְתֵר</bookName>
+    <bookNameEnglishGuide>Esther</bookNameEnglishGuide>
     <referenceAbbreviation>EST</referenceAbbreviation>
     <referenceNumber>17</referenceNumber>
     <sequenceNumber>80</sequenceNumber>
@@ -499,7 +518,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Job</nameEnglish>
+    <bookName>אִיּוֹב</bookName>
+    <bookNameEnglishGuide>Job</bookNameEnglishGuide>
     <referenceAbbreviation>JOB</referenceAbbreviation>
     <referenceNumber>18</referenceNumber>
     <sequenceNumber>90</sequenceNumber>
@@ -520,7 +540,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Psalms / Gallicanum / Psalms A</nameEnglish>
+    <bookName>תְהִלִּים</bookName>
+    <bookNameEnglishGuide>Psalms / Gallicanum / Psalms A</bookNameEnglishGuide>
     <referenceAbbreviation>PSA</referenceAbbreviation>
     <referenceNumber>19</referenceNumber>
     <sequenceNumber>100</sequenceNumber>
@@ -543,7 +564,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   </BibleBookCodes>
   <BibleBookCodes>
     <!-- Proverbs in the Ethiopian canon is shorter than in the European canon -->
-    <nameEnglish>Proverbs</nameEnglish>
+    <bookName>מִשְׁלֵי</bookName>
+    <bookNameEnglishGuide>Proverbs</bookNameEnglishGuide>
     <referenceAbbreviation>PRO</referenceAbbreviation>
     <referenceNumber>20</referenceNumber>
     <sequenceNumber>110</sequenceNumber>
@@ -564,7 +586,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Ecclesiastes / Qoholeth</nameEnglish>
+    <bookName>קֹהֶלֶת</bookName>
+    <bookNameEnglishGuide>קֹהֶלֶת / Qoholeth</bookNameEnglishGuide>
     <!-- For Ecclesiasticus use code SIR -->
     <referenceAbbreviation>ECC</referenceAbbreviation>
     <referenceNumber>21</referenceNumber>
@@ -586,7 +609,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Song of Solomon / Song of Songs / Canticles / Canticle of Canticles</nameEnglish>
+    <bookName>שִׁיר הַשִּׁירִים</bookName>
+    <bookNameEnglishGuide>Song of Solomon / Song of Songs / Canticles / Canticle of Canticles</bookNameEnglishGuide>
     <referenceAbbreviation>SNG</referenceAbbreviation>
     <referenceNumber>22</referenceNumber>
     <sequenceNumber>130</sequenceNumber>
@@ -607,7 +631,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Isaiah</nameEnglish>
+    <bookName>יְשַׁעְיָהוּ</bookName>
+    <bookNameEnglishGuide>Isaiah</bookNameEnglishGuide>
     <referenceAbbreviation>ISA</referenceAbbreviation>
     <referenceNumber>23</referenceNumber>
     <sequenceNumber>132</sequenceNumber>
@@ -628,7 +653,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Jeremiah</nameEnglish>
+    <bookName>יִרְמְיָהוּ</bookName>
+    <bookNameEnglishGuide>Jeremiah</bookNameEnglishGuide>
     <referenceAbbreviation>JER</referenceAbbreviation>
     <referenceNumber>24</referenceNumber>
     <sequenceNumber>134</sequenceNumber>
@@ -649,7 +675,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Lamentations / Lamentations of Jeremiah</nameEnglish>
+    <bookName>אֵיכָה</bookName>
+    <bookNameEnglishGuide>Lamentations / Lamentations of Jeremiah</bookNameEnglishGuide>
     <referenceAbbreviation>LAM</referenceAbbreviation>
     <referenceNumber>25</referenceNumber>
     <sequenceNumber>136</sequenceNumber>
@@ -670,7 +697,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Ezekiel</nameEnglish>
+    <bookName>יְחֶזְקֵאל</bookName>
+    <bookNameEnglishGuide>Ezekiel</bookNameEnglishGuide>
     <referenceAbbreviation>EZE</referenceAbbreviation>
     <referenceNumber>26</referenceNumber>
     <sequenceNumber>138</sequenceNumber>
@@ -691,7 +719,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Daniel</nameEnglish>
+    <bookName>דָּנִיֵּאל</bookName>
+    <bookNameEnglishGuide>Daniel</bookNameEnglishGuide>
     <referenceAbbreviation>DAN</referenceAbbreviation>
     <referenceNumber>27</referenceNumber>
     <sequenceNumber>140</sequenceNumber>
@@ -713,7 +742,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Hosea</nameEnglish>
+    <bookName>הוֹשֵׁעַ</bookName>
+    <bookNameEnglishGuide>Hosea</bookNameEnglishGuide>
     <referenceAbbreviation>HOS</referenceAbbreviation>
     <referenceNumber>28</referenceNumber>
     <sequenceNumber>152</sequenceNumber>
@@ -734,7 +764,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Joel</nameEnglish>
+    <bookName>יוֹאֵל</bookName>
+    <bookNameEnglishGuide>Joel</bookNameEnglishGuide>
     <referenceAbbreviation>JOL</referenceAbbreviation>
     <referenceNumber>29</referenceNumber>
     <sequenceNumber>154</sequenceNumber>
@@ -755,7 +786,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Amos</nameEnglish>
+    <bookName>עָמוֹס</bookName>
+    <bookNameEnglishGuide>Amos</bookNameEnglishGuide>
     <referenceAbbreviation>AMO</referenceAbbreviation>
     <referenceNumber>30</referenceNumber>
     <sequenceNumber>156</sequenceNumber>
@@ -776,7 +808,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Obadiah</nameEnglish>
+    <bookName>עֹבַדְיָה</bookName>
+    <bookNameEnglishGuide>Obadiah</bookNameEnglishGuide>
     <referenceAbbreviation>OBA</referenceAbbreviation>
     <referenceNumber>31</referenceNumber>
     <sequenceNumber>158</sequenceNumber>
@@ -797,7 +830,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Jonah</nameEnglish>
+    <bookName>יוֹנָה</bookName>
+    <bookNameEnglishGuide>Jonah</bookNameEnglishGuide>
     <referenceAbbreviation>JNA</referenceAbbreviation>
     <referenceNumber>32</referenceNumber>
     <sequenceNumber>160</sequenceNumber>
@@ -818,7 +852,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Micah</nameEnglish>
+    <bookName>מִיכָה</bookName>
+    <bookNameEnglishGuide>Micah</bookNameEnglishGuide>
     <referenceAbbreviation>MIC</referenceAbbreviation>
     <referenceNumber>33</referenceNumber>
     <sequenceNumber>162</sequenceNumber>
@@ -839,7 +874,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Nahum</nameEnglish>
+    <bookName>נַחוּם</bookName>
+    <bookNameEnglishGuide>Nahum</bookNameEnglishGuide>
     <referenceAbbreviation>NAH</referenceAbbreviation>
     <referenceNumber>34</referenceNumber>
     <sequenceNumber>164</sequenceNumber>
@@ -859,7 +895,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Habakkuk</nameEnglish>
+    <bookName>חֲבַקּוּק</bookName>
+    <bookNameEnglishGuide>Habakkuk</bookNameEnglishGuide>
     <referenceAbbreviation>HAB</referenceAbbreviation>
     <referenceNumber>35</referenceNumber>
     <sequenceNumber>166</sequenceNumber>
@@ -880,7 +917,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Zephaniah</nameEnglish>
+    <bookName>צְפַנְיָה</bookName>
+    <bookNameEnglishGuide>Zephaniah</bookNameEnglishGuide>
     <referenceAbbreviation>ZEP</referenceAbbreviation>
     <referenceNumber>36</referenceNumber>
     <sequenceNumber>168</sequenceNumber>
@@ -901,7 +939,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Haggai</nameEnglish>
+    <bookName>חַגַּי</bookName>
+    <bookNameEnglishGuide>Haggai</bookNameEnglishGuide>
     <referenceAbbreviation>HAG</referenceAbbreviation>
     <referenceNumber>37</referenceNumber>
     <sequenceNumber>170</sequenceNumber>
@@ -922,7 +961,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Zechariah</nameEnglish>
+    <bookName>זְכַרְיָה</bookName>
+    <bookNameEnglishGuide>Zechariah</bookNameEnglishGuide>
     <referenceAbbreviation>ZEC</referenceAbbreviation>
     <referenceNumber>38</referenceNumber>
     <sequenceNumber>172</sequenceNumber>
@@ -943,7 +983,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Malachi</nameEnglish>
+    <bookName>מַלְאָכִי</bookName>
+    <bookNameEnglishGuide>Malachi</bookNameEnglishGuide>
     <referenceAbbreviation>MAL</referenceAbbreviation>
     <referenceNumber>39</referenceNumber>
     <sequenceNumber>174</sequenceNumber>
@@ -966,7 +1007,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
 
 <!-- New Testament -->
   <BibleBookCodes>
-    <nameEnglish>Matthew</nameEnglish>
+    <bookName>Κατὰ Μαθθαῖον</bookName>
+    <bookNameEnglishGuide>Matthew</bookNameEnglishGuide>
     <referenceAbbreviation>MAT</referenceAbbreviation>
     <referenceNumber>40</referenceNumber>
     <sequenceNumber>600</sequenceNumber>
@@ -988,7 +1030,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Mark</nameEnglish>
+    <bookName>Κατὰ Μᾶρκον</bookName>
+    <bookNameEnglishGuide>Mark</bookNameEnglishGuide>
     <referenceAbbreviation>MRK</referenceAbbreviation>
     <referenceNumber>41</referenceNumber>
     <sequenceNumber>602</sequenceNumber>
@@ -1009,7 +1052,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Luke</nameEnglish>
+    <bookName>Κατὰ Λουκᾶν</bookName>
+    <bookNameEnglishGuide>Luke</bookNameEnglishGuide>
     <referenceAbbreviation>LUK</referenceAbbreviation>
     <referenceNumber>42</referenceNumber>
     <sequenceNumber>604</sequenceNumber>
@@ -1032,7 +1076,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>John</nameEnglish>
+    <bookName>Κατὰ Ἰωάννην</bookName>
+    <bookNameEnglishGuide>John</bookNameEnglishGuide>
     <referenceAbbreviation>JHN</referenceAbbreviation>
     <referenceNumber>43</referenceNumber>
     <sequenceNumber>606</sequenceNumber>
@@ -1054,7 +1099,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Acts / Acts of the Apostles</nameEnglish>
+    <bookName>Πράξεις Ἀποστόλων</bookName>
+    <bookNameEnglishGuide>Acts / Acts of the Apostles</bookNameEnglishGuide>
     <referenceAbbreviation>ACT</referenceAbbreviation>
     <referenceNumber>44</referenceNumber>
     <sequenceNumber>610</sequenceNumber>
@@ -1076,7 +1122,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Romans</nameEnglish>
+    <bookName>Πρὸς Ῥωμαίους</bookName>
+    <bookNameEnglishGuide>Romans</bookNameEnglishGuide>
     <referenceAbbreviation>ROM</referenceAbbreviation>
     <referenceNumber>45</referenceNumber>
     <sequenceNumber>612</sequenceNumber>
@@ -1098,7 +1145,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>1 Corinthians</nameEnglish>
+    <bookName>Πρὸς Κορινθίους α</bookName>
+    <bookNameEnglishGuide>1 Corinthians</bookNameEnglishGuide>
     <referenceAbbreviation>CO1</referenceAbbreviation>
     <referenceNumber>46</referenceNumber>
     <sequenceNumber>614</sequenceNumber>
@@ -1119,7 +1167,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>2 Corinthians</nameEnglish>
+    <bookName>Πρὸς Κορινθίους β</bookName>
+    <bookNameEnglishGuide>2 Corinthians</bookNameEnglishGuide>
     <referenceAbbreviation>CO2</referenceAbbreviation>
     <referenceNumber>47</referenceNumber>
     <sequenceNumber>616</sequenceNumber>
@@ -1140,7 +1189,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Galatians</nameEnglish>
+    <bookName>Πρὸς Γαλάτας</bookName>
+    <bookNameEnglishGuide>Galatians</bookNameEnglishGuide>
     <referenceAbbreviation>GAL</referenceAbbreviation>
     <referenceNumber>48</referenceNumber>
     <sequenceNumber>618</sequenceNumber>
@@ -1162,7 +1212,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Ephesians</nameEnglish>
+    <bookName>Πρὸς Ἐφεσίους</bookName>
+    <bookNameEnglishGuide>Ephesians</bookNameEnglishGuide>
     <referenceAbbreviation>EPH</referenceAbbreviation>
     <referenceNumber>49</referenceNumber>
     <sequenceNumber>620</sequenceNumber>
@@ -1184,7 +1235,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Philippians</nameEnglish>
+    <bookName>Πρὸς Φιλιππησίους</bookName>
+    <bookNameEnglishGuide>Philippians</bookNameEnglishGuide>
     <referenceAbbreviation>PHP</referenceAbbreviation>
     <referenceNumber>50</referenceNumber>
     <sequenceNumber>622</sequenceNumber>
@@ -1206,7 +1258,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Colossians</nameEnglish>
+    <bookName>Πρὸς Κολοσσαεῖς</bookName>
+    <bookNameEnglishGuide>Colossians</bookNameEnglishGuide>
     <referenceAbbreviation>COL</referenceAbbreviation>
     <referenceNumber>51</referenceNumber>
     <sequenceNumber>624</sequenceNumber>
@@ -1228,7 +1281,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>1 Thessalonians</nameEnglish>
+    <bookName>Πρὸς Θεσσαλονικεῖς α</bookName>
+    <bookNameEnglishGuide>1 Thessalonians</bookNameEnglishGuide>
     <referenceAbbreviation>TH1</referenceAbbreviation>
     <referenceNumber>52</referenceNumber>
     <sequenceNumber>626</sequenceNumber>
@@ -1249,7 +1303,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>2 Thessalonians</nameEnglish>
+    <bookName>Πρὸς Θεσσαλονικεῖς β</bookName>
+    <bookNameEnglishGuide>2 Thessalonians</bookNameEnglishGuide>
     <referenceAbbreviation>TH2</referenceAbbreviation>
     <referenceNumber>53</referenceNumber>
     <sequenceNumber>628</sequenceNumber>
@@ -1270,7 +1325,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>1 Timothy</nameEnglish>
+    <bookName>Πρὸς Τιμόθεον α</bookName>
+    <bookNameEnglishGuide>1 Timothy</bookNameEnglishGuide>
     <referenceAbbreviation>TI1</referenceAbbreviation>
     <referenceNumber>54</referenceNumber>
     <sequenceNumber>630</sequenceNumber>
@@ -1291,7 +1347,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>2 Timothy</nameEnglish>
+    <bookName>Πρὸς Τιμόθεον β</bookName>
+    <bookNameEnglishGuide>2 Timothy</bookNameEnglishGuide>
     <referenceAbbreviation>TI2</referenceAbbreviation>
     <referenceNumber>55</referenceNumber>
     <sequenceNumber>632</sequenceNumber>
@@ -1312,7 +1369,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Titus</nameEnglish>
+    <bookName>Πρὸς Τίτον</bookName>
+    <bookNameEnglishGuide>Titus</bookNameEnglishGuide>
     <referenceAbbreviation>TIT</referenceAbbreviation>
     <referenceNumber>56</referenceNumber>
     <sequenceNumber>634</sequenceNumber>
@@ -1334,7 +1392,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Philemon</nameEnglish>
+    <bookName>Πρὸς Φιλήμονα</bookName>
+    <bookNameEnglishGuide>Philemon</bookNameEnglishGuide>
     <referenceAbbreviation>PHM</referenceAbbreviation>
     <referenceNumber>57</referenceNumber>
     <sequenceNumber>636</sequenceNumber>
@@ -1355,7 +1414,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Hebrews</nameEnglish>
+    <bookName>Πρὸς Ἑβραίους</bookName>
+    <bookNameEnglishGuide>Hebrews</bookNameEnglishGuide>
     <referenceAbbreviation>HEB</referenceAbbreviation>
     <referenceNumber>58</referenceNumber>
     <sequenceNumber>638</sequenceNumber>
@@ -1377,7 +1437,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>James / Jacob</nameEnglish>
+    <bookName>Ἰακώβου</bookName>
+    <bookNameEnglishGuide>James / Jacob</bookNameEnglishGuide>
     <referenceAbbreviation>JAM</referenceAbbreviation>
     <referenceNumber>59</referenceNumber>
     <sequenceNumber>640</sequenceNumber>
@@ -1399,7 +1460,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>1 Peter</nameEnglish>
+    <bookName>Πέτρου α</bookName>
+    <bookNameEnglishGuide>1 Peter</bookNameEnglishGuide>
     <referenceAbbreviation>PE1</referenceAbbreviation>
     <referenceNumber>60</referenceNumber>
     <sequenceNumber>642</sequenceNumber>
@@ -1421,7 +1483,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>2 Peter</nameEnglish>
+    <bookName>Πέτρου β</bookName>
+    <bookNameEnglishGuide>2 Peter</bookNameEnglishGuide>
     <referenceAbbreviation>PE2</referenceAbbreviation>
     <referenceNumber>61</referenceNumber>
     <sequenceNumber>644</sequenceNumber>
@@ -1443,7 +1506,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>1 John</nameEnglish>
+    <bookName>Ἰωάννου α</bookName>
+    <bookNameEnglishGuide>1 John</bookNameEnglishGuide>
     <referenceAbbreviation>JN1</referenceAbbreviation>
     <referenceNumber>62</referenceNumber>
     <sequenceNumber>646</sequenceNumber>
@@ -1465,7 +1529,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>2 John</nameEnglish>
+    <bookName>Ἰωάννου β</bookName>
+    <bookNameEnglishGuide>2 John</bookNameEnglishGuide>
     <referenceAbbreviation>JN2</referenceAbbreviation>
     <referenceNumber>63</referenceNumber>
     <sequenceNumber>648</sequenceNumber>
@@ -1487,7 +1552,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>3 John</nameEnglish>
+    <bookName>Ἰωάννου γ</bookName>
+    <bookNameEnglishGuide>3 John</bookNameEnglishGuide>
     <referenceAbbreviation>JN3</referenceAbbreviation>
     <referenceNumber>64</referenceNumber>
     <sequenceNumber>650</sequenceNumber>
@@ -1509,7 +1575,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Jude</nameEnglish>
+    <bookName>Ἰούδας</bookName>
+    <bookNameEnglishGuide>Jude / Judas</bookNameEnglishGuide>
     <referenceAbbreviation>JDE</referenceAbbreviation>
     <referenceNumber>65</referenceNumber>
     <sequenceNumber>652</sequenceNumber>
@@ -1531,7 +1598,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Revelation / Revelation of John / Apocalypse of St. John</nameEnglish>
+    <bookName>Ἀποκάλυψις Ἰωάννου</bookName>
+    <bookNameEnglishGuide>Revelation / Revelation of John / Apocalypse of St. John</bookNameEnglishGuide>
     <referenceAbbreviation>REV</referenceAbbreviation>
     <referenceNumber>66</referenceNumber>
     <sequenceNumber>654</sequenceNumber>
@@ -1555,7 +1623,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
 
 <!-- Books from above which have quite different Hebrew and Greek versions. Sometimes printed separately, sometimes combined. -->
   <BibleBookCodes>
-    <nameEnglish>Greek Esther / Esther (Greek)</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Greek Esther / Esther (Greek)</bookNameEnglishGuide>
     <referenceAbbreviation>ESG</referenceAbbreviation>
     <referenceNumber>70</referenceNumber>
     <sequenceNumber>204</sequenceNumber>
@@ -1573,7 +1642,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Greek additions to Esther / Esther (additions)</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Greek additions to Esther / Esther (additions)</bookNameEnglishGuide>
     <referenceAbbreviation>ESA</referenceAbbreviation>
     <referenceNumber>71</referenceNumber>
     <sequenceNumber>84</sequenceNumber>
@@ -1589,7 +1659,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Combined Hebrew/Greek Esther / Esther (combined)</nameEnglish>
+    <bookName>אֶסְתֵר</bookName>
+    <bookNameEnglishGuide>Combined Hebrew/Greek Esther / Esther (combined)</bookNameEnglishGuide>
     <referenceAbbreviation>ESC</referenceAbbreviation>
     <referenceNumber>72</referenceNumber>
     <sequenceNumber>86</sequenceNumber>
@@ -1604,7 +1675,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Greek Daniel / Daniel (Greek)</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Greek Daniel / Daniel (Greek)</bookNameEnglishGuide>
     <referenceAbbreviation>DNG</referenceAbbreviation>
     <referenceNumber>73</referenceNumber>
     <sequenceNumber>142</sequenceNumber>
@@ -1622,7 +1694,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Greek additions to Daniel / Daniel (additions)</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Greek additions to Daniel / Daniel (additions)</bookNameEnglishGuide>
     <referenceAbbreviation>DNA</referenceAbbreviation>
     <referenceNumber>74</referenceNumber>
     <sequenceNumber>144</sequenceNumber>
@@ -1636,7 +1709,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Combined Hebrew/Greek Daniel / Daniel (combined)</nameEnglish>
+    <bookName>דָּנִיֵּאל</bookName>
+    <bookNameEnglishGuide>Combined Hebrew/Greek Daniel / Daniel (combined)</bookNameEnglishGuide>
     <referenceAbbreviation>DNC</referenceAbbreviation>
     <referenceNumber>75</referenceNumber>
     <sequenceNumber>146</sequenceNumber>
@@ -1652,7 +1726,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
 
 <!-- Catholic Deuterocanonical (Protestant Apocryphal) books -->
   <BibleBookCodes>
-    <nameEnglish>Bel and the dragon</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Bel and the dragon</bookNameEnglishGuide>
     <referenceAbbreviation>BEL</referenceAbbreviation>
     <referenceNumber>80</referenceNumber>
     <sequenceNumber>262</sequenceNumber>
@@ -1671,7 +1746,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>DC</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Susanna</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Susanna</bookNameEnglishGuide>
     <referenceAbbreviation>SUS</referenceAbbreviation>
     <referenceNumber>81</referenceNumber>
     <sequenceNumber>260</sequenceNumber>
@@ -1690,7 +1766,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>DC</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Judith</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Judith</bookNameEnglishGuide>
     <referenceAbbreviation>JDT</referenceAbbreviation>
     <referenceNumber>82</referenceNumber>
     <sequenceNumber>202</sequenceNumber>
@@ -1708,7 +1785,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>DC</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Prayer of Manasses / Prayer of Manasseh</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Prayer of Manasses / Prayer of Manasseh</bookNameEnglishGuide>
     <!-- Part of Odes, part of 2 Chronicles in the Ethiopian Orthodox Bible -->
     <referenceAbbreviation>MAN</referenceAbbreviation>
     <referenceNumber>83</referenceNumber>
@@ -1727,7 +1805,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>DC</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Sirach / Ecclesiasticus / Wisdom of Ben Sira / Wisdom of Jesus son of Sirach</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Sirach / Ecclesiasticus / Wisdom of Ben Sira / Wisdom of Jesus son of Sirach</bookNameEnglishGuide>
     <referenceAbbreviation>SIR</referenceAbbreviation>
     <referenceNumber>84</referenceNumber>
     <sequenceNumber>208</sequenceNumber>
@@ -1745,7 +1824,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>DC</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Sirach Prologue</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Sirach Prologue</bookNameEnglishGuide>
     <referenceAbbreviation>SIP</referenceAbbreviation>
     <referenceNumber>85</referenceNumber>
     <sequenceNumber>207</sequenceNumber>
@@ -1755,7 +1835,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>DC</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Tobit / Tobias</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Tobit / Tobias</bookNameEnglishGuide>
     <referenceAbbreviation>TOB</referenceAbbreviation>
     <referenceNumber>86</referenceNumber>
     <sequenceNumber>200</sequenceNumber>
@@ -1774,7 +1855,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>DC</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Wisdom / Wisdom of Solomon</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Wisdom / Wisdom of Solomon</bookNameEnglishGuide>
     <referenceAbbreviation>WIS</referenceAbbreviation>
     <referenceNumber>87</referenceNumber>
     <sequenceNumber>206</sequenceNumber>
@@ -1792,7 +1874,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>DC</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Prayer of Azariah and the Song of the Three Young Men / Prayer of Azariah / Song of the Three Young Men / Song of the Three Children</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Prayer of Azariah and the Song of the Three Young Men / Prayer of Azariah / Song of the Three Young Men / Song of the Three Children</bookNameEnglishGuide>
     <referenceAbbreviation>PAZ</referenceAbbreviation>
     <referenceNumber>88</referenceNumber>
     <sequenceNumber>250</sequenceNumber>
@@ -1818,7 +1901,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   <BibleBookCodes>
     <!-- 1 Esdras is a Greek paraphrase of Hebrew Ezra. Also called 1 Ezra or 2 Ezra or 3 Ezra depending on the canon.
         In the Catholic tradition it is called 3 Esdras/Ezra. -->
-    <nameEnglish>Greek Esdras / Greek Ezra / 1 Esdras / 1 Ezra / 2 Ezra / 3 Ezra / 3 Esdras</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Greek Esdras / Greek Ezra / 1 Esdras / 1 Ezra / 2 Ezra / 3 Ezra / 3 Esdras</bookNameEnglishGuide>
     <referenceAbbreviation>GES</referenceAbbreviation>
     <referenceNumber>90</referenceNumber>
     <sequenceNumber>282</sequenceNumber>
@@ -1839,7 +1923,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   <BibleBookCodes>
     <!-- 2 Esdras is Latin Esdras. It is also called 4 Esdras or 4 Ezra in the Catholic tradition.
         It is called 3 Esdras in the Russian and Georgian traditions. -->
-    <nameEnglish>Latin Esdras / 2 Esdras / 3 Esdras / 4 Esdras / 4 Ezra</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Latin Esdras / 2 Esdras / 3 Esdras / 4 Esdras / 4 Ezra</bookNameEnglishGuide>
     <referenceAbbreviation>LES</referenceAbbreviation>
     <referenceNumber>91</referenceNumber>
     <sequenceNumber>284</sequenceNumber>
@@ -1858,7 +1943,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Apocalypse of Ezra / Ezra Apocalypse / 4 Ezra / Ezra Shealtiel</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Apocalypse of Ezra / Ezra Apocalypse / 4 Ezra / Ezra Shealtiel</bookNameEnglishGuide>
     <!-- Historic 12 chapter Ezra Apocalypse used in the Armenian, Syriac and Ethiopian traditions -->
     <referenceAbbreviation>EZA</referenceAbbreviation>
     <referenceNumber>92</referenceNumber>
@@ -1872,7 +1958,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>5 Ezra / 3 Esdras / 5 Esdras</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>5 Ezra / 3 Esdras / 5 Esdras</bookNameEnglishGuide>
     <!-- 2 chapter Latin preface to the Apocalypse of Ezra known to scholars as 5 Ezra -->
     <referenceAbbreviation>EZ5</referenceAbbreviation>
     <referenceNumber>93</referenceNumber>
@@ -1885,7 +1972,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>6 Ezra / 5 Esdras / 6 Esdras</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>6 Ezra / 5 Esdras / 6 Esdras</bookNameEnglishGuide>
     <!-- 2 chapter Latin addition to the Apocalypse of Ezra known to scholars as 6 Ezra -->
     <referenceAbbreviation>EZ6</referenceAbbreviation>
     <referenceNumber>94</referenceNumber>
@@ -1899,7 +1987,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   </BibleBookCodes>
   <BibleBookCodes>
     <!-- Pseudepigrapha -->
-    <nameEnglish>Revelation of Ezra</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Revelation of Ezra</bookNameEnglishGuide>
     <referenceAbbreviation>RVE</referenceAbbreviation>
     <referenceNumber>95</referenceNumber>
     <sequenceNumber>292</sequenceNumber>
@@ -1909,7 +1998,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   </BibleBookCodes>
   <BibleBookCodes>
     <!-- Pseudepigrapha -->
-    <nameEnglish>Vison of Ezra</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Vison of Ezra</bookNameEnglishGuide>
     <referenceAbbreviation>VSE</referenceAbbreviation>
     <referenceNumber>96</referenceNumber>
     <sequenceNumber>293</sequenceNumber>
@@ -1920,7 +2010,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
 
 <!-- Baruch and the Letter of Jeremiah -->
   <BibleBookCodes>
-    <nameEnglish>Letter of Jeremiah / Epistle of Jeremiah</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Letter of Jeremiah / Epistle of Jeremiah</bookNameEnglishGuide>
     <referenceAbbreviation>LJE</referenceAbbreviation>
     <referenceNumber>100</referenceNumber>
     <sequenceNumber>240</sequenceNumber>
@@ -1939,7 +2030,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>DC</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Baruch / 1 Baruch</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Baruch / 1 Baruch</bookNameEnglishGuide>
     <!-- Use LJB for the six-chapter book which includes the Letter of Jeremiah -->
     <referenceAbbreviation>BAR</referenceAbbreviation>
     <referenceNumber>101</referenceNumber>
@@ -1959,7 +2051,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>DC</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Letter of Jeremiah with Baruch / Epistle of Jeremiah with Baruch</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Letter of Jeremiah with Baruch / Epistle of Jeremiah with Baruch</bookNameEnglishGuide>
     <referenceAbbreviation>LJB</referenceAbbreviation>
     <referenceNumber>102</referenceNumber>
     <sequenceNumber>222</sequenceNumber>
@@ -1973,7 +2066,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>DC</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>2 Baruch / Apocalypse of Baruch</nameEnglish> <!-- Syriac -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>2 Baruch / Apocalypse of Baruch</bookNameEnglishGuide> <!-- Syriac -->
     <referenceAbbreviation>BA2</referenceAbbreviation>
     <referenceNumber>103</referenceNumber>
     <sequenceNumber>228</sequenceNumber>
@@ -1986,7 +2080,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>DC</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Letter of Baruch / Epistle of Baruch</nameEnglish> <!-- Syriac -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Letter of Baruch / Epistle of Baruch</bookNameEnglishGuide> <!-- Syriac -->
     <referenceAbbreviation>LBA</referenceAbbreviation>
     <referenceNumber>104</referenceNumber>
     <sequenceNumber>224</sequenceNumber>
@@ -1999,7 +2094,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>DC</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>2 Baruch with the Letter of Baruch</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>2 Baruch with the Letter of Baruch</bookNameEnglishGuide>
     <!-- Syriac -->
     <referenceAbbreviation>LB2</referenceAbbreviation>
     <referenceNumber>105</referenceNumber>
@@ -2011,17 +2107,19 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>3 Baruch</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>3 Baruch</bookNameEnglishGuide>
     <!-- Greek -->
     <referenceAbbreviation>BA3</referenceAbbreviation>
     <referenceNumber>106</referenceNumber>
+    <sequenceNumber>230</sequenceNumber>
     <OSISAbbreviation>3Bar</OSISAbbreviation>
     <SwordAbbreviation>3Bar</SwordAbbreviation>
-    <sequenceNumber>230</sequenceNumber>
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>4 Baruch / Paralipomenon of Jeremiah / Paraleipomena Ieremiou / Rest of the Words of Baruch</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>4 Baruch / Paralipomenon of Jeremiah / Paraleipomena Ieremiou / Rest of the Words of Baruch</bookNameEnglishGuide>
     <!-- Greek -->
     <referenceAbbreviation>BA4</referenceAbbreviation>
     <referenceNumber>107</referenceNumber>
@@ -2033,7 +2131,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Additions to Jeremiah / Rest of Jeremiah</nameEnglish> <!-- Ethiopian Orthodox Canon / Ge'ez Translation addition -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Additions to Jeremiah / Rest of Jeremiah</bookNameEnglishGuide> <!-- Ethiopian Orthodox Canon / Ge'ez Translation addition -->
     <referenceAbbreviation>JRA</referenceAbbreviation>
     <referenceNumber>108</referenceNumber>
     <sequenceNumber>233</sequenceNumber>
@@ -2041,7 +2140,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Pseudo-Josephus</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Pseudo-Josephus</bookNameEnglishGuide>
     <!-- Jossipon; Joseph ben Gorion's Medieval History of the Jews in Ethiopian Orthodox Canon / Ge'ez Translation addition -->
     <referenceAbbreviation>PSJ</referenceAbbreviation>
     <referenceNumber>109</referenceNumber>
@@ -2053,7 +2153,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
 <!-- Maccabees -->
   <BibleBookCodes>
     <!-- The combined book of Maccabees as used by Jerome in the Latin Vulgate -->
-    <nameEnglish>Maccabees</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Maccabees</bookNameEnglishGuide>
     <referenceAbbreviation>MAC</referenceAbbreviation>
     <referenceNumber>110</referenceNumber>
     <sequenceNumber>270</sequenceNumber>
@@ -2061,7 +2162,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>DC</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>1 Maccabees</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>1 Maccabees</bookNameEnglishGuide>
     <referenceAbbreviation>MA1</referenceAbbreviation>
     <referenceNumber>111</referenceNumber>
     <sequenceNumber>272</sequenceNumber>
@@ -2079,7 +2181,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>DC</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>2 Maccabees</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>2 Maccabees</bookNameEnglishGuide>
     <referenceAbbreviation>MA2</referenceAbbreviation>
     <referenceNumber>112</referenceNumber>
     <sequenceNumber>274</sequenceNumber>
@@ -2097,7 +2200,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>DC</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>3 Maccabees</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>3 Maccabees</bookNameEnglishGuide>
     <!-- Part of Eastern Orthodox and Armenian Bibles -->
     <referenceAbbreviation>MA3</referenceAbbreviation>
     <referenceNumber>113</referenceNumber>
@@ -2116,7 +2220,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>DC</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>4 Maccabees</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>4 Maccabees</bookNameEnglishGuide>
     <!-- Part of the Georgian Bible and the Greek Appendix -->
     <referenceAbbreviation>MA4</referenceAbbreviation>
     <referenceNumber>114</referenceNumber>
@@ -2135,7 +2240,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>DC</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>5 Maccabees</nameEnglish> <!-- Syriac. Apparently there's also an Arabic one. -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>5 Maccabees</bookNameEnglishGuide> <!-- Syriac. Apparently there's also an Arabic one. -->
     <referenceAbbreviation>MA5</referenceAbbreviation>
     <referenceNumber>115</referenceNumber>
     <sequenceNumber>280</sequenceNumber>
@@ -2146,7 +2252,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
 
 <!-- Meqabyans / Makabians -->
   <BibleBookCodes>
-    <nameEnglish>1 Meqabyan / 1 Makabian / Mekabis of Benjamin</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>1 Meqabyan / 1 Makabian / Mekabis of Benjamin</bookNameEnglishGuide>
     <!-- Ge'ez -->
     <referenceAbbreviation>MQ1</referenceAbbreviation>
     <referenceNumber>116</referenceNumber>
@@ -2158,7 +2265,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>2 Meqabyan / 2 Makabian / Mekabis of Moab</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>2 Meqabyan / 2 Makabian / Mekabis of Moab</bookNameEnglishGuide>
     <!-- Ge'ez -->
     <referenceAbbreviation>MQ2</referenceAbbreviation>
     <referenceNumber>117</referenceNumber>
@@ -2170,7 +2278,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>3 Meqabyan / 3 Makabian</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>3 Meqabyan / 3 Makabian</bookNameEnglishGuide>
     <!-- Ge'ez -->
     <referenceAbbreviation>MQ3</referenceAbbreviation>
     <referenceNumber>118</referenceNumber>
@@ -2184,7 +2293,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
 
 <!-- Psalms -->
   <BibleBookCodes>
-    <nameEnglish>Psalms Book 1 / Psalms Book I</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Psalms Book 1 / Psalms Book I</bookNameEnglishGuide>
     <!-- One of five books which altogether contain 150 psalms -->
     <referenceAbbreviation>PB1</referenceAbbreviation>
     <referenceNumber>120</referenceNumber>
@@ -2193,7 +2303,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Psalms Book 2 / Psalms Book II</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Psalms Book 2 / Psalms Book II</bookNameEnglishGuide>
     <!-- One of five books which altogether contain 150 psalms -->
     <referenceAbbreviation>PB2</referenceAbbreviation>
     <referenceNumber>121</referenceNumber>
@@ -2202,7 +2313,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Psalms Book 3 / Psalms Book III</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Psalms Book 3 / Psalms Book III</bookNameEnglishGuide>
     <!-- One of five books which altogether contain 150 psalms -->
     <referenceAbbreviation>PB3</referenceAbbreviation>
     <referenceNumber>122</referenceNumber>
@@ -2211,7 +2323,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Psalms Book 4 / Psalms Book IV</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Psalms Book 4 / Psalms Book IV</bookNameEnglishGuide>
     <!-- One of five books which altogether contain 150 psalms -->
     <referenceAbbreviation>PB4</referenceAbbreviation>
     <referenceNumber>123</referenceNumber>
@@ -2220,7 +2333,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Psalms Book 5 / Psalms Book V</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Psalms Book 5 / Psalms Book V</bookNameEnglishGuide>
     <!-- One of five books which altogether contain 150 psalms -->
     <referenceAbbreviation>PB5</referenceAbbreviation>
     <referenceNumber>124</referenceNumber>
@@ -2229,7 +2343,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Psalms B / Liturgical Psalms / Metrical Psalms / Alternative Psalms / Grail Psalms</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Psalms B / Liturgical Psalms / Metrical Psalms / Alternative Psalms / Grail Psalms</bookNameEnglishGuide>
     <referenceAbbreviation>PSB</referenceAbbreviation>
     <referenceNumber>125</referenceNumber>
     <sequenceNumber>106</sequenceNumber>
@@ -2240,7 +2355,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT+</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Psalm 151</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Psalm 151</bookNameEnglishGuide>
     <!-- The 151st Psalm of David (7 verses) that is in the LXX, included in Orthodox Bibles translated from the Septuagint -->
     <referenceAbbreviation>PS2</referenceAbbreviation>
     <referenceNumber>126</referenceNumber>
@@ -2259,7 +2375,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT+</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Syriac Psalms 152-155 / Five apocryphal Syriac Psalms / Additional Syriac Psalms</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Syriac Psalms 152-155 / Five apocryphal Syriac Psalms / Additional Syriac Psalms</bookNameEnglishGuide>
     <!-- Hebrew / Syriac (17,20,6,6 verses) -->
     <referenceAbbreviation>PS3</referenceAbbreviation>
     <referenceNumber>127</referenceNumber>
@@ -2272,7 +2389,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Additional Psalms of Solomon</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Additional Psalms of Solomon</bookNameEnglishGuide>
     <!-- Not printed in any canonical tradition, but in some Syriac and LXX manuscripts -->
     <referenceAbbreviation>PSS</referenceAbbreviation>
     <referenceNumber>128</referenceNumber>
@@ -2288,7 +2406,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   </BibleBookCodes>
 
   <BibleBookCodes>
-    <nameEnglish>Letter to the Laodiceans</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Letter to the Laodiceans</bookNameEnglishGuide>
     <!-- Latin Vulgate NT -->
     <referenceAbbreviation>LAO</referenceAbbreviation>
     <referenceNumber>130</referenceNumber>
@@ -2303,7 +2422,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   </BibleBookCodes>
   <BibleBookCodes>
     <!-- At this stage, we use a single code for the Greek, Russian or Syriac Odes -->
-    <nameEnglish>Odes / Odae</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Odes / Odae</bookNameEnglishGuide>
     <referenceAbbreviation>ODE</referenceAbbreviation>
     <referenceNumber>131</referenceNumber>
     <sequenceNumber>300</sequenceNumber>
@@ -2317,7 +2437,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>DC</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Prayer of Solomon</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Prayer of Solomon</bookNameEnglishGuide>
     <!-- Latin Vulgate OT -->
     <referenceAbbreviation>PSO</referenceAbbreviation>
     <referenceNumber>132</referenceNumber>
@@ -2328,7 +2449,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>DC</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Prayer of Jeremiah</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Prayer of Jeremiah</bookNameEnglishGuide>
     <!-- Latin Vulgate OT -->
     <referenceAbbreviation>PJE</referenceAbbreviation>
     <referenceNumber>133</referenceNumber>
@@ -2340,7 +2462,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>DC</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Words of Sirach</nameEnglish> <!-- Armenian Zohrab Bible (not divided into chapters and verses) -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Words of Sirach</bookNameEnglishGuide> <!-- Armenian Zohrab Bible (not divided into chapters and verses) -->
     <referenceAbbreviation>WSI</referenceAbbreviation>
     <referenceNumber>134</referenceNumber>
     <sequenceNumber>320</sequenceNumber>
@@ -2350,7 +2473,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Letter of the Corinthians to Paul / Epistle of the Corinthians to Paul</nameEnglish> <!-- Armenian -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Letter of the Corinthians to Paul / Epistle of the Corinthians to Paul</bookNameEnglishGuide> <!-- Armenian -->
     <referenceAbbreviation>COP</referenceAbbreviation>
     <referenceNumber>135</referenceNumber>
     <sequenceNumber>662</sequenceNumber>
@@ -2360,7 +2484,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT+</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>3 Corinthians</nameEnglish> <!-- Armenian (19 verses) -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>3 Corinthians</bookNameEnglishGuide> <!-- Armenian (19 verses) -->
     <referenceAbbreviation>CO3</referenceAbbreviation>
     <referenceNumber>136</referenceNumber>
     <sequenceNumber>664</sequenceNumber>
@@ -2370,7 +2495,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT+</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Prayer of Euthalius</nameEnglish> <!-- Armenian (60 verses) -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Prayer of Euthalius</bookNameEnglishGuide> <!-- Armenian (60 verses) -->
     <referenceAbbreviation>EUT</referenceAbbreviation>
     <referenceNumber>137</referenceNumber>
     <sequenceNumber>670</sequenceNumber>
@@ -2381,7 +2507,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT+</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Dormition of John</nameEnglish> <!-- Armenian -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Dormition of John</bookNameEnglishGuide> <!-- Armenian -->
     <referenceAbbreviation>DOJ</referenceAbbreviation>
     <referenceNumber>138</referenceNumber>
     <sequenceNumber>680</sequenceNumber>
@@ -2391,7 +2518,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>NT+</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Jubilees</nameEnglish> <!-- Hebrew -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Jubilees</bookNameEnglishGuide> <!-- Hebrew -->
     <referenceAbbreviation>JUB</referenceAbbreviation>
     <referenceNumber>140</referenceNumber>
     <sequenceNumber>340</sequenceNumber>
@@ -2402,7 +2530,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>DC</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Enoch / 1 Enoch / Ethiopic Apocalypse of Enoch</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Enoch / 1 Enoch / Ethiopic Apocalypse of Enoch</bookNameEnglishGuide>
     <!-- Hebrew -->
     <referenceAbbreviation>ENO</referenceAbbreviation>
     <referenceNumber>141</referenceNumber>
@@ -2414,7 +2543,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>2 Enoch</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>2 Enoch</bookNameEnglishGuide>
     <!-- Old Church Slavonic -->
     <referenceAbbreviation>EN2</referenceAbbreviation>
     <referenceNumber>142</referenceNumber>
@@ -2424,7 +2554,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Reproof / Tegsas / Tegsats / Taagsas</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Reproof / Tegsas / Tegsats / Taagsas</bookNameEnglishGuide>
     <!-- Hebrew Proverbs 25-31 -->
     <referenceAbbreviation>REP</referenceAbbreviation>
     <referenceNumber>143</referenceNumber>
@@ -2436,7 +2567,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Letter of Barnabas / Epistle of Barnabas / Barnabas</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Letter of Barnabas / Epistle of Barnabas / Barnabas</bookNameEnglishGuide>
     <referenceAbbreviation>LBB</referenceAbbreviation>
     <referenceNumber>144</referenceNumber>
     <sequenceNumber>690</sequenceNumber>
@@ -2445,7 +2577,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   </BibleBookCodes>
 
   <BibleBookCodes>
-    <nameEnglish>1 Clement</nameEnglish> <!-- Greek from Alexandrinus, Hierosolymitanus -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>1 Clement</bookNameEnglishGuide> <!-- Greek from Alexandrinus, Hierosolymitanus -->
     <referenceAbbreviation>CL1</referenceAbbreviation>
     <referenceNumber>150</referenceNumber>
     <sequenceNumber>360</sequenceNumber>
@@ -2455,7 +2588,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>2 Clement</nameEnglish> <!-- Greek from Alexandrinus, Hierosolymitanus -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>2 Clement</bookNameEnglishGuide> <!-- Greek from Alexandrinus, Hierosolymitanus -->
     <referenceAbbreviation>CL2</referenceAbbreviation>
     <referenceNumber>151</referenceNumber>
     <sequenceNumber>362</sequenceNumber>
@@ -2465,7 +2599,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Didache</nameEnglish> <!-- Greek from Codex Hierosolymitanus -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Didache</bookNameEnglishGuide> <!-- Greek from Codex Hierosolymitanus -->
     <referenceAbbreviation>DID</referenceAbbreviation>
     <referenceNumber>153</referenceNumber>
     <sequenceNumber>366</sequenceNumber>
@@ -2476,7 +2611,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   </BibleBookCodes>
 
   <BibleBookCodes>
-    <nameEnglish>Joshua A</nameEnglish> <!-- From Codex Alexandrinus (vs. Vaticanus) -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Joshua A</bookNameEnglishGuide> <!-- From Codex Alexandrinus (vs. Vaticanus) -->
     <referenceAbbreviation>JSA</referenceAbbreviation>
     <referenceNumber>154</referenceNumber>
     <sequenceNumber>370</sequenceNumber>
@@ -2488,7 +2624,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Joshua B</nameEnglish> <!-- From Codex Vaticanus (vs. Alexandrinus) -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Joshua B</bookNameEnglishGuide> <!-- From Codex Vaticanus (vs. Alexandrinus) -->
     <referenceAbbreviation>JSB</referenceAbbreviation>
     <referenceNumber>155</referenceNumber>
     <sequenceNumber>371</sequenceNumber>
@@ -2500,7 +2637,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Judges A</nameEnglish> <!-- from Codex Alexandrinus (vs. Vaticanus) -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Judges A</bookNameEnglishGuide> <!-- from Codex Alexandrinus (vs. Vaticanus) -->
     <referenceAbbreviation>JGA</referenceAbbreviation>
     <referenceNumber>156</referenceNumber>
     <sequenceNumber>372</sequenceNumber>
@@ -2512,7 +2650,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Judges B</nameEnglish>  <!-- From Codex Vaticanus (vs. Alexandrinus) -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Judges B</bookNameEnglishGuide>  <!-- From Codex Vaticanus (vs. Alexandrinus) -->
     <referenceAbbreviation>JGB</referenceAbbreviation>
     <referenceNumber>157</referenceNumber>
     <sequenceNumber>373</sequenceNumber>
@@ -2524,7 +2663,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Tobit S</nameEnglish> <!-- Variant in Rahlfs from Codex Sinaiticus (vs. Vaticanus & Alexandrinus) -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Tobit S</bookNameEnglishGuide> <!-- Variant in Rahlfs from Codex Sinaiticus (vs. Vaticanus & Alexandrinus) -->
     <referenceAbbreviation>TBS</referenceAbbreviation>
     <referenceNumber>158</referenceNumber>
     <sequenceNumber>374</sequenceNumber>
@@ -2536,7 +2676,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Susanna θ / Susanna Th</nameEnglish> <!-- Variant in Rahlfs from Theodotion (vs. LXX) -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Susanna θ / Susanna Th</bookNameEnglishGuide> <!-- Variant in Rahlfs from Theodotion (vs. LXX) -->
     <referenceAbbreviation>SST</referenceAbbreviation>
     <referenceNumber>159</referenceNumber>
     <sequenceNumber>375</sequenceNumber>
@@ -2548,7 +2689,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Daniel θ / Daniel Th</nameEnglish> <!-- Variant in Rahlfs from Theodotion (vs. LXX) -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Daniel θ / Daniel Th</bookNameEnglishGuide> <!-- Variant in Rahlfs from Theodotion (vs. LXX) -->
     <referenceAbbreviation>DNT</referenceAbbreviation>
     <referenceNumber>160</referenceNumber>
     <sequenceNumber>376</sequenceNumber>
@@ -2560,7 +2702,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>???</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Bel and the dragon θ / Bel and the dragon Th</nameEnglish> <!-- Variant in Rahlfs from Theodotion (vs. LXX) -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Bel and the dragon θ / Bel and the dragon Th</bookNameEnglishGuide> <!-- Variant in Rahlfs from Theodotion (vs. LXX) -->
     <referenceAbbreviation>BLT</referenceAbbreviation>
     <referenceNumber>161</referenceNumber>
     <sequenceNumber>377</sequenceNumber>
@@ -2574,77 +2717,88 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
 
 <!-- Apocryphal gosels / Gnostic gospels -->
   <BibleBookCodes>
-    <nameEnglish>Gospel of the Hebrews</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Gospel of the Hebrews</bookNameEnglishGuide>
     <referenceAbbreviation>GHE</referenceAbbreviation>
     <referenceNumber>170</referenceNumber>
     <sequenceNumber>700</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Gospel of Truth</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Gospel of Truth</bookNameEnglishGuide>
     <referenceAbbreviation>GTR</referenceAbbreviation>
     <referenceNumber>171</referenceNumber>
     <sequenceNumber>702</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Gospel of Mary</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Gospel of Mary</bookNameEnglishGuide>
     <referenceAbbreviation>GMA</referenceAbbreviation>
     <referenceNumber>172</referenceNumber>
     <sequenceNumber>704</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Gospel of Marcion</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Gospel of Marcion</bookNameEnglishGuide>
     <referenceAbbreviation>GMC</referenceAbbreviation>
     <referenceNumber>173</referenceNumber>
     <sequenceNumber>706</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Gospel of the Twelve</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Gospel of the Twelve</bookNameEnglishGuide>
     <referenceAbbreviation>GTW</referenceAbbreviation>
     <referenceNumber>174</referenceNumber>
     <sequenceNumber>708</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Gospel of Philip</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Gospel of Philip</bookNameEnglishGuide>
     <referenceAbbreviation>GPH</referenceAbbreviation>
     <referenceNumber>175</referenceNumber>
     <sequenceNumber>710</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Gospel of Thomas</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Gospel of Thomas</bookNameEnglishGuide>
     <referenceAbbreviation>GTH</referenceAbbreviation>
     <referenceNumber>176</referenceNumber>
     <sequenceNumber>712</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Gospel of Judas</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Gospel of Judas</bookNameEnglishGuide>
     <referenceAbbreviation>GJU</referenceAbbreviation>
     <referenceNumber>177</referenceNumber>
     <sequenceNumber>714</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Gospel of Bartholomew</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Gospel of Bartholomew</bookNameEnglishGuide>
     <referenceAbbreviation>GBA</referenceAbbreviation>
     <referenceNumber>178</referenceNumber>
     <sequenceNumber>716</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Apocrypha of James / Apocryphal James</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Apocrypha of James / Apocryphal James</bookNameEnglishGuide>
     <referenceAbbreviation>AJA</referenceAbbreviation>
     <referenceNumber>179</referenceNumber>
     <sequenceNumber>718</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Wisdom of Jesus Christ</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Wisdom of Jesus Christ</bookNameEnglishGuide>
     <referenceAbbreviation>WJC</referenceAbbreviation>
     <referenceNumber>180</referenceNumber>
     <sequenceNumber>720</sequenceNumber>
@@ -2653,147 +2807,168 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
 
 <!-- More Pseudepigrapha -->
   <BibleBookCodes>
-    <nameEnglish>Testament of Adam</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Testament of Adam</bookNameEnglishGuide>
     <referenceAbbreviation>TAD</referenceAbbreviation>
     <referenceNumber>190</referenceNumber>
     <sequenceNumber>400</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Life of Adam and Eve</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Life of Adam and Eve</bookNameEnglishGuide>
     <referenceAbbreviation>LAE</referenceAbbreviation>
     <referenceNumber>191</referenceNumber>
     <sequenceNumber>402</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Assumption of Moses / Testament of Moses</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Assumption of Moses / Testament of Moses</bookNameEnglishGuide>
     <referenceAbbreviation>ASS</referenceAbbreviation>
     <referenceNumber>192</referenceNumber>
     <sequenceNumber>404</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Testament of Solomon</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Testament of Solomon</bookNameEnglishGuide>
     <referenceAbbreviation>TSO</referenceAbbreviation>
     <referenceNumber>193</referenceNumber>
     <sequenceNumber>406</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Testament of Job</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Testament of Job</bookNameEnglishGuide>
     <referenceAbbreviation>TJB</referenceAbbreviation>
     <referenceNumber>194</referenceNumber>
     <sequenceNumber>408</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Martyrdom and Ascension of Isaiah</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Martyrdom and Ascension of Isaiah</bookNameEnglishGuide>
     <referenceAbbreviation>MAI</referenceAbbreviation>
     <referenceNumber>195</referenceNumber>
     <sequenceNumber>410</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Apocrypha of Ezekiel / Apocryphon of Ezekiel</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Apocrypha of Ezekiel / Apocryphon of Ezekiel</bookNameEnglishGuide>
     <referenceAbbreviation>AEZ</referenceAbbreviation>
     <referenceNumber>196</referenceNumber>
     <sequenceNumber>412</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Ezekiel the Tragedian</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Ezekiel the Tragedian</bookNameEnglishGuide>
     <referenceAbbreviation>EZT</referenceAbbreviation>
     <referenceNumber>197</referenceNumber>
     <sequenceNumber>414</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Eupolemus</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Eupolemus</bookNameEnglishGuide>
     <referenceAbbreviation>EUP</referenceAbbreviation>
     <referenceNumber>198</referenceNumber>
     <sequenceNumber>416</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Pseudo of Eupolemus / Pseudo-Eupolemus</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Pseudo of Eupolemus / Pseudo-Eupolemus</bookNameEnglishGuide>
     <referenceAbbreviation>PEU</referenceAbbreviation>
     <referenceNumber>199</referenceNumber>
     <sequenceNumber>418</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Visions of Amram</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Visions of Amram</bookNameEnglishGuide>
     <referenceAbbreviation>VAM</referenceAbbreviation>
     <referenceNumber>200</referenceNumber>
     <sequenceNumber>420</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Letter of Aristeas / Epistle of Aristeas</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Letter of Aristeas / Epistle of Aristeas</bookNameEnglishGuide>
     <referenceAbbreviation>LAR</referenceAbbreviation>
     <referenceNumber>201</referenceNumber>
     <sequenceNumber>422</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Aristeas the Exegete</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Aristeas the Exegete</bookNameEnglishGuide>
     <referenceAbbreviation>ARI</referenceAbbreviation>
     <referenceNumber>202</referenceNumber>
     <sequenceNumber>424</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Aristobulus</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Aristobulus</bookNameEnglishGuide>
     <referenceAbbreviation>ABL</referenceAbbreviation>
     <referenceNumber>203</referenceNumber>
     <sequenceNumber>426</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Artapanus</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Artapanus</bookNameEnglishGuide>
     <referenceAbbreviation>ART</referenceAbbreviation>
     <referenceNumber>204</referenceNumber>
     <sequenceNumber>428</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Cleodemus Malchus</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Cleodemus Malchus</bookNameEnglishGuide>
     <referenceAbbreviation>CLM</referenceAbbreviation>
     <referenceNumber>205</referenceNumber>
     <sequenceNumber>430</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Eldad and Modad</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Eldad and Modad</bookNameEnglishGuide>
     <referenceAbbreviation>ELM</referenceAbbreviation>
     <referenceNumber>206</referenceNumber>
     <sequenceNumber>432</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>History of the Rechabites</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>History of the Rechabites</bookNameEnglishGuide>
     <referenceAbbreviation>HRE</referenceAbbreviation>
     <referenceNumber>207</referenceNumber>
     <sequenceNumber>434</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Lives of the Prophets</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Lives of the Prophets</bookNameEnglishGuide>
     <referenceAbbreviation>LPR</referenceAbbreviation>
     <referenceNumber>208</referenceNumber>
     <sequenceNumber>436</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Philo the Epic Poet</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Philo the Epic Poet</bookNameEnglishGuide>
     <referenceAbbreviation>EPL</referenceAbbreviation>
     <referenceNumber>209</referenceNumber>
     <sequenceNumber>438</sequenceNumber>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Theodotus</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Theodotus</bookNameEnglishGuide>
     <referenceAbbreviation>TEO</referenceAbbreviation>
     <referenceNumber>210</referenceNumber>
     <sequenceNumber>440</sequenceNumber>
@@ -2801,7 +2976,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   </BibleBookCodes>
 
   <BibleBookCodes>
-    <nameEnglish>Testaments of the Twelve Patriarchs</nameEnglish> <!-- Armenian Orthodox -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Testaments of the Twelve Patriarchs</bookNameEnglishGuide> <!-- Armenian Orthodox -->
     <referenceAbbreviation>TTP</referenceAbbreviation>
     <referenceNumber>250</referenceNumber>
     <sequenceNumber>380</sequenceNumber>
@@ -2809,7 +2985,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Testament of Asher</nameEnglish> <!-- Armenian -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Testament of Asher</bookNameEnglishGuide> <!-- Armenian -->
     <referenceAbbreviation>TSA</referenceAbbreviation>
     <referenceNumber>251</referenceNumber>
     <sequenceNumber>381</sequenceNumber>
@@ -2817,7 +2994,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Testament of Benjamin</nameEnglish> <!-- Armenian -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Testament of Benjamin</bookNameEnglishGuide> <!-- Armenian -->
     <referenceAbbreviation>TSB</referenceAbbreviation>
     <referenceNumber>252</referenceNumber>
     <sequenceNumber>382</sequenceNumber>
@@ -2825,7 +3003,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Testament of Dan</nameEnglish> <!-- Armenian -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Testament of Dan</bookNameEnglishGuide> <!-- Armenian -->
     <referenceAbbreviation>TSD</referenceAbbreviation>
     <referenceNumber>253</referenceNumber>
     <sequenceNumber>383</sequenceNumber>
@@ -2833,7 +3012,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Testament of Gad</nameEnglish> <!-- Armenian -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Testament of Gad</bookNameEnglishGuide> <!-- Armenian -->
     <referenceAbbreviation>TSG</referenceAbbreviation>
     <referenceNumber>254</referenceNumber>
     <sequenceNumber>384</sequenceNumber>
@@ -2841,7 +3021,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Testament of Issachar</nameEnglish> <!-- Armenian -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Testament of Issachar</bookNameEnglishGuide> <!-- Armenian -->
     <referenceAbbreviation>TSI</referenceAbbreviation>
     <referenceNumber>255</referenceNumber>
     <sequenceNumber>385</sequenceNumber>
@@ -2849,7 +3030,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Testament of Joseph</nameEnglish> <!-- Armenian -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Testament of Joseph</bookNameEnglishGuide> <!-- Armenian -->
     <referenceAbbreviation>TSJ</referenceAbbreviation>
     <referenceNumber>256</referenceNumber>
     <sequenceNumber>386</sequenceNumber>
@@ -2857,7 +3039,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Testament of Judah</nameEnglish> <!-- Armenian -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Testament of Judah</bookNameEnglishGuide> <!-- Armenian -->
     <referenceAbbreviation>TSY</referenceAbbreviation>
     <referenceNumber>257</referenceNumber>
     <sequenceNumber>387</sequenceNumber>
@@ -2865,7 +3048,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Testament of Levi</nameEnglish> <!-- Armenian -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Testament of Levi</bookNameEnglishGuide> <!-- Armenian -->
     <referenceAbbreviation>TSL</referenceAbbreviation>
     <referenceNumber>258</referenceNumber>
     <sequenceNumber>388</sequenceNumber>
@@ -2873,7 +3057,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Testament of Naphtali</nameEnglish> <!-- Armenian -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Testament of Naphtali</bookNameEnglishGuide> <!-- Armenian -->
     <referenceAbbreviation>TSN</referenceAbbreviation>
     <referenceNumber>259</referenceNumber>
     <sequenceNumber>389</sequenceNumber>
@@ -2881,7 +3066,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Testament of Reuben</nameEnglish> <!-- Armenian -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Testament of Reuben</bookNameEnglishGuide> <!-- Armenian -->
     <referenceAbbreviation>TSR</referenceAbbreviation>
     <referenceNumber>260</referenceNumber>
     <sequenceNumber>390</sequenceNumber>
@@ -2889,7 +3075,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Testament of Simeon</nameEnglish> <!-- Armenian -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Testament of Simeon</bookNameEnglishGuide> <!-- Armenian -->
     <referenceAbbreviation>TSS</referenceAbbreviation>
     <referenceNumber>261</referenceNumber>
     <sequenceNumber>391</sequenceNumber>
@@ -2897,7 +3084,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Testament of Zebulun</nameEnglish> <!-- Armenian -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Testament of Zebulun</bookNameEnglishGuide> <!-- Armenian -->
     <referenceAbbreviation>TSZ</referenceAbbreviation>
     <referenceNumber>262</referenceNumber>
     <sequenceNumber>392</sequenceNumber>
@@ -2906,7 +3094,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   </BibleBookCodes>
 
   <BibleBookCodes>
-    <nameEnglish>Josephus Jewish War VI</nameEnglish> <!-- Syriac -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Josephus Jewish War VI</bookNameEnglishGuide> <!-- Syriac -->
     <referenceAbbreviation>JJW</referenceAbbreviation>
     <referenceNumber>270</referenceNumber>
     <sequenceNumber>378</sequenceNumber>
@@ -2915,7 +3104,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   </BibleBookCodes>
 
   <BibleBookCodes>
-    <nameEnglish>Shepherd of Hermas</nameEnglish> <!-- Greek from Codex Siniaticus -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Shepherd of Hermas</bookNameEnglishGuide> <!-- Greek from Codex Siniaticus -->
     <referenceAbbreviation>SHE</referenceAbbreviation>
     <referenceNumber>280</referenceNumber>
     <sequenceNumber>394</sequenceNumber>
@@ -2924,7 +3114,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Shepherd of Hermas Mandates</nameEnglish> <!-- Greek from Codex Siniaticus -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Shepherd of Hermas Mandates</bookNameEnglishGuide> <!-- Greek from Codex Siniaticus -->
     <referenceAbbreviation>SHM</referenceAbbreviation>
     <referenceNumber>281</referenceNumber>
     <sequenceNumber>395</sequenceNumber>
@@ -2932,7 +3123,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Shepherd of Hermas Similitudes</nameEnglish> <!-- Greek from Codex Siniaticus -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Shepherd of Hermas Similitudes</bookNameEnglishGuide> <!-- Greek from Codex Siniaticus -->
     <referenceAbbreviation>SHS</referenceAbbreviation>
     <referenceNumber>282</referenceNumber>
     <sequenceNumber>396</sequenceNumber>
@@ -2940,7 +3132,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Shepherd of Hermas Visions</nameEnglish> <!-- Greek from Codex Siniaticus -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Shepherd of Hermas Visions</bookNameEnglishGuide> <!-- Greek from Codex Siniaticus -->
     <referenceAbbreviation>SHV</referenceAbbreviation>
     <referenceNumber>283</referenceNumber>
     <sequenceNumber>397</sequenceNumber>
@@ -2949,7 +3142,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   </BibleBookCodes>
 
   <BibleBookCodes>
-    <nameEnglish>Ignatius to the Ephesians</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Ignatius to the Ephesians</bookNameEnglishGuide>
     <referenceAbbreviation>IGE</referenceAbbreviation>
     <referenceNumber>290</referenceNumber>
     <sequenceNumber>730</sequenceNumber>
@@ -2957,7 +3151,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Ignatius to the Magnesians</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Ignatius to the Magnesians</bookNameEnglishGuide>
     <referenceAbbreviation>IGM</referenceAbbreviation>
     <referenceNumber>291</referenceNumber>
     <sequenceNumber>731</sequenceNumber>
@@ -2965,7 +3160,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Ignatius to the Trallians</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Ignatius to the Trallians</bookNameEnglishGuide>
     <referenceAbbreviation>IGT</referenceAbbreviation>
     <referenceNumber>292</referenceNumber>
     <sequenceNumber>732</sequenceNumber>
@@ -2973,7 +3169,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Ignatius to the Romans</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Ignatius to the Romans</bookNameEnglishGuide>
     <referenceAbbreviation>IGR</referenceAbbreviation>
     <referenceNumber>293</referenceNumber>
     <sequenceNumber>733</sequenceNumber>
@@ -2981,7 +3178,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Ignatius to the Philadelphians</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Ignatius to the Philadelphians</bookNameEnglishGuide>
     <referenceAbbreviation>IGP</referenceAbbreviation>
     <referenceNumber>294</referenceNumber>
     <sequenceNumber>734</sequenceNumber>
@@ -2989,7 +3187,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Ignatius to the Smyrnaeans</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Ignatius to the Smyrnaeans</bookNameEnglishGuide>
     <referenceAbbreviation>IGS</referenceAbbreviation>
     <referenceNumber>295</referenceNumber>
     <sequenceNumber>735</sequenceNumber>
@@ -2997,7 +3196,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Ignatius to Polycarp</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Ignatius to Polycarp</bookNameEnglishGuide>
     <referenceAbbreviation>IGC</referenceAbbreviation>
     <referenceNumber>296</referenceNumber>
     <sequenceNumber>736</sequenceNumber>
@@ -3006,7 +3206,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   </BibleBookCodes>
 
   <BibleBookCodes>
-    <nameEnglish>Polycarp to the Philippians</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Polycarp to the Philippians</bookNameEnglishGuide>
     <referenceAbbreviation>PCP</referenceAbbreviation>
     <referenceNumber>297</referenceNumber>
     <sequenceNumber>740</sequenceNumber>
@@ -3014,7 +3215,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Martydom of Polycarp</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Martydom of Polycarp</bookNameEnglishGuide>
     <referenceAbbreviation>MPC</referenceAbbreviation>
     <referenceNumber>298</referenceNumber>
     <sequenceNumber>741</sequenceNumber>
@@ -3023,7 +3225,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   </BibleBookCodes>
 
   <BibleBookCodes>
-    <nameEnglish>Diognetus</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Diognetus</bookNameEnglishGuide>
     <referenceAbbreviation>DIO</referenceAbbreviation>
     <referenceNumber>300</referenceNumber>
     <sequenceNumber>750</sequenceNumber>
@@ -3031,7 +3234,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Apostles' Creed</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Apostles' Creed</bookNameEnglishGuide>
     <referenceAbbreviation>APC</referenceAbbreviation>
     <referenceNumber>301</referenceNumber>
     <sequenceNumber>751</sequenceNumber>
@@ -3039,7 +3243,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Fragments of Papias</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Fragments of Papias</bookNameEnglishGuide>
     <referenceAbbreviation>FOP</referenceAbbreviation>
     <referenceNumber>302</referenceNumber>
     <sequenceNumber>752</sequenceNumber>
@@ -3047,7 +3252,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Reliques of the Elders</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Reliques of the Elders</bookNameEnglishGuide>
     <referenceAbbreviation>ROE</referenceAbbreviation>
     <referenceNumber>303</referenceNumber>
     <sequenceNumber>753</sequenceNumber>
@@ -3055,7 +3261,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Fragment of Quadratus</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Fragment of Quadratus</bookNameEnglishGuide>
     <referenceAbbreviation>FOQ</referenceAbbreviation>
     <referenceNumber>304</referenceNumber>
     <sequenceNumber>754</sequenceNumber>
@@ -3064,7 +3271,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   </BibleBookCodes>
 
   <BibleBookCodes>
-    <nameEnglish>Tatian / Tatian's Diatessaron / Diatessaron</nameEnglish> <!-- Appears in Codex Fuldensis; Latin language gospel harmony -->
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Tatian / Tatian's Diatessaron / Diatessaron</bookNameEnglishGuide> <!-- Appears in Codex Fuldensis; Latin language gospel harmony -->
     <referenceAbbreviation>TAT</referenceAbbreviation>
     <referenceNumber>310</referenceNumber>
     <sequenceNumber>760</sequenceNumber>
@@ -3074,7 +3282,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
 
 <!-- Combinations of books -->
   <BibleBookCodes>
-    <nameEnglish>Books of Moses</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Books of Moses</bookNameEnglishGuide>
     <referenceAbbreviation>MOS</referenceAbbreviation>
     <referenceNumber>600</referenceNumber>
     <sequenceNumber>18</sequenceNumber>
@@ -3084,7 +3293,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   </BibleBookCodes>
   <BibleBookCodes>
     <!-- Samuel is just one book in the Hebrew -->
-    <nameEnglish>Samuel</nameEnglish>
+    <bookName>שְׁמוּאֵל</bookName>
+    <bookNameEnglishGuide>Samuel</bookNameEnglishGuide>
     <referenceAbbreviation>SAM</referenceAbbreviation>
     <referenceNumber>610</referenceNumber>
     <sequenceNumber>36</sequenceNumber>
@@ -3094,7 +3304,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   </BibleBookCodes>
   <BibleBookCodes>
     <!-- Kings is just one book in the Hebrew -->
-    <nameEnglish>Kings</nameEnglish>
+    <bookName>מְלָכִים</bookName>
+    <bookNameEnglishGuide>Kings</bookNameEnglishGuide>
     <referenceAbbreviation>KGS</referenceAbbreviation>
     <referenceNumber>620</referenceNumber>
     <sequenceNumber>42</sequenceNumber>
@@ -3104,7 +3315,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   </BibleBookCodes>
   <BibleBookCodes>
     <!-- Samuel/Kings could be regarded as one contiguous work -->
-    <nameEnglish>Samuel-Kings</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Samuel-Kings</bookNameEnglishGuide>
     <referenceAbbreviation>SMK</referenceAbbreviation>
     <referenceNumber>625</referenceNumber>
     <sequenceNumber>43</sequenceNumber>
@@ -3114,7 +3326,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   </BibleBookCodes>
   <BibleBookCodes>
     <!-- Chronicles is just one book in the Hebrew -->
-    <nameEnglish>Chronicles</nameEnglish>
+    <bookName>דִּבְרֵי הַיָּמִים</bookName>
+    <bookNameEnglishGuide>Chronicles</bookNameEnglishGuide>
     <referenceAbbreviation>CHR</referenceAbbreviation>
     <referenceNumber>630</referenceNumber>
     <sequenceNumber>48</sequenceNumber>
@@ -3123,7 +3336,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Ezra-Nehemiah / 1 Esdras</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Ezra-Nehemiah / 1 Esdras</bookNameEnglishGuide>
     <referenceAbbreviation>EZN</referenceAbbreviation>
     <referenceNumber>640</referenceNumber>
     <sequenceNumber>65</sequenceNumber>
@@ -3141,14 +3355,16 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   </BibleBookCodes>
   <BibleBookCodes>
     <!-- Used for the Minor Prophets in the Hebrew -->
-    <nameEnglish>Twelve Prophets</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Twelve Prophets</bookNameEnglishGuide>
     <referenceAbbreviation>P12</referenceAbbreviation>
     <referenceNumber>650</referenceNumber>
     <sequenceNumber>150</sequenceNumber>
     <typicalSection>OT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Luke-Acts</nameEnglish>
+    <bookName>(Unknown)</bookName>
+    <bookNameEnglishGuide>Luke-Acts</bookNameEnglishGuide>
     <referenceAbbreviation>LKA</referenceAbbreviation>
     <referenceNumber>690</referenceNumber>
     <sequenceNumber>608</sequenceNumber>
@@ -3159,7 +3375,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
 
 <!-- Extra front and/or back matter (although this file doesn't define or imply the order of "books") -->
   <BibleBookCodes>
-    <nameEnglish>Generic front matter</nameEnglish>
+    <bookName>(Generic front matter)</bookName>
+    <bookNameEnglishGuide>Generic front matter</bookNameEnglishGuide>
     <referenceAbbreviation>FRT</referenceAbbreviation>
     <referenceNumber>700</referenceNumber>
     <sequenceNumber>5</sequenceNumber>
@@ -3170,21 +3387,24 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>FRT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Preface</nameEnglish>
+    <bookName>Preface</bookName>
+    <bookNameEnglishGuide>Preface</bookNameEnglishGuide>
     <referenceAbbreviation>PRF</referenceAbbreviation>
     <referenceNumber>705</referenceNumber>
     <sequenceNumber>1</sequenceNumber>
     <typicalSection>FRT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Acknowledgements</nameEnglish>
+    <bookName>Acknowledgements</bookName>
+    <bookNameEnglishGuide>Acknowledgements</bookNameEnglishGuide>
     <referenceAbbreviation>ACK</referenceAbbreviation>
     <referenceNumber>710</referenceNumber>
     <sequenceNumber>2</sequenceNumber>
     <typicalSection>FRT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Introduction</nameEnglish>
+    <bookName>Introduction</bookName>
+    <bookNameEnglishGuide>Introduction</bookNameEnglishGuide>
     <referenceAbbreviation>INT</referenceAbbreviation>
     <referenceNumber>715</referenceNumber>
     <sequenceNumber>3</sequenceNumber>
@@ -3194,14 +3414,16 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>FRT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Table of Contents</nameEnglish>
+    <bookName>(Table of Contents)</bookName>
+    <bookNameEnglishGuide>Table of Contents</bookNameEnglishGuide>
     <referenceAbbreviation>TOC</referenceAbbreviation>
     <referenceNumber>720</referenceNumber>
     <sequenceNumber>8</sequenceNumber>
     <typicalSection>FRT</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Glossary</nameEnglish>
+    <bookName>Glossary</bookName>
+    <bookNameEnglishGuide>Glossary</bookNameEnglishGuide>
     <referenceAbbreviation>GLS</referenceAbbreviation>
     <referenceNumber>725</referenceNumber>
     <sequenceNumber>800</sequenceNumber>
@@ -3211,7 +3433,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>BAK</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Concordance</nameEnglish>
+    <bookName>Concordance</bookName>
+    <bookNameEnglishGuide>Concordance</bookNameEnglishGuide>
     <referenceAbbreviation>CNC</referenceAbbreviation>
     <referenceNumber>730</referenceNumber>
     <sequenceNumber>810</sequenceNumber>
@@ -3219,14 +3442,16 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>BAK</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Topical Concordance</nameEnglish>
+    <bookName>(Topical Concordance)</bookName>
+    <bookNameEnglishGuide>Topical Concordance</bookNameEnglishGuide>
     <referenceAbbreviation>TPC</referenceAbbreviation>
     <referenceNumber>735</referenceNumber>
     <sequenceNumber>820</sequenceNumber>
     <typicalSection>BAK</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Names Index</nameEnglish>
+    <bookName>(Names Index)</bookName>
+    <bookNameEnglishGuide>Names Index</bookNameEnglishGuide>
     <referenceAbbreviation>IXN</referenceAbbreviation>
     <referenceNumber>740</referenceNumber>
     <sequenceNumber>830</sequenceNumber>
@@ -3235,14 +3460,16 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>BAK</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Places Index</nameEnglish>
+    <bookName>(Places Index)</bookName>
+    <bookNameEnglishGuide>Places Index</bookNameEnglishGuide>
     <referenceAbbreviation>IXP</referenceAbbreviation>
     <referenceNumber>745</referenceNumber>
     <sequenceNumber>840</sequenceNumber>
     <typicalSection>BAK</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Maps</nameEnglish>
+    <bookName>Maps</bookName>
+    <bookNameEnglishGuide>Maps</bookNameEnglishGuide>
     <referenceAbbreviation>MAP</referenceAbbreviation>
     <referenceNumber>750</referenceNumber>
     <sequenceNumber>890</sequenceNumber>
@@ -3250,7 +3477,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
   </BibleBookCodes>
   <BibleBookCodes>
     <!-- Is this the same as a topical concordance? -->
-    <nameEnglish>Thematic Index</nameEnglish>
+    <bookName>(Thematic Index)</bookName>
+    <bookNameEnglishGuide>Thematic Index</bookNameEnglishGuide>
     <referenceAbbreviation>IXT</referenceAbbreviation>
     <referenceNumber>755</referenceNumber>
     <sequenceNumber>850</sequenceNumber>
@@ -3260,7 +3488,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>BAK</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Generic back matter</nameEnglish>
+    <bookName>(Generic back matter)</bookName>
+    <bookNameEnglishGuide>Generic back matter</bookNameEnglishGuide>
     <referenceAbbreviation>BAK</referenceAbbreviation>
     <referenceNumber>760</referenceNumber>
     <sequenceNumber>860</sequenceNumber>
@@ -3270,7 +3499,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>BAK</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Unspecified other OTH</nameEnglish>
+    <bookName>(OTHER)</bookName>
+    <bookNameEnglishGuide>Unspecified other OTH</bookNameEnglishGuide>
     <referenceAbbreviation>OTH</referenceAbbreviation>
     <referenceNumber>870</referenceNumber>
     <sequenceNumber>970</sequenceNumber>
@@ -3280,35 +3510,40 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
 
   <!-- Reference dictionaries and databases (not usually published) -->
   <BibleBookCodes>
-    <nameEnglish>Spelling dictionary / word list</nameEnglish>
+    <bookName>(Spelling dictionary / word list)</bookName>
+    <bookNameEnglishGuide>Spelling dictionary / word list</bookNameEnglishGuide>
     <referenceAbbreviation>WRD</referenceAbbreviation>
     <referenceNumber>880</referenceNumber>
     <sequenceNumber>980</sequenceNumber>
     <typicalSection>BAK</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish> Word definitions dictionary</nameEnglish>
+    <bookName>(Word definitions dictionary)</bookName>
+    <bookNameEnglishGuide>Word definitions dictionary</bookNameEnglishGuide>
     <referenceAbbreviation>WDF</referenceAbbreviation>
     <referenceNumber>882</referenceNumber>
     <sequenceNumber>982</sequenceNumber>
     <typicalSection>BAK</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Hyphenation dictionary</nameEnglish>
+    <bookName>(Hyphenation dictionary)</bookName>
+    <bookNameEnglishGuide>Hyphenation dictionary</bookNameEnglishGuide>
     <referenceAbbreviation>HYP</referenceAbbreviation>
     <referenceNumber>884</referenceNumber>
     <sequenceNumber>984</sequenceNumber>
     <typicalSection>BAK</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Strong's Database</nameEnglish>
+    <bookName>(Strong's Database)</bookName>
+    <bookNameEnglishGuide>Strong's Database</bookNameEnglishGuide>
     <referenceAbbreviation>STR</referenceAbbreviation>
     <referenceNumber>888</referenceNumber>
     <sequenceNumber>988</sequenceNumber>
     <typicalSection>BAK</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Semantic Database</nameEnglish>
+    <bookName>(Semantic Database)</bookName>
+    <bookNameEnglishGuide>Semantic Database</bookNameEnglishGuide>
     <referenceAbbreviation>SEM</referenceAbbreviation>
     <referenceNumber>890</referenceNumber>
     <sequenceNumber>990</sequenceNumber>
@@ -3320,7 +3555,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
         rather than these generic, undefined codes
         which give no indication of what they contain. -->
   <BibleBookCodes>
-    <nameEnglish>Unspecified extra XXA</nameEnglish>
+    <bookName>(XXA)</bookName>
+    <bookNameEnglishGuide>Unspecified extra XXA</bookNameEnglishGuide>
     <referenceAbbreviation>XXA</referenceAbbreviation>
     <referenceNumber>800</referenceNumber>
     <sequenceNumber>900</sequenceNumber>
@@ -3331,7 +3567,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>BAK</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Unspecified extra XXB</nameEnglish>
+    <bookName>(XXB)</bookName>
+    <bookNameEnglishGuide>Unspecified extra XXB</bookNameEnglishGuide>
     <referenceAbbreviation>XXB</referenceAbbreviation>
     <referenceNumber>810</referenceNumber>
     <sequenceNumber>910</sequenceNumber>
@@ -3341,7 +3578,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>BAK</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Unspecified extra XXC</nameEnglish>
+    <bookName>(XXC)</bookName>
+    <bookNameEnglishGuide>Unspecified extra XXC</bookNameEnglishGuide>
     <referenceAbbreviation>XXC</referenceAbbreviation>
     <referenceNumber>820</referenceNumber>
     <sequenceNumber>920</sequenceNumber>
@@ -3351,7 +3589,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>BAK</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Unspecified extra XXD</nameEnglish>
+    <bookName>(XXD)</bookName>
+    <bookNameEnglishGuide>Unspecified extra XXD</bookNameEnglishGuide>
     <referenceAbbreviation>XXD</referenceAbbreviation>
     <referenceNumber>830</referenceNumber>
     <sequenceNumber>930</sequenceNumber>
@@ -3361,7 +3600,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>BAK</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Unspecified extra XXE</nameEnglish>
+    <bookName>(XXE)</bookName>
+    <bookNameEnglishGuide>Unspecified extra XXE</bookNameEnglishGuide>
     <referenceAbbreviation>XXE</referenceAbbreviation>
     <referenceNumber>840</referenceNumber>
     <sequenceNumber>940</sequenceNumber>
@@ -3371,7 +3611,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>BAK</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Unspecified extra XXF</nameEnglish>
+    <bookName>(XXF)</bookName>
+    <bookNameEnglishGuide>Unspecified extra XXF</bookNameEnglishGuide>
     <referenceAbbreviation>XXF</referenceAbbreviation>
     <referenceNumber>850</referenceNumber>
     <sequenceNumber>950</sequenceNumber>
@@ -3381,7 +3622,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <typicalSection>BAK</typicalSection>
   </BibleBookCodes>
   <BibleBookCodes>
-    <nameEnglish>Unspecified extra XXG</nameEnglish>
+    <bookName>(XXG)</bookName>
+    <bookNameEnglishGuide>Unspecified extra XXG</bookNameEnglishGuide>
     <referenceAbbreviation>XXG</referenceAbbreviation>
     <referenceNumber>860</referenceNumber>
     <sequenceNumber>960</sequenceNumber>
@@ -3393,7 +3635,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
 
   <!-- Code to use for Open Bible Stories saved as a book using story number and frame number (rather than chapter number and verse number)-->
   <BibleBookCodes>
-    <nameEnglish>Open Bible Stories</nameEnglish>
+    <bookName>Open Bible Stories</bookName>
+    <bookNameEnglishGuide>Open Bible Stories</bookNameEnglishGuide>
     <referenceAbbreviation>OBS</referenceAbbreviation>
     <referenceNumber>997</referenceNumber>
     <sequenceNumber>997</sequenceNumber>
@@ -3403,7 +3646,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
 
   <!-- Code to use for a TEST book -->
   <BibleBookCodes>
-    <nameEnglish>TEST</nameEnglish>
+    <bookName>(TEST)</bookName>
+    <bookNameEnglishGuide>TEST</bookNameEnglishGuide>
     <referenceAbbreviation>TST</referenceAbbreviation>
     <referenceNumber>998</referenceNumber>
     <sequenceNumber>998</sequenceNumber>
@@ -3412,7 +3656,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
 
   <!-- Code to use for an UNKNOWN book -->
   <BibleBookCodes>
-    <nameEnglish>UNKNOWN</nameEnglish>
+    <bookName>(UNKNOWN)</bookName>
+    <bookNameEnglishGuide>UNKNOWN</bookNameEnglishGuide>
     <referenceAbbreviation>UNK</referenceAbbreviation>
     <referenceNumber>999</referenceNumber>
     <sequenceNumber>999</sequenceNumber>
