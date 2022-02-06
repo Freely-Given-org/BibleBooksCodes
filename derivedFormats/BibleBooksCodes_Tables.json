@@ -16,7 +16,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "50",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Genesis / 1 Moses",
+      "bookNameEnglishGuide": "Genesis / 1 Moses",
       "typicalSection": "OT"
     },
     "2": {
@@ -35,7 +35,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "40",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Exodus / 2 Moses",
+      "bookNameEnglishGuide": "Exodus / 2 Moses",
       "typicalSection": "OT"
     },
     "3": {
@@ -54,7 +54,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "27",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Leviticus / 3 Moses",
+      "bookNameEnglishGuide": "Leviticus / 3 Moses",
       "typicalSection": "OT"
     },
     "4": {
@@ -73,7 +73,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "36",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Numbers / 4 Moses",
+      "bookNameEnglishGuide": "Numbers / 4 Moses",
       "typicalSection": "OT"
     },
     "5": {
@@ -92,7 +92,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "34",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Deuteronomy / 5 Moses",
+      "bookNameEnglishGuide": "Deuteronomy / 5 Moses",
       "typicalSection": "OT"
     },
     "6": {
@@ -113,7 +113,7 @@
       "possibleAlternativeBooks": [
         "JSA"
       ],
-      "nameEnglish": "Joshua / Joshua son of Nun",
+      "bookNameEnglishGuide": "Joshua / Joshua son of Nun",
       "typicalSection": "OT"
     },
     "7": {
@@ -134,7 +134,7 @@
       "possibleAlternativeBooks": [
         "JGB"
       ],
-      "nameEnglish": "Judges",
+      "bookNameEnglishGuide": "Judges",
       "typicalSection": "OT"
     },
     "8": {
@@ -153,7 +153,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "4",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ruth",
+      "bookNameEnglishGuide": "Ruth",
       "typicalSection": "OT"
     },
     "9": {
@@ -172,7 +172,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "31",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "1 Samuel / 1 Kingdoms / 1 Kings",
+      "bookNameEnglishGuide": "1 Samuel / 1 Kingdoms / 1 Kings",
       "typicalSection": "OT"
     },
     "10": {
@@ -191,7 +191,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "24",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 Samuel / 2 Kingdoms / 2 Kings",
+      "bookNameEnglishGuide": "2 Samuel / 2 Kingdoms / 2 Kings",
       "typicalSection": "OT"
     },
     "11": {
@@ -210,7 +210,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "22",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "1 Kings / 3 Kingdoms / 3 Kings",
+      "bookNameEnglishGuide": "1 Kings / 3 Kingdoms / 3 Kings",
       "typicalSection": "OT"
     },
     "12": {
@@ -229,7 +229,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "25",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 Kings / 4 Kingdoms / 4 Kings",
+      "bookNameEnglishGuide": "2 Kings / 4 Kingdoms / 4 Kings",
       "typicalSection": "OT"
     },
     "13": {
@@ -248,7 +248,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "29",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "1 Chronicles / 1 Paralipomenon",
+      "bookNameEnglishGuide": "1 Chronicles / 1 Paralipomenon",
       "typicalSection": "OT"
     },
     "14": {
@@ -267,7 +267,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "36,37",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 Chronicles / 2 Paralipomenon",
+      "bookNameEnglishGuide": "2 Chronicles / 2 Paralipomenon",
       "typicalSection": "OT"
     },
     "15": {
@@ -288,7 +288,7 @@
       "possibleAlternativeBooks": [
         "EZN"
       ],
-      "nameEnglish": "Ezra / 1 Ezra / 1 Esdras",
+      "bookNameEnglishGuide": "Ezra / 1 Ezra / 1 Esdras",
       "typicalSection": "OT"
     },
     "16": {
@@ -309,7 +309,7 @@
       "possibleAlternativeBooks": [
         "EZN"
       ],
-      "nameEnglish": "Nehemiah / 2 Ezra / 2 Esdras",
+      "bookNameEnglishGuide": "Nehemiah / 2 Ezra / 2 Esdras",
       "typicalSection": "OT"
     },
     "17": {
@@ -332,7 +332,7 @@
         "ESA",
         "ESC"
       ],
-      "nameEnglish": "Esther",
+      "bookNameEnglishGuide": "Esther",
       "typicalSection": "OT"
     },
     "18": {
@@ -351,7 +351,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "42",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Job",
+      "bookNameEnglishGuide": "Job",
       "typicalSection": "OT"
     },
     "19": {
@@ -376,7 +376,7 @@
         "PB4",
         "PB5"
       ],
-      "nameEnglish": "Psalms / Gallicanum / Psalms A",
+      "bookNameEnglishGuide": "Psalms / Gallicanum / Psalms A",
       "typicalSection": "OT"
     },
     "20": {
@@ -395,7 +395,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "31",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Proverbs",
+      "bookNameEnglishGuide": "Proverbs",
       "typicalSection": "OT"
     },
     "21": {
@@ -414,7 +414,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "12",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ecclesiastes / Qoholeth",
+      "bookNameEnglishGuide": "קֹהֶלֶת / Qoholeth",
       "typicalSection": "OT"
     },
     "22": {
@@ -433,7 +433,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "8",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Song of Solomon / Song of Songs / Canticles / Canticle of Canticles",
+      "bookNameEnglishGuide": "Song of Solomon / Song of Songs / Canticles / Canticle of Canticles",
       "typicalSection": "OT"
     },
     "23": {
@@ -452,7 +452,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "66",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Isaiah",
+      "bookNameEnglishGuide": "Isaiah",
       "typicalSection": "OT"
     },
     "24": {
@@ -471,7 +471,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "52",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Jeremiah",
+      "bookNameEnglishGuide": "Jeremiah",
       "typicalSection": "OT"
     },
     "25": {
@@ -490,7 +490,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "5",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Lamentations / Lamentations of Jeremiah",
+      "bookNameEnglishGuide": "Lamentations / Lamentations of Jeremiah",
       "typicalSection": "OT"
     },
     "26": {
@@ -509,7 +509,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "48",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ezekiel",
+      "bookNameEnglishGuide": "Ezekiel",
       "typicalSection": "OT"
     },
     "27": {
@@ -533,7 +533,7 @@
         "DNC",
         "DNT"
       ],
-      "nameEnglish": "Daniel",
+      "bookNameEnglishGuide": "Daniel",
       "typicalSection": "OT"
     },
     "28": {
@@ -552,7 +552,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "14",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Hosea",
+      "bookNameEnglishGuide": "Hosea",
       "typicalSection": "OT"
     },
     "29": {
@@ -571,7 +571,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "3,4",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Joel",
+      "bookNameEnglishGuide": "Joel",
       "typicalSection": "OT"
     },
     "30": {
@@ -590,7 +590,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "9",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Amos",
+      "bookNameEnglishGuide": "Amos",
       "typicalSection": "OT"
     },
     "31": {
@@ -609,7 +609,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Obadiah",
+      "bookNameEnglishGuide": "Obadiah",
       "typicalSection": "OT"
     },
     "32": {
@@ -628,12 +628,12 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "4",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Jonah",
+      "bookNameEnglishGuide": "Jonah",
       "typicalSection": "OT"
     },
     "33": {
       "referenceAbbreviation": "MIC",
-      "SBLAbbreviation": "Nic",
+      "SBLAbbreviation": "Mic",
       "OSISAbbreviation": "Mic",
       "SwordAbbreviation": "Mic",
       "CCELNumberString": "33",
@@ -647,7 +647,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "7",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Micah",
+      "bookNameEnglishGuide": "Micah",
       "typicalSection": "OT"
     },
     "34": {
@@ -666,7 +666,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "3",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Nahum",
+      "bookNameEnglishGuide": "Nahum",
       "typicalSection": "OT"
     },
     "35": {
@@ -685,7 +685,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "3",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Habakkuk",
+      "bookNameEnglishGuide": "Habakkuk",
       "typicalSection": "OT"
     },
     "36": {
@@ -704,7 +704,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "3",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Zephaniah",
+      "bookNameEnglishGuide": "Zephaniah",
       "typicalSection": "OT"
     },
     "37": {
@@ -723,7 +723,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "2",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Haggai",
+      "bookNameEnglishGuide": "Haggai",
       "typicalSection": "OT"
     },
     "38": {
@@ -742,7 +742,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "14",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Zechariah",
+      "bookNameEnglishGuide": "Zechariah",
       "typicalSection": "OT"
     },
     "39": {
@@ -761,7 +761,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "4,3",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Malachi",
+      "bookNameEnglishGuide": "Malachi",
       "typicalSection": "OT"
     },
     "40": {
@@ -780,7 +780,7 @@
       "ByzantineAbbreviation": "MT",
       "numExpectedChapters": "28",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Matthew",
+      "bookNameEnglishGuide": "Matthew",
       "typicalSection": "NT"
     },
     "41": {
@@ -799,7 +799,7 @@
       "ByzantineAbbreviation": "MR",
       "numExpectedChapters": "16",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Mark",
+      "bookNameEnglishGuide": "Mark",
       "typicalSection": "NT"
     },
     "42": {
@@ -820,7 +820,7 @@
       "possibleAlternativeBooks": [
         "LKA"
       ],
-      "nameEnglish": "Luke",
+      "bookNameEnglishGuide": "Luke",
       "typicalSection": "NT"
     },
     "43": {
@@ -839,7 +839,7 @@
       "ByzantineAbbreviation": "JOH",
       "numExpectedChapters": "21",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "John",
+      "bookNameEnglishGuide": "John",
       "typicalSection": "NT"
     },
     "44": {
@@ -860,7 +860,7 @@
       "possibleAlternativeBooks": [
         "LKA"
       ],
-      "nameEnglish": "Acts / Acts of the Apostles",
+      "bookNameEnglishGuide": "Acts / Acts of the Apostles",
       "typicalSection": "NT"
     },
     "45": {
@@ -879,7 +879,7 @@
       "ByzantineAbbreviation": "RO",
       "numExpectedChapters": "16",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Romans",
+      "bookNameEnglishGuide": "Romans",
       "typicalSection": "NT"
     },
     "46": {
@@ -898,7 +898,7 @@
       "ByzantineAbbreviation": "1CO",
       "numExpectedChapters": "16",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "1 Corinthians",
+      "bookNameEnglishGuide": "1 Corinthians",
       "typicalSection": "NT"
     },
     "47": {
@@ -917,7 +917,7 @@
       "ByzantineAbbreviation": "2CO",
       "numExpectedChapters": "13",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 Corinthians",
+      "bookNameEnglishGuide": "2 Corinthians",
       "typicalSection": "NT"
     },
     "48": {
@@ -936,7 +936,7 @@
       "ByzantineAbbreviation": "GA",
       "numExpectedChapters": "6",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Galatians",
+      "bookNameEnglishGuide": "Galatians",
       "typicalSection": "NT"
     },
     "49": {
@@ -955,7 +955,7 @@
       "ByzantineAbbreviation": "EPH",
       "numExpectedChapters": "6",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ephesians",
+      "bookNameEnglishGuide": "Ephesians",
       "typicalSection": "NT"
     },
     "50": {
@@ -974,7 +974,7 @@
       "ByzantineAbbreviation": "PHP",
       "numExpectedChapters": "4",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Philippians",
+      "bookNameEnglishGuide": "Philippians",
       "typicalSection": "NT"
     },
     "51": {
@@ -993,7 +993,7 @@
       "ByzantineAbbreviation": "COL",
       "numExpectedChapters": "4",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Colossians",
+      "bookNameEnglishGuide": "Colossians",
       "typicalSection": "NT"
     },
     "52": {
@@ -1012,7 +1012,7 @@
       "ByzantineAbbreviation": "1TH",
       "numExpectedChapters": "5",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "1 Thessalonians",
+      "bookNameEnglishGuide": "1 Thessalonians",
       "typicalSection": "NT"
     },
     "53": {
@@ -1031,7 +1031,7 @@
       "ByzantineAbbreviation": "2TH",
       "numExpectedChapters": "3",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 Thessalonians",
+      "bookNameEnglishGuide": "2 Thessalonians",
       "typicalSection": "NT"
     },
     "54": {
@@ -1050,7 +1050,7 @@
       "ByzantineAbbreviation": "1TI",
       "numExpectedChapters": "6",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "1 Timothy",
+      "bookNameEnglishGuide": "1 Timothy",
       "typicalSection": "NT"
     },
     "55": {
@@ -1069,7 +1069,7 @@
       "ByzantineAbbreviation": "2TI",
       "numExpectedChapters": "4",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 Timothy",
+      "bookNameEnglishGuide": "2 Timothy",
       "typicalSection": "NT"
     },
     "56": {
@@ -1088,7 +1088,7 @@
       "ByzantineAbbreviation": "TIT",
       "numExpectedChapters": "3",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Titus",
+      "bookNameEnglishGuide": "Titus",
       "typicalSection": "NT"
     },
     "57": {
@@ -1107,7 +1107,7 @@
       "ByzantineAbbreviation": "PHM",
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Philemon",
+      "bookNameEnglishGuide": "Philemon",
       "typicalSection": "NT"
     },
     "58": {
@@ -1126,7 +1126,7 @@
       "ByzantineAbbreviation": "HEB",
       "numExpectedChapters": "13",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Hebrews",
+      "bookNameEnglishGuide": "Hebrews",
       "typicalSection": "NT"
     },
     "59": {
@@ -1145,7 +1145,7 @@
       "ByzantineAbbreviation": "JAS",
       "numExpectedChapters": "5",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "James / Jacob",
+      "bookNameEnglishGuide": "James / Jacob",
       "typicalSection": "NT"
     },
     "60": {
@@ -1164,7 +1164,7 @@
       "ByzantineAbbreviation": "1PE",
       "numExpectedChapters": "5",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "1 Peter",
+      "bookNameEnglishGuide": "1 Peter",
       "typicalSection": "NT"
     },
     "61": {
@@ -1183,7 +1183,7 @@
       "ByzantineAbbreviation": "2PE",
       "numExpectedChapters": "3",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 Peter",
+      "bookNameEnglishGuide": "2 Peter",
       "typicalSection": "NT"
     },
     "62": {
@@ -1202,7 +1202,7 @@
       "ByzantineAbbreviation": "1JO",
       "numExpectedChapters": "5",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "1 John",
+      "bookNameEnglishGuide": "1 John",
       "typicalSection": "NT"
     },
     "63": {
@@ -1221,7 +1221,7 @@
       "ByzantineAbbreviation": "2JO",
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 John",
+      "bookNameEnglishGuide": "2 John",
       "typicalSection": "NT"
     },
     "64": {
@@ -1240,7 +1240,7 @@
       "ByzantineAbbreviation": "3JO",
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "3 John",
+      "bookNameEnglishGuide": "3 John",
       "typicalSection": "NT"
     },
     "65": {
@@ -1259,7 +1259,7 @@
       "ByzantineAbbreviation": "JUDE",
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Jude",
+      "bookNameEnglishGuide": "Jude / Judas",
       "typicalSection": "NT"
     },
     "66": {
@@ -1278,7 +1278,7 @@
       "ByzantineAbbreviation": "RE",
       "numExpectedChapters": "22",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Revelation / Revelation of John / Apocalypse of St. John",
+      "bookNameEnglishGuide": "Revelation / Revelation of John / Apocalypse of St. John",
       "typicalSection": "NT"
     },
     "70": {
@@ -1301,7 +1301,7 @@
         "ESA",
         "ESC"
       ],
-      "nameEnglish": "Greek Esther / Esther (Greek)",
+      "bookNameEnglishGuide": "Greek Esther / Esther (Greek)",
       "typicalSection": "OT"
     },
     "71": {
@@ -1324,7 +1324,7 @@
         "ESG",
         "ESC"
       ],
-      "nameEnglish": "Greek additions to Esther / Esther (additions)",
+      "bookNameEnglishGuide": "Greek additions to Esther / Esther (additions)",
       "typicalSection": "OT"
     },
     "72": {
@@ -1347,7 +1347,7 @@
         "ESG",
         "ESA"
       ],
-      "nameEnglish": "Combined Hebrew/Greek Esther / Esther (combined)",
+      "bookNameEnglishGuide": "Combined Hebrew/Greek Esther / Esther (combined)",
       "typicalSection": "OT"
     },
     "73": {
@@ -1371,7 +1371,7 @@
         "DNC",
         "DNT"
       ],
-      "nameEnglish": "Greek Daniel / Daniel (Greek)",
+      "bookNameEnglishGuide": "Greek Daniel / Daniel (Greek)",
       "typicalSection": "OT"
     },
     "74": {
@@ -1395,7 +1395,7 @@
         "DNC",
         "DNT"
       ],
-      "nameEnglish": "Greek additions to Daniel / Daniel (additions)",
+      "bookNameEnglishGuide": "Greek additions to Daniel / Daniel (additions)",
       "typicalSection": "OT"
     },
     "75": {
@@ -1419,7 +1419,7 @@
         "DNA",
         "DNT"
       ],
-      "nameEnglish": "Combined Hebrew/Greek Daniel / Daniel (combined)",
+      "bookNameEnglishGuide": "Combined Hebrew/Greek Daniel / Daniel (combined)",
       "typicalSection": "OT"
     },
     "80": {
@@ -1440,7 +1440,7 @@
       "possibleAlternativeBooks": [
         "BLT"
       ],
-      "nameEnglish": "Bel and the dragon",
+      "bookNameEnglishGuide": "Bel and the dragon",
       "typicalSection": "DC"
     },
     "81": {
@@ -1461,7 +1461,7 @@
       "possibleAlternativeBooks": [
         "SST"
       ],
-      "nameEnglish": "Susanna",
+      "bookNameEnglishGuide": "Susanna",
       "typicalSection": "DC"
     },
     "82": {
@@ -1480,7 +1480,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "16",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Judith",
+      "bookNameEnglishGuide": "Judith",
       "typicalSection": "DC"
     },
     "83": {
@@ -1499,7 +1499,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Prayer of Manasses / Prayer of Manasseh",
+      "bookNameEnglishGuide": "Prayer of Manasses / Prayer of Manasseh",
       "typicalSection": "DC"
     },
     "84": {
@@ -1518,7 +1518,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "51,52",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Sirach / Ecclesiasticus / Wisdom of Ben Sira / Wisdom of Jesus son of Sirach",
+      "bookNameEnglishGuide": "Sirach / Ecclesiasticus / Wisdom of Ben Sira / Wisdom of Jesus son of Sirach",
       "typicalSection": "DC"
     },
     "85": {
@@ -1537,7 +1537,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Sirach Prologue",
+      "bookNameEnglishGuide": "Sirach Prologue",
       "typicalSection": "DC"
     },
     "86": {
@@ -1558,7 +1558,7 @@
       "possibleAlternativeBooks": [
         "TBS"
       ],
-      "nameEnglish": "Tobit / Tobias",
+      "bookNameEnglishGuide": "Tobit / Tobias",
       "typicalSection": "DC"
     },
     "87": {
@@ -1577,7 +1577,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "19",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Wisdom / Wisdom of Solomon",
+      "bookNameEnglishGuide": "Wisdom / Wisdom of Solomon",
       "typicalSection": "DC"
     },
     "88": {
@@ -1596,7 +1596,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Prayer of Azariah and the Song of the Three Young Men / Prayer of Azariah / Song of the Three Young Men / Song of the Three Children",
+      "bookNameEnglishGuide": "Prayer of Azariah and the Song of the Three Young Men / Prayer of Azariah / Song of the Three Young Men / Song of the Three Children",
       "typicalSection": "DC"
     },
     "90": {
@@ -1617,7 +1617,7 @@
       "possibleAlternativeBooks": [
         "LES"
       ],
-      "nameEnglish": "Greek Esdras / Greek Ezra / 1 Esdras / 1 Ezra / 2 Ezra / 3 Ezra / 3 Esdras",
+      "bookNameEnglishGuide": "Greek Esdras / Greek Ezra / 1 Esdras / 1 Ezra / 2 Ezra / 3 Ezra / 3 Esdras",
       "typicalSection": "???"
     },
     "91": {
@@ -1638,7 +1638,7 @@
       "possibleAlternativeBooks": [
         "GES"
       ],
-      "nameEnglish": "Latin Esdras / 2 Esdras / 3 Esdras / 4 Esdras / 4 Ezra",
+      "bookNameEnglishGuide": "Latin Esdras / 2 Esdras / 3 Esdras / 4 Esdras / 4 Ezra",
       "typicalSection": "???"
     },
     "92": {
@@ -1657,7 +1657,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "12,13",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Apocalypse of Ezra / Ezra Apocalypse / 4 Ezra / Ezra Shealtiel",
+      "bookNameEnglishGuide": "Apocalypse of Ezra / Ezra Apocalypse / 4 Ezra / Ezra Shealtiel",
       "typicalSection": "???"
     },
     "93": {
@@ -1676,7 +1676,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "2",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "5 Ezra / 3 Esdras / 5 Esdras",
+      "bookNameEnglishGuide": "5 Ezra / 3 Esdras / 5 Esdras",
       "typicalSection": "???"
     },
     "94": {
@@ -1695,7 +1695,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "2",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "6 Ezra / 5 Esdras / 6 Esdras",
+      "bookNameEnglishGuide": "6 Ezra / 5 Esdras / 6 Esdras",
       "typicalSection": "???"
     },
     "95": {
@@ -1714,7 +1714,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Revelation of Ezra",
+      "bookNameEnglishGuide": "Revelation of Ezra",
       "typicalSection": "PS"
     },
     "96": {
@@ -1733,7 +1733,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Vison of Ezra",
+      "bookNameEnglishGuide": "Vison of Ezra",
       "typicalSection": "PS"
     },
     "100": {
@@ -1754,7 +1754,7 @@
       "possibleAlternativeBooks": [
         "LJB"
       ],
-      "nameEnglish": "Letter of Jeremiah / Epistle of Jeremiah",
+      "bookNameEnglishGuide": "Letter of Jeremiah / Epistle of Jeremiah",
       "typicalSection": "DC"
     },
     "101": {
@@ -1775,7 +1775,7 @@
       "possibleAlternativeBooks": [
         "LJB"
       ],
-      "nameEnglish": "Baruch / 1 Baruch",
+      "bookNameEnglishGuide": "Baruch / 1 Baruch",
       "typicalSection": "DC"
     },
     "102": {
@@ -1796,7 +1796,7 @@
       "possibleAlternativeBooks": [
         "BAR"
       ],
-      "nameEnglish": "Letter of Jeremiah with Baruch / Epistle of Jeremiah with Baruch",
+      "bookNameEnglishGuide": "Letter of Jeremiah with Baruch / Epistle of Jeremiah with Baruch",
       "typicalSection": "DC"
     },
     "103": {
@@ -1817,7 +1817,7 @@
       "possibleAlternativeBooks": [
         "LB2"
       ],
-      "nameEnglish": "2 Baruch / Apocalypse of Baruch",
+      "bookNameEnglishGuide": "2 Baruch / Apocalypse of Baruch",
       "typicalSection": "DC"
     },
     "104": {
@@ -1838,7 +1838,7 @@
       "possibleAlternativeBooks": [
         "LB2"
       ],
-      "nameEnglish": "Letter of Baruch / Epistle of Baruch",
+      "bookNameEnglishGuide": "Letter of Baruch / Epistle of Baruch",
       "typicalSection": "DC"
     },
     "105": {
@@ -1860,7 +1860,7 @@
         "BA2",
         "LBA"
       ],
-      "nameEnglish": "2 Baruch with the Letter of Baruch",
+      "bookNameEnglishGuide": "2 Baruch with the Letter of Baruch",
       "typicalSection": "???"
     },
     "106": {
@@ -1879,7 +1879,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "3 Baruch",
+      "bookNameEnglishGuide": "3 Baruch",
       "typicalSection": "???"
     },
     "107": {
@@ -1898,7 +1898,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "6,5",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "4 Baruch / Paralipomenon of Jeremiah / Paraleipomena Ieremiou / Rest of the Words of Baruch",
+      "bookNameEnglishGuide": "4 Baruch / Paralipomenon of Jeremiah / Paraleipomena Ieremiou / Rest of the Words of Baruch",
       "typicalSection": "???"
     },
     "108": {
@@ -1917,7 +1917,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Additions to Jeremiah / Rest of Jeremiah",
+      "bookNameEnglishGuide": "Additions to Jeremiah / Rest of Jeremiah",
       "typicalSection": "???"
     },
     "109": {
@@ -1936,7 +1936,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Pseudo-Josephus",
+      "bookNameEnglishGuide": "Pseudo-Josephus",
       "typicalSection": "???"
     },
     "110": {
@@ -1955,7 +1955,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "31",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Maccabees",
+      "bookNameEnglishGuide": "Maccabees",
       "typicalSection": "DC"
     },
     "111": {
@@ -1974,7 +1974,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "16",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "1 Maccabees",
+      "bookNameEnglishGuide": "1 Maccabees",
       "typicalSection": "DC"
     },
     "112": {
@@ -1993,7 +1993,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "15",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 Maccabees",
+      "bookNameEnglishGuide": "2 Maccabees",
       "typicalSection": "DC"
     },
     "113": {
@@ -2012,7 +2012,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "7",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "3 Maccabees",
+      "bookNameEnglishGuide": "3 Maccabees",
       "typicalSection": "DC"
     },
     "114": {
@@ -2031,7 +2031,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "18",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "4 Maccabees",
+      "bookNameEnglishGuide": "4 Maccabees",
       "typicalSection": "DC"
     },
     "115": {
@@ -2050,7 +2050,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "5 Maccabees",
+      "bookNameEnglishGuide": "5 Maccabees",
       "typicalSection": "???"
     },
     "116": {
@@ -2069,7 +2069,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "36",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "1 Meqabyan / 1 Makabian / Mekabis of Benjamin",
+      "bookNameEnglishGuide": "1 Meqabyan / 1 Makabian / Mekabis of Benjamin",
       "typicalSection": "???"
     },
     "117": {
@@ -2088,7 +2088,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "20,21",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 Meqabyan / 2 Makabian / Mekabis of Moab",
+      "bookNameEnglishGuide": "2 Meqabyan / 2 Makabian / Mekabis of Moab",
       "typicalSection": "???"
     },
     "118": {
@@ -2107,7 +2107,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "10",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "3 Meqabyan / 3 Makabian",
+      "bookNameEnglishGuide": "3 Meqabyan / 3 Makabian",
       "typicalSection": "???"
     },
     "120": {
@@ -2126,7 +2126,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "41",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Psalms Book 1 / Psalms Book I",
+      "bookNameEnglishGuide": "Psalms Book 1 / Psalms Book I",
       "typicalSection": "OT"
     },
     "121": {
@@ -2145,7 +2145,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "31",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Psalms Book 2 / Psalms Book II",
+      "bookNameEnglishGuide": "Psalms Book 2 / Psalms Book II",
       "typicalSection": "OT"
     },
     "122": {
@@ -2164,7 +2164,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "17",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Psalms Book 3 / Psalms Book III",
+      "bookNameEnglishGuide": "Psalms Book 3 / Psalms Book III",
       "typicalSection": "OT"
     },
     "123": {
@@ -2183,7 +2183,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "17",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Psalms Book 4 / Psalms Book IV",
+      "bookNameEnglishGuide": "Psalms Book 4 / Psalms Book IV",
       "typicalSection": "OT"
     },
     "124": {
@@ -2202,7 +2202,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "44",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Psalms Book 5 / Psalms Book V",
+      "bookNameEnglishGuide": "Psalms Book 5 / Psalms Book V",
       "typicalSection": "OT"
     },
     "125": {
@@ -2221,7 +2221,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "150",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Psalms B / Liturgical Psalms / Metrical Psalms / Alternative Psalms / Grail Psalms",
+      "bookNameEnglishGuide": "Psalms B / Liturgical Psalms / Metrical Psalms / Alternative Psalms / Grail Psalms",
       "typicalSection": "OT+"
     },
     "126": {
@@ -2240,7 +2240,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Psalm 151",
+      "bookNameEnglishGuide": "Psalm 151",
       "typicalSection": "OT+"
     },
     "127": {
@@ -2259,7 +2259,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "5,4",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Syriac Psalms 152-155 / Five apocryphal Syriac Psalms / Additional Syriac Psalms",
+      "bookNameEnglishGuide": "Syriac Psalms 152-155 / Five apocryphal Syriac Psalms / Additional Syriac Psalms",
       "typicalSection": "???"
     },
     "128": {
@@ -2278,7 +2278,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "18",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Additional Psalms of Solomon",
+      "bookNameEnglishGuide": "Additional Psalms of Solomon",
       "typicalSection": "???"
     },
     "130": {
@@ -2297,7 +2297,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Letter to the Laodiceans",
+      "bookNameEnglishGuide": "Letter to the Laodiceans",
       "typicalSection": "NT+"
     },
     "131": {
@@ -2316,7 +2316,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "14",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Odes / Odae",
+      "bookNameEnglishGuide": "Odes / Odae",
       "typicalSection": "DC"
     },
     "132": {
@@ -2335,7 +2335,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Prayer of Solomon",
+      "bookNameEnglishGuide": "Prayer of Solomon",
       "typicalSection": "DC"
     },
     "133": {
@@ -2354,7 +2354,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Prayer of Jeremiah",
+      "bookNameEnglishGuide": "Prayer of Jeremiah",
       "typicalSection": "DC"
     },
     "134": {
@@ -2373,7 +2373,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Words of Sirach",
+      "bookNameEnglishGuide": "Words of Sirach",
       "typicalSection": "???"
     },
     "135": {
@@ -2392,7 +2392,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Letter of the Corinthians to Paul / Epistle of the Corinthians to Paul",
+      "bookNameEnglishGuide": "Letter of the Corinthians to Paul / Epistle of the Corinthians to Paul",
       "typicalSection": "NT+"
     },
     "136": {
@@ -2411,7 +2411,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "3 Corinthians",
+      "bookNameEnglishGuide": "3 Corinthians",
       "typicalSection": "NT+"
     },
     "137": {
@@ -2430,7 +2430,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Prayer of Euthalius",
+      "bookNameEnglishGuide": "Prayer of Euthalius",
       "typicalSection": "NT+"
     },
     "138": {
@@ -2449,7 +2449,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Dormition of John",
+      "bookNameEnglishGuide": "Dormition of John",
       "typicalSection": "NT+"
     },
     "140": {
@@ -2468,7 +2468,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "34",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Jubilees",
+      "bookNameEnglishGuide": "Jubilees",
       "typicalSection": "DC"
     },
     "141": {
@@ -2487,7 +2487,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "42",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Enoch / 1 Enoch / Ethiopic Apocalypse of Enoch",
+      "bookNameEnglishGuide": "Enoch / 1 Enoch / Ethiopic Apocalypse of Enoch",
       "typicalSection": "???"
     },
     "142": {
@@ -2506,7 +2506,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 Enoch",
+      "bookNameEnglishGuide": "2 Enoch",
       "typicalSection": "???"
     },
     "143": {
@@ -2525,7 +2525,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "6",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Reproof / Tegsas / Tegsats / Taagsas",
+      "bookNameEnglishGuide": "Reproof / Tegsas / Tegsats / Taagsas",
       "typicalSection": "???"
     },
     "144": {
@@ -2544,7 +2544,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Letter of Barnabas / Epistle of Barnabas / Barnabas",
+      "bookNameEnglishGuide": "Letter of Barnabas / Epistle of Barnabas / Barnabas",
       "typicalSection": "???"
     },
     "150": {
@@ -2563,7 +2563,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "65",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "1 Clement",
+      "bookNameEnglishGuide": "1 Clement",
       "typicalSection": "???"
     },
     "151": {
@@ -2582,7 +2582,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "20",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 Clement",
+      "bookNameEnglishGuide": "2 Clement",
       "typicalSection": "???"
     },
     "153": {
@@ -2601,7 +2601,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "16",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Didache",
+      "bookNameEnglishGuide": "Didache",
       "typicalSection": "???"
     },
     "154": {
@@ -2622,10 +2622,52 @@
       "possibleAlternativeBooks": [
         "JOS"
       ],
-      "nameEnglish": "Joshua A",
+      "bookNameEnglishGuide": "Joshua A",
       "typicalSection": "???"
     },
     "155": {
+      "referenceAbbreviation": "JSB",
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": "JoshB",
+      "CCELNumberString": null,
+      "USFMAbbreviation": "JsB",
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": "24",
+      "possibleAlternativeBooks": [
+        "JOS"
+      ],
+      "bookNameEnglishGuide": "Joshua B",
+      "typicalSection": "???"
+    },
+    "156": {
+      "referenceAbbreviation": "JGA",
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": "JudgA",
+      "CCELNumberString": null,
+      "USFMAbbreviation": "JdA",
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": "21",
+      "possibleAlternativeBooks": [
+        "JDG"
+      ],
+      "bookNameEnglishGuide": "Judges A",
+      "typicalSection": "???"
+    },
+    "157": {
       "referenceAbbreviation": "JGB",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -2643,10 +2685,10 @@
       "possibleAlternativeBooks": [
         "JDG"
       ],
-      "nameEnglish": "Judges B",
+      "bookNameEnglishGuide": "Judges B",
       "typicalSection": "???"
     },
-    "156": {
+    "158": {
       "referenceAbbreviation": "TBS",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -2664,10 +2706,10 @@
       "possibleAlternativeBooks": [
         "TOB"
       ],
-      "nameEnglish": "Tobit S",
+      "bookNameEnglishGuide": "Tobit S",
       "typicalSection": "???"
     },
-    "157": {
+    "159": {
       "referenceAbbreviation": "SST",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -2685,10 +2727,10 @@
       "possibleAlternativeBooks": [
         "SUS"
       ],
-      "nameEnglish": "Susanna \u03b8 / Susanna Th",
+      "bookNameEnglishGuide": "Susanna θ / Susanna Th",
       "typicalSection": "???"
     },
-    "158": {
+    "160": {
       "referenceAbbreviation": "DNT",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -2709,10 +2751,10 @@
         "DNA",
         "DNC"
       ],
-      "nameEnglish": "Daniel \u03b8 / Daniel Th",
+      "bookNameEnglishGuide": "Daniel θ / Daniel Th",
       "typicalSection": "???"
     },
-    "159": {
+    "161": {
       "referenceAbbreviation": "BLT",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -2730,10 +2772,10 @@
       "possibleAlternativeBooks": [
         "BEL"
       ],
-      "nameEnglish": "Bel and the dragon \u03b8 / Bel and the dragon Th",
+      "bookNameEnglishGuide": "Bel and the dragon θ / Bel and the dragon Th",
       "typicalSection": "???"
     },
-    "160": {
+    "170": {
       "referenceAbbreviation": "GHE",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -2749,10 +2791,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Gospel of the Hebrews",
+      "bookNameEnglishGuide": "Gospel of the Hebrews",
       "typicalSection": "PS"
     },
-    "161": {
+    "171": {
       "referenceAbbreviation": "GTR",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -2768,10 +2810,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Gospel of Truth",
+      "bookNameEnglishGuide": "Gospel of Truth",
       "typicalSection": "PS"
     },
-    "162": {
+    "172": {
       "referenceAbbreviation": "GMA",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -2787,10 +2829,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Gospel of Mary",
+      "bookNameEnglishGuide": "Gospel of Mary",
       "typicalSection": "PS"
     },
-    "163": {
+    "173": {
       "referenceAbbreviation": "GMC",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -2806,10 +2848,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Gospel of Marcion",
+      "bookNameEnglishGuide": "Gospel of Marcion",
       "typicalSection": "PS"
     },
-    "164": {
+    "174": {
       "referenceAbbreviation": "GTW",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -2825,10 +2867,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Gospel of the Twelve",
+      "bookNameEnglishGuide": "Gospel of the Twelve",
       "typicalSection": "PS"
     },
-    "165": {
+    "175": {
       "referenceAbbreviation": "GPH",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -2844,10 +2886,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Gospel of Philip",
+      "bookNameEnglishGuide": "Gospel of Philip",
       "typicalSection": "PS"
     },
-    "166": {
+    "176": {
       "referenceAbbreviation": "GTH",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -2863,10 +2905,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Gospel of Thomas",
+      "bookNameEnglishGuide": "Gospel of Thomas",
       "typicalSection": "PS"
     },
-    "167": {
+    "177": {
       "referenceAbbreviation": "GJU",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -2882,10 +2924,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Gospel of Judas",
+      "bookNameEnglishGuide": "Gospel of Judas",
       "typicalSection": "PS"
     },
-    "168": {
+    "178": {
       "referenceAbbreviation": "GBA",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -2901,10 +2943,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Gospel of Bartholomew",
+      "bookNameEnglishGuide": "Gospel of Bartholomew",
       "typicalSection": "PS"
     },
-    "169": {
+    "179": {
       "referenceAbbreviation": "AJA",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -2920,10 +2962,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Apocrypha of James / Apocryphal James",
+      "bookNameEnglishGuide": "Apocrypha of James / Apocryphal James",
       "typicalSection": "PS"
     },
-    "170": {
+    "180": {
       "referenceAbbreviation": "WJC",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -2939,10 +2981,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Wisdom of Jesus Christ",
+      "bookNameEnglishGuide": "Wisdom of Jesus Christ",
       "typicalSection": "PS"
     },
-    "180": {
+    "190": {
       "referenceAbbreviation": "TAD",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -2958,10 +3000,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Adam",
+      "bookNameEnglishGuide": "Testament of Adam",
       "typicalSection": "PS"
     },
-    "181": {
+    "191": {
       "referenceAbbreviation": "LAE",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -2977,10 +3019,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Life of Adam and Eve",
+      "bookNameEnglishGuide": "Life of Adam and Eve",
       "typicalSection": "PS"
     },
-    "182": {
+    "192": {
       "referenceAbbreviation": "ASS",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -2996,10 +3038,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Assumption of Moses / Testament of Moses",
+      "bookNameEnglishGuide": "Assumption of Moses / Testament of Moses",
       "typicalSection": "PS"
     },
-    "183": {
+    "193": {
       "referenceAbbreviation": "TSO",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -3015,10 +3057,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Solomon",
+      "bookNameEnglishGuide": "Testament of Solomon",
       "typicalSection": "PS"
     },
-    "184": {
+    "194": {
       "referenceAbbreviation": "TJB",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -3034,10 +3076,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Job",
+      "bookNameEnglishGuide": "Testament of Job",
       "typicalSection": "PS"
     },
-    "185": {
+    "195": {
       "referenceAbbreviation": "MAI",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -3053,10 +3095,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Martyrdom and Ascension of Isaiah",
+      "bookNameEnglishGuide": "Martyrdom and Ascension of Isaiah",
       "typicalSection": "PS"
     },
-    "186": {
+    "196": {
       "referenceAbbreviation": "AEZ",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -3072,10 +3114,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Apocrypha of Ezekiel / Apocryphon of Ezekiel",
+      "bookNameEnglishGuide": "Apocrypha of Ezekiel / Apocryphon of Ezekiel",
       "typicalSection": "PS"
     },
-    "187": {
+    "197": {
       "referenceAbbreviation": "EZT",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -3091,10 +3133,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ezekiel the Tragedian",
+      "bookNameEnglishGuide": "Ezekiel the Tragedian",
       "typicalSection": "PS"
     },
-    "188": {
+    "198": {
       "referenceAbbreviation": "EUP",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -3110,10 +3152,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Eupolemus",
+      "bookNameEnglishGuide": "Eupolemus",
       "typicalSection": "PS"
     },
-    "189": {
+    "199": {
       "referenceAbbreviation": "PEU",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -3129,10 +3171,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Pseudo of Eupolemus / Pseudo-Eupolemus",
+      "bookNameEnglishGuide": "Pseudo of Eupolemus / Pseudo-Eupolemus",
       "typicalSection": "PS"
     },
-    "190": {
+    "200": {
       "referenceAbbreviation": "VAM",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -3148,10 +3190,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Visions of Amram",
+      "bookNameEnglishGuide": "Visions of Amram",
       "typicalSection": "PS"
     },
-    "191": {
+    "201": {
       "referenceAbbreviation": "LAR",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -3167,10 +3209,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Letter of Aristeas / Epistle of Aristeas",
+      "bookNameEnglishGuide": "Letter of Aristeas / Epistle of Aristeas",
       "typicalSection": "PS"
     },
-    "192": {
+    "202": {
       "referenceAbbreviation": "ARI",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -3186,10 +3228,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Aristeas the Exegete",
+      "bookNameEnglishGuide": "Aristeas the Exegete",
       "typicalSection": "PS"
     },
-    "193": {
+    "203": {
       "referenceAbbreviation": "ABL",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -3205,10 +3247,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Aristobulus",
+      "bookNameEnglishGuide": "Aristobulus",
       "typicalSection": "PS"
     },
-    "194": {
+    "204": {
       "referenceAbbreviation": "ART",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -3224,10 +3266,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Artapanus",
+      "bookNameEnglishGuide": "Artapanus",
       "typicalSection": "PS"
     },
-    "195": {
+    "205": {
       "referenceAbbreviation": "CLM",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -3243,10 +3285,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Cleodemus Malchus",
+      "bookNameEnglishGuide": "Cleodemus Malchus",
       "typicalSection": "PS"
     },
-    "196": {
+    "206": {
       "referenceAbbreviation": "ELM",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -3262,10 +3304,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Eldad and Modad",
+      "bookNameEnglishGuide": "Eldad and Modad",
       "typicalSection": "PS"
     },
-    "197": {
+    "207": {
       "referenceAbbreviation": "HRE",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -3281,10 +3323,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "History of the Rechabites",
+      "bookNameEnglishGuide": "History of the Rechabites",
       "typicalSection": "PS"
     },
-    "198": {
+    "208": {
       "referenceAbbreviation": "LPR",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -3300,10 +3342,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Lives of the Prophets",
+      "bookNameEnglishGuide": "Lives of the Prophets",
       "typicalSection": "PS"
     },
-    "199": {
+    "209": {
       "referenceAbbreviation": "EPL",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -3319,10 +3361,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Philo the Epic Poet",
+      "bookNameEnglishGuide": "Philo the Epic Poet",
       "typicalSection": "PS"
     },
-    "200": {
+    "210": {
       "referenceAbbreviation": "TEO",
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -3338,7 +3380,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Theodotus",
+      "bookNameEnglishGuide": "Theodotus",
       "typicalSection": "PS"
     },
     "250": {
@@ -3357,7 +3399,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testaments of the Twelve Patriarchs",
+      "bookNameEnglishGuide": "Testaments of the Twelve Patriarchs",
       "typicalSection": "PS"
     },
     "251": {
@@ -3376,7 +3418,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Asher",
+      "bookNameEnglishGuide": "Testament of Asher",
       "typicalSection": "PS"
     },
     "252": {
@@ -3395,7 +3437,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Benjamin",
+      "bookNameEnglishGuide": "Testament of Benjamin",
       "typicalSection": "PS"
     },
     "253": {
@@ -3414,7 +3456,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Dan",
+      "bookNameEnglishGuide": "Testament of Dan",
       "typicalSection": "PS"
     },
     "254": {
@@ -3433,7 +3475,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Gad",
+      "bookNameEnglishGuide": "Testament of Gad",
       "typicalSection": "PS"
     },
     "255": {
@@ -3452,7 +3494,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Issachar",
+      "bookNameEnglishGuide": "Testament of Issachar",
       "typicalSection": "PS"
     },
     "256": {
@@ -3471,7 +3513,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Joseph",
+      "bookNameEnglishGuide": "Testament of Joseph",
       "typicalSection": "PS"
     },
     "257": {
@@ -3490,7 +3532,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Judah",
+      "bookNameEnglishGuide": "Testament of Judah",
       "typicalSection": "PS"
     },
     "258": {
@@ -3509,7 +3551,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Levi",
+      "bookNameEnglishGuide": "Testament of Levi",
       "typicalSection": "PS"
     },
     "259": {
@@ -3528,7 +3570,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Naphtali",
+      "bookNameEnglishGuide": "Testament of Naphtali",
       "typicalSection": "PS"
     },
     "260": {
@@ -3547,7 +3589,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Reuben",
+      "bookNameEnglishGuide": "Testament of Reuben",
       "typicalSection": "PS"
     },
     "261": {
@@ -3566,7 +3608,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Simeon",
+      "bookNameEnglishGuide": "Testament of Simeon",
       "typicalSection": "PS"
     },
     "262": {
@@ -3585,7 +3627,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Zebulun",
+      "bookNameEnglishGuide": "Testament of Zebulun",
       "typicalSection": "PS"
     },
     "270": {
@@ -3604,7 +3646,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Josephus Jewish War VI",
+      "bookNameEnglishGuide": "Josephus Jewish War VI",
       "typicalSection": "PS"
     },
     "280": {
@@ -3623,7 +3665,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Shepherd of Hermas",
+      "bookNameEnglishGuide": "Shepherd of Hermas",
       "typicalSection": "PS"
     },
     "281": {
@@ -3642,7 +3684,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Shepherd of Hermas Mandates",
+      "bookNameEnglishGuide": "Shepherd of Hermas Mandates",
       "typicalSection": "PS"
     },
     "282": {
@@ -3661,7 +3703,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Shepherd of Hermas Similitudes",
+      "bookNameEnglishGuide": "Shepherd of Hermas Similitudes",
       "typicalSection": "PS"
     },
     "283": {
@@ -3680,7 +3722,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Shepherd of Hermas Visions",
+      "bookNameEnglishGuide": "Shepherd of Hermas Visions",
       "typicalSection": "PS"
     },
     "290": {
@@ -3699,7 +3741,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ignatius to the Ephesians",
+      "bookNameEnglishGuide": "Ignatius to the Ephesians",
       "typicalSection": "PS"
     },
     "291": {
@@ -3718,7 +3760,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ignatius to the Magnesians",
+      "bookNameEnglishGuide": "Ignatius to the Magnesians",
       "typicalSection": "PS"
     },
     "292": {
@@ -3737,7 +3779,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ignatius to the Trallians",
+      "bookNameEnglishGuide": "Ignatius to the Trallians",
       "typicalSection": "PS"
     },
     "293": {
@@ -3756,7 +3798,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ignatius to the Romans",
+      "bookNameEnglishGuide": "Ignatius to the Romans",
       "typicalSection": "PS"
     },
     "294": {
@@ -3775,7 +3817,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ignatius to the Philadelphians",
+      "bookNameEnglishGuide": "Ignatius to the Philadelphians",
       "typicalSection": "PS"
     },
     "295": {
@@ -3794,7 +3836,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ignatius to the Smyrnaeans",
+      "bookNameEnglishGuide": "Ignatius to the Smyrnaeans",
       "typicalSection": "PS"
     },
     "296": {
@@ -3813,7 +3855,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ignatius to Polycarp",
+      "bookNameEnglishGuide": "Ignatius to Polycarp",
       "typicalSection": "PS"
     },
     "297": {
@@ -3832,7 +3874,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Polycarp to the Philippians",
+      "bookNameEnglishGuide": "Polycarp to the Philippians",
       "typicalSection": "PS"
     },
     "298": {
@@ -3851,7 +3893,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Martydom of Polycarp",
+      "bookNameEnglishGuide": "Martydom of Polycarp",
       "typicalSection": "PS"
     },
     "300": {
@@ -3870,7 +3912,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Diognetus",
+      "bookNameEnglishGuide": "Diognetus",
       "typicalSection": "PS"
     },
     "301": {
@@ -3889,7 +3931,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Apostles' Creed",
+      "bookNameEnglishGuide": "Apostles' Creed",
       "typicalSection": "PS"
     },
     "302": {
@@ -3908,7 +3950,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Fragments of Papias",
+      "bookNameEnglishGuide": "Fragments of Papias",
       "typicalSection": "PS"
     },
     "303": {
@@ -3927,7 +3969,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Reliques of the Elders",
+      "bookNameEnglishGuide": "Reliques of the Elders",
       "typicalSection": "PS"
     },
     "304": {
@@ -3946,7 +3988,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Fragment of Quadratus",
+      "bookNameEnglishGuide": "Fragment of Quadratus",
       "typicalSection": "PS"
     },
     "310": {
@@ -3965,7 +4007,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Tatian / Tatian's Diatessaron / Diatessaron",
+      "bookNameEnglishGuide": "Tatian / Tatian's Diatessaron / Diatessaron",
       "typicalSection": "PS"
     },
     "600": {
@@ -3990,7 +4032,7 @@
         "NUM",
         "DEU"
       ],
-      "nameEnglish": "Books of Moses",
+      "bookNameEnglishGuide": "Books of Moses",
       "typicalSection": "OT"
     },
     "610": {
@@ -4012,7 +4054,7 @@
         "SA1",
         "SA2"
       ],
-      "nameEnglish": "Samuel",
+      "bookNameEnglishGuide": "Samuel",
       "typicalSection": "OT"
     },
     "620": {
@@ -4034,7 +4076,7 @@
         "KI1",
         "KI2"
       ],
-      "nameEnglish": "Kings",
+      "bookNameEnglishGuide": "Kings",
       "typicalSection": "OT"
     },
     "625": {
@@ -4060,7 +4102,7 @@
         "KI1",
         "KI2"
       ],
-      "nameEnglish": "Samuel-Kings",
+      "bookNameEnglishGuide": "Samuel-Kings",
       "typicalSection": "NT"
     },
     "630": {
@@ -4082,7 +4124,7 @@
         "CH1",
         "CH2"
       ],
-      "nameEnglish": "Chronicles",
+      "bookNameEnglishGuide": "Chronicles",
       "typicalSection": "OT"
     },
     "640": {
@@ -4104,7 +4146,7 @@
         "EZR",
         "NEH"
       ],
-      "nameEnglish": "Ezra-Nehemiah / 1 Esdras",
+      "bookNameEnglishGuide": "Ezra-Nehemiah / 1 Esdras",
       "typicalSection": "OT"
     },
     "650": {
@@ -4122,8 +4164,11 @@
       "DrupalBibleAbbreviation": null,
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
-      "possibleAlternativeBooks": null,
-      "nameEnglish": "Twelve Prophets",
+      "possibleAlternativeBooks": [
+        "EZR",
+        "NEH"
+      ],
+      "bookNameEnglishGuide": "Twelve Prophets",
       "typicalSection": "OT"
     },
     "690": {
@@ -4145,7 +4190,7 @@
         "LUK",
         "ACT"
       ],
-      "nameEnglish": "Luke-Acts",
+      "bookNameEnglishGuide": "Luke-Acts",
       "typicalSection": "NT"
     },
     "700": {
@@ -4164,7 +4209,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Generic front matter",
+      "bookNameEnglishGuide": "Generic front matter",
       "typicalSection": "FRT"
     },
     "705": {
@@ -4183,7 +4228,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Preface",
+      "bookNameEnglishGuide": "Preface",
       "typicalSection": "FRT"
     },
     "710": {
@@ -4202,7 +4247,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Acknowledgements",
+      "bookNameEnglishGuide": "Acknowledgements",
       "typicalSection": "FRT"
     },
     "715": {
@@ -4221,7 +4266,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Introduction",
+      "bookNameEnglishGuide": "Introduction",
       "typicalSection": "FRT"
     },
     "720": {
@@ -4240,7 +4285,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Table of Contents",
+      "bookNameEnglishGuide": "Table of Contents",
       "typicalSection": "FRT"
     },
     "725": {
@@ -4259,7 +4304,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Glossary",
+      "bookNameEnglishGuide": "Glossary",
       "typicalSection": "BAK"
     },
     "730": {
@@ -4278,7 +4323,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Concordance",
+      "bookNameEnglishGuide": "Concordance",
       "typicalSection": "BAK"
     },
     "735": {
@@ -4297,7 +4342,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Topical Concordance",
+      "bookNameEnglishGuide": "Topical Concordance",
       "typicalSection": "BAK"
     },
     "740": {
@@ -4316,7 +4361,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Names Index",
+      "bookNameEnglishGuide": "Names Index",
       "typicalSection": "BAK"
     },
     "745": {
@@ -4335,7 +4380,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Places Index",
+      "bookNameEnglishGuide": "Places Index",
       "typicalSection": "BAK"
     },
     "750": {
@@ -4354,7 +4399,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Maps",
+      "bookNameEnglishGuide": "Maps",
       "typicalSection": "BAK"
     },
     "755": {
@@ -4373,7 +4418,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Thematic Index",
+      "bookNameEnglishGuide": "Thematic Index",
       "typicalSection": "BAK"
     },
     "760": {
@@ -4392,7 +4437,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Generic back matter",
+      "bookNameEnglishGuide": "Generic back matter",
       "typicalSection": "BAK"
     },
     "870": {
@@ -4411,7 +4456,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Unspecified other OTH",
+      "bookNameEnglishGuide": "Unspecified other OTH",
       "typicalSection": "BAK"
     },
     "880": {
@@ -4430,7 +4475,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Spelling dictionary / word list",
+      "bookNameEnglishGuide": "Spelling dictionary / word list",
       "typicalSection": "BAK"
     },
     "882": {
@@ -4449,7 +4494,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": " Word definitions dictionary",
+      "bookNameEnglishGuide": "Word definitions dictionary",
       "typicalSection": "BAK"
     },
     "884": {
@@ -4468,7 +4513,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Hyphenation dictionary",
+      "bookNameEnglishGuide": "Hyphenation dictionary",
       "typicalSection": "BAK"
     },
     "888": {
@@ -4487,7 +4532,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Strong's Database",
+      "bookNameEnglishGuide": "Strong's Database",
       "typicalSection": "BAK"
     },
     "890": {
@@ -4506,7 +4551,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Semantic Database",
+      "bookNameEnglishGuide": "Semantic Database",
       "typicalSection": "BAK"
     },
     "800": {
@@ -4525,7 +4570,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Unspecified extra XXA",
+      "bookNameEnglishGuide": "Unspecified extra XXA",
       "typicalSection": "BAK"
     },
     "810": {
@@ -4544,7 +4589,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Unspecified extra XXB",
+      "bookNameEnglishGuide": "Unspecified extra XXB",
       "typicalSection": "BAK"
     },
     "820": {
@@ -4563,7 +4608,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Unspecified extra XXC",
+      "bookNameEnglishGuide": "Unspecified extra XXC",
       "typicalSection": "BAK"
     },
     "830": {
@@ -4582,7 +4627,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Unspecified extra XXD",
+      "bookNameEnglishGuide": "Unspecified extra XXD",
       "typicalSection": "BAK"
     },
     "840": {
@@ -4601,7 +4646,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Unspecified extra XXE",
+      "bookNameEnglishGuide": "Unspecified extra XXE",
       "typicalSection": "BAK"
     },
     "850": {
@@ -4620,7 +4665,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Unspecified extra XXF",
+      "bookNameEnglishGuide": "Unspecified extra XXF",
       "typicalSection": "BAK"
     },
     "860": {
@@ -4639,7 +4684,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Unspecified extra XXG",
+      "bookNameEnglishGuide": "Unspecified extra XXG",
       "typicalSection": "BAK"
     },
     "997": {
@@ -4658,7 +4703,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "50",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Open Bible Stories",
+      "bookNameEnglishGuide": "Open Bible Stories",
       "typicalSection": "???"
     },
     "998": {
@@ -4677,7 +4722,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "TEST",
+      "bookNameEnglishGuide": "TEST",
       "typicalSection": "???"
     },
     "999": {
@@ -4696,7 +4741,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "UNKNOWN",
+      "bookNameEnglishGuide": "UNKNOWN",
       "typicalSection": "???"
     }
   },
@@ -4717,7 +4762,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "50",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Genesis / 1 Moses",
+      "bookNameEnglishGuide": "Genesis / 1 Moses",
       "typicalSection": "OT"
     },
     "EXO": {
@@ -4736,7 +4781,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "40",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Exodus / 2 Moses",
+      "bookNameEnglishGuide": "Exodus / 2 Moses",
       "typicalSection": "OT"
     },
     "LEV": {
@@ -4755,7 +4800,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "27",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Leviticus / 3 Moses",
+      "bookNameEnglishGuide": "Leviticus / 3 Moses",
       "typicalSection": "OT"
     },
     "NUM": {
@@ -4774,7 +4819,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "36",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Numbers / 4 Moses",
+      "bookNameEnglishGuide": "Numbers / 4 Moses",
       "typicalSection": "OT"
     },
     "DEU": {
@@ -4793,7 +4838,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "34",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Deuteronomy / 5 Moses",
+      "bookNameEnglishGuide": "Deuteronomy / 5 Moses",
       "typicalSection": "OT"
     },
     "JOS": {
@@ -4814,7 +4859,7 @@
       "possibleAlternativeBooks": [
         "JSA"
       ],
-      "nameEnglish": "Joshua / Joshua son of Nun",
+      "bookNameEnglishGuide": "Joshua / Joshua son of Nun",
       "typicalSection": "OT"
     },
     "JDG": {
@@ -4835,7 +4880,7 @@
       "possibleAlternativeBooks": [
         "JGB"
       ],
-      "nameEnglish": "Judges",
+      "bookNameEnglishGuide": "Judges",
       "typicalSection": "OT"
     },
     "RUT": {
@@ -4854,7 +4899,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "4",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ruth",
+      "bookNameEnglishGuide": "Ruth",
       "typicalSection": "OT"
     },
     "SA1": {
@@ -4873,7 +4918,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "31",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "1 Samuel / 1 Kingdoms / 1 Kings",
+      "bookNameEnglishGuide": "1 Samuel / 1 Kingdoms / 1 Kings",
       "typicalSection": "OT"
     },
     "SA2": {
@@ -4892,7 +4937,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "24",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 Samuel / 2 Kingdoms / 2 Kings",
+      "bookNameEnglishGuide": "2 Samuel / 2 Kingdoms / 2 Kings",
       "typicalSection": "OT"
     },
     "KI1": {
@@ -4911,7 +4956,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "22",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "1 Kings / 3 Kingdoms / 3 Kings",
+      "bookNameEnglishGuide": "1 Kings / 3 Kingdoms / 3 Kings",
       "typicalSection": "OT"
     },
     "KI2": {
@@ -4930,7 +4975,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "25",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 Kings / 4 Kingdoms / 4 Kings",
+      "bookNameEnglishGuide": "2 Kings / 4 Kingdoms / 4 Kings",
       "typicalSection": "OT"
     },
     "CH1": {
@@ -4949,7 +4994,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "29",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "1 Chronicles / 1 Paralipomenon",
+      "bookNameEnglishGuide": "1 Chronicles / 1 Paralipomenon",
       "typicalSection": "OT"
     },
     "CH2": {
@@ -4968,7 +5013,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "36,37",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 Chronicles / 2 Paralipomenon",
+      "bookNameEnglishGuide": "2 Chronicles / 2 Paralipomenon",
       "typicalSection": "OT"
     },
     "EZR": {
@@ -4989,7 +5034,7 @@
       "possibleAlternativeBooks": [
         "EZN"
       ],
-      "nameEnglish": "Ezra / 1 Ezra / 1 Esdras",
+      "bookNameEnglishGuide": "Ezra / 1 Ezra / 1 Esdras",
       "typicalSection": "OT"
     },
     "NEH": {
@@ -5010,7 +5055,7 @@
       "possibleAlternativeBooks": [
         "EZN"
       ],
-      "nameEnglish": "Nehemiah / 2 Ezra / 2 Esdras",
+      "bookNameEnglishGuide": "Nehemiah / 2 Ezra / 2 Esdras",
       "typicalSection": "OT"
     },
     "EST": {
@@ -5033,7 +5078,7 @@
         "ESA",
         "ESC"
       ],
-      "nameEnglish": "Esther",
+      "bookNameEnglishGuide": "Esther",
       "typicalSection": "OT"
     },
     "JOB": {
@@ -5052,7 +5097,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "42",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Job",
+      "bookNameEnglishGuide": "Job",
       "typicalSection": "OT"
     },
     "PSA": {
@@ -5077,7 +5122,7 @@
         "PB4",
         "PB5"
       ],
-      "nameEnglish": "Psalms / Gallicanum / Psalms A",
+      "bookNameEnglishGuide": "Psalms / Gallicanum / Psalms A",
       "typicalSection": "OT"
     },
     "PRO": {
@@ -5096,7 +5141,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "31",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Proverbs",
+      "bookNameEnglishGuide": "Proverbs",
       "typicalSection": "OT"
     },
     "ECC": {
@@ -5115,7 +5160,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "12",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ecclesiastes / Qoholeth",
+      "bookNameEnglishGuide": "קֹהֶלֶת / Qoholeth",
       "typicalSection": "OT"
     },
     "SNG": {
@@ -5134,7 +5179,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "8",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Song of Solomon / Song of Songs / Canticles / Canticle of Canticles",
+      "bookNameEnglishGuide": "Song of Solomon / Song of Songs / Canticles / Canticle of Canticles",
       "typicalSection": "OT"
     },
     "ISA": {
@@ -5153,7 +5198,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "66",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Isaiah",
+      "bookNameEnglishGuide": "Isaiah",
       "typicalSection": "OT"
     },
     "JER": {
@@ -5172,7 +5217,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "52",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Jeremiah",
+      "bookNameEnglishGuide": "Jeremiah",
       "typicalSection": "OT"
     },
     "LAM": {
@@ -5191,7 +5236,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "5",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Lamentations / Lamentations of Jeremiah",
+      "bookNameEnglishGuide": "Lamentations / Lamentations of Jeremiah",
       "typicalSection": "OT"
     },
     "EZE": {
@@ -5210,7 +5255,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "48",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ezekiel",
+      "bookNameEnglishGuide": "Ezekiel",
       "typicalSection": "OT"
     },
     "DAN": {
@@ -5234,7 +5279,7 @@
         "DNC",
         "DNT"
       ],
-      "nameEnglish": "Daniel",
+      "bookNameEnglishGuide": "Daniel",
       "typicalSection": "OT"
     },
     "HOS": {
@@ -5253,7 +5298,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "14",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Hosea",
+      "bookNameEnglishGuide": "Hosea",
       "typicalSection": "OT"
     },
     "JOL": {
@@ -5272,7 +5317,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "3,4",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Joel",
+      "bookNameEnglishGuide": "Joel",
       "typicalSection": "OT"
     },
     "AMO": {
@@ -5291,7 +5336,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "9",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Amos",
+      "bookNameEnglishGuide": "Amos",
       "typicalSection": "OT"
     },
     "OBA": {
@@ -5310,7 +5355,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Obadiah",
+      "bookNameEnglishGuide": "Obadiah",
       "typicalSection": "OT"
     },
     "JNA": {
@@ -5329,12 +5374,12 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "4",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Jonah",
+      "bookNameEnglishGuide": "Jonah",
       "typicalSection": "OT"
     },
     "MIC": {
       "referenceNumber": 33,
-      "SBLAbbreviation": "Nic",
+      "SBLAbbreviation": "Mic",
       "OSISAbbreviation": "Mic",
       "SwordAbbreviation": "Mic",
       "CCELNumberString": "33",
@@ -5348,7 +5393,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "7",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Micah",
+      "bookNameEnglishGuide": "Micah",
       "typicalSection": "OT"
     },
     "NAH": {
@@ -5367,7 +5412,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "3",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Nahum",
+      "bookNameEnglishGuide": "Nahum",
       "typicalSection": "OT"
     },
     "HAB": {
@@ -5386,7 +5431,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "3",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Habakkuk",
+      "bookNameEnglishGuide": "Habakkuk",
       "typicalSection": "OT"
     },
     "ZEP": {
@@ -5405,7 +5450,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "3",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Zephaniah",
+      "bookNameEnglishGuide": "Zephaniah",
       "typicalSection": "OT"
     },
     "HAG": {
@@ -5424,7 +5469,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "2",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Haggai",
+      "bookNameEnglishGuide": "Haggai",
       "typicalSection": "OT"
     },
     "ZEC": {
@@ -5443,7 +5488,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "14",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Zechariah",
+      "bookNameEnglishGuide": "Zechariah",
       "typicalSection": "OT"
     },
     "MAL": {
@@ -5462,7 +5507,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "4,3",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Malachi",
+      "bookNameEnglishGuide": "Malachi",
       "typicalSection": "OT"
     },
     "MAT": {
@@ -5481,7 +5526,7 @@
       "ByzantineAbbreviation": "MT",
       "numExpectedChapters": "28",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Matthew",
+      "bookNameEnglishGuide": "Matthew",
       "typicalSection": "NT"
     },
     "MRK": {
@@ -5500,7 +5545,7 @@
       "ByzantineAbbreviation": "MR",
       "numExpectedChapters": "16",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Mark",
+      "bookNameEnglishGuide": "Mark",
       "typicalSection": "NT"
     },
     "LUK": {
@@ -5521,7 +5566,7 @@
       "possibleAlternativeBooks": [
         "LKA"
       ],
-      "nameEnglish": "Luke",
+      "bookNameEnglishGuide": "Luke",
       "typicalSection": "NT"
     },
     "JHN": {
@@ -5540,7 +5585,7 @@
       "ByzantineAbbreviation": "JOH",
       "numExpectedChapters": "21",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "John",
+      "bookNameEnglishGuide": "John",
       "typicalSection": "NT"
     },
     "ACT": {
@@ -5561,7 +5606,7 @@
       "possibleAlternativeBooks": [
         "LKA"
       ],
-      "nameEnglish": "Acts / Acts of the Apostles",
+      "bookNameEnglishGuide": "Acts / Acts of the Apostles",
       "typicalSection": "NT"
     },
     "ROM": {
@@ -5580,7 +5625,7 @@
       "ByzantineAbbreviation": "RO",
       "numExpectedChapters": "16",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Romans",
+      "bookNameEnglishGuide": "Romans",
       "typicalSection": "NT"
     },
     "CO1": {
@@ -5599,7 +5644,7 @@
       "ByzantineAbbreviation": "1CO",
       "numExpectedChapters": "16",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "1 Corinthians",
+      "bookNameEnglishGuide": "1 Corinthians",
       "typicalSection": "NT"
     },
     "CO2": {
@@ -5618,7 +5663,7 @@
       "ByzantineAbbreviation": "2CO",
       "numExpectedChapters": "13",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 Corinthians",
+      "bookNameEnglishGuide": "2 Corinthians",
       "typicalSection": "NT"
     },
     "GAL": {
@@ -5637,7 +5682,7 @@
       "ByzantineAbbreviation": "GA",
       "numExpectedChapters": "6",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Galatians",
+      "bookNameEnglishGuide": "Galatians",
       "typicalSection": "NT"
     },
     "EPH": {
@@ -5656,7 +5701,7 @@
       "ByzantineAbbreviation": "EPH",
       "numExpectedChapters": "6",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ephesians",
+      "bookNameEnglishGuide": "Ephesians",
       "typicalSection": "NT"
     },
     "PHP": {
@@ -5675,7 +5720,7 @@
       "ByzantineAbbreviation": "PHP",
       "numExpectedChapters": "4",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Philippians",
+      "bookNameEnglishGuide": "Philippians",
       "typicalSection": "NT"
     },
     "COL": {
@@ -5694,7 +5739,7 @@
       "ByzantineAbbreviation": "COL",
       "numExpectedChapters": "4",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Colossians",
+      "bookNameEnglishGuide": "Colossians",
       "typicalSection": "NT"
     },
     "TH1": {
@@ -5713,7 +5758,7 @@
       "ByzantineAbbreviation": "1TH",
       "numExpectedChapters": "5",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "1 Thessalonians",
+      "bookNameEnglishGuide": "1 Thessalonians",
       "typicalSection": "NT"
     },
     "TH2": {
@@ -5732,7 +5777,7 @@
       "ByzantineAbbreviation": "2TH",
       "numExpectedChapters": "3",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 Thessalonians",
+      "bookNameEnglishGuide": "2 Thessalonians",
       "typicalSection": "NT"
     },
     "TI1": {
@@ -5751,7 +5796,7 @@
       "ByzantineAbbreviation": "1TI",
       "numExpectedChapters": "6",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "1 Timothy",
+      "bookNameEnglishGuide": "1 Timothy",
       "typicalSection": "NT"
     },
     "TI2": {
@@ -5770,7 +5815,7 @@
       "ByzantineAbbreviation": "2TI",
       "numExpectedChapters": "4",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 Timothy",
+      "bookNameEnglishGuide": "2 Timothy",
       "typicalSection": "NT"
     },
     "TIT": {
@@ -5789,7 +5834,7 @@
       "ByzantineAbbreviation": "TIT",
       "numExpectedChapters": "3",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Titus",
+      "bookNameEnglishGuide": "Titus",
       "typicalSection": "NT"
     },
     "PHM": {
@@ -5808,7 +5853,7 @@
       "ByzantineAbbreviation": "PHM",
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Philemon",
+      "bookNameEnglishGuide": "Philemon",
       "typicalSection": "NT"
     },
     "HEB": {
@@ -5827,7 +5872,7 @@
       "ByzantineAbbreviation": "HEB",
       "numExpectedChapters": "13",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Hebrews",
+      "bookNameEnglishGuide": "Hebrews",
       "typicalSection": "NT"
     },
     "JAM": {
@@ -5846,7 +5891,7 @@
       "ByzantineAbbreviation": "JAS",
       "numExpectedChapters": "5",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "James / Jacob",
+      "bookNameEnglishGuide": "James / Jacob",
       "typicalSection": "NT"
     },
     "PE1": {
@@ -5865,7 +5910,7 @@
       "ByzantineAbbreviation": "1PE",
       "numExpectedChapters": "5",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "1 Peter",
+      "bookNameEnglishGuide": "1 Peter",
       "typicalSection": "NT"
     },
     "PE2": {
@@ -5884,7 +5929,7 @@
       "ByzantineAbbreviation": "2PE",
       "numExpectedChapters": "3",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 Peter",
+      "bookNameEnglishGuide": "2 Peter",
       "typicalSection": "NT"
     },
     "JN1": {
@@ -5903,7 +5948,7 @@
       "ByzantineAbbreviation": "1JO",
       "numExpectedChapters": "5",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "1 John",
+      "bookNameEnglishGuide": "1 John",
       "typicalSection": "NT"
     },
     "JN2": {
@@ -5922,7 +5967,7 @@
       "ByzantineAbbreviation": "2JO",
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 John",
+      "bookNameEnglishGuide": "2 John",
       "typicalSection": "NT"
     },
     "JN3": {
@@ -5941,7 +5986,7 @@
       "ByzantineAbbreviation": "3JO",
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "3 John",
+      "bookNameEnglishGuide": "3 John",
       "typicalSection": "NT"
     },
     "JDE": {
@@ -5960,7 +6005,7 @@
       "ByzantineAbbreviation": "JUDE",
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Jude",
+      "bookNameEnglishGuide": "Jude / Judas",
       "typicalSection": "NT"
     },
     "REV": {
@@ -5979,7 +6024,7 @@
       "ByzantineAbbreviation": "RE",
       "numExpectedChapters": "22",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Revelation / Revelation of John / Apocalypse of St. John",
+      "bookNameEnglishGuide": "Revelation / Revelation of John / Apocalypse of St. John",
       "typicalSection": "NT"
     },
     "ESG": {
@@ -6002,7 +6047,7 @@
         "ESA",
         "ESC"
       ],
-      "nameEnglish": "Greek Esther / Esther (Greek)",
+      "bookNameEnglishGuide": "Greek Esther / Esther (Greek)",
       "typicalSection": "OT"
     },
     "ESA": {
@@ -6025,7 +6070,7 @@
         "ESG",
         "ESC"
       ],
-      "nameEnglish": "Greek additions to Esther / Esther (additions)",
+      "bookNameEnglishGuide": "Greek additions to Esther / Esther (additions)",
       "typicalSection": "OT"
     },
     "ESC": {
@@ -6048,7 +6093,7 @@
         "ESG",
         "ESA"
       ],
-      "nameEnglish": "Combined Hebrew/Greek Esther / Esther (combined)",
+      "bookNameEnglishGuide": "Combined Hebrew/Greek Esther / Esther (combined)",
       "typicalSection": "OT"
     },
     "DNG": {
@@ -6072,7 +6117,7 @@
         "DNC",
         "DNT"
       ],
-      "nameEnglish": "Greek Daniel / Daniel (Greek)",
+      "bookNameEnglishGuide": "Greek Daniel / Daniel (Greek)",
       "typicalSection": "OT"
     },
     "DNA": {
@@ -6096,7 +6141,7 @@
         "DNC",
         "DNT"
       ],
-      "nameEnglish": "Greek additions to Daniel / Daniel (additions)",
+      "bookNameEnglishGuide": "Greek additions to Daniel / Daniel (additions)",
       "typicalSection": "OT"
     },
     "DNC": {
@@ -6120,7 +6165,7 @@
         "DNA",
         "DNT"
       ],
-      "nameEnglish": "Combined Hebrew/Greek Daniel / Daniel (combined)",
+      "bookNameEnglishGuide": "Combined Hebrew/Greek Daniel / Daniel (combined)",
       "typicalSection": "OT"
     },
     "BEL": {
@@ -6141,7 +6186,7 @@
       "possibleAlternativeBooks": [
         "BLT"
       ],
-      "nameEnglish": "Bel and the dragon",
+      "bookNameEnglishGuide": "Bel and the dragon",
       "typicalSection": "DC"
     },
     "SUS": {
@@ -6162,7 +6207,7 @@
       "possibleAlternativeBooks": [
         "SST"
       ],
-      "nameEnglish": "Susanna",
+      "bookNameEnglishGuide": "Susanna",
       "typicalSection": "DC"
     },
     "JDT": {
@@ -6181,7 +6226,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "16",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Judith",
+      "bookNameEnglishGuide": "Judith",
       "typicalSection": "DC"
     },
     "MAN": {
@@ -6200,7 +6245,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Prayer of Manasses / Prayer of Manasseh",
+      "bookNameEnglishGuide": "Prayer of Manasses / Prayer of Manasseh",
       "typicalSection": "DC"
     },
     "SIR": {
@@ -6219,7 +6264,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "51,52",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Sirach / Ecclesiasticus / Wisdom of Ben Sira / Wisdom of Jesus son of Sirach",
+      "bookNameEnglishGuide": "Sirach / Ecclesiasticus / Wisdom of Ben Sira / Wisdom of Jesus son of Sirach",
       "typicalSection": "DC"
     },
     "SIP": {
@@ -6238,7 +6283,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Sirach Prologue",
+      "bookNameEnglishGuide": "Sirach Prologue",
       "typicalSection": "DC"
     },
     "TOB": {
@@ -6259,7 +6304,7 @@
       "possibleAlternativeBooks": [
         "TBS"
       ],
-      "nameEnglish": "Tobit / Tobias",
+      "bookNameEnglishGuide": "Tobit / Tobias",
       "typicalSection": "DC"
     },
     "WIS": {
@@ -6278,7 +6323,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "19",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Wisdom / Wisdom of Solomon",
+      "bookNameEnglishGuide": "Wisdom / Wisdom of Solomon",
       "typicalSection": "DC"
     },
     "PAZ": {
@@ -6297,7 +6342,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Prayer of Azariah and the Song of the Three Young Men / Prayer of Azariah / Song of the Three Young Men / Song of the Three Children",
+      "bookNameEnglishGuide": "Prayer of Azariah and the Song of the Three Young Men / Prayer of Azariah / Song of the Three Young Men / Song of the Three Children",
       "typicalSection": "DC"
     },
     "GES": {
@@ -6318,7 +6363,7 @@
       "possibleAlternativeBooks": [
         "LES"
       ],
-      "nameEnglish": "Greek Esdras / Greek Ezra / 1 Esdras / 1 Ezra / 2 Ezra / 3 Ezra / 3 Esdras",
+      "bookNameEnglishGuide": "Greek Esdras / Greek Ezra / 1 Esdras / 1 Ezra / 2 Ezra / 3 Ezra / 3 Esdras",
       "typicalSection": "???"
     },
     "LES": {
@@ -6339,7 +6384,7 @@
       "possibleAlternativeBooks": [
         "GES"
       ],
-      "nameEnglish": "Latin Esdras / 2 Esdras / 3 Esdras / 4 Esdras / 4 Ezra",
+      "bookNameEnglishGuide": "Latin Esdras / 2 Esdras / 3 Esdras / 4 Esdras / 4 Ezra",
       "typicalSection": "???"
     },
     "EZA": {
@@ -6358,7 +6403,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "12,13",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Apocalypse of Ezra / Ezra Apocalypse / 4 Ezra / Ezra Shealtiel",
+      "bookNameEnglishGuide": "Apocalypse of Ezra / Ezra Apocalypse / 4 Ezra / Ezra Shealtiel",
       "typicalSection": "???"
     },
     "EZ5": {
@@ -6377,7 +6422,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "2",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "5 Ezra / 3 Esdras / 5 Esdras",
+      "bookNameEnglishGuide": "5 Ezra / 3 Esdras / 5 Esdras",
       "typicalSection": "???"
     },
     "EZ6": {
@@ -6396,7 +6441,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "2",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "6 Ezra / 5 Esdras / 6 Esdras",
+      "bookNameEnglishGuide": "6 Ezra / 5 Esdras / 6 Esdras",
       "typicalSection": "???"
     },
     "RVE": {
@@ -6415,7 +6460,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Revelation of Ezra",
+      "bookNameEnglishGuide": "Revelation of Ezra",
       "typicalSection": "PS"
     },
     "VSE": {
@@ -6434,7 +6479,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Vison of Ezra",
+      "bookNameEnglishGuide": "Vison of Ezra",
       "typicalSection": "PS"
     },
     "LJE": {
@@ -6455,7 +6500,7 @@
       "possibleAlternativeBooks": [
         "LJB"
       ],
-      "nameEnglish": "Letter of Jeremiah / Epistle of Jeremiah",
+      "bookNameEnglishGuide": "Letter of Jeremiah / Epistle of Jeremiah",
       "typicalSection": "DC"
     },
     "BAR": {
@@ -6476,7 +6521,7 @@
       "possibleAlternativeBooks": [
         "LJB"
       ],
-      "nameEnglish": "Baruch / 1 Baruch",
+      "bookNameEnglishGuide": "Baruch / 1 Baruch",
       "typicalSection": "DC"
     },
     "LJB": {
@@ -6497,7 +6542,7 @@
       "possibleAlternativeBooks": [
         "BAR"
       ],
-      "nameEnglish": "Letter of Jeremiah with Baruch / Epistle of Jeremiah with Baruch",
+      "bookNameEnglishGuide": "Letter of Jeremiah with Baruch / Epistle of Jeremiah with Baruch",
       "typicalSection": "DC"
     },
     "BA2": {
@@ -6518,7 +6563,7 @@
       "possibleAlternativeBooks": [
         "LB2"
       ],
-      "nameEnglish": "2 Baruch / Apocalypse of Baruch",
+      "bookNameEnglishGuide": "2 Baruch / Apocalypse of Baruch",
       "typicalSection": "DC"
     },
     "LBA": {
@@ -6539,7 +6584,7 @@
       "possibleAlternativeBooks": [
         "LB2"
       ],
-      "nameEnglish": "Letter of Baruch / Epistle of Baruch",
+      "bookNameEnglishGuide": "Letter of Baruch / Epistle of Baruch",
       "typicalSection": "DC"
     },
     "LB2": {
@@ -6561,7 +6606,7 @@
         "BA2",
         "LBA"
       ],
-      "nameEnglish": "2 Baruch with the Letter of Baruch",
+      "bookNameEnglishGuide": "2 Baruch with the Letter of Baruch",
       "typicalSection": "???"
     },
     "BA3": {
@@ -6580,7 +6625,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "3 Baruch",
+      "bookNameEnglishGuide": "3 Baruch",
       "typicalSection": "???"
     },
     "BA4": {
@@ -6599,7 +6644,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "6,5",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "4 Baruch / Paralipomenon of Jeremiah / Paraleipomena Ieremiou / Rest of the Words of Baruch",
+      "bookNameEnglishGuide": "4 Baruch / Paralipomenon of Jeremiah / Paraleipomena Ieremiou / Rest of the Words of Baruch",
       "typicalSection": "???"
     },
     "JRA": {
@@ -6618,7 +6663,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Additions to Jeremiah / Rest of Jeremiah",
+      "bookNameEnglishGuide": "Additions to Jeremiah / Rest of Jeremiah",
       "typicalSection": "???"
     },
     "PSJ": {
@@ -6637,7 +6682,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Pseudo-Josephus",
+      "bookNameEnglishGuide": "Pseudo-Josephus",
       "typicalSection": "???"
     },
     "MAC": {
@@ -6656,7 +6701,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "31",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Maccabees",
+      "bookNameEnglishGuide": "Maccabees",
       "typicalSection": "DC"
     },
     "MA1": {
@@ -6675,7 +6720,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "16",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "1 Maccabees",
+      "bookNameEnglishGuide": "1 Maccabees",
       "typicalSection": "DC"
     },
     "MA2": {
@@ -6694,7 +6739,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "15",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 Maccabees",
+      "bookNameEnglishGuide": "2 Maccabees",
       "typicalSection": "DC"
     },
     "MA3": {
@@ -6713,7 +6758,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "7",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "3 Maccabees",
+      "bookNameEnglishGuide": "3 Maccabees",
       "typicalSection": "DC"
     },
     "MA4": {
@@ -6732,7 +6777,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "18",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "4 Maccabees",
+      "bookNameEnglishGuide": "4 Maccabees",
       "typicalSection": "DC"
     },
     "MA5": {
@@ -6751,7 +6796,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "5 Maccabees",
+      "bookNameEnglishGuide": "5 Maccabees",
       "typicalSection": "???"
     },
     "MQ1": {
@@ -6770,7 +6815,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "36",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "1 Meqabyan / 1 Makabian / Mekabis of Benjamin",
+      "bookNameEnglishGuide": "1 Meqabyan / 1 Makabian / Mekabis of Benjamin",
       "typicalSection": "???"
     },
     "MQ2": {
@@ -6789,7 +6834,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "20,21",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 Meqabyan / 2 Makabian / Mekabis of Moab",
+      "bookNameEnglishGuide": "2 Meqabyan / 2 Makabian / Mekabis of Moab",
       "typicalSection": "???"
     },
     "MQ3": {
@@ -6808,7 +6853,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "10",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "3 Meqabyan / 3 Makabian",
+      "bookNameEnglishGuide": "3 Meqabyan / 3 Makabian",
       "typicalSection": "???"
     },
     "PB1": {
@@ -6827,7 +6872,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "41",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Psalms Book 1 / Psalms Book I",
+      "bookNameEnglishGuide": "Psalms Book 1 / Psalms Book I",
       "typicalSection": "OT"
     },
     "PB2": {
@@ -6846,7 +6891,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "31",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Psalms Book 2 / Psalms Book II",
+      "bookNameEnglishGuide": "Psalms Book 2 / Psalms Book II",
       "typicalSection": "OT"
     },
     "PB3": {
@@ -6865,7 +6910,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "17",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Psalms Book 3 / Psalms Book III",
+      "bookNameEnglishGuide": "Psalms Book 3 / Psalms Book III",
       "typicalSection": "OT"
     },
     "PB4": {
@@ -6884,7 +6929,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "17",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Psalms Book 4 / Psalms Book IV",
+      "bookNameEnglishGuide": "Psalms Book 4 / Psalms Book IV",
       "typicalSection": "OT"
     },
     "PB5": {
@@ -6903,7 +6948,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "44",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Psalms Book 5 / Psalms Book V",
+      "bookNameEnglishGuide": "Psalms Book 5 / Psalms Book V",
       "typicalSection": "OT"
     },
     "PSB": {
@@ -6922,7 +6967,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "150",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Psalms B / Liturgical Psalms / Metrical Psalms / Alternative Psalms / Grail Psalms",
+      "bookNameEnglishGuide": "Psalms B / Liturgical Psalms / Metrical Psalms / Alternative Psalms / Grail Psalms",
       "typicalSection": "OT+"
     },
     "PS2": {
@@ -6941,7 +6986,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Psalm 151",
+      "bookNameEnglishGuide": "Psalm 151",
       "typicalSection": "OT+"
     },
     "PS3": {
@@ -6960,7 +7005,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "5,4",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Syriac Psalms 152-155 / Five apocryphal Syriac Psalms / Additional Syriac Psalms",
+      "bookNameEnglishGuide": "Syriac Psalms 152-155 / Five apocryphal Syriac Psalms / Additional Syriac Psalms",
       "typicalSection": "???"
     },
     "PSS": {
@@ -6979,7 +7024,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "18",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Additional Psalms of Solomon",
+      "bookNameEnglishGuide": "Additional Psalms of Solomon",
       "typicalSection": "???"
     },
     "LAO": {
@@ -6998,7 +7043,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Letter to the Laodiceans",
+      "bookNameEnglishGuide": "Letter to the Laodiceans",
       "typicalSection": "NT+"
     },
     "ODE": {
@@ -7017,7 +7062,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "14",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Odes / Odae",
+      "bookNameEnglishGuide": "Odes / Odae",
       "typicalSection": "DC"
     },
     "PSO": {
@@ -7036,7 +7081,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Prayer of Solomon",
+      "bookNameEnglishGuide": "Prayer of Solomon",
       "typicalSection": "DC"
     },
     "PJE": {
@@ -7055,7 +7100,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Prayer of Jeremiah",
+      "bookNameEnglishGuide": "Prayer of Jeremiah",
       "typicalSection": "DC"
     },
     "WSI": {
@@ -7074,7 +7119,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Words of Sirach",
+      "bookNameEnglishGuide": "Words of Sirach",
       "typicalSection": "???"
     },
     "COP": {
@@ -7093,7 +7138,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Letter of the Corinthians to Paul / Epistle of the Corinthians to Paul",
+      "bookNameEnglishGuide": "Letter of the Corinthians to Paul / Epistle of the Corinthians to Paul",
       "typicalSection": "NT+"
     },
     "CO3": {
@@ -7112,7 +7157,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "3 Corinthians",
+      "bookNameEnglishGuide": "3 Corinthians",
       "typicalSection": "NT+"
     },
     "EUT": {
@@ -7131,7 +7176,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Prayer of Euthalius",
+      "bookNameEnglishGuide": "Prayer of Euthalius",
       "typicalSection": "NT+"
     },
     "DOJ": {
@@ -7150,7 +7195,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "1",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Dormition of John",
+      "bookNameEnglishGuide": "Dormition of John",
       "typicalSection": "NT+"
     },
     "JUB": {
@@ -7169,7 +7214,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "34",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Jubilees",
+      "bookNameEnglishGuide": "Jubilees",
       "typicalSection": "DC"
     },
     "ENO": {
@@ -7188,7 +7233,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "42",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Enoch / 1 Enoch / Ethiopic Apocalypse of Enoch",
+      "bookNameEnglishGuide": "Enoch / 1 Enoch / Ethiopic Apocalypse of Enoch",
       "typicalSection": "???"
     },
     "EN2": {
@@ -7207,7 +7252,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 Enoch",
+      "bookNameEnglishGuide": "2 Enoch",
       "typicalSection": "???"
     },
     "REP": {
@@ -7226,7 +7271,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "6",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Reproof / Tegsas / Tegsats / Taagsas",
+      "bookNameEnglishGuide": "Reproof / Tegsas / Tegsats / Taagsas",
       "typicalSection": "???"
     },
     "LBB": {
@@ -7245,7 +7290,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Letter of Barnabas / Epistle of Barnabas / Barnabas",
+      "bookNameEnglishGuide": "Letter of Barnabas / Epistle of Barnabas / Barnabas",
       "typicalSection": "???"
     },
     "CL1": {
@@ -7264,7 +7309,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "65",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "1 Clement",
+      "bookNameEnglishGuide": "1 Clement",
       "typicalSection": "???"
     },
     "CL2": {
@@ -7283,7 +7328,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "20",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "2 Clement",
+      "bookNameEnglishGuide": "2 Clement",
       "typicalSection": "???"
     },
     "DID": {
@@ -7302,7 +7347,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "16",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Didache",
+      "bookNameEnglishGuide": "Didache",
       "typicalSection": "???"
     },
     "JSA": {
@@ -7323,11 +7368,53 @@
       "possibleAlternativeBooks": [
         "JOS"
       ],
-      "nameEnglish": "Joshua A",
+      "bookNameEnglishGuide": "Joshua A",
+      "typicalSection": "???"
+    },
+    "JSB": {
+      "referenceNumber": 155,
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": "JoshB",
+      "CCELNumberString": null,
+      "USFMAbbreviation": "JsB",
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": "24",
+      "possibleAlternativeBooks": [
+        "JOS"
+      ],
+      "bookNameEnglishGuide": "Joshua B",
+      "typicalSection": "???"
+    },
+    "JGA": {
+      "referenceNumber": 156,
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": "JudgA",
+      "CCELNumberString": null,
+      "USFMAbbreviation": "JdA",
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": "21",
+      "possibleAlternativeBooks": [
+        "JDG"
+      ],
+      "bookNameEnglishGuide": "Judges A",
       "typicalSection": "???"
     },
     "JGB": {
-      "referenceNumber": 155,
+      "referenceNumber": 157,
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
       "SwordAbbreviation": "JudgB",
@@ -7344,11 +7431,11 @@
       "possibleAlternativeBooks": [
         "JDG"
       ],
-      "nameEnglish": "Judges B",
+      "bookNameEnglishGuide": "Judges B",
       "typicalSection": "???"
     },
     "TBS": {
-      "referenceNumber": 156,
+      "referenceNumber": 158,
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
       "SwordAbbreviation": "TobS",
@@ -7365,11 +7452,11 @@
       "possibleAlternativeBooks": [
         "TOB"
       ],
-      "nameEnglish": "Tobit S",
+      "bookNameEnglishGuide": "Tobit S",
       "typicalSection": "???"
     },
     "SST": {
-      "referenceNumber": 157,
+      "referenceNumber": 159,
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
       "SwordAbbreviation": "SusTh",
@@ -7386,11 +7473,11 @@
       "possibleAlternativeBooks": [
         "SUS"
       ],
-      "nameEnglish": "Susanna \u03b8 / Susanna Th",
+      "bookNameEnglishGuide": "Susanna θ / Susanna Th",
       "typicalSection": "???"
     },
     "DNT": {
-      "referenceNumber": 158,
+      "referenceNumber": 160,
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
       "SwordAbbreviation": "DanTh",
@@ -7410,11 +7497,11 @@
         "DNA",
         "DNC"
       ],
-      "nameEnglish": "Daniel \u03b8 / Daniel Th",
+      "bookNameEnglishGuide": "Daniel θ / Daniel Th",
       "typicalSection": "???"
     },
     "BLT": {
-      "referenceNumber": 159,
+      "referenceNumber": 161,
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
       "SwordAbbreviation": "BelTh",
@@ -7431,200 +7518,10 @@
       "possibleAlternativeBooks": [
         "BEL"
       ],
-      "nameEnglish": "Bel and the dragon \u03b8 / Bel and the dragon Th",
+      "bookNameEnglishGuide": "Bel and the dragon θ / Bel and the dragon Th",
       "typicalSection": "???"
     },
     "GHE": {
-      "referenceNumber": 160,
-      "SBLAbbreviation": null,
-      "OSISAbbreviation": null,
-      "SwordAbbreviation": null,
-      "CCELNumberString": null,
-      "USFMAbbreviation": null,
-      "USFMNumberString": null,
-      "USXNumberString": null,
-      "UnboundCodeString": null,
-      "BibleditNumberString": null,
-      "NETBibleAbbreviation": null,
-      "DrupalBibleAbbreviation": null,
-      "ByzantineAbbreviation": null,
-      "numExpectedChapters": null,
-      "possibleAlternativeBooks": null,
-      "nameEnglish": "Gospel of the Hebrews",
-      "typicalSection": "PS"
-    },
-    "GTR": {
-      "referenceNumber": 161,
-      "SBLAbbreviation": null,
-      "OSISAbbreviation": null,
-      "SwordAbbreviation": null,
-      "CCELNumberString": null,
-      "USFMAbbreviation": null,
-      "USFMNumberString": null,
-      "USXNumberString": null,
-      "UnboundCodeString": null,
-      "BibleditNumberString": null,
-      "NETBibleAbbreviation": null,
-      "DrupalBibleAbbreviation": null,
-      "ByzantineAbbreviation": null,
-      "numExpectedChapters": null,
-      "possibleAlternativeBooks": null,
-      "nameEnglish": "Gospel of Truth",
-      "typicalSection": "PS"
-    },
-    "GMA": {
-      "referenceNumber": 162,
-      "SBLAbbreviation": null,
-      "OSISAbbreviation": null,
-      "SwordAbbreviation": null,
-      "CCELNumberString": null,
-      "USFMAbbreviation": null,
-      "USFMNumberString": null,
-      "USXNumberString": null,
-      "UnboundCodeString": null,
-      "BibleditNumberString": null,
-      "NETBibleAbbreviation": null,
-      "DrupalBibleAbbreviation": null,
-      "ByzantineAbbreviation": null,
-      "numExpectedChapters": null,
-      "possibleAlternativeBooks": null,
-      "nameEnglish": "Gospel of Mary",
-      "typicalSection": "PS"
-    },
-    "GMC": {
-      "referenceNumber": 163,
-      "SBLAbbreviation": null,
-      "OSISAbbreviation": null,
-      "SwordAbbreviation": null,
-      "CCELNumberString": null,
-      "USFMAbbreviation": null,
-      "USFMNumberString": null,
-      "USXNumberString": null,
-      "UnboundCodeString": null,
-      "BibleditNumberString": null,
-      "NETBibleAbbreviation": null,
-      "DrupalBibleAbbreviation": null,
-      "ByzantineAbbreviation": null,
-      "numExpectedChapters": null,
-      "possibleAlternativeBooks": null,
-      "nameEnglish": "Gospel of Marcion",
-      "typicalSection": "PS"
-    },
-    "GTW": {
-      "referenceNumber": 164,
-      "SBLAbbreviation": null,
-      "OSISAbbreviation": null,
-      "SwordAbbreviation": null,
-      "CCELNumberString": null,
-      "USFMAbbreviation": null,
-      "USFMNumberString": null,
-      "USXNumberString": null,
-      "UnboundCodeString": null,
-      "BibleditNumberString": null,
-      "NETBibleAbbreviation": null,
-      "DrupalBibleAbbreviation": null,
-      "ByzantineAbbreviation": null,
-      "numExpectedChapters": null,
-      "possibleAlternativeBooks": null,
-      "nameEnglish": "Gospel of the Twelve",
-      "typicalSection": "PS"
-    },
-    "GPH": {
-      "referenceNumber": 165,
-      "SBLAbbreviation": null,
-      "OSISAbbreviation": null,
-      "SwordAbbreviation": null,
-      "CCELNumberString": null,
-      "USFMAbbreviation": null,
-      "USFMNumberString": null,
-      "USXNumberString": null,
-      "UnboundCodeString": null,
-      "BibleditNumberString": null,
-      "NETBibleAbbreviation": null,
-      "DrupalBibleAbbreviation": null,
-      "ByzantineAbbreviation": null,
-      "numExpectedChapters": null,
-      "possibleAlternativeBooks": null,
-      "nameEnglish": "Gospel of Philip",
-      "typicalSection": "PS"
-    },
-    "GTH": {
-      "referenceNumber": 166,
-      "SBLAbbreviation": null,
-      "OSISAbbreviation": null,
-      "SwordAbbreviation": null,
-      "CCELNumberString": null,
-      "USFMAbbreviation": null,
-      "USFMNumberString": null,
-      "USXNumberString": null,
-      "UnboundCodeString": null,
-      "BibleditNumberString": null,
-      "NETBibleAbbreviation": null,
-      "DrupalBibleAbbreviation": null,
-      "ByzantineAbbreviation": null,
-      "numExpectedChapters": null,
-      "possibleAlternativeBooks": null,
-      "nameEnglish": "Gospel of Thomas",
-      "typicalSection": "PS"
-    },
-    "GJU": {
-      "referenceNumber": 167,
-      "SBLAbbreviation": null,
-      "OSISAbbreviation": null,
-      "SwordAbbreviation": null,
-      "CCELNumberString": null,
-      "USFMAbbreviation": null,
-      "USFMNumberString": null,
-      "USXNumberString": null,
-      "UnboundCodeString": null,
-      "BibleditNumberString": null,
-      "NETBibleAbbreviation": null,
-      "DrupalBibleAbbreviation": null,
-      "ByzantineAbbreviation": null,
-      "numExpectedChapters": null,
-      "possibleAlternativeBooks": null,
-      "nameEnglish": "Gospel of Judas",
-      "typicalSection": "PS"
-    },
-    "GBA": {
-      "referenceNumber": 168,
-      "SBLAbbreviation": null,
-      "OSISAbbreviation": null,
-      "SwordAbbreviation": null,
-      "CCELNumberString": null,
-      "USFMAbbreviation": null,
-      "USFMNumberString": null,
-      "USXNumberString": null,
-      "UnboundCodeString": null,
-      "BibleditNumberString": null,
-      "NETBibleAbbreviation": null,
-      "DrupalBibleAbbreviation": null,
-      "ByzantineAbbreviation": null,
-      "numExpectedChapters": null,
-      "possibleAlternativeBooks": null,
-      "nameEnglish": "Gospel of Bartholomew",
-      "typicalSection": "PS"
-    },
-    "AJA": {
-      "referenceNumber": 169,
-      "SBLAbbreviation": null,
-      "OSISAbbreviation": null,
-      "SwordAbbreviation": null,
-      "CCELNumberString": null,
-      "USFMAbbreviation": null,
-      "USFMNumberString": null,
-      "USXNumberString": null,
-      "UnboundCodeString": null,
-      "BibleditNumberString": null,
-      "NETBibleAbbreviation": null,
-      "DrupalBibleAbbreviation": null,
-      "ByzantineAbbreviation": null,
-      "numExpectedChapters": null,
-      "possibleAlternativeBooks": null,
-      "nameEnglish": "Apocrypha of James / Apocryphal James",
-      "typicalSection": "PS"
-    },
-    "WJC": {
       "referenceNumber": 170,
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -7640,10 +7537,181 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Wisdom of Jesus Christ",
+      "bookNameEnglishGuide": "Gospel of the Hebrews",
       "typicalSection": "PS"
     },
-    "TAD": {
+    "GTR": {
+      "referenceNumber": 171,
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": null,
+      "CCELNumberString": null,
+      "USFMAbbreviation": null,
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": null,
+      "possibleAlternativeBooks": null,
+      "bookNameEnglishGuide": "Gospel of Truth",
+      "typicalSection": "PS"
+    },
+    "GMA": {
+      "referenceNumber": 172,
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": null,
+      "CCELNumberString": null,
+      "USFMAbbreviation": null,
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": null,
+      "possibleAlternativeBooks": null,
+      "bookNameEnglishGuide": "Gospel of Mary",
+      "typicalSection": "PS"
+    },
+    "GMC": {
+      "referenceNumber": 173,
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": null,
+      "CCELNumberString": null,
+      "USFMAbbreviation": null,
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": null,
+      "possibleAlternativeBooks": null,
+      "bookNameEnglishGuide": "Gospel of Marcion",
+      "typicalSection": "PS"
+    },
+    "GTW": {
+      "referenceNumber": 174,
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": null,
+      "CCELNumberString": null,
+      "USFMAbbreviation": null,
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": null,
+      "possibleAlternativeBooks": null,
+      "bookNameEnglishGuide": "Gospel of the Twelve",
+      "typicalSection": "PS"
+    },
+    "GPH": {
+      "referenceNumber": 175,
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": null,
+      "CCELNumberString": null,
+      "USFMAbbreviation": null,
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": null,
+      "possibleAlternativeBooks": null,
+      "bookNameEnglishGuide": "Gospel of Philip",
+      "typicalSection": "PS"
+    },
+    "GTH": {
+      "referenceNumber": 176,
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": null,
+      "CCELNumberString": null,
+      "USFMAbbreviation": null,
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": null,
+      "possibleAlternativeBooks": null,
+      "bookNameEnglishGuide": "Gospel of Thomas",
+      "typicalSection": "PS"
+    },
+    "GJU": {
+      "referenceNumber": 177,
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": null,
+      "CCELNumberString": null,
+      "USFMAbbreviation": null,
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": null,
+      "possibleAlternativeBooks": null,
+      "bookNameEnglishGuide": "Gospel of Judas",
+      "typicalSection": "PS"
+    },
+    "GBA": {
+      "referenceNumber": 178,
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": null,
+      "CCELNumberString": null,
+      "USFMAbbreviation": null,
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": null,
+      "possibleAlternativeBooks": null,
+      "bookNameEnglishGuide": "Gospel of Bartholomew",
+      "typicalSection": "PS"
+    },
+    "AJA": {
+      "referenceNumber": 179,
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": null,
+      "CCELNumberString": null,
+      "USFMAbbreviation": null,
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": null,
+      "possibleAlternativeBooks": null,
+      "bookNameEnglishGuide": "Apocrypha of James / Apocryphal James",
+      "typicalSection": "PS"
+    },
+    "WJC": {
       "referenceNumber": 180,
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -7659,181 +7727,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Adam",
+      "bookNameEnglishGuide": "Wisdom of Jesus Christ",
       "typicalSection": "PS"
     },
-    "LAE": {
-      "referenceNumber": 181,
-      "SBLAbbreviation": null,
-      "OSISAbbreviation": null,
-      "SwordAbbreviation": null,
-      "CCELNumberString": null,
-      "USFMAbbreviation": null,
-      "USFMNumberString": null,
-      "USXNumberString": null,
-      "UnboundCodeString": null,
-      "BibleditNumberString": null,
-      "NETBibleAbbreviation": null,
-      "DrupalBibleAbbreviation": null,
-      "ByzantineAbbreviation": null,
-      "numExpectedChapters": null,
-      "possibleAlternativeBooks": null,
-      "nameEnglish": "Life of Adam and Eve",
-      "typicalSection": "PS"
-    },
-    "ASS": {
-      "referenceNumber": 182,
-      "SBLAbbreviation": null,
-      "OSISAbbreviation": null,
-      "SwordAbbreviation": null,
-      "CCELNumberString": null,
-      "USFMAbbreviation": null,
-      "USFMNumberString": null,
-      "USXNumberString": null,
-      "UnboundCodeString": null,
-      "BibleditNumberString": null,
-      "NETBibleAbbreviation": null,
-      "DrupalBibleAbbreviation": null,
-      "ByzantineAbbreviation": null,
-      "numExpectedChapters": null,
-      "possibleAlternativeBooks": null,
-      "nameEnglish": "Assumption of Moses / Testament of Moses",
-      "typicalSection": "PS"
-    },
-    "TSO": {
-      "referenceNumber": 183,
-      "SBLAbbreviation": null,
-      "OSISAbbreviation": null,
-      "SwordAbbreviation": null,
-      "CCELNumberString": null,
-      "USFMAbbreviation": null,
-      "USFMNumberString": null,
-      "USXNumberString": null,
-      "UnboundCodeString": null,
-      "BibleditNumberString": null,
-      "NETBibleAbbreviation": null,
-      "DrupalBibleAbbreviation": null,
-      "ByzantineAbbreviation": null,
-      "numExpectedChapters": null,
-      "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Solomon",
-      "typicalSection": "PS"
-    },
-    "TJB": {
-      "referenceNumber": 184,
-      "SBLAbbreviation": null,
-      "OSISAbbreviation": null,
-      "SwordAbbreviation": null,
-      "CCELNumberString": null,
-      "USFMAbbreviation": null,
-      "USFMNumberString": null,
-      "USXNumberString": null,
-      "UnboundCodeString": null,
-      "BibleditNumberString": null,
-      "NETBibleAbbreviation": null,
-      "DrupalBibleAbbreviation": null,
-      "ByzantineAbbreviation": null,
-      "numExpectedChapters": null,
-      "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Job",
-      "typicalSection": "PS"
-    },
-    "MAI": {
-      "referenceNumber": 185,
-      "SBLAbbreviation": null,
-      "OSISAbbreviation": null,
-      "SwordAbbreviation": null,
-      "CCELNumberString": null,
-      "USFMAbbreviation": null,
-      "USFMNumberString": null,
-      "USXNumberString": null,
-      "UnboundCodeString": null,
-      "BibleditNumberString": null,
-      "NETBibleAbbreviation": null,
-      "DrupalBibleAbbreviation": null,
-      "ByzantineAbbreviation": null,
-      "numExpectedChapters": null,
-      "possibleAlternativeBooks": null,
-      "nameEnglish": "Martyrdom and Ascension of Isaiah",
-      "typicalSection": "PS"
-    },
-    "AEZ": {
-      "referenceNumber": 186,
-      "SBLAbbreviation": null,
-      "OSISAbbreviation": null,
-      "SwordAbbreviation": null,
-      "CCELNumberString": null,
-      "USFMAbbreviation": null,
-      "USFMNumberString": null,
-      "USXNumberString": null,
-      "UnboundCodeString": null,
-      "BibleditNumberString": null,
-      "NETBibleAbbreviation": null,
-      "DrupalBibleAbbreviation": null,
-      "ByzantineAbbreviation": null,
-      "numExpectedChapters": null,
-      "possibleAlternativeBooks": null,
-      "nameEnglish": "Apocrypha of Ezekiel / Apocryphon of Ezekiel",
-      "typicalSection": "PS"
-    },
-    "EZT": {
-      "referenceNumber": 187,
-      "SBLAbbreviation": null,
-      "OSISAbbreviation": null,
-      "SwordAbbreviation": null,
-      "CCELNumberString": null,
-      "USFMAbbreviation": null,
-      "USFMNumberString": null,
-      "USXNumberString": null,
-      "UnboundCodeString": null,
-      "BibleditNumberString": null,
-      "NETBibleAbbreviation": null,
-      "DrupalBibleAbbreviation": null,
-      "ByzantineAbbreviation": null,
-      "numExpectedChapters": null,
-      "possibleAlternativeBooks": null,
-      "nameEnglish": "Ezekiel the Tragedian",
-      "typicalSection": "PS"
-    },
-    "EUP": {
-      "referenceNumber": 188,
-      "SBLAbbreviation": null,
-      "OSISAbbreviation": null,
-      "SwordAbbreviation": null,
-      "CCELNumberString": null,
-      "USFMAbbreviation": null,
-      "USFMNumberString": null,
-      "USXNumberString": null,
-      "UnboundCodeString": null,
-      "BibleditNumberString": null,
-      "NETBibleAbbreviation": null,
-      "DrupalBibleAbbreviation": null,
-      "ByzantineAbbreviation": null,
-      "numExpectedChapters": null,
-      "possibleAlternativeBooks": null,
-      "nameEnglish": "Eupolemus",
-      "typicalSection": "PS"
-    },
-    "PEU": {
-      "referenceNumber": 189,
-      "SBLAbbreviation": null,
-      "OSISAbbreviation": null,
-      "SwordAbbreviation": null,
-      "CCELNumberString": null,
-      "USFMAbbreviation": null,
-      "USFMNumberString": null,
-      "USXNumberString": null,
-      "UnboundCodeString": null,
-      "BibleditNumberString": null,
-      "NETBibleAbbreviation": null,
-      "DrupalBibleAbbreviation": null,
-      "ByzantineAbbreviation": null,
-      "numExpectedChapters": null,
-      "possibleAlternativeBooks": null,
-      "nameEnglish": "Pseudo of Eupolemus / Pseudo-Eupolemus",
-      "typicalSection": "PS"
-    },
-    "VAM": {
+    "TAD": {
       "referenceNumber": 190,
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -7849,10 +7746,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Visions of Amram",
+      "bookNameEnglishGuide": "Testament of Adam",
       "typicalSection": "PS"
     },
-    "LAR": {
+    "LAE": {
       "referenceNumber": 191,
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -7868,10 +7765,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Letter of Aristeas / Epistle of Aristeas",
+      "bookNameEnglishGuide": "Life of Adam and Eve",
       "typicalSection": "PS"
     },
-    "ARI": {
+    "ASS": {
       "referenceNumber": 192,
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -7887,10 +7784,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Aristeas the Exegete",
+      "bookNameEnglishGuide": "Assumption of Moses / Testament of Moses",
       "typicalSection": "PS"
     },
-    "ABL": {
+    "TSO": {
       "referenceNumber": 193,
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -7906,10 +7803,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Aristobulus",
+      "bookNameEnglishGuide": "Testament of Solomon",
       "typicalSection": "PS"
     },
-    "ART": {
+    "TJB": {
       "referenceNumber": 194,
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -7925,10 +7822,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Artapanus",
+      "bookNameEnglishGuide": "Testament of Job",
       "typicalSection": "PS"
     },
-    "CLM": {
+    "MAI": {
       "referenceNumber": 195,
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -7944,10 +7841,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Cleodemus Malchus",
+      "bookNameEnglishGuide": "Martyrdom and Ascension of Isaiah",
       "typicalSection": "PS"
     },
-    "ELM": {
+    "AEZ": {
       "referenceNumber": 196,
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -7963,10 +7860,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Eldad and Modad",
+      "bookNameEnglishGuide": "Apocrypha of Ezekiel / Apocryphon of Ezekiel",
       "typicalSection": "PS"
     },
-    "HRE": {
+    "EZT": {
       "referenceNumber": 197,
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -7982,10 +7879,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "History of the Rechabites",
+      "bookNameEnglishGuide": "Ezekiel the Tragedian",
       "typicalSection": "PS"
     },
-    "LPR": {
+    "EUP": {
       "referenceNumber": 198,
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -8001,10 +7898,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Lives of the Prophets",
+      "bookNameEnglishGuide": "Eupolemus",
       "typicalSection": "PS"
     },
-    "EPL": {
+    "PEU": {
       "referenceNumber": 199,
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -8020,10 +7917,10 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Philo the Epic Poet",
+      "bookNameEnglishGuide": "Pseudo of Eupolemus / Pseudo-Eupolemus",
       "typicalSection": "PS"
     },
-    "TEO": {
+    "VAM": {
       "referenceNumber": 200,
       "SBLAbbreviation": null,
       "OSISAbbreviation": null,
@@ -8039,7 +7936,197 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Theodotus",
+      "bookNameEnglishGuide": "Visions of Amram",
+      "typicalSection": "PS"
+    },
+    "LAR": {
+      "referenceNumber": 201,
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": null,
+      "CCELNumberString": null,
+      "USFMAbbreviation": null,
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": null,
+      "possibleAlternativeBooks": null,
+      "bookNameEnglishGuide": "Letter of Aristeas / Epistle of Aristeas",
+      "typicalSection": "PS"
+    },
+    "ARI": {
+      "referenceNumber": 202,
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": null,
+      "CCELNumberString": null,
+      "USFMAbbreviation": null,
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": null,
+      "possibleAlternativeBooks": null,
+      "bookNameEnglishGuide": "Aristeas the Exegete",
+      "typicalSection": "PS"
+    },
+    "ABL": {
+      "referenceNumber": 203,
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": null,
+      "CCELNumberString": null,
+      "USFMAbbreviation": null,
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": null,
+      "possibleAlternativeBooks": null,
+      "bookNameEnglishGuide": "Aristobulus",
+      "typicalSection": "PS"
+    },
+    "ART": {
+      "referenceNumber": 204,
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": null,
+      "CCELNumberString": null,
+      "USFMAbbreviation": null,
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": null,
+      "possibleAlternativeBooks": null,
+      "bookNameEnglishGuide": "Artapanus",
+      "typicalSection": "PS"
+    },
+    "CLM": {
+      "referenceNumber": 205,
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": null,
+      "CCELNumberString": null,
+      "USFMAbbreviation": null,
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": null,
+      "possibleAlternativeBooks": null,
+      "bookNameEnglishGuide": "Cleodemus Malchus",
+      "typicalSection": "PS"
+    },
+    "ELM": {
+      "referenceNumber": 206,
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": null,
+      "CCELNumberString": null,
+      "USFMAbbreviation": null,
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": null,
+      "possibleAlternativeBooks": null,
+      "bookNameEnglishGuide": "Eldad and Modad",
+      "typicalSection": "PS"
+    },
+    "HRE": {
+      "referenceNumber": 207,
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": null,
+      "CCELNumberString": null,
+      "USFMAbbreviation": null,
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": null,
+      "possibleAlternativeBooks": null,
+      "bookNameEnglishGuide": "History of the Rechabites",
+      "typicalSection": "PS"
+    },
+    "LPR": {
+      "referenceNumber": 208,
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": null,
+      "CCELNumberString": null,
+      "USFMAbbreviation": null,
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": null,
+      "possibleAlternativeBooks": null,
+      "bookNameEnglishGuide": "Lives of the Prophets",
+      "typicalSection": "PS"
+    },
+    "EPL": {
+      "referenceNumber": 209,
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": null,
+      "CCELNumberString": null,
+      "USFMAbbreviation": null,
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": null,
+      "possibleAlternativeBooks": null,
+      "bookNameEnglishGuide": "Philo the Epic Poet",
+      "typicalSection": "PS"
+    },
+    "TEO": {
+      "referenceNumber": 210,
+      "SBLAbbreviation": null,
+      "OSISAbbreviation": null,
+      "SwordAbbreviation": null,
+      "CCELNumberString": null,
+      "USFMAbbreviation": null,
+      "USFMNumberString": null,
+      "USXNumberString": null,
+      "UnboundCodeString": null,
+      "BibleditNumberString": null,
+      "NETBibleAbbreviation": null,
+      "DrupalBibleAbbreviation": null,
+      "ByzantineAbbreviation": null,
+      "numExpectedChapters": null,
+      "possibleAlternativeBooks": null,
+      "bookNameEnglishGuide": "Theodotus",
       "typicalSection": "PS"
     },
     "TTP": {
@@ -8058,7 +8145,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testaments of the Twelve Patriarchs",
+      "bookNameEnglishGuide": "Testaments of the Twelve Patriarchs",
       "typicalSection": "PS"
     },
     "TSA": {
@@ -8077,7 +8164,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Asher",
+      "bookNameEnglishGuide": "Testament of Asher",
       "typicalSection": "PS"
     },
     "TSB": {
@@ -8096,7 +8183,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Benjamin",
+      "bookNameEnglishGuide": "Testament of Benjamin",
       "typicalSection": "PS"
     },
     "TSD": {
@@ -8115,7 +8202,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Dan",
+      "bookNameEnglishGuide": "Testament of Dan",
       "typicalSection": "PS"
     },
     "TSG": {
@@ -8134,7 +8221,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Gad",
+      "bookNameEnglishGuide": "Testament of Gad",
       "typicalSection": "PS"
     },
     "TSI": {
@@ -8153,7 +8240,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Issachar",
+      "bookNameEnglishGuide": "Testament of Issachar",
       "typicalSection": "PS"
     },
     "TSJ": {
@@ -8172,7 +8259,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Joseph",
+      "bookNameEnglishGuide": "Testament of Joseph",
       "typicalSection": "PS"
     },
     "TSY": {
@@ -8191,7 +8278,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Judah",
+      "bookNameEnglishGuide": "Testament of Judah",
       "typicalSection": "PS"
     },
     "TSL": {
@@ -8210,7 +8297,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Levi",
+      "bookNameEnglishGuide": "Testament of Levi",
       "typicalSection": "PS"
     },
     "TSN": {
@@ -8229,7 +8316,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Naphtali",
+      "bookNameEnglishGuide": "Testament of Naphtali",
       "typicalSection": "PS"
     },
     "TSR": {
@@ -8248,7 +8335,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Reuben",
+      "bookNameEnglishGuide": "Testament of Reuben",
       "typicalSection": "PS"
     },
     "TSS": {
@@ -8267,7 +8354,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Simeon",
+      "bookNameEnglishGuide": "Testament of Simeon",
       "typicalSection": "PS"
     },
     "TSZ": {
@@ -8286,7 +8373,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Testament of Zebulun",
+      "bookNameEnglishGuide": "Testament of Zebulun",
       "typicalSection": "PS"
     },
     "JJW": {
@@ -8305,7 +8392,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Josephus Jewish War VI",
+      "bookNameEnglishGuide": "Josephus Jewish War VI",
       "typicalSection": "PS"
     },
     "SHE": {
@@ -8324,7 +8411,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Shepherd of Hermas",
+      "bookNameEnglishGuide": "Shepherd of Hermas",
       "typicalSection": "PS"
     },
     "SHM": {
@@ -8343,7 +8430,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Shepherd of Hermas Mandates",
+      "bookNameEnglishGuide": "Shepherd of Hermas Mandates",
       "typicalSection": "PS"
     },
     "SHS": {
@@ -8362,7 +8449,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Shepherd of Hermas Similitudes",
+      "bookNameEnglishGuide": "Shepherd of Hermas Similitudes",
       "typicalSection": "PS"
     },
     "SHV": {
@@ -8381,7 +8468,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Shepherd of Hermas Visions",
+      "bookNameEnglishGuide": "Shepherd of Hermas Visions",
       "typicalSection": "PS"
     },
     "IGE": {
@@ -8400,7 +8487,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ignatius to the Ephesians",
+      "bookNameEnglishGuide": "Ignatius to the Ephesians",
       "typicalSection": "PS"
     },
     "IGM": {
@@ -8419,7 +8506,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ignatius to the Magnesians",
+      "bookNameEnglishGuide": "Ignatius to the Magnesians",
       "typicalSection": "PS"
     },
     "IGT": {
@@ -8438,7 +8525,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ignatius to the Trallians",
+      "bookNameEnglishGuide": "Ignatius to the Trallians",
       "typicalSection": "PS"
     },
     "IGR": {
@@ -8457,7 +8544,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ignatius to the Romans",
+      "bookNameEnglishGuide": "Ignatius to the Romans",
       "typicalSection": "PS"
     },
     "IGP": {
@@ -8476,7 +8563,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ignatius to the Philadelphians",
+      "bookNameEnglishGuide": "Ignatius to the Philadelphians",
       "typicalSection": "PS"
     },
     "IGS": {
@@ -8495,7 +8582,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ignatius to the Smyrnaeans",
+      "bookNameEnglishGuide": "Ignatius to the Smyrnaeans",
       "typicalSection": "PS"
     },
     "IGC": {
@@ -8514,7 +8601,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Ignatius to Polycarp",
+      "bookNameEnglishGuide": "Ignatius to Polycarp",
       "typicalSection": "PS"
     },
     "PCP": {
@@ -8533,7 +8620,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Polycarp to the Philippians",
+      "bookNameEnglishGuide": "Polycarp to the Philippians",
       "typicalSection": "PS"
     },
     "MPC": {
@@ -8552,7 +8639,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Martydom of Polycarp",
+      "bookNameEnglishGuide": "Martydom of Polycarp",
       "typicalSection": "PS"
     },
     "DIO": {
@@ -8571,7 +8658,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Diognetus",
+      "bookNameEnglishGuide": "Diognetus",
       "typicalSection": "PS"
     },
     "APC": {
@@ -8590,7 +8677,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Apostles' Creed",
+      "bookNameEnglishGuide": "Apostles' Creed",
       "typicalSection": "PS"
     },
     "FOP": {
@@ -8609,7 +8696,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Fragments of Papias",
+      "bookNameEnglishGuide": "Fragments of Papias",
       "typicalSection": "PS"
     },
     "ROE": {
@@ -8628,7 +8715,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Reliques of the Elders",
+      "bookNameEnglishGuide": "Reliques of the Elders",
       "typicalSection": "PS"
     },
     "FOQ": {
@@ -8647,7 +8734,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Fragment of Quadratus",
+      "bookNameEnglishGuide": "Fragment of Quadratus",
       "typicalSection": "PS"
     },
     "TAT": {
@@ -8666,7 +8753,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Tatian / Tatian's Diatessaron / Diatessaron",
+      "bookNameEnglishGuide": "Tatian / Tatian's Diatessaron / Diatessaron",
       "typicalSection": "PS"
     },
     "MOS": {
@@ -8691,7 +8778,7 @@
         "NUM",
         "DEU"
       ],
-      "nameEnglish": "Books of Moses",
+      "bookNameEnglishGuide": "Books of Moses",
       "typicalSection": "OT"
     },
     "SAM": {
@@ -8713,7 +8800,7 @@
         "SA1",
         "SA2"
       ],
-      "nameEnglish": "Samuel",
+      "bookNameEnglishGuide": "Samuel",
       "typicalSection": "OT"
     },
     "KGS": {
@@ -8735,7 +8822,7 @@
         "KI1",
         "KI2"
       ],
-      "nameEnglish": "Kings",
+      "bookNameEnglishGuide": "Kings",
       "typicalSection": "OT"
     },
     "SMK": {
@@ -8761,7 +8848,7 @@
         "KI1",
         "KI2"
       ],
-      "nameEnglish": "Samuel-Kings",
+      "bookNameEnglishGuide": "Samuel-Kings",
       "typicalSection": "NT"
     },
     "CHR": {
@@ -8783,7 +8870,7 @@
         "CH1",
         "CH2"
       ],
-      "nameEnglish": "Chronicles",
+      "bookNameEnglishGuide": "Chronicles",
       "typicalSection": "OT"
     },
     "EZN": {
@@ -8805,7 +8892,7 @@
         "EZR",
         "NEH"
       ],
-      "nameEnglish": "Ezra-Nehemiah / 1 Esdras",
+      "bookNameEnglishGuide": "Ezra-Nehemiah / 1 Esdras",
       "typicalSection": "OT"
     },
     "P12": {
@@ -8823,8 +8910,11 @@
       "DrupalBibleAbbreviation": null,
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
-      "possibleAlternativeBooks": null,
-      "nameEnglish": "Twelve Prophets",
+      "possibleAlternativeBooks": [
+        "EZR",
+        "NEH"
+      ],
+      "bookNameEnglishGuide": "Twelve Prophets",
       "typicalSection": "OT"
     },
     "LKA": {
@@ -8846,7 +8936,7 @@
         "LUK",
         "ACT"
       ],
-      "nameEnglish": "Luke-Acts",
+      "bookNameEnglishGuide": "Luke-Acts",
       "typicalSection": "NT"
     },
     "FRT": {
@@ -8865,7 +8955,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Generic front matter",
+      "bookNameEnglishGuide": "Generic front matter",
       "typicalSection": "FRT"
     },
     "PRF": {
@@ -8884,7 +8974,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Preface",
+      "bookNameEnglishGuide": "Preface",
       "typicalSection": "FRT"
     },
     "ACK": {
@@ -8903,7 +8993,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Acknowledgements",
+      "bookNameEnglishGuide": "Acknowledgements",
       "typicalSection": "FRT"
     },
     "INT": {
@@ -8922,7 +9012,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Introduction",
+      "bookNameEnglishGuide": "Introduction",
       "typicalSection": "FRT"
     },
     "TOC": {
@@ -8941,7 +9031,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Table of Contents",
+      "bookNameEnglishGuide": "Table of Contents",
       "typicalSection": "FRT"
     },
     "GLS": {
@@ -8960,7 +9050,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Glossary",
+      "bookNameEnglishGuide": "Glossary",
       "typicalSection": "BAK"
     },
     "CNC": {
@@ -8979,7 +9069,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Concordance",
+      "bookNameEnglishGuide": "Concordance",
       "typicalSection": "BAK"
     },
     "TPC": {
@@ -8998,7 +9088,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Topical Concordance",
+      "bookNameEnglishGuide": "Topical Concordance",
       "typicalSection": "BAK"
     },
     "IXN": {
@@ -9017,7 +9107,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Names Index",
+      "bookNameEnglishGuide": "Names Index",
       "typicalSection": "BAK"
     },
     "IXP": {
@@ -9036,7 +9126,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Places Index",
+      "bookNameEnglishGuide": "Places Index",
       "typicalSection": "BAK"
     },
     "MAP": {
@@ -9055,7 +9145,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Maps",
+      "bookNameEnglishGuide": "Maps",
       "typicalSection": "BAK"
     },
     "IXT": {
@@ -9074,7 +9164,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Thematic Index",
+      "bookNameEnglishGuide": "Thematic Index",
       "typicalSection": "BAK"
     },
     "BAK": {
@@ -9093,7 +9183,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Generic back matter",
+      "bookNameEnglishGuide": "Generic back matter",
       "typicalSection": "BAK"
     },
     "OTH": {
@@ -9112,7 +9202,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Unspecified other OTH",
+      "bookNameEnglishGuide": "Unspecified other OTH",
       "typicalSection": "BAK"
     },
     "WRD": {
@@ -9131,7 +9221,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Spelling dictionary / word list",
+      "bookNameEnglishGuide": "Spelling dictionary / word list",
       "typicalSection": "BAK"
     },
     "WDF": {
@@ -9150,7 +9240,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": " Word definitions dictionary",
+      "bookNameEnglishGuide": "Word definitions dictionary",
       "typicalSection": "BAK"
     },
     "HYP": {
@@ -9169,7 +9259,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Hyphenation dictionary",
+      "bookNameEnglishGuide": "Hyphenation dictionary",
       "typicalSection": "BAK"
     },
     "STR": {
@@ -9188,7 +9278,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Strong's Database",
+      "bookNameEnglishGuide": "Strong's Database",
       "typicalSection": "BAK"
     },
     "SEM": {
@@ -9207,7 +9297,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Semantic Database",
+      "bookNameEnglishGuide": "Semantic Database",
       "typicalSection": "BAK"
     },
     "XXA": {
@@ -9226,7 +9316,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Unspecified extra XXA",
+      "bookNameEnglishGuide": "Unspecified extra XXA",
       "typicalSection": "BAK"
     },
     "XXB": {
@@ -9245,7 +9335,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Unspecified extra XXB",
+      "bookNameEnglishGuide": "Unspecified extra XXB",
       "typicalSection": "BAK"
     },
     "XXC": {
@@ -9264,7 +9354,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Unspecified extra XXC",
+      "bookNameEnglishGuide": "Unspecified extra XXC",
       "typicalSection": "BAK"
     },
     "XXD": {
@@ -9283,7 +9373,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Unspecified extra XXD",
+      "bookNameEnglishGuide": "Unspecified extra XXD",
       "typicalSection": "BAK"
     },
     "XXE": {
@@ -9302,7 +9392,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Unspecified extra XXE",
+      "bookNameEnglishGuide": "Unspecified extra XXE",
       "typicalSection": "BAK"
     },
     "XXF": {
@@ -9321,7 +9411,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Unspecified extra XXF",
+      "bookNameEnglishGuide": "Unspecified extra XXF",
       "typicalSection": "BAK"
     },
     "XXG": {
@@ -9340,7 +9430,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Unspecified extra XXG",
+      "bookNameEnglishGuide": "Unspecified extra XXG",
       "typicalSection": "BAK"
     },
     "OBS": {
@@ -9359,7 +9449,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": "50",
       "possibleAlternativeBooks": null,
-      "nameEnglish": "Open Bible Stories",
+      "bookNameEnglishGuide": "Open Bible Stories",
       "typicalSection": "???"
     },
     "TST": {
@@ -9378,7 +9468,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "TEST",
+      "bookNameEnglishGuide": "TEST",
       "typicalSection": "???"
     },
     "UNK": {
@@ -9397,7 +9487,7 @@
       "ByzantineAbbreviation": null,
       "numExpectedChapters": null,
       "possibleAlternativeBooks": null,
-      "nameEnglish": "UNKNOWN",
+      "bookNameEnglishGuide": "UNKNOWN",
       "typicalSection": "???"
     }
   },
@@ -9512,6 +9602,8 @@
     "CL2",
     "DID",
     "JSA",
+    "JSB",
+    "JGA",
     "JGB",
     "TBS",
     "SST",
@@ -9776,7 +9868,7 @@
       32,
       "JNA"
     ],
-    "NIC": [
+    "MIC": [
       33,
       "MIC"
     ],
@@ -10900,24 +10992,32 @@
       154,
       "JSA"
     ],
-    "JUDGB": [
+    "JOSHB": [
       155,
+      "JSB"
+    ],
+    "JUDGA": [
+      156,
+      "JGA"
+    ],
+    "JUDGB": [
+      157,
       "JGB"
     ],
     "TOBS": [
-      156,
+      158,
       "TBS"
     ],
     "SUSTH": [
-      157,
+      159,
       "SST"
     ],
     "DANTH": [
-      158,
+      160,
       "DNT"
     ],
     "BELTH": [
-      159,
+      161,
       "BLT"
     ],
     "T12PATR": [
@@ -11991,28 +12091,38 @@
       "JSA",
       null
     ],
-    "JDB": [
+    "JSB": [
       155,
+      "JSB",
+      null
+    ],
+    "JDA": [
+      156,
+      "JGA",
+      null
+    ],
+    "JDB": [
+      157,
       "JGB",
       null
     ],
     "TBS": [
-      156,
+      158,
       "TBS",
       null
     ],
     "SST": [
-      157,
+      159,
       "SST",
       null
     ],
     "DNT": [
-      158,
+      160,
       "DNT",
       null
     ],
     "BLT": [
-      159,
+      161,
       "BLT",
       null
     ],
@@ -14983,24 +15093,32 @@
       154,
       "JSA"
     ],
-    "JDA": [
+    "JSB": [
       155,
+      "JSB"
+    ],
+    "JDA": [
+      156,
+      "JGA"
+    ],
+    "JDB": [
+      157,
       "JGB"
     ],
     "TBS": [
-      156,
+      158,
       "TBS"
     ],
     "SUT": [
-      157,
+      159,
       "SST"
     ],
     "DAT": [
-      158,
+      160,
       "DNT"
     ],
     "BET": [
-      159,
+      161,
       "BLT"
     ]
   },
@@ -15195,7 +15313,7 @@
       20,
       "PRO"
     ],
-    "ECCLESIASTES / QOHOLETH": [
+    "קֹהֶלֶת / QOHOLETH": [
       21,
       "ECC"
     ],
@@ -15371,7 +15489,7 @@
       64,
       "JN3"
     ],
-    "JUDE": [
+    "JUDE / JUDAS": [
       65,
       "JDE"
     ],
@@ -15651,152 +15769,160 @@
       154,
       "JSA"
     ],
-    "JUDGES B": [
+    "JOSHUA B": [
       155,
+      "JSB"
+    ],
+    "JUDGES A": [
+      156,
+      "JGA"
+    ],
+    "JUDGES B": [
+      157,
       "JGB"
     ],
     "TOBIT S": [
-      156,
+      158,
       "TBS"
     ],
-    "SUSANNA \u0398 / SUSANNA TH": [
-      157,
+    "SUSANNA Θ / SUSANNA TH": [
+      159,
       "SST"
     ],
-    "DANIEL \u0398 / DANIEL TH": [
-      158,
+    "DANIEL Θ / DANIEL TH": [
+      160,
       "DNT"
     ],
-    "BEL AND THE DRAGON \u0398 / BEL AND THE DRAGON TH": [
-      159,
+    "BEL AND THE DRAGON Θ / BEL AND THE DRAGON TH": [
+      161,
       "BLT"
     ],
     "GOSPEL OF THE HEBREWS": [
-      160,
+      170,
       "GHE"
     ],
     "GOSPEL OF TRUTH": [
-      161,
+      171,
       "GTR"
     ],
     "GOSPEL OF MARY": [
-      162,
+      172,
       "GMA"
     ],
     "GOSPEL OF MARCION": [
-      163,
+      173,
       "GMC"
     ],
     "GOSPEL OF THE TWELVE": [
-      164,
+      174,
       "GTW"
     ],
     "GOSPEL OF PHILIP": [
-      165,
+      175,
       "GPH"
     ],
     "GOSPEL OF THOMAS": [
-      166,
+      176,
       "GTH"
     ],
     "GOSPEL OF JUDAS": [
-      167,
+      177,
       "GJU"
     ],
     "GOSPEL OF BARTHOLOMEW": [
-      168,
+      178,
       "GBA"
     ],
     "APOCRYPHA OF JAMES / APOCRYPHAL JAMES": [
-      169,
+      179,
       "AJA"
     ],
     "WISDOM OF JESUS CHRIST": [
-      170,
+      180,
       "WJC"
     ],
     "TESTAMENT OF ADAM": [
-      180,
+      190,
       "TAD"
     ],
     "LIFE OF ADAM AND EVE": [
-      181,
+      191,
       "LAE"
     ],
     "ASSUMPTION OF MOSES / TESTAMENT OF MOSES": [
-      182,
+      192,
       "ASS"
     ],
     "TESTAMENT OF SOLOMON": [
-      183,
+      193,
       "TSO"
     ],
     "TESTAMENT OF JOB": [
-      184,
+      194,
       "TJB"
     ],
     "MARTYRDOM AND ASCENSION OF ISAIAH": [
-      185,
+      195,
       "MAI"
     ],
     "APOCRYPHA OF EZEKIEL / APOCRYPHON OF EZEKIEL": [
-      186,
+      196,
       "AEZ"
     ],
     "EZEKIEL THE TRAGEDIAN": [
-      187,
+      197,
       "EZT"
     ],
     "EUPOLEMUS": [
-      188,
+      198,
       "EUP"
     ],
     "PSEUDO OF EUPOLEMUS / PSEUDO-EUPOLEMUS": [
-      189,
+      199,
       "PEU"
     ],
     "VISIONS OF AMRAM": [
-      190,
+      200,
       "VAM"
     ],
     "LETTER OF ARISTEAS / EPISTLE OF ARISTEAS": [
-      191,
+      201,
       "LAR"
     ],
     "ARISTEAS THE EXEGETE": [
-      192,
+      202,
       "ARI"
     ],
     "ARISTOBULUS": [
-      193,
+      203,
       "ABL"
     ],
     "ARTAPANUS": [
-      194,
+      204,
       "ART"
     ],
     "CLEODEMUS MALCHUS": [
-      195,
+      205,
       "CLM"
     ],
     "ELDAD AND MODAD": [
-      196,
+      206,
       "ELM"
     ],
     "HISTORY OF THE RECHABITES": [
-      197,
+      207,
       "HRE"
     ],
     "LIVES OF THE PROPHETS": [
-      198,
+      208,
       "LPR"
     ],
     "PHILO THE EPIC POET": [
-      199,
+      209,
       "EPL"
     ],
     "THEODOTUS": [
-      200,
+      210,
       "TEO"
     ],
     "TESTAMENTS OF THE TWELVE PATRIARCHS": [
@@ -16023,7 +16149,7 @@
       880,
       "WRD"
     ],
-    " WORD DEFINITIONS DICTIONARY": [
+    "WORD DEFINITIONS DICTIONARY": [
       882,
       "WDF"
     ],
@@ -16149,7 +16275,6 @@
     "OBA": "OBA",
     "JONAH": "JNA",
     "JON": "JNA",
-    "NIC": "MIC",
     "MIC": "MIC",
     "NAH": "NAH",
     "NAM": "NAH",
@@ -16346,9 +16471,12 @@
     "DID": "DID",
     "JOSHA": "JSA",
     "JSA": "JSA",
+    "JOSHB": "JSB",
+    "JSB": "JSB",
+    "JUDGA": "JGA",
+    "JDA": "JGA",
     "JUDGB": "JGB",
     "JDB": "JGB",
-    "JDA": "JGB",
     "TOBS": "TBS",
     "TBS": "TBS",
     "SUSTH": "SST",

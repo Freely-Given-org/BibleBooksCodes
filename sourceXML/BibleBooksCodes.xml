@@ -40,7 +40,10 @@ and then these optional fields (optional because not all systems handle the less
     Possible alternative book codes (separated by commas)
         This is not precise but roughly shows which book this book might be confused with.
         It is used for automatic mapping of book codes (also using the expected number of chapters)
+    Consists of book codes (separated by commas)
+        Where a single book might be a combination of two or more individual books
     The name of a typical section containing this book (in the set OT, OT+, NT, NT+, DC, PS, FRT, BAK)
+    The name of a typical sub-section containing this book (in the set Pentateuch, Historical, Poetry-Wisdom, Major Prophets, Minor Prophets, Gospels, Acts, Paul's Letters, General Letters, Revelation)
 Most of the above fields should individually be unique, but there are some many-to-one mappings.
     e.g., Paratext uses the same code for Ezra as for Ezra-Nehemiah. (We make available separate codes.)
 
@@ -91,17 +94,18 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
                     <!ATTLIST identifier type (URL) #REQUIRED>
                 <!ELEMENT rights (#PCDATA)>
         <!ELEMENT BibleBookCodes (bookName,bookNameEnglishGuide,referenceAbbreviation,referenceNumber,sequenceNumber,expectedChapters?,
-                        SBLAbbreviation?,OSISAbbreviation?,SwordAbbreviation?,CCELNumber?,USFMAbbreviation?,USFMNumber?,
+                        shortAbbreviation?,SBLAbbreviation?,OSISAbbreviation?,SwordAbbreviation?,CCELNumber?,USFMAbbreviation?,USFMNumber?,
                         USXNumber?,UnboundCode?,BibleditNumber?,NETBibleAbbreviation?,DrupalBibleAbbreviation?,
                         BibleWorksAbbreviation?, ByzantineAbbreviation?,
-                        possibleAlternativeAbbreviations?,possibleAlternativeBooks?,
-                        typicalSection)>
+                        possibleAlternativeAbbreviations?,possibleAlternativeBooks?,consistsOfBooks?,
+                        typicalSection,typicalSubsection?)>
             <!ELEMENT bookName (#PCDATA)>
             <!ELEMENT bookNameEnglishGuide (#PCDATA)>
             <!ELEMENT referenceAbbreviation (#PCDATA)>
             <!ELEMENT referenceNumber (#PCDATA)>
             <!ELEMENT sequenceNumber (#PCDATA)>
             <!ELEMENT expectedChapters (#PCDATA)>
+            <!ELEMENT shortAbbreviation (#PCDATA)>
             <!ELEMENT SBLAbbreviation (#PCDATA)>
             <!ELEMENT OSISAbbreviation (#PCDATA)>
             <!ELEMENT SwordAbbreviation (#PCDATA)>
@@ -117,15 +121,17 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
             <!ELEMENT ByzantineAbbreviation (#PCDATA)>
             <!ELEMENT possibleAlternativeAbbreviations (#PCDATA)>
             <!ELEMENT possibleAlternativeBooks (#PCDATA)>
+            <!ELEMENT consistsOfBooks (#PCDATA)>
             <!ELEMENT typicalSection (#PCDATA)>
+            <!ELEMENT typicalSubsection (#PCDATA)>
 ]>
 
 <BibleBooksCodes>
 
   <header>
     <work>
-      <version>0.82</version>
-      <date>2022-02-05</date>
+      <version>0.83</version>
+      <date>2022-02-06</date>
       <title>Bible books codes list</title>
       <contributor role="com">Robert Hunt</contributor>
       <identifier type="URL">http://www.sbl-site.org/publications/publishingwithsbl.aspx</identifier>
@@ -149,6 +155,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>1</referenceNumber>
     <sequenceNumber>20</sequenceNumber>
     <expectedChapters>50</expectedChapters>
+    <shortAbbreviation>Ge</shortAbbreviation>
     <SBLAbbreviation>Gen</SBLAbbreviation>
     <OSISAbbreviation>Gen</OSISAbbreviation>
     <SwordAbbreviation>Gen</SwordAbbreviation>
@@ -163,6 +170,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>GEN</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>GE,GN,GNS,1MOS,1MO,1MS</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Pentateuch</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>שְׁמֹות</bookName>
@@ -171,6 +179,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>2</referenceNumber>
     <sequenceNumber>22</sequenceNumber>
     <expectedChapters>40</expectedChapters>
+    <shortAbbreviation>Ex</shortAbbreviation>
     <SBLAbbreviation>Exod</SBLAbbreviation>
     <OSISAbbreviation>Exod</OSISAbbreviation>
     <SwordAbbreviation>Exod</SwordAbbreviation>
@@ -185,6 +194,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>EXO</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>EX,EXD,2MOS,2MO,2MS</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Pentateuch</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>וַיִּקְרָא</bookName>
@@ -193,6 +203,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>3</referenceNumber>
     <sequenceNumber>24</sequenceNumber>
     <expectedChapters>27</expectedChapters>
+    <shortAbbreviation>Le</shortAbbreviation>
     <SBLAbbreviation>Lev</SBLAbbreviation>
     <OSISAbbreviation>Lev</OSISAbbreviation>
     <SwordAbbreviation>Lev</SwordAbbreviation>
@@ -207,6 +218,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>LEV</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>LV,3MOS,3MO,3MS</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Pentateuch</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>בְּמִדְבַּר</bookName>
@@ -215,6 +227,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>4</referenceNumber>
     <sequenceNumber>26</sequenceNumber>
     <expectedChapters>36</expectedChapters>
+    <shortAbbreviation>Nu</shortAbbreviation>
     <SBLAbbreviation>Num</SBLAbbreviation>
     <OSISAbbreviation>Num</OSISAbbreviation>
     <SwordAbbreviation>Num</SwordAbbreviation>
@@ -229,6 +242,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>NUM</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>NM,NMB,4MOS,4MO,4MS</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Pentateuch</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>דְּבָרִים</bookName>
@@ -237,6 +251,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>5</referenceNumber>
     <sequenceNumber>28</sequenceNumber>
     <expectedChapters>34</expectedChapters>
+    <shortAbbreviation>Dt</shortAbbreviation>
     <SBLAbbreviation>Deut</SBLAbbreviation>
     <OSISAbbreviation>Deut</OSISAbbreviation>
     <SwordAbbreviation>Deut</SwordAbbreviation>
@@ -251,6 +266,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>DEU</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>DT,5MOS,5MO,5MS</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Pentateuch</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>יְהוֹשֻעַ</bookName>
@@ -259,6 +275,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>6</referenceNumber>
     <sequenceNumber>30</sequenceNumber>
     <expectedChapters>24</expectedChapters>
+    <shortAbbreviation>Jos</shortAbbreviation>
     <SBLAbbreviation>Josh</SBLAbbreviation>
     <OSISAbbreviation>Josh</OSISAbbreviation>
     <SwordAbbreviation>Josh</SwordAbbreviation>
@@ -274,6 +291,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <possibleAlternativeAbbreviations>JS,JSH</possibleAlternativeAbbreviations>
     <possibleAlternativeBooks>JSA</possibleAlternativeBooks>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Historical</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>שֹׁפְטִים</bookName>
@@ -282,6 +300,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>7</referenceNumber>
     <sequenceNumber>32</sequenceNumber>
     <expectedChapters>21</expectedChapters>
+    <shortAbbreviation>Jdg</shortAbbreviation>
     <SBLAbbreviation>Judg</SBLAbbreviation>
     <OSISAbbreviation>Judg</OSISAbbreviation>
     <SwordAbbreviation>Judg</SwordAbbreviation>
@@ -297,6 +316,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <possibleAlternativeAbbreviations>JG</possibleAlternativeAbbreviations>
     <possibleAlternativeBooks>JGB</possibleAlternativeBooks>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Historical</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>רוּת</bookName>
@@ -305,6 +325,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>8</referenceNumber>
     <sequenceNumber>34</sequenceNumber>
     <expectedChapters>4</expectedChapters>
+    <shortAbbreviation>Ru</shortAbbreviation>
     <SBLAbbreviation>Ruth</SBLAbbreviation>
     <OSISAbbreviation>Ruth</OSISAbbreviation>
     <SwordAbbreviation>Ruth</SwordAbbreviation>
@@ -319,6 +340,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>RUT</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>RT</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Historical</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>שְׁמוּאֵל א</bookName>
@@ -327,6 +349,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>9</referenceNumber>
     <sequenceNumber>38</sequenceNumber>
     <expectedChapters>31</expectedChapters>
+    <shortAbbreviation>1Sa</shortAbbreviation>
     <SBLAbbreviation>1 Sam</SBLAbbreviation>
     <OSISAbbreviation>1Sam</OSISAbbreviation>
     <SwordAbbreviation>1Sam</SwordAbbreviation>
@@ -340,6 +363,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <DrupalBibleAbbreviation>1Sm</DrupalBibleAbbreviation>
     <BibleWorksAbbreviation>1SA</BibleWorksAbbreviation>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Historical</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>שְׁמוּאֵל ב</bookName>
@@ -348,6 +372,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>10</referenceNumber>
     <sequenceNumber>40</sequenceNumber>
     <expectedChapters>24</expectedChapters>
+    <shortAbbreviation>2Sa</shortAbbreviation>
     <SBLAbbreviation>2 Sam</SBLAbbreviation>
     <OSISAbbreviation>2Sam</OSISAbbreviation>
     <SwordAbbreviation>2Sam</SwordAbbreviation>
@@ -361,6 +386,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <DrupalBibleAbbreviation>2Sm</DrupalBibleAbbreviation>
     <BibleWorksAbbreviation>2SA</BibleWorksAbbreviation>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Historical</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>מְלָכִים א</bookName>
@@ -369,6 +395,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>11</referenceNumber>
     <sequenceNumber>44</sequenceNumber>
     <expectedChapters>22</expectedChapters>
+    <shortAbbreviation>1Ki</shortAbbreviation>
     <SBLAbbreviation>1 Kgs</SBLAbbreviation>
     <OSISAbbreviation>1Kgs</OSISAbbreviation>
     <SwordAbbreviation>1Kgs</SwordAbbreviation>
@@ -383,6 +410,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>1KI</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>1K</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Historical</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>מְלָכִים ב</bookName>
@@ -391,6 +419,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>12</referenceNumber>
     <sequenceNumber>46</sequenceNumber>
     <expectedChapters>25</expectedChapters>
+    <shortAbbreviation>2Ki</shortAbbreviation>
     <SBLAbbreviation>2 Kgs</SBLAbbreviation>
     <OSISAbbreviation>2Kgs</OSISAbbreviation>
     <SwordAbbreviation>2Kgs</SwordAbbreviation>
@@ -405,6 +434,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>2KI</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>2K</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Historical</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>דִּבְרֵי הַיָּמִים א</bookName>
@@ -413,6 +443,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>13</referenceNumber>
     <sequenceNumber>50</sequenceNumber>
     <expectedChapters>29</expectedChapters>
+    <shortAbbreviation>1Ch</shortAbbreviation>
     <SBLAbbreviation>1 Chr</SBLAbbreviation>
     <OSISAbbreviation>1Chr</OSISAbbreviation>
     <SwordAbbreviation>1Chr</SwordAbbreviation>
@@ -426,6 +457,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <DrupalBibleAbbreviation>1Ch</DrupalBibleAbbreviation>
     <BibleWorksAbbreviation>1CH</BibleWorksAbbreviation>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Historical</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>דִּבְרֵי הַיָּמִים ב</bookName>
@@ -434,6 +466,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>14</referenceNumber>
     <sequenceNumber>52</sequenceNumber>
     <expectedChapters>36,37</expectedChapters>
+    <shortAbbreviation>2Ch</shortAbbreviation>
     <SBLAbbreviation>2 Chr</SBLAbbreviation>
     <OSISAbbreviation>2Chr</OSISAbbreviation>
     <SwordAbbreviation>2Chr</SwordAbbreviation>
@@ -447,6 +480,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <DrupalBibleAbbreviation>2Ch</DrupalBibleAbbreviation>
     <BibleWorksAbbreviation>2CH</BibleWorksAbbreviation>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Historical</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <!-- Don't use this for combined Ezra-Nehemiah (use EZN) -->
@@ -456,6 +490,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>15</referenceNumber>
     <sequenceNumber>60</sequenceNumber>
     <expectedChapters>10</expectedChapters>
+    <shortAbbreviation>Ezr</shortAbbreviation>
     <SBLAbbreviation>Ezra</SBLAbbreviation>
     <OSISAbbreviation>Ezra</OSISAbbreviation>
     <SwordAbbreviation>Ezra</SwordAbbreviation>
@@ -470,6 +505,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>EZR</BibleWorksAbbreviation>
     <possibleAlternativeBooks>EZN</possibleAlternativeBooks>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Historical</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>נְחֶמְיָה</bookName>
@@ -478,6 +514,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>16</referenceNumber>
     <sequenceNumber>70</sequenceNumber>
     <expectedChapters>13</expectedChapters>
+    <shortAbbreviation>Ne</shortAbbreviation>
     <SBLAbbreviation>Neh</SBLAbbreviation>
     <OSISAbbreviation>Neh</OSISAbbreviation>
     <SwordAbbreviation>Neh</SwordAbbreviation>
@@ -493,6 +530,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <possibleAlternativeAbbreviations>NH,NHM</possibleAlternativeAbbreviations>
     <possibleAlternativeBooks>EZN</possibleAlternativeBooks>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Historical</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>אֶסְתֵר</bookName>
@@ -501,6 +539,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>17</referenceNumber>
     <sequenceNumber>80</sequenceNumber>
     <expectedChapters>10</expectedChapters>
+    <shortAbbreviation>Es</shortAbbreviation>
     <SBLAbbreviation>Esth</SBLAbbreviation>
     <OSISAbbreviation>Esth</OSISAbbreviation>
     <SwordAbbreviation>Esth</SwordAbbreviation>
@@ -516,6 +555,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <possibleAlternativeAbbreviations>ES</possibleAlternativeAbbreviations>
     <possibleAlternativeBooks>ESG,ESA,ESC</possibleAlternativeBooks>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Historical</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>אִיּוֹב</bookName>
@@ -524,6 +564,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>18</referenceNumber>
     <sequenceNumber>90</sequenceNumber>
     <expectedChapters>42</expectedChapters>
+    <shortAbbreviation>Jb</shortAbbreviation>
     <SBLAbbreviation>Job</SBLAbbreviation>
     <OSISAbbreviation>Job</OSISAbbreviation>
     <SwordAbbreviation>Job</SwordAbbreviation>
@@ -538,6 +579,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>JOB</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>JB</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Poetry-Wisdom</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>תְהִלִּים</bookName>
@@ -546,6 +588,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>19</referenceNumber>
     <sequenceNumber>100</sequenceNumber>
     <expectedChapters>150,151</expectedChapters>
+    <shortAbbreviation>Ps</shortAbbreviation>
     <SBLAbbreviation>Ps</SBLAbbreviation>
     <OSISAbbreviation>Ps</OSISAbbreviation>
     <SwordAbbreviation>Ps</SwordAbbreviation>
@@ -561,6 +604,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <possibleAlternativeAbbreviations>PSLM</possibleAlternativeAbbreviations>
     <possibleAlternativeBooks>PB1,PB2,PB3,PB4,PB5</possibleAlternativeBooks>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Poetry-Wisdom</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <!-- Proverbs in the Ethiopian canon is shorter than in the European canon -->
@@ -570,6 +614,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>20</referenceNumber>
     <sequenceNumber>110</sequenceNumber>
     <expectedChapters>31</expectedChapters>
+    <shortAbbreviation>Pr</shortAbbreviation>
     <SBLAbbreviation>Prov</SBLAbbreviation>
     <OSISAbbreviation>Prov</OSISAbbreviation>
     <SwordAbbreviation>Prov</SwordAbbreviation>
@@ -584,6 +629,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>PRO</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>PR,PRV</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Poetry-Wisdom</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>קֹהֶלֶת</bookName>
@@ -593,6 +639,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>21</referenceNumber>
     <sequenceNumber>120</sequenceNumber>
     <expectedChapters>12</expectedChapters>
+    <shortAbbreviation>Ec</shortAbbreviation>
     <SBLAbbreviation>Eccl</SBLAbbreviation>
     <OSISAbbreviation>Eccl</OSISAbbreviation>
     <SwordAbbreviation>Eccl</SwordAbbreviation>
@@ -607,6 +654,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>ECC</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>EC</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Poetry-Wisdom</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>שִׁיר הַשִּׁירִים</bookName>
@@ -615,6 +663,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>22</referenceNumber>
     <sequenceNumber>130</sequenceNumber>
     <expectedChapters>8</expectedChapters>
+    <shortAbbreviation>So</shortAbbreviation>
     <SBLAbbreviation>Song</SBLAbbreviation>
     <OSISAbbreviation>Song</OSISAbbreviation>
     <SwordAbbreviation>Song</SwordAbbreviation>
@@ -629,6 +678,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>SOL</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>SL,SS,CANT,CAN,</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Poetry-Wisdom</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>יְשַׁעְיָהוּ</bookName>
@@ -637,6 +687,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>23</referenceNumber>
     <sequenceNumber>132</sequenceNumber>
     <expectedChapters>66</expectedChapters>
+    <shortAbbreviation>Is</shortAbbreviation>
     <SBLAbbreviation>Isa</SBLAbbreviation>
     <OSISAbbreviation>Isa</OSISAbbreviation>
     <SwordAbbreviation>Isa</SwordAbbreviation>
@@ -651,6 +702,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>ISA</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>IS</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Major Prophets</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>יִרְמְיָהוּ</bookName>
@@ -659,6 +711,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>24</referenceNumber>
     <sequenceNumber>134</sequenceNumber>
     <expectedChapters>52</expectedChapters>
+    <shortAbbreviation>Je</shortAbbreviation>
     <SBLAbbreviation>Jer</SBLAbbreviation>
     <OSISAbbreviation>Jer</OSISAbbreviation>
     <SwordAbbreviation>Jer</SwordAbbreviation>
@@ -673,6 +726,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>JER</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>JR,JRM</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Major Prophets</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>אֵיכָה</bookName>
@@ -681,6 +735,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>25</referenceNumber>
     <sequenceNumber>136</sequenceNumber>
     <expectedChapters>5</expectedChapters>
+    <shortAbbreviation>La</shortAbbreviation>
     <SBLAbbreviation>Lam</SBLAbbreviation>
     <OSISAbbreviation>Lam</OSISAbbreviation>
     <SwordAbbreviation>Lam</SwordAbbreviation>
@@ -695,6 +750,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>LAM</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>LM,LA</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Poetry-Wisdom</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>יְחֶזְקֵאל</bookName>
@@ -703,6 +759,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>26</referenceNumber>
     <sequenceNumber>138</sequenceNumber>
     <expectedChapters>48</expectedChapters>
+    <shortAbbreviation>Eze</shortAbbreviation>
     <SBLAbbreviation>Ezek</SBLAbbreviation>
     <OSISAbbreviation>Ezek</OSISAbbreviation>
     <SwordAbbreviation>Ezek</SwordAbbreviation>
@@ -717,6 +774,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>EZE</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>EZ</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Major Prophets</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>דָּנִיֵּאל</bookName>
@@ -725,6 +783,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>27</referenceNumber>
     <sequenceNumber>140</sequenceNumber>
     <expectedChapters>12,14</expectedChapters>
+    <shortAbbreviation>Da</shortAbbreviation>
     <SBLAbbreviation>Dan</SBLAbbreviation>
     <OSISAbbreviation>Dan</OSISAbbreviation>
     <SwordAbbreviation>Dan</SwordAbbreviation>
@@ -740,6 +799,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <possibleAlternativeAbbreviations>DN,DNL</possibleAlternativeAbbreviations>
     <possibleAlternativeBooks>DNG,DNA,DNC,DNT</possibleAlternativeBooks>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Major Prophets</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>הוֹשֵׁעַ</bookName>
@@ -748,6 +808,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>28</referenceNumber>
     <sequenceNumber>152</sequenceNumber>
     <expectedChapters>14</expectedChapters>
+    <shortAbbreviation>Ho</shortAbbreviation>
     <SBLAbbreviation>Hos</SBLAbbreviation>
     <OSISAbbreviation>Hos</OSISAbbreviation>
     <SwordAbbreviation>Hos</SwordAbbreviation>
@@ -762,6 +823,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>HOS</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>HS</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Minor Prophets</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>יוֹאֵל</bookName>
@@ -770,6 +832,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>29</referenceNumber>
     <sequenceNumber>154</sequenceNumber>
     <expectedChapters>3,4</expectedChapters>
+    <shortAbbreviation>Jol</shortAbbreviation>
     <SBLAbbreviation>Joel</SBLAbbreviation>
     <OSISAbbreviation>Joel</OSISAbbreviation>
     <SwordAbbreviation>Joel</SwordAbbreviation>
@@ -784,6 +847,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>JOE</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>JL</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Minor Prophets</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>עָמוֹס</bookName>
@@ -792,6 +856,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>30</referenceNumber>
     <sequenceNumber>156</sequenceNumber>
     <expectedChapters>9</expectedChapters>
+    <shortAbbreviation>Am</shortAbbreviation>
     <SBLAbbreviation>Amos</SBLAbbreviation>
     <OSISAbbreviation>Amos</OSISAbbreviation>
     <SwordAbbreviation>Amos</SwordAbbreviation>
@@ -806,6 +871,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>AMO</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>AM,AMS</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Minor Prophets</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>עֹבַדְיָה</bookName>
@@ -814,6 +880,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>31</referenceNumber>
     <sequenceNumber>158</sequenceNumber>
     <expectedChapters>1</expectedChapters>
+    <shortAbbreviation>Ob</shortAbbreviation>
     <SBLAbbreviation>Obad</SBLAbbreviation>
     <OSISAbbreviation>Obad</OSISAbbreviation>
     <SwordAbbreviation>Obad</SwordAbbreviation>
@@ -828,6 +895,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>OBA</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>OB,OBD</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Minor Prophets</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>יוֹנָה</bookName>
@@ -836,6 +904,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>32</referenceNumber>
     <sequenceNumber>160</sequenceNumber>
     <expectedChapters>4</expectedChapters>
+    <shortAbbreviation>Jon</shortAbbreviation>
     <SBLAbbreviation>Jonah</SBLAbbreviation>
     <OSISAbbreviation>Jonah</OSISAbbreviation>
     <SwordAbbreviation>Jonah</SwordAbbreviation>
@@ -850,6 +919,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>JON</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>JNH</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Minor Prophets</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>מִיכָה</bookName>
@@ -858,7 +928,8 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>33</referenceNumber>
     <sequenceNumber>162</sequenceNumber>
     <expectedChapters>7</expectedChapters>
-    <SBLAbbreviation>Nic</SBLAbbreviation>
+    <shortAbbreviation>Mi</shortAbbreviation>
+    <SBLAbbreviation>Mic</SBLAbbreviation>
     <OSISAbbreviation>Mic</OSISAbbreviation>
     <SwordAbbreviation>Mic</SwordAbbreviation>
     <CCELNumber>33</CCELNumber>
@@ -872,6 +943,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>MIC</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>MC,MCH</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Minor Prophets</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>נַחוּם</bookName>
@@ -880,6 +952,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>34</referenceNumber>
     <sequenceNumber>164</sequenceNumber>
     <expectedChapters>3</expectedChapters>
+    <shortAbbreviation>Na</shortAbbreviation>
     <SBLAbbreviation>Nah</SBLAbbreviation>
     <OSISAbbreviation>Nah</OSISAbbreviation>
     <SwordAbbreviation>Nah</SwordAbbreviation>
@@ -893,6 +966,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <DrupalBibleAbbreviation>Nah</DrupalBibleAbbreviation>
     <BibleWorksAbbreviation>NAH</BibleWorksAbbreviation>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Minor Prophets</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>חֲבַקּוּק</bookName>
@@ -901,6 +975,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>35</referenceNumber>
     <sequenceNumber>166</sequenceNumber>
     <expectedChapters>3</expectedChapters>
+    <shortAbbreviation>Hab</shortAbbreviation>
     <SBLAbbreviation>Hab</SBLAbbreviation>
     <OSISAbbreviation>Hab</OSISAbbreviation>
     <SwordAbbreviation>Hab</SwordAbbreviation>
@@ -915,6 +990,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>HAB</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>HBK</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Minor Prophets</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>צְפַנְיָה</bookName>
@@ -923,6 +999,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>36</referenceNumber>
     <sequenceNumber>168</sequenceNumber>
     <expectedChapters>3</expectedChapters>
+    <shortAbbreviation>Zep</shortAbbreviation>
     <SBLAbbreviation>Zeph</SBLAbbreviation>
     <OSISAbbreviation>Zeph</OSISAbbreviation>
     <SwordAbbreviation>Zeph</SwordAbbreviation>
@@ -937,6 +1014,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>ZEP</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>ZP,ZPH</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Minor Prophets</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>חַגַּי</bookName>
@@ -945,6 +1023,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>37</referenceNumber>
     <sequenceNumber>170</sequenceNumber>
     <expectedChapters>2</expectedChapters>
+    <shortAbbreviation>Hag</shortAbbreviation>
     <SBLAbbreviation>Hag</SBLAbbreviation>
     <OSISAbbreviation>Hag</OSISAbbreviation>
     <SwordAbbreviation>Hag</SwordAbbreviation>
@@ -959,6 +1038,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>HAG</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>HG,HGG</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Minor Prophets</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>זְכַרְיָה</bookName>
@@ -967,6 +1047,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>38</referenceNumber>
     <sequenceNumber>172</sequenceNumber>
     <expectedChapters>14</expectedChapters>
+    <shortAbbreviation>Zec</shortAbbreviation>
     <SBLAbbreviation>Zech</SBLAbbreviation>
     <OSISAbbreviation>Zech</OSISAbbreviation>
     <SwordAbbreviation>Zech</SwordAbbreviation>
@@ -981,6 +1062,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>ZEC</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>ZC</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Minor Prophets</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>מַלְאָכִי</bookName>
@@ -989,6 +1071,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>39</referenceNumber>
     <sequenceNumber>174</sequenceNumber>
     <expectedChapters>4,3</expectedChapters>
+    <shortAbbreviation>Mal</shortAbbreviation>
     <SBLAbbreviation>Mal</SBLAbbreviation>
     <OSISAbbreviation>Mal</OSISAbbreviation>
     <SwordAbbreviation>Mal</SwordAbbreviation>
@@ -1003,6 +1086,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>MAL</BibleWorksAbbreviation>
     <possibleAlternativeAbbreviations>ML</possibleAlternativeAbbreviations>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Minor Prophets</typicalSubsection>
   </BibleBookCodes>
 
 <!-- New Testament -->
@@ -1013,6 +1097,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>40</referenceNumber>
     <sequenceNumber>600</sequenceNumber>
     <expectedChapters>28</expectedChapters>
+    <shortAbbreviation>Mt</shortAbbreviation>
     <SBLAbbreviation>Matt</SBLAbbreviation>
     <OSISAbbreviation>Matt</OSISAbbreviation>
     <SwordAbbreviation>Matt</SwordAbbreviation>
@@ -1028,6 +1113,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <ByzantineAbbreviation>MT</ByzantineAbbreviation>
     <possibleAlternativeAbbreviations>MTT</possibleAlternativeAbbreviations>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>Gospels</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Κατὰ Μᾶρκον</bookName>
@@ -1036,6 +1122,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>41</referenceNumber>
     <sequenceNumber>602</sequenceNumber>
     <expectedChapters>16</expectedChapters>
+    <shortAbbreviation>Mk</shortAbbreviation>
     <SBLAbbreviation>Mark</SBLAbbreviation>
     <OSISAbbreviation>Mark</OSISAbbreviation>
     <SwordAbbreviation>Mark</SwordAbbreviation>
@@ -1050,6 +1137,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>MAR</BibleWorksAbbreviation>
     <ByzantineAbbreviation>MR</ByzantineAbbreviation>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>Gospels</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Κατὰ Λουκᾶν</bookName>
@@ -1058,6 +1146,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>42</referenceNumber>
     <sequenceNumber>604</sequenceNumber>
     <expectedChapters>24</expectedChapters>
+    <shortAbbreviation>Lk</shortAbbreviation>
     <SBLAbbreviation>Luke</SBLAbbreviation>
     <OSISAbbreviation>Luke</OSISAbbreviation>
     <SwordAbbreviation>Luke</SwordAbbreviation>
@@ -1074,6 +1163,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <possibleAlternativeAbbreviations>LK</possibleAlternativeAbbreviations>
     <possibleAlternativeBooks>LKA</possibleAlternativeBooks>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>Gospels</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Κατὰ Ἰωάννην</bookName>
@@ -1082,6 +1172,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>43</referenceNumber>
     <sequenceNumber>606</sequenceNumber>
     <expectedChapters>21</expectedChapters>
+    <shortAbbreviation>Jn</shortAbbreviation>
     <SBLAbbreviation>John</SBLAbbreviation>
     <OSISAbbreviation>John</OSISAbbreviation>
     <SwordAbbreviation>John</SwordAbbreviation>
@@ -1097,6 +1188,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <ByzantineAbbreviation>JOH</ByzantineAbbreviation>
     <possibleAlternativeAbbreviations>JN</possibleAlternativeAbbreviations>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>Gospels</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Πράξεις Ἀποστόλων</bookName>
@@ -1105,6 +1197,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>44</referenceNumber>
     <sequenceNumber>610</sequenceNumber>
     <expectedChapters>28</expectedChapters>
+    <shortAbbreviation>Ac</shortAbbreviation>
     <SBLAbbreviation>Acts</SBLAbbreviation>
     <OSISAbbreviation>Acts</OSISAbbreviation>
     <SwordAbbreviation>Acts</SwordAbbreviation>
@@ -1120,6 +1213,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <ByzantineAbbreviation>AC</ByzantineAbbreviation>
     <possibleAlternativeBooks>LKA</possibleAlternativeBooks>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>Acts</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Πρὸς Ῥωμαίους</bookName>
@@ -1128,6 +1222,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>45</referenceNumber>
     <sequenceNumber>612</sequenceNumber>
     <expectedChapters>16</expectedChapters>
+    <shortAbbreviation>Ro</shortAbbreviation>
     <SBLAbbreviation>Rom</SBLAbbreviation>
     <OSISAbbreviation>Rom</OSISAbbreviation>
     <SwordAbbreviation>Rom</SwordAbbreviation>
@@ -1143,6 +1238,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <ByzantineAbbreviation>RO</ByzantineAbbreviation>
     <possibleAlternativeAbbreviations>RM,RMN</possibleAlternativeAbbreviations>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>Paul's Letters</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Πρὸς Κορινθίους α</bookName>
@@ -1151,6 +1247,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>46</referenceNumber>
     <sequenceNumber>614</sequenceNumber>
     <expectedChapters>16</expectedChapters>
+    <shortAbbreviation>1Co</shortAbbreviation>
     <SBLAbbreviation>1 Cor</SBLAbbreviation>
     <OSISAbbreviation>1Cor</OSISAbbreviation>
     <SwordAbbreviation>1Cor</SwordAbbreviation>
@@ -1165,6 +1262,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>1CO</BibleWorksAbbreviation>
     <ByzantineAbbreviation>1CO</ByzantineAbbreviation>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>Paul's Letters</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Πρὸς Κορινθίους β</bookName>
@@ -1173,6 +1271,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>47</referenceNumber>
     <sequenceNumber>616</sequenceNumber>
     <expectedChapters>13</expectedChapters>
+    <shortAbbreviation>2Co</shortAbbreviation>
     <SBLAbbreviation>2 Cor</SBLAbbreviation>
     <OSISAbbreviation>2Cor</OSISAbbreviation>
     <SwordAbbreviation>2Cor</SwordAbbreviation>
@@ -1187,6 +1286,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>2CO</BibleWorksAbbreviation>
     <ByzantineAbbreviation>2CO</ByzantineAbbreviation>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>Paul's Letters</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Πρὸς Γαλάτας</bookName>
@@ -1195,6 +1295,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>48</referenceNumber>
     <sequenceNumber>618</sequenceNumber>
     <expectedChapters>6</expectedChapters>
+    <shortAbbreviation>Ga</shortAbbreviation>
     <SBLAbbreviation>Gal</SBLAbbreviation>
     <OSISAbbreviation>Gal</OSISAbbreviation>
     <SwordAbbreviation>Gal</SwordAbbreviation>
@@ -1210,6 +1311,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <ByzantineAbbreviation>GA</ByzantineAbbreviation>
     <possibleAlternativeAbbreviations>GL</possibleAlternativeAbbreviations>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>Paul's Letters</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Πρὸς Ἐφεσίους</bookName>
@@ -1218,6 +1320,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>49</referenceNumber>
     <sequenceNumber>620</sequenceNumber>
     <expectedChapters>6</expectedChapters>
+    <shortAbbreviation>Eph</shortAbbreviation>
     <SBLAbbreviation>Eph</SBLAbbreviation>
     <OSISAbbreviation>Eph</OSISAbbreviation>
     <SwordAbbreviation>Eph</SwordAbbreviation>
@@ -1233,6 +1336,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <ByzantineAbbreviation>EPH</ByzantineAbbreviation>
     <possibleAlternativeAbbreviations>EP</possibleAlternativeAbbreviations>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>Paul's Letters</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Πρὸς Φιλιππησίους</bookName>
@@ -1241,6 +1345,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>50</referenceNumber>
     <sequenceNumber>622</sequenceNumber>
     <expectedChapters>4</expectedChapters>
+    <shortAbbreviation>Php</shortAbbreviation>
     <SBLAbbreviation>Phil</SBLAbbreviation>
     <OSISAbbreviation>Phil</OSISAbbreviation>
     <SwordAbbreviation>Phil</SwordAbbreviation>
@@ -1256,6 +1361,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <ByzantineAbbreviation>PHP</ByzantineAbbreviation>
     <possibleAlternativeAbbreviations>PH,PP</possibleAlternativeAbbreviations>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>Paul's Letters</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Πρὸς Κολοσσαεῖς</bookName>
@@ -1264,6 +1370,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>51</referenceNumber>
     <sequenceNumber>624</sequenceNumber>
     <expectedChapters>4</expectedChapters>
+    <shortAbbreviation>Col</shortAbbreviation>
     <SBLAbbreviation>Col</SBLAbbreviation>
     <OSISAbbreviation>Col</OSISAbbreviation>
     <SwordAbbreviation>Col</SwordAbbreviation>
@@ -1279,6 +1386,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <ByzantineAbbreviation>COL</ByzantineAbbreviation>
     <possibleAlternativeAbbreviations>CL,CLS</possibleAlternativeAbbreviations>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>Paul's Letters</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Πρὸς Θεσσαλονικεῖς α</bookName>
@@ -1287,6 +1395,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>52</referenceNumber>
     <sequenceNumber>626</sequenceNumber>
     <expectedChapters>5</expectedChapters>
+    <shortAbbreviation>1Th</shortAbbreviation>
     <SBLAbbreviation>1 Thess</SBLAbbreviation>
     <OSISAbbreviation>1Thess</OSISAbbreviation>
     <SwordAbbreviation>1Thess</SwordAbbreviation>
@@ -1301,6 +1410,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>1TH</BibleWorksAbbreviation>
     <ByzantineAbbreviation>1TH</ByzantineAbbreviation>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>Paul's Letters</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Πρὸς Θεσσαλονικεῖς β</bookName>
@@ -1309,6 +1419,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>53</referenceNumber>
     <sequenceNumber>628</sequenceNumber>
     <expectedChapters>3</expectedChapters>
+    <shortAbbreviation>2Th</shortAbbreviation>
     <SBLAbbreviation>2 Thess</SBLAbbreviation>
     <OSISAbbreviation>2Thess</OSISAbbreviation>
     <SwordAbbreviation>2Thess</SwordAbbreviation>
@@ -1323,6 +1434,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>2TH</BibleWorksAbbreviation>
     <ByzantineAbbreviation>2TH</ByzantineAbbreviation>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>Paul's Letters</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Πρὸς Τιμόθεον α</bookName>
@@ -1331,6 +1443,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>54</referenceNumber>
     <sequenceNumber>630</sequenceNumber>
     <expectedChapters>6</expectedChapters>
+    <shortAbbreviation>1Ti</shortAbbreviation>
     <SBLAbbreviation>1 Tim</SBLAbbreviation>
     <OSISAbbreviation>1Tim</OSISAbbreviation>
     <SwordAbbreviation>1Tim</SwordAbbreviation>
@@ -1345,6 +1458,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>1TI</BibleWorksAbbreviation>
     <ByzantineAbbreviation>1TI</ByzantineAbbreviation>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>Paul's Letters</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Πρὸς Τιμόθεον β</bookName>
@@ -1353,6 +1467,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>55</referenceNumber>
     <sequenceNumber>632</sequenceNumber>
     <expectedChapters>4</expectedChapters>
+    <shortAbbreviation>2Ti</shortAbbreviation>
     <SBLAbbreviation>2 Tim</SBLAbbreviation>
     <OSISAbbreviation>2Tim</OSISAbbreviation>
     <SwordAbbreviation>2Tim</SwordAbbreviation>
@@ -1367,6 +1482,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>2TI</BibleWorksAbbreviation>
     <ByzantineAbbreviation>2TI</ByzantineAbbreviation>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>Paul's Letters</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Πρὸς Τίτον</bookName>
@@ -1375,6 +1491,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>56</referenceNumber>
     <sequenceNumber>634</sequenceNumber>
     <expectedChapters>3</expectedChapters>
+    <shortAbbreviation>Tit</shortAbbreviation>
     <SBLAbbreviation>Titus</SBLAbbreviation>
     <OSISAbbreviation>Titus</OSISAbbreviation>
     <SwordAbbreviation>Titus</SwordAbbreviation>
@@ -1390,6 +1507,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <ByzantineAbbreviation>TIT</ByzantineAbbreviation>
     <possibleAlternativeAbbreviations>TI</possibleAlternativeAbbreviations>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>Paul's Letters</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Πρὸς Φιλήμονα</bookName>
@@ -1398,6 +1516,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>57</referenceNumber>
     <sequenceNumber>636</sequenceNumber>
     <expectedChapters>1</expectedChapters>
+    <shortAbbreviation>Phm</shortAbbreviation>
     <SBLAbbreviation>Phlm</SBLAbbreviation>
     <OSISAbbreviation>Phlm</OSISAbbreviation>
     <SwordAbbreviation>Phlm</SwordAbbreviation>
@@ -1412,6 +1531,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>PHM</BibleWorksAbbreviation>
     <ByzantineAbbreviation>PHM</ByzantineAbbreviation>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>Paul's Letters</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Πρὸς Ἑβραίους</bookName>
@@ -1420,6 +1540,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>58</referenceNumber>
     <sequenceNumber>638</sequenceNumber>
     <expectedChapters>13</expectedChapters>
+    <shortAbbreviation>Heb</shortAbbreviation>
     <SBLAbbreviation>Heb</SBLAbbreviation>
     <OSISAbbreviation>Heb</OSISAbbreviation>
     <SwordAbbreviation>Heb</SwordAbbreviation>
@@ -1435,6 +1556,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <ByzantineAbbreviation>HEB</ByzantineAbbreviation>
     <possibleAlternativeAbbreviations>HB</possibleAlternativeAbbreviations>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>General Letters</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Ἰακώβου</bookName>
@@ -1443,6 +1565,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>59</referenceNumber>
     <sequenceNumber>640</sequenceNumber>
     <expectedChapters>5</expectedChapters>
+    <shortAbbreviation>Jas</shortAbbreviation>
     <SBLAbbreviation>Jas</SBLAbbreviation>
     <OSISAbbreviation>Jas</OSISAbbreviation>
     <SwordAbbreviation>Jas</SwordAbbreviation>
@@ -1458,6 +1581,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <ByzantineAbbreviation>JAS</ByzantineAbbreviation>
     <possibleAlternativeAbbreviations>JM,JMS</possibleAlternativeAbbreviations>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>General Letters</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Πέτρου α</bookName>
@@ -1466,6 +1590,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>60</referenceNumber>
     <sequenceNumber>642</sequenceNumber>
     <expectedChapters>5</expectedChapters>
+    <shortAbbreviation>1Pe</shortAbbreviation>
     <SBLAbbreviation>1 Pet</SBLAbbreviation>
     <OSISAbbreviation>1Pet</OSISAbbreviation>
     <SwordAbbreviation>1Pet</SwordAbbreviation>
@@ -1481,6 +1606,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <ByzantineAbbreviation>1PE</ByzantineAbbreviation>
     <possibleAlternativeAbbreviations>1P</possibleAlternativeAbbreviations>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>General Letters</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Πέτρου β</bookName>
@@ -1489,6 +1615,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>61</referenceNumber>
     <sequenceNumber>644</sequenceNumber>
     <expectedChapters>3</expectedChapters>
+    <shortAbbreviation>2Pe</shortAbbreviation>
     <SBLAbbreviation>2 Pet</SBLAbbreviation>
     <OSISAbbreviation>2Pet</OSISAbbreviation>
     <SwordAbbreviation>2Pet</SwordAbbreviation>
@@ -1504,6 +1631,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <ByzantineAbbreviation>2PE</ByzantineAbbreviation>
     <possibleAlternativeAbbreviations>2P</possibleAlternativeAbbreviations>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>General Letters</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Ἰωάννου α</bookName>
@@ -1512,6 +1640,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>62</referenceNumber>
     <sequenceNumber>646</sequenceNumber>
     <expectedChapters>5</expectedChapters>
+    <shortAbbreviation>1Jn</shortAbbreviation>
     <SBLAbbreviation>1 John</SBLAbbreviation>
     <OSISAbbreviation>1John</OSISAbbreviation>
     <SwordAbbreviation>1John</SwordAbbreviation>
@@ -1527,6 +1656,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <ByzantineAbbreviation>1JO</ByzantineAbbreviation>
     <possibleAlternativeAbbreviations>1J</possibleAlternativeAbbreviations>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>General Letters</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Ἰωάννου β</bookName>
@@ -1535,6 +1665,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>63</referenceNumber>
     <sequenceNumber>648</sequenceNumber>
     <expectedChapters>1</expectedChapters>
+    <shortAbbreviation>2Jn</shortAbbreviation>
     <SBLAbbreviation>2 John</SBLAbbreviation>
     <OSISAbbreviation>2John</OSISAbbreviation>
     <SwordAbbreviation>2John</SwordAbbreviation>
@@ -1550,6 +1681,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <ByzantineAbbreviation>2JO</ByzantineAbbreviation>
     <possibleAlternativeAbbreviations>2J</possibleAlternativeAbbreviations>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>General Letters</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Ἰωάννου γ</bookName>
@@ -1558,6 +1690,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>64</referenceNumber>
     <sequenceNumber>650</sequenceNumber>
     <expectedChapters>1</expectedChapters>
+    <shortAbbreviation>3Jn</shortAbbreviation>
     <SBLAbbreviation>3 John</SBLAbbreviation>
     <OSISAbbreviation>3John</OSISAbbreviation>
     <SwordAbbreviation>3John</SwordAbbreviation>
@@ -1573,6 +1706,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <ByzantineAbbreviation>3JO</ByzantineAbbreviation>
     <possibleAlternativeAbbreviations>3J</possibleAlternativeAbbreviations>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>General Letters</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Ἰούδας</bookName>
@@ -1581,6 +1715,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>65</referenceNumber>
     <sequenceNumber>652</sequenceNumber>
     <expectedChapters>1</expectedChapters>
+    <shortAbbreviation>Jud</shortAbbreviation>
     <SBLAbbreviation>Jude</SBLAbbreviation>
     <OSISAbbreviation>Jude</OSISAbbreviation>
     <SwordAbbreviation>Jude</SwordAbbreviation>
@@ -1596,6 +1731,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <ByzantineAbbreviation>JUDE</ByzantineAbbreviation>
     <possibleAlternativeAbbreviations>JD</possibleAlternativeAbbreviations>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>General Letters</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>Ἀποκάλυψις Ἰωάννου</bookName>
@@ -1604,6 +1740,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>66</referenceNumber>
     <sequenceNumber>654</sequenceNumber>
     <expectedChapters>22</expectedChapters>
+    <shortAbbreviation>Re</shortAbbreviation>
     <SBLAbbreviation>Rev</SBLAbbreviation>
     <OSISAbbreviation>Rev</OSISAbbreviation>
     <SwordAbbreviation>Rev</SwordAbbreviation>
@@ -1619,6 +1756,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <ByzantineAbbreviation>RE</ByzantineAbbreviation>
     <possibleAlternativeAbbreviations>RV</possibleAlternativeAbbreviations>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>Revelation</typicalSubsection>
   </BibleBookCodes>
 
 <!-- Books from above which have quite different Hebrew and Greek versions. Sometimes printed separately, sometimes combined. -->
@@ -1640,6 +1778,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleditNumber>72</BibleditNumber>
     <possibleAlternativeBooks>EST,ESA,ESC</possibleAlternativeBooks>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Historical</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>(Unknown)</bookName>
@@ -1657,6 +1796,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>ESG</BibleWorksAbbreviation>
     <possibleAlternativeBooks>EST,ESG,ESC</possibleAlternativeBooks>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Historical</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>אֶסְתֵר</bookName>
@@ -1673,6 +1813,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <USFMNumber>70</USFMNumber>
     <possibleAlternativeBooks>EST,ESG,ESA</possibleAlternativeBooks>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Historical</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>(Unknown)</bookName>
@@ -1692,6 +1833,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <BibleWorksAbbreviation>DNG</BibleWorksAbbreviation>
     <possibleAlternativeBooks>DAN,DNA,DNC,DNT</possibleAlternativeBooks>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Major Prophets</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>(Unknown)</bookName>
@@ -1707,6 +1849,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <USFMNumber>B2</USFMNumber>
     <possibleAlternativeBooks>DAN,DNG,DNC,DNT</possibleAlternativeBooks>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Major Prophets</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>דָּנִיֵּאל</bookName>
@@ -1722,6 +1865,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <USFMNumber>B2</USFMNumber>
     <possibleAlternativeBooks>DAN,DNG,DNA,DNT</possibleAlternativeBooks>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Major Prophets</typicalSubsection>
   </BibleBookCodes>
 
 <!-- Catholic Deuterocanonical (Protestant Apocryphal) books -->
@@ -1732,6 +1876,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>80</referenceNumber>
     <sequenceNumber>262</sequenceNumber>
     <expectedChapters>1</expectedChapters>
+    <shortAbbreviation>Bel</shortAbbreviation>
     <SBLAbbreviation>Bel</SBLAbbreviation>
     <OSISAbbreviation>Bel</OSISAbbreviation>
     <SwordAbbreviation>Bel</SwordAbbreviation>
@@ -1752,6 +1897,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>81</referenceNumber>
     <sequenceNumber>260</sequenceNumber>
     <expectedChapters>1</expectedChapters>
+    <shortAbbreviation>Sus</shortAbbreviation>
     <SBLAbbreviation>Sus</SBLAbbreviation>
     <OSISAbbreviation>Sus</OSISAbbreviation>
     <SwordAbbreviation>Sus</SwordAbbreviation>
@@ -1772,6 +1918,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>82</referenceNumber>
     <sequenceNumber>202</sequenceNumber>
     <expectedChapters>16</expectedChapters>
+    <shortAbbreviation>Jdt</shortAbbreviation>
     <SBLAbbreviation>Jdt</SBLAbbreviation>
     <OSISAbbreviation>Jdt</OSISAbbreviation>
     <SwordAbbreviation>Jdt</SwordAbbreviation>
@@ -1811,6 +1958,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>84</referenceNumber>
     <sequenceNumber>208</sequenceNumber>
     <expectedChapters>51,52</expectedChapters>
+    <shortAbbreviation>Sir</shortAbbreviation>
     <SBLAbbreviation>Sir</SBLAbbreviation>
     <OSISAbbreviation>Sir</OSISAbbreviation>
     <SwordAbbreviation>Sir</SwordAbbreviation>
@@ -1841,6 +1989,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>86</referenceNumber>
     <sequenceNumber>200</sequenceNumber>
     <expectedChapters>14</expectedChapters>
+    <shortAbbreviation>Tob</shortAbbreviation>
     <SBLAbbreviation>Tob</SBLAbbreviation>
     <OSISAbbreviation>Tob</OSISAbbreviation>
     <SwordAbbreviation>Tob</SwordAbbreviation>
@@ -1861,6 +2010,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>87</referenceNumber>
     <sequenceNumber>206</sequenceNumber>
     <expectedChapters>19</expectedChapters>
+    <shortAbbreviation>Wis</shortAbbreviation>
     <SBLAbbreviation>Wis</SBLAbbreviation>
     <OSISAbbreviation>Wis</OSISAbbreviation>
     <SwordAbbreviation>Wis</SwordAbbreviation>
@@ -1880,6 +2030,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>88</referenceNumber>
     <sequenceNumber>250</sequenceNumber>
     <expectedChapters>1</expectedChapters>
+    <shortAbbreviation>Az</shortAbbreviation>
     <SBLAbbreviation>Pr Azar</SBLAbbreviation>
     <OSISAbbreviation>PrAzar</OSISAbbreviation>
     <SwordAbbreviation>PrAzar</SwordAbbreviation>
@@ -2016,6 +2167,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>100</referenceNumber>
     <sequenceNumber>240</sequenceNumber>
     <expectedChapters>1</expectedChapters>
+    <shortAbbreviation>LJe</shortAbbreviation>
     <SBLAbbreviation>Ep Jer</SBLAbbreviation>
     <OSISAbbreviation>EpJer</OSISAbbreviation>
     <SwordAbbreviation>EpJer</SwordAbbreviation>
@@ -2037,6 +2189,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>101</referenceNumber>
     <sequenceNumber>220</sequenceNumber>
     <expectedChapters>5,6</expectedChapters>
+    <shortAbbreviation>Bar</shortAbbreviation>
     <SBLAbbreviation>Bar</SBLAbbreviation>
     <OSISAbbreviation>Bar</OSISAbbreviation>
     <SwordAbbreviation>Bar</SwordAbbreviation>
@@ -2168,6 +2321,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>111</referenceNumber>
     <sequenceNumber>272</sequenceNumber>
     <expectedChapters>16</expectedChapters>
+    <shortAbbreviation>1Ma</shortAbbreviation>
     <SBLAbbreviation>1 Macc</SBLAbbreviation>
     <OSISAbbreviation>1Macc</OSISAbbreviation>
     <SwordAbbreviation>1Macc</SwordAbbreviation>
@@ -2187,6 +2341,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>112</referenceNumber>
     <sequenceNumber>274</sequenceNumber>
     <expectedChapters>15</expectedChapters>
+    <shortAbbreviation>2Ma</shortAbbreviation>
     <SBLAbbreviation>2 Macc</SBLAbbreviation>
     <OSISAbbreviation>2Macc</OSISAbbreviation>
     <SwordAbbreviation>2Macc</SwordAbbreviation>
@@ -2207,6 +2362,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>113</referenceNumber>
     <sequenceNumber>276</sequenceNumber>
     <expectedChapters>7</expectedChapters>
+    <shortAbbreviation>3Ma</shortAbbreviation>
     <SBLAbbreviation>3 Macc</SBLAbbreviation>
     <OSISAbbreviation>3Macc</OSISAbbreviation>
     <SwordAbbreviation>3Macc</SwordAbbreviation>
@@ -2227,6 +2383,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>114</referenceNumber>
     <sequenceNumber>278</sequenceNumber>
     <expectedChapters>18</expectedChapters>
+    <shortAbbreviation>4Ma</shortAbbreviation>
     <SBLAbbreviation>4 Macc</SBLAbbreviation>
     <OSISAbbreviation>4Macc</OSISAbbreviation>
     <SwordAbbreviation>4Macc</SwordAbbreviation>
@@ -2245,6 +2402,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceAbbreviation>MA5</referenceAbbreviation>
     <referenceNumber>115</referenceNumber>
     <sequenceNumber>280</sequenceNumber>
+    <shortAbbreviation>5Ma</shortAbbreviation>
     <OSISAbbreviation>5Macc</OSISAbbreviation>
     <SwordAbbreviation>5Macc</SwordAbbreviation>
     <typicalSection>???</typicalSection>
@@ -3230,6 +3388,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceAbbreviation>DIO</referenceAbbreviation>
     <referenceNumber>300</referenceNumber>
     <sequenceNumber>750</sequenceNumber>
+    <shortAbbreviation>Dio</shortAbbreviation>
     <SwordAbbreviation>Diogn</SwordAbbreviation>
     <typicalSection>PS</typicalSection>
   </BibleBookCodes>
@@ -3288,8 +3447,11 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>600</referenceNumber>
     <sequenceNumber>18</sequenceNumber>
     <expectedChapters>187</expectedChapters>
+    <shortAbbreviation>Mos</shortAbbreviation>
     <possibleAlternativeBooks>GEN,EXO,LEV,NUM,DEU</possibleAlternativeBooks>
+    <consistsOfBooks>GEN,EXO,LEV,NUM,DEU</consistsOfBooks>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Pentateuch</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <!-- Samuel is just one book in the Hebrew -->
@@ -3299,8 +3461,11 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>610</referenceNumber>
     <sequenceNumber>36</sequenceNumber>
     <expectedChapters>55</expectedChapters>
+    <shortAbbreviation>Sam</shortAbbreviation>
     <possibleAlternativeBooks>SA1,SA2</possibleAlternativeBooks>
+    <consistsOfBooks>SA1,SA2</consistsOfBooks>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Historical</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <!-- Kings is just one book in the Hebrew -->
@@ -3310,8 +3475,11 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>620</referenceNumber>
     <sequenceNumber>42</sequenceNumber>
     <expectedChapters>47</expectedChapters>
+    <shortAbbreviation>Ki</shortAbbreviation>
     <possibleAlternativeBooks>KI1,KI2</possibleAlternativeBooks>
+    <consistsOfBooks>KI1,KI2</consistsOfBooks>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Historical</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <!-- Samuel/Kings could be regarded as one contiguous work -->
@@ -3323,6 +3491,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <expectedChapters>102</expectedChapters>
     <possibleAlternativeBooks>SAM,KGS,SA1,SA2,KI1,KI2</possibleAlternativeBooks>
     <typicalSection>NT</typicalSection>
+    <typicalSubsection>Historical</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <!-- Chronicles is just one book in the Hebrew -->
@@ -3332,8 +3501,11 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceNumber>630</referenceNumber>
     <sequenceNumber>48</sequenceNumber>
     <expectedChapters>65</expectedChapters>
+    <shortAbbreviation>Chr</shortAbbreviation>
     <possibleAlternativeBooks>CH1,CH2</possibleAlternativeBooks>
+    <consistsOfBooks>CH1,CH2</consistsOfBooks>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Historical</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>(Unknown)</bookName>
@@ -3351,7 +3523,9 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <NETBibleAbbreviation>Ezr</NETBibleAbbreviation>
     <DrupalBibleAbbreviation>Ezr</DrupalBibleAbbreviation>
     <possibleAlternativeBooks>EZR,NEH</possibleAlternativeBooks>
+    <consistsOfBooks>EZR,NEH</consistsOfBooks>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Historical</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <!-- Used for the Minor Prophets in the Hebrew -->
@@ -3360,7 +3534,10 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <referenceAbbreviation>P12</referenceAbbreviation>
     <referenceNumber>650</referenceNumber>
     <sequenceNumber>150</sequenceNumber>
+    <possibleAlternativeBooks>EZR,NEH</possibleAlternativeBooks>
+    <consistsOfBooks>EZR,NEH</consistsOfBooks>
     <typicalSection>OT</typicalSection>
+    <typicalSubsection>Minor Prophets</typicalSubsection>
   </BibleBookCodes>
   <BibleBookCodes>
     <bookName>(Unknown)</bookName>
@@ -3370,6 +3547,7 @@ See the supplied BibleBooksCodes.ReadMe.txt for more details.
     <sequenceNumber>608</sequenceNumber>
     <expectedChapters>52</expectedChapters>
     <possibleAlternativeBooks>LUK,ACT</possibleAlternativeBooks>
+    <consistsOfBooks>LUK,ACT</consistsOfBooks>
     <typicalSection>NT</typicalSection>
   </BibleBookCodes>
 

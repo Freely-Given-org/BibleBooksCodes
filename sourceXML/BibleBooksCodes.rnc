@@ -1,5 +1,5 @@
 # BibleBooksCodes.rnc           Relax NG Compact Syntax schema file
-#   Last modified: 2022-02-05 by RJH
+#   Last modified: 2022-02-06 by RJH
 #   Version 0.76
 #
 # On Linux, to convert to RNG, use
@@ -49,6 +49,7 @@ BibleBookCodes = element BibleBookCodes
     element referenceNumber { xsd:positiveInteger { totalDigits="3" minInclusive="1" maxInclusive="999" } },
     element sequenceNumber { xsd:positiveInteger { totalDigits="3" minInclusive="1" maxInclusive="999" } },
     element expectedChapters { xsd:string { minLength="1" maxLength="7" } }?,
+    element shortAbbreviation { xsd:string { minLength="2" maxLength="3" } }?,
     element SBLAbbreviation { xsd:string { minLength="2" maxLength="8" } }?,
     element OSISAbbreviation { xsd:string { minLength="2" maxLength="7" } }?,
     element SwordAbbreviation { xsd:string { minLength="2" maxLength="13" } }?,
@@ -64,5 +65,7 @@ BibleBookCodes = element BibleBookCodes
     element ByzantineAbbreviation { xsd:string { minLength="2" maxLength="4" } }?,
     element possibleAlternativeAbbreviations { xsd:string { minLength="1" maxLength="25" } }?,
     element possibleAlternativeBooks { xsd:string { minLength="3" maxLength="23" } }?,
-    element typicalSection { "OT" | "OT+" | "NT" | "NT+" | "DC" | "PS" | "FRT" | "BAK" | "???" }?
+    element consistsOfBooks { xsd:string { minLength="3" maxLength="19" } }?,
+    element typicalSection { "OT" | "OT+" | "NT" | "NT+" | "DC" | "PS" | "FRT" | "BAK" | "???" }?,
+    element typicalSubsection { "Pentateuch" | "Historical" | "Poetry-Wisdom" | "Major Prophets" | "Minor Prophets" | "Gospels" | "Acts" | "Paul's Letters" | "General Letters" | "Revelation" }?
 }

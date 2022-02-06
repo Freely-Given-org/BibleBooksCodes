@@ -3,9 +3,9 @@
 #
 # BibleBooksCodesConverter.py
 #
-# Module handling BibleBooksCodes.xml to produce C and Python data tables
+# Module handling BibleBooksCodes.xml to produce various derived export formats
 #
-# Copyright (C) 2010-2021 Robert Hunt
+# Copyright (C) 2010-2022 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -32,20 +32,14 @@ from pathlib import Path
 from datetime import datetime
 from xml.etree.ElementTree import ElementTree
 
-if __name__ == '__main__':
-    import sys
-    aboveAboveAboveFolderpath = os.path.dirname( os.path.dirname( os.path.dirname( os.path.dirname( os.path.abspath( __file__ ) ) ) ) )
-    if aboveAboveAboveFolderpath not in sys.path:
-        sys.path.insert( 0, aboveAboveAboveFolderpath )
-from BibleOrgSys.Misc.singleton import singleton
-from BibleOrgSys import BibleOrgSysGlobals
-from BibleOrgSys.BibleOrgSysGlobals import fnPrint, vPrint, dPrint
+import BibleOrgSysGlobals
+from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2021-01-19' # by RJH
+LAST_MODIFIED_DATE = '2022-02-06' # by RJH
 SHORT_PROGRAM_NAME = "BibleBooksCodesConverter"
 PROGRAM_NAME = "Bible Books Codes converter"
-PROGRAM_VERSION = '0.81'
+PROGRAM_VERSION = '0.82'
 programNameVersion = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 debuggingThisModule = False
@@ -55,7 +49,6 @@ SPECIAL_BOOK_CODES = ('ALL',) # We check these aren't used for other things
 
 
 
-@singleton # Can only ever have one instance
 class BibleBooksCodesConverter:
     """
     Class for reading, validating, and converting BibleBooksCodes.
@@ -79,14 +72,14 @@ class BibleBooksCodesConverter:
         self._compulsoryAttributes = ()
         self._optionalAttributes = ()
         self._uniqueAttributes = self._compulsoryAttributes + self._optionalAttributes
-        self._compulsoryElements = ( 'nameEnglish', 'referenceAbbreviation', 'referenceNumber', 'sequenceNumber',
+        self._compulsoryElements = ( 'bookName', 'bookNameEnglishGuide', 'referenceAbbreviation', 'referenceNumber', 'sequenceNumber',
                                     'typicalSection' )
-        self._optionalElements = ( 'expectedChapters', 'SBLAbbreviation', 'OSISAbbreviation', 'SwordAbbreviation',
+        self._optionalElements = ( 'expectedChapters', 'shortAbbreviation', 'SBLAbbreviation', 'OSISAbbreviation', 'SwordAbbreviation',
                                     'CCELNumber', 'USFMAbbreviation', 'USFMNumber', 'USXNumber', 'UnboundCode',
                                     'BibleditNumber', 'NETBibleAbbreviation', 'DrupalBibleAbbreviation',
                                     'BibleWorksAbbreviation', 'ByzantineAbbreviation',
                                     'possibleAlternativeAbbreviations', 'possibleAlternativeBooks' )
-        self._uniqueElements = ( 'nameEnglish', 'referenceAbbreviation', 'referenceNumber', 'sequenceNumber' ) + \
+        self._uniqueElements = ( 'bookNameEnglishGuide', 'referenceAbbreviation', 'referenceNumber', 'sequenceNumber' ) + \
                     ( 'USXNumber', 'UnboundCode', 'BibleditNumber', 'NETBibleAbbreviation', 'DrupalBibleAbbreviation',
                       'BibleWorksAbbreviation', 'ByzantineAbbreviation' )
 
@@ -104,9 +97,7 @@ class BibleBooksCodesConverter:
         """
         if self._XMLTree is None: # We mustn't have already have loaded the data
             if XMLFileOrFilepath is None:
-                # XMLFileOrFilepath = BibleOrgSysGlobals.BOS_DATAFILES_FOLDERPATH.joinpath( self._filenameBase + '.xml' ) # Relative to module, not cwd
-                import importlib.resources # From Python 3.7 onwards -- handles zipped resources also
-                XMLFileOrFilepath = importlib.resources.open_text('BibleOrgSys.DataFiles', self._filenameBase + '.xml')
+                XMLFileOrFilepath = os.path.join('../sourceXML', self._filenameBase + '.xml')
 
             self.__load( XMLFileOrFilepath )
             if BibleOrgSysGlobals.strictCheckingFlag:
@@ -314,7 +305,7 @@ class BibleBooksCodesConverter:
         for element in self._XMLTree:
             # Get the required information out of the tree for this element
             # Start with the compulsory elements
-            nameEnglish = element.find('nameEnglish').text # This name is really just a comment element
+            bookNameEnglishGuide = element.find('bookNameEnglishGuide').text # This name is really just a comment element
             referenceAbbreviation = element.find('referenceAbbreviation').text
             if referenceAbbreviation.upper() != referenceAbbreviation:
                 logging.error( _("Reference abbreviation {!r} should be UPPER CASE").format( referenceAbbreviation ) )
@@ -360,7 +351,7 @@ class BibleBooksCodesConverter:
                                                     'UnboundCodeString':UnboundCodeString, 'BibleditNumberString':BibleditNumberString,
                                                     'NETBibleAbbreviation':NETBibleAbbreviation, 'DrupalBibleAbbreviation':DrupalBibleAbbreviation, 'ByzantineAbbreviation':ByzantineAbbreviation,
                                                     'numExpectedChapters':expectedChapters, 'possibleAlternativeBooks':possibleAlternativeBooks,
-                                                    'nameEnglish':nameEnglish, 'typicalSection':typicalSection }
+                                                    'bookNameEnglishGuide':bookNameEnglishGuide, 'typicalSection':typicalSection }
             if 'referenceNumber' in self._compulsoryElements or ID:
                 if 'referenceNumber' in self._uniqueElements: assert intID not in myIDDict # Shouldn't be any duplicates
                 if intID in myIDDict: halt
@@ -370,7 +361,7 @@ class BibleBooksCodesConverter:
                                     'UnboundCodeString':UnboundCodeString, 'BibleditNumberString':BibleditNumberString,
                                     'NETBibleAbbreviation':NETBibleAbbreviation, 'DrupalBibleAbbreviation':DrupalBibleAbbreviation, 'ByzantineAbbreviation':ByzantineAbbreviation,
                                     'numExpectedChapters':expectedChapters, 'possibleAlternativeBooks':possibleAlternativeBooks,
-                                    'nameEnglish':nameEnglish, 'typicalSection':typicalSection }
+                                    'bookNameEnglishGuide':bookNameEnglishGuide, 'typicalSection':typicalSection }
             if 'sequenceNumber' in self._compulsoryElements or sequenceNumber:
                 if 'sequenceNumber' in self._uniqueElements: assert intSequenceNumber not in sequenceNumberList # Shouldn't be any duplicates
                 if intSequenceNumber in sequenceNumberList: halt
@@ -487,9 +478,9 @@ class BibleBooksCodesConverter:
                     #logging.info( _("This Byzantine {!r} abbreviation ({}) already assigned to {!r}").format( UCAbbreviation, referenceAbbreviation, initialAllAbbreviationsDict[UCAbbreviation] ) )
                     #initialAllAbbreviationsDict[UCAbbreviation] = 'MultipleValues'
                 #else: initialAllAbbreviationsDict[UCAbbreviation] = referenceAbbreviation
-            if "nameEnglish" in self._compulsoryElements or USFMNumberString:
-                if "nameEnglish" in self._uniqueElements: assert nameEnglish not in myENDict # Shouldn't be any duplicates
-                UCName = nameEnglish.upper()
+            if "bookNameEnglishGuide" in self._compulsoryElements or USFMNumberString:
+                if "bookNameEnglishGuide" in self._uniqueElements: assert bookNameEnglishGuide not in myENDict # Shouldn't be any duplicates
+                UCName = bookNameEnglishGuide.upper()
                 if UCName in myENDict:
                     if BibleOrgSysGlobals.debugFlag: halt
                 else: myENDict[UCName] = ( intID, referenceAbbreviation )
@@ -619,7 +610,7 @@ class BibleBooksCodesConverter:
         assert self.__DataDicts
 
         if not filepath:
-            folderpath = BibleOrgSysGlobals.DEFAULT_WRITEABLE_DERIVED_DATAFILES_FOLDERPATH
+            folderpath = Path('../derivedFormats/')
                             # TODO: What was this all about ???
                             # if isinstance( self.__XMLFileOrFilepath, (str,Path) ) \
                             # else BibleOrgSysGlobals.DEFAULT_WRITEABLE_CACHE_FOLDERPATH
@@ -654,9 +645,7 @@ class BibleBooksCodesConverter:
         assert self.__DataDicts
 
         if not filepath:
-            folderpath = BibleOrgSysGlobals.DEFAULT_WRITEABLE_DERIVED_DATAFILES_FOLDERPATH \
-                            if isinstance( self.__XMLFileOrFilepath, (str,Path) ) \
-                            else BibleOrgSysGlobals.DEFAULT_WRITEABLE_DERIVED_DATAFILES_FOLDERPATH
+            folderpath = Path('../derivedFormats/')
             if not os.path.exists( folderpath ): os.mkdir( folderpath )
             filepath = os.path.join( folderpath, self._filenameBase + '_Tables.py' )
         vPrint( 'Quiet', debuggingThisModule, _("Exporting to {}…").format( filepath ) )
@@ -684,7 +673,7 @@ class BibleBooksCodesConverter:
                     "DrupalBibleAbbreviationDict":("DrupalBibleAbbreviation", mostEntries),
                     "BibleWorksAbbreviationDict":("BibleWorksAbbreviation", mostEntries),
                     "ByzantineAbbreviationDict":("ByzantineAbbreviation", mostEntries),
-                    "EnglishNameDict":("nameEnglish", mostEntries),
+                    "EnglishNameDict":("bookNameEnglishGuide", mostEntries),
                     "initialAllAbbreviationsDict":("allAbbreviations", mostEntries) }
             for dictName,dictData in self.__DataDicts.items():
                 exportPythonDictOrList( myFile, dictData, dictName, dictInfo[dictName][0], dictInfo[dictName][1] )
@@ -696,7 +685,7 @@ class BibleBooksCodesConverter:
         """
         Writes the information tables to a .json file that can be easily loaded into a Java program.
 
-        See http://en.wikipedia.org/wiki/JSON.
+        See https://en.wikipedia.org/wiki/JSON.
         """
         import json
 
@@ -705,7 +694,7 @@ class BibleBooksCodesConverter:
         assert self.__DataDicts
 
         if not filepath:
-            folderpath = BibleOrgSysGlobals.DEFAULT_WRITEABLE_DERIVED_DATAFILES_FOLDERPATH
+            folderpath = Path('../derivedFormats/')
             if not os.path.exists( folderpath ): os.mkdir( folderpath )
             filepath = os.path.join( folderpath, self._filenameBase + '_Tables.json' )
         vPrint( 'Quiet', debuggingThisModule, _("Exporting to {}…").format( filepath ) )
@@ -778,7 +767,7 @@ class BibleBooksCodesConverter:
         assert self.__DataDicts
 
         if not filepath:
-            folderpath = BibleOrgSysGlobals.DEFAULT_WRITEABLE_DERIVED_DATAFILES_FOLDERPATH
+            folderpath = Path('../derivedFormats/')
             if not os.path.exists( folderpath ): os.mkdir( folderpath )
             filepath = os.path.join( folderpath, self._filenameBase + '_Tables' )
         hFilepath = filepath + '.h'
@@ -809,10 +798,10 @@ class BibleBooksCodesConverter:
             BYTE = "const int"
             dictInfo = {
                 "referenceNumberDict":("referenceNumber (integer 1..255)",
-                    "{} referenceNumber; {}* ByzantineAbbreviation; {}* CCELNumberString; {}* NETBibleAbbreviation; {}* OSISAbbreviation; {} USFMAbbreviation[3+1]; {} USFMNumberString[2+1]; {}* SBLAbbreviation; {}* SwordAbbreviation; {}* nameEnglish; {}* numExpectedChapters; {}* possibleAlternativeBooks; {} referenceAbbreviation[3+1];"
+                    "{} referenceNumber; {}* ByzantineAbbreviation; {}* CCELNumberString; {}* NETBibleAbbreviation; {}* OSISAbbreviation; {} USFMAbbreviation[3+1]; {} USFMNumberString[2+1]; {}* SBLAbbreviation; {}* SwordAbbreviation; {}* bookNameEnglishGuide; {}* numExpectedChapters; {}* possibleAlternativeBooks; {} referenceAbbreviation[3+1];"
                    .format(BYTE, CHAR, CHAR, CHAR, CHAR, CHAR, CHAR, CHAR, CHAR, CHAR, CHAR, CHAR, CHAR ) ),
                 "referenceAbbreviationDict":("referenceAbbreviation",
-                    "{} referenceAbbreviation[3+1]; {}* ByzantineAbbreviation; {}* CCELNumberString; {} referenceNumber; {}* NETBibleAbbreviation; {}* OSISAbbreviation; {} USFMAbbreviation[3+1]; {} USFMNumberString[2+1]; {}* SBLAbbreviation; {}* SwordAbbreviation; {}* nameEnglish; {}* numExpectedChapters; {}* possibleAlternativeBooks;"
+                    "{} referenceAbbreviation[3+1]; {}* ByzantineAbbreviation; {}* CCELNumberString; {} referenceNumber; {}* NETBibleAbbreviation; {}* OSISAbbreviation; {} USFMAbbreviation[3+1]; {} USFMNumberString[2+1]; {}* SBLAbbreviation; {}* SwordAbbreviation; {}* bookNameEnglishGuide; {}* numExpectedChapters; {}* possibleAlternativeBooks;"
                    .format(CHAR, CHAR, CHAR, BYTE, CHAR, CHAR, CHAR, CHAR, CHAR, CHAR, CHAR, CHAR, CHAR ) ),
                 "sequenceList":("sequenceList",),
                 "CCELDict":("CCELNumberString", "{}* CCELNumberString; {} referenceNumber; {} referenceAbbreviation[3+1];".format(CHAR,BYTE,CHAR) ),
@@ -827,7 +816,7 @@ class BibleBooksCodesConverter:
                 "NETBibleAbbreviationDict":("NETBibleAbbreviation", "{}* NETBibleAbbreviation; {} referenceNumber; {} referenceAbbreviation[3+1];".format(CHAR,BYTE,CHAR) ),
                 "DrupalBibleAbbreviationDict":("DrupalBibleAbbreviation", "{}* DrupalBibleAbbreviation; {} referenceNumber; {} referenceAbbreviation[3+1];".format(CHAR,BYTE,CHAR) ),
                 "ByzantineAbbreviationDict":("ByzantineAbbreviation", "{}* ByzantineAbbreviation; {} referenceNumber; {} referenceAbbreviation[3+1];".format(CHAR,BYTE,CHAR) ),
-                "EnglishNameDict":("nameEnglish", "{}* nameEnglish; {} referenceNumber; {} referenceAbbreviation[3+1];".format(CHAR,BYTE,CHAR) ),
+                "EnglishNameDict":("bookNameEnglishGuide", "{}* bookNameEnglishGuide; {} referenceNumber; {} referenceAbbreviation[3+1];".format(CHAR,BYTE,CHAR) ),
                 "initialAllAbbreviationsDict":("abbreviation", "{}* abbreviation; {} referenceAbbreviation[3+1];".format(CHAR,CHAR) ) }
 
             for dictName,dictData in self.__DataDicts.items():
@@ -859,8 +848,9 @@ def briefDemo() -> None:
         bbcc = BibleBooksCodesConverter().loadAndValidate() # Load the XML
         vPrint( 'Quiet', debuggingThisModule, bbcc ) # Just print a summary
         OAD = bbcc.importDataToPython()['OSISAbbreviationDict']
-        vPrint( 'Quiet', debuggingThisModule, 'OAD', len(OAD), sorted(OAD) )
-        vPrint( 'Quiet', debuggingThisModule, OAD['WIS'] )
+        vPrint( 'Quiet', debuggingThisModule, "\nSample output:" )
+        vPrint( 'Quiet', debuggingThisModule, f"\nOSISAbbreviationDict: ({len(OAD)}) {sorted(OAD)}" )
+        vPrint( 'Quiet', debuggingThisModule, f"\n{OAD['WIS']=}" )
 # end of BibleBooksCodesConverter.briefDemo
 
 def fullDemo() -> None:
@@ -881,8 +871,9 @@ def fullDemo() -> None:
         bbcc = BibleBooksCodesConverter().loadAndValidate() # Load the XML
         vPrint( 'Quiet', debuggingThisModule, bbcc ) # Just print a summary
         OAD = bbcc.importDataToPython()['OSISAbbreviationDict']
-        vPrint( 'Quiet', debuggingThisModule, 'OAD', len(OAD), sorted(OAD) )
-        vPrint( 'Quiet', debuggingThisModule, OAD['WIS'] )
+        vPrint( 'Quiet', debuggingThisModule, "\nSample output:" )
+        vPrint( 'Quiet', debuggingThisModule, f"\nOSISAbbreviationDict: ({len(OAD)}) {sorted(OAD)}" )
+        vPrint( 'Quiet', debuggingThisModule, f"\n{OAD['WIS']=}" )
 # end of BibleBooksCodesConverter.fullDemo
 
 if __name__ == '__main__':

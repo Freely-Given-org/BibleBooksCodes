@@ -2,7 +2,7 @@
 <grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <!--
     BibleBooksCodes.rnc           Relax NG Compact Syntax schema file
-      Last modified: 2022-02-05 by RJH
+      Last modified: 2022-02-06 by RJH
       Version 0.76
     
     On Linux, to convert to RNG, use
@@ -130,6 +130,14 @@
         </element>
       </optional>
       <optional>
+        <element name="shortAbbreviation">
+          <data type="string">
+            <param name="minLength">2</param>
+            <param name="maxLength">3</param>
+          </data>
+        </element>
+      </optional>
+      <optional>
         <element name="SBLAbbreviation">
           <data type="string">
             <param name="minLength">2</param>
@@ -248,6 +256,14 @@
         </element>
       </optional>
       <optional>
+        <element name="consistsOfBooks">
+          <data type="string">
+            <param name="minLength">3</param>
+            <param name="maxLength">19</param>
+          </data>
+        </element>
+      </optional>
+      <optional>
         <element name="typicalSection">
           <choice>
             <value>OT</value>
@@ -259,6 +275,22 @@
             <value>FRT</value>
             <value>BAK</value>
             <value>???</value>
+          </choice>
+        </element>
+      </optional>
+      <optional>
+        <element name="typicalSubsection">
+          <choice>
+            <value>Pentateuch</value>
+            <value>Historical</value>
+            <value>Poetry-Wisdom</value>
+            <value>Major Prophets</value>
+            <value>Minor Prophets</value>
+            <value>Gospels</value>
+            <value>Acts</value>
+            <value>Paul's Letters</value>
+            <value>General Letters</value>
+            <value>Revelation</value>
           </choice>
         </element>
       </optional>
