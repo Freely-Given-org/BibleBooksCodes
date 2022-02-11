@@ -9,7 +9,7 @@ A library that handles 3-character Bible Books Codes.
 readme = "README.md"
 homepage = "https://github.com/Freely-Given-org/BibleBooksCodes"
 repository = "https://github.com/Freely-Given-org/BibleBooksCodes"
-keywords = ["cli", "bible", "usfm", "books codes"]
+keywords = ["bible", "books", "codes", "USFM", "OSIS"]
 categories = ["command-line-utilities", "text-processing"]
 
 edition = "2021"
