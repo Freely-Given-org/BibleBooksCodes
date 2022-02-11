@@ -1,5 +1,5 @@
 #![allow(non_snake_case)]
-//#![allow(unused)]
+// #![allow(unused)]
 
 // use std::path::Path;
 // use std::fs::File;
@@ -22,29 +22,32 @@ enum StringOrListOfStrings {
 }
 
 #[derive(Debug, Deserialize)]
+struct ReferenceNumber(u16); // 1..999
+
+#[derive(Debug, Deserialize)]
 struct AbbreviationEntry {
     // for Bibleworks, Byzantine
-    referenceNumber: u16,
+    referenceNumber: ReferenceNumber,
     referenceAbbreviation: String,
 }
 
 #[derive(Debug, Deserialize)]
 struct AbbreviationOrAbbreviationsEntry {
     // for SBL, OSIS, Sword, CCEL, NET, Drupal
-    referenceNumber: u16,
+    referenceNumber: ReferenceNumber,
     referenceAbbreviationOrAbbreviations: StringOrListOfStrings,
 }
 
 #[derive(Debug, Deserialize)]
 struct USFMAbbreviationEntry {
-    referenceNumber: u16,
+    referenceNumber: ReferenceNumber,
     USFMAbbreviationOrAbbreviations: StringOrListOfStrings,
     USFMNumberStringOrStrings: Option<StringOrListOfStrings>,
 }
 
 #[derive(Debug, Deserialize)]
 struct USFMNumberEntry {
-    referenceNumber: u16,
+    referenceNumber: ReferenceNumber,
     referenceAbbreviationOrAbbreviations: StringOrListOfStrings,
     USFMAbbreviationOrAbbreviations: StringOrListOfStrings,
 }
@@ -52,14 +55,14 @@ struct USFMNumberEntry {
 #[derive(Debug, Deserialize)]
 struct GeneralNumberEntry {
     // for USX, unboundBible, Bibledit
-    referenceNumber: u16,
+    referenceNumber: ReferenceNumber,
     referenceAbbreviation: String,
     USFMAbbreviation: String,
 }
 
 #[derive(Debug, Deserialize)]
 struct ReferenceAbbreviationEntry {
-    referenceNumber: u16,
+    referenceNumber: ReferenceNumber,
     SBLAbbreviation: Option<String>,
     OSISAbbreviation: Option<String>,
     SwordAbbreviation: Option<String>,
@@ -74,7 +77,7 @@ struct ReferenceAbbreviationEntry {
     ByzantineAbbreviation: Option<String>,
     numExpectedChaptersString: Option<String>,
     possibleAlternativeBooksList: Option<Vec<String>>,
-    nameEnglish: String,
+    bookNameEnglishGuide: String,
     typicalSection: String,
 }
 
@@ -95,13 +98,12 @@ struct ReferenceNumberEntry {
     ByzantineAbbreviation: Option<String>,
     numExpectedChaptersString: Option<String>,
     possibleAlternativeBooksList: Option<Vec<String>>,
-    nameEnglish: String,
+    bookNameEnglishGuide: String,
     typicalSection: String,
 }
 
 #[derive(Debug, Deserialize)]
-// This is public so we can return it
-pub struct BibleBooksCodes {
+pub struct BibleBooksCodes { // This is public so we can return it
     BibleWorksAbbreviationDict: HashMap<String, AbbreviationEntry>,
     BibleditNumberDict: HashMap<String, GeneralNumberEntry>,
     ByzantineAbbreviationDict: HashMap<String, AbbreviationEntry>,
@@ -165,8 +167,8 @@ mod tests {
 
 fn it_works() {
         use crate::{load_from_json, BibleBooksCodes};
-        // let data_folderpath = Path::new("/home/robert/Programming/WebDevelopment/OpenScriptures/BibleOrgSys/BibleOrgSys/DataFiles/");
-        let data_folderpath = String::from("/home/robert/Programming/WebDevelopment/OpenScriptures/BibleOrgSys/BibleOrgSys/DataFiles/");
+        // let data_folderpath = Path::new("DataFiles/");
+        let data_folderpath = String::from("../");
         let bible_books_codes: BibleBooksCodes = load_from_json(&data_folderpath).unwrap();
         assert_eq!(
             bible_books_codes.referenceNumberDict["42"].referenceAbbreviation,
@@ -175,23 +177,21 @@ fn it_works() {
     }
 }
 
-/*
-fn print_type_of<T>(_: &T) {
-    println!("{}", std::any::type_name::<T>())
-}
-*/
+
+// fn print_type_of<T>(_: &T) {
+//     println!("{}", std::any::type_name::<T>())
+// }
+
 
 pub fn load_from_json(data_folderpath: &String) -> Result<BibleBooksCodes, Box<dyn Error>> {
     println!("  In bos_books_codes::load_from_json()…");
 
-    let filepath = data_folderpath.to_owned() + "DerivedFiles/BibleBooksCodes_Tables.json";
+    let filepath = data_folderpath.to_owned() + "derivedFormats/BibleBooksCodes_Tables.json";
     // let the_file = File::open(filepath)?;
     let the_file_contents =
-        fs::read_to_string(filepath).expect("Something went wrong reading the Books Codes file");
+        fs::read_to_string(filepath).expect("Something went wrong reading the Books Codes JSON file");
     let bible_books_codes: BibleBooksCodes =
         serde_json::from_str(&the_file_contents).expect("Books codes JSON was not well-formatted");
-    // print_type_of(&parsed_json); // serde_json::value::Value
-    // print_type_of(&parsed_json["allAbbreviationsDict"]); // serde_json::value::Value
     println!(
         "    Loaded Bible books codes data for {:?} books.",
         bible_books_codes.referenceNumberDict.len()
@@ -199,7 +199,7 @@ pub fn load_from_json(data_folderpath: &String) -> Result<BibleBooksCodes, Box<d
     println!(
         "      Book 42 is {:?}: {:?}",
         bible_books_codes.referenceNumberDict["42"].referenceAbbreviation,
-        bible_books_codes.referenceNumberDict["42"].nameEnglish
+        bible_books_codes.referenceNumberDict["42"].bookNameEnglishGuide
     );
 
     Ok(bible_books_codes)
