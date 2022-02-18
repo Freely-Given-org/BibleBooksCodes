@@ -36,16 +36,16 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-02-06' # by RJH
+LAST_MODIFIED_DATE = '2022-02-18' # by RJH
 SHORT_PROGRAM_NAME = "BibleBooksCodesConverter"
 PROGRAM_NAME = "Bible Books Codes converter"
-PROGRAM_VERSION = '0.82'
+PROGRAM_VERSION = '0.83'
 programNameVersion = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 debuggingThisModule = False
 
 
-SPECIAL_BOOK_CODES = ('ALL',) # We check these aren't used for other things
+SPECIAL_BOOK_CODES = ('ALL',) # We use these for other things so check they aren't used in the XML
 
 
 
@@ -305,6 +305,7 @@ class BibleBooksCodesConverter:
         for element in self._XMLTree:
             # Get the required information out of the tree for this element
             # Start with the compulsory elements
+            bookName = element.find('bookName').text # In the original language
             bookNameEnglishGuide = element.find('bookNameEnglishGuide').text # This name is really just a comment element
             referenceAbbreviation = element.find('referenceAbbreviation').text
             if referenceAbbreviation.upper() != referenceAbbreviation:
@@ -315,6 +316,7 @@ class BibleBooksCodesConverter:
             intSequenceNumber = int( sequenceNumber )
             # The optional elements are set to None if they don't exist
             expectedChapters = None if element.find('expectedChapters') is None else element.find('expectedChapters').text
+            shortAbbreviation = None if element.find('shortAbbreviation') is None else element.find('shortAbbreviation').text
             SBLAbbreviation = None if element.find('SBLAbbreviation') is None else element.find('SBLAbbreviation').text
             OSISAbbreviation = None if element.find('OSISAbbreviation') is None else element.find('OSISAbbreviation').text
             SwordAbbreviation = None if element.find('SwordAbbreviation') is None else element.find('SwordAbbreviation').text
@@ -345,23 +347,27 @@ class BibleBooksCodesConverter:
             if 'referenceAbbreviation' in self._compulsoryElements or referenceAbbreviation:
                 if 'referenceAbbreviation' in self._uniqueElements: assert referenceAbbreviation not in myRefAbbrDict # Shouldn't be any duplicates
                 if referenceAbbreviation in myRefAbbrDict: halt
-                else: myRefAbbrDict[referenceAbbreviation] = { 'referenceNumber':intID, 'SBLAbbreviation':SBLAbbreviation, 'OSISAbbreviation':OSISAbbreviation,
-                                                    'SwordAbbreviation':SwordAbbreviation, 'CCELNumberString':CCELNumberString,
-                                                    'USFMAbbreviation':USFMAbbreviation, 'USFMNumberString':USFMNumberString, 'USXNumberString':USXNumberString,
-                                                    'UnboundCodeString':UnboundCodeString, 'BibleditNumberString':BibleditNumberString,
-                                                    'NETBibleAbbreviation':NETBibleAbbreviation, 'DrupalBibleAbbreviation':DrupalBibleAbbreviation, 'ByzantineAbbreviation':ByzantineAbbreviation,
-                                                    'numExpectedChapters':expectedChapters, 'possibleAlternativeBooks':possibleAlternativeBooks,
-                                                    'bookNameEnglishGuide':bookNameEnglishGuide, 'typicalSection':typicalSection }
+                else: myRefAbbrDict[referenceAbbreviation] = {
+                        'referenceNumber':intID,  'shortAbbreviation':shortAbbreviation,
+                        'SBLAbbreviation':SBLAbbreviation, 'OSISAbbreviation':OSISAbbreviation,
+                        'SwordAbbreviation':SwordAbbreviation, 'CCELNumberString':CCELNumberString,
+                        'USFMAbbreviation':USFMAbbreviation, 'USFMNumberString':USFMNumberString, 'USXNumberString':USXNumberString,
+                        'UnboundCodeString':UnboundCodeString, 'BibleditNumberString':BibleditNumberString,
+                        'NETBibleAbbreviation':NETBibleAbbreviation, 'DrupalBibleAbbreviation':DrupalBibleAbbreviation, 'ByzantineAbbreviation':ByzantineAbbreviation,
+                        'numExpectedChapters':expectedChapters, 'possibleAlternativeBooks':possibleAlternativeBooks,
+                        'bookName':bookName, 'bookNameEnglishGuide':bookNameEnglishGuide, 'typicalSection':typicalSection }
             if 'referenceNumber' in self._compulsoryElements or ID:
                 if 'referenceNumber' in self._uniqueElements: assert intID not in myIDDict # Shouldn't be any duplicates
                 if intID in myIDDict: halt
-                else: myIDDict[intID] = { 'referenceAbbreviation':referenceAbbreviation, 'SBLAbbreviation':SBLAbbreviation, 'OSISAbbreviation':OSISAbbreviation,
-                                    'SwordAbbreviation':SwordAbbreviation, 'CCELNumberString':CCELNumberString,
-                                    'USFMAbbreviation':USFMAbbreviation, 'USFMNumberString':USFMNumberString, 'USXNumberString':USXNumberString,
-                                    'UnboundCodeString':UnboundCodeString, 'BibleditNumberString':BibleditNumberString,
-                                    'NETBibleAbbreviation':NETBibleAbbreviation, 'DrupalBibleAbbreviation':DrupalBibleAbbreviation, 'ByzantineAbbreviation':ByzantineAbbreviation,
-                                    'numExpectedChapters':expectedChapters, 'possibleAlternativeBooks':possibleAlternativeBooks,
-                                    'bookNameEnglishGuide':bookNameEnglishGuide, 'typicalSection':typicalSection }
+                else: myIDDict[intID] = { 
+                        'referenceAbbreviation':referenceAbbreviation, 'shortAbbreviation':shortAbbreviation, 
+                        'SBLAbbreviation':SBLAbbreviation, 'OSISAbbreviation':OSISAbbreviation,
+                        'SwordAbbreviation':SwordAbbreviation, 'CCELNumberString':CCELNumberString,
+                        'USFMAbbreviation':USFMAbbreviation, 'USFMNumberString':USFMNumberString, 'USXNumberString':USXNumberString,
+                        'UnboundCodeString':UnboundCodeString, 'BibleditNumberString':BibleditNumberString,
+                        'NETBibleAbbreviation':NETBibleAbbreviation, 'DrupalBibleAbbreviation':DrupalBibleAbbreviation, 'ByzantineAbbreviation':ByzantineAbbreviation,
+                        'numExpectedChapters':expectedChapters, 'possibleAlternativeBooks':possibleAlternativeBooks,
+                        'bookName':bookName, 'bookNameEnglishGuide':bookNameEnglishGuide, 'typicalSection':typicalSection }
             if 'sequenceNumber' in self._compulsoryElements or sequenceNumber:
                 if 'sequenceNumber' in self._uniqueElements: assert intSequenceNumber not in sequenceNumberList # Shouldn't be any duplicates
                 if intSequenceNumber in sequenceNumberList: halt

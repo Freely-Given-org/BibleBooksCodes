@@ -5,7 +5,7 @@
 #
 # Module handling BibleBooksCodes functions
 #
-# Copyright (C) 2010-2021 Robert Hunt
+# Copyright (C) 2010-2022 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -51,10 +51,10 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2021-10-18' # by RJH
+LAST_MODIFIED_DATE = '2022-02-18' # by RJH
 SHORT_PROGRAM_NAME = "BibleBooksCodes"
 PROGRAM_NAME = "Bible Books Codes handler"
-PROGRAM_VERSION = '0.86'
+PROGRAM_VERSION = '0.87'
 programNameVersion = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 debuggingThisModule = False
@@ -232,6 +232,11 @@ class BibleBooksCodes:
     def getCCELNumber( self, BBB:str ) -> int:
         """ Return the CCEL number string for the given book code (referenceAbbreviation). """
         return self.__DataDicts['referenceAbbreviationDict'][BBB]['CCELNumberString']
+
+
+    def getShortAbbreviation( self, BBB:str ) -> str:
+        """ Return the short abbreviation string for the given book code (referenceAbbreviation). """
+        return self.__DataDicts['referenceAbbreviationDict'][BBB]['shortAbbreviation']
 
 
     def getSBLAbbreviation( self, BBB:str ) -> str:
@@ -627,13 +632,21 @@ class BibleBooksCodes:
     # end of BibleBooksCodes.sortBCVReferences
 
 
+    def getBookName( self, BBB:str ):
+        """
+        Returns the original language name for a book.
+        """
+        return self.__DataDicts['referenceAbbreviationDict'][BBB]['bookName']
+    # end of BibleBooksCodes.getEnglishName_NR
+
+
     # NOTE: The following functions are all not recommended (NR) because they rely on assumed information that may be incorrect
     #           i.e., they assume English language or European book order conventions
     #       They are included because they might be necessary for error messages or similar uses
     #           (where the precisely correct information is unknown)
     def getEnglishName_NR( self, BBB:str ): # NR = not recommended (because not completely general/international)
         """
-        Returns the first English name for a book.
+        Returns the first English name for a book. (Options are separated by forward slashes.)
 
         Remember: These names are only intended as comments or for some basic module processing.
             They are not intended to be used for a proper international human interface.
@@ -650,8 +663,7 @@ class BibleBooksCodes:
             They are not intended to be used for a proper international human interface.
             The first one in the list is supposed to be the more common.
         """
-        names = self.__DataDicts['referenceAbbreviationDict'][BBB]['nameEnglish']
-        return [name.strip() for name in names.split('/')]
+        return [name.strip() for name in self.__DataDicts['referenceAbbreviationDict'][BBB]['nameEnglish'].split('/')]
     # end of BibleBooksCodes.getEnglishNameList_NR
 
     def isOldTestament_NR( self, BBB:str ): # NR = not recommended (because not completely general/international)
