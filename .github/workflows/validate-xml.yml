@@ -1,0 +1,14 @@
+name: validate-xml
+on: [push]
+jobs:
+  create-rng-from-rnc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: trang sourceXML/BibleBooksCodes.rnc derivedFormats/BibleBooksCodes.rng
+  validate-against-rng-and-dtd:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: xmllint --noout --relaxng derivedFormats/BibleBooksCodes.rng --valid sourceXML/BibleBooksCodes.xml
+
