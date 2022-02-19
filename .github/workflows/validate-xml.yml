@@ -5,12 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: sudo apt install trang
+      - run: sudo apt-get install trang
       - run: trang sourceXML/BibleBooksCodes.rnc derivedFormats/BibleBooksCodes.rng
   validate-against-rng-and-dtd:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: sudo apt install xmllint
+      - run: sudo apt-get install libxml2-utils
       - run: xmllint --noout --relaxng derivedFormats/BibleBooksCodes.rng --valid sourceXML/BibleBooksCodes.xml
 
