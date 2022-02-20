@@ -36,10 +36,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-02-18' # by RJH
+LAST_MODIFIED_DATE = '2022-02-20' # by RJH
 SHORT_PROGRAM_NAME = "BibleBooksCodesConverter"
 PROGRAM_NAME = "Bible Books Codes converter"
-PROGRAM_VERSION = '0.83'
+PROGRAM_VERSION = '0.84'
 programNameVersion = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 debuggingThisModule = False
@@ -72,7 +72,8 @@ class BibleBooksCodesConverter:
         self._compulsoryAttributes = ()
         self._optionalAttributes = ()
         self._uniqueAttributes = self._compulsoryAttributes + self._optionalAttributes
-        self._compulsoryElements = ( 'bookName', 'bookNameEnglishGuide', 'referenceAbbreviation', 'referenceNumber', 'sequenceNumber',
+        self._compulsoryElements = ( 'originalLanguageCode', 'bookName', 'bookNameEnglishGuide', 'referenceAbbreviation', 
+                                    'referenceNumber', 'sequenceNumber',
                                     'typicalSection' )
         self._optionalElements = ( 'expectedChapters', 'shortAbbreviation', 'SBLAbbreviation', 'OSISAbbreviation', 'SwordAbbreviation',
                                     'CCELNumber', 'USFMAbbreviation', 'USFMNumber', 'USXNumber', 'UnboundCode',
@@ -305,6 +306,7 @@ class BibleBooksCodesConverter:
         for element in self._XMLTree:
             # Get the required information out of the tree for this element
             # Start with the compulsory elements
+            originalLanguageCode = element.find('originalLanguageCode').text # IETF code
             bookName = element.find('bookName').text # In the original language
             bookNameEnglishGuide = element.find('bookNameEnglishGuide').text # This name is really just a comment element
             referenceAbbreviation = element.find('referenceAbbreviation').text
@@ -348,6 +350,7 @@ class BibleBooksCodesConverter:
                 if 'referenceAbbreviation' in self._uniqueElements: assert referenceAbbreviation not in myRefAbbrDict # Shouldn't be any duplicates
                 if referenceAbbreviation in myRefAbbrDict: halt
                 else: myRefAbbrDict[referenceAbbreviation] = {
+                        'originalLanguageCode': originalLanguageCode, 'bookName':bookName,
                         'referenceNumber':intID,  'shortAbbreviation':shortAbbreviation,
                         'SBLAbbreviation':SBLAbbreviation, 'OSISAbbreviation':OSISAbbreviation,
                         'SwordAbbreviation':SwordAbbreviation, 'CCELNumberString':CCELNumberString,
@@ -355,19 +358,20 @@ class BibleBooksCodesConverter:
                         'UnboundCodeString':UnboundCodeString, 'BibleditNumberString':BibleditNumberString,
                         'NETBibleAbbreviation':NETBibleAbbreviation, 'DrupalBibleAbbreviation':DrupalBibleAbbreviation, 'ByzantineAbbreviation':ByzantineAbbreviation,
                         'numExpectedChapters':expectedChapters, 'possibleAlternativeBooks':possibleAlternativeBooks,
-                        'bookName':bookName, 'bookNameEnglishGuide':bookNameEnglishGuide, 'typicalSection':typicalSection }
+                        'bookNameEnglishGuide':bookNameEnglishGuide, 'typicalSection':typicalSection }
             if 'referenceNumber' in self._compulsoryElements or ID:
                 if 'referenceNumber' in self._uniqueElements: assert intID not in myIDDict # Shouldn't be any duplicates
                 if intID in myIDDict: halt
                 else: myIDDict[intID] = { 
-                        'referenceAbbreviation':referenceAbbreviation, 'shortAbbreviation':shortAbbreviation, 
+                        'referenceAbbreviation':referenceAbbreviation, 'shortAbbreviation':shortAbbreviation,
+                        'originalLanguageCode': originalLanguageCode, 'bookName':bookName,
                         'SBLAbbreviation':SBLAbbreviation, 'OSISAbbreviation':OSISAbbreviation,
                         'SwordAbbreviation':SwordAbbreviation, 'CCELNumberString':CCELNumberString,
                         'USFMAbbreviation':USFMAbbreviation, 'USFMNumberString':USFMNumberString, 'USXNumberString':USXNumberString,
                         'UnboundCodeString':UnboundCodeString, 'BibleditNumberString':BibleditNumberString,
                         'NETBibleAbbreviation':NETBibleAbbreviation, 'DrupalBibleAbbreviation':DrupalBibleAbbreviation, 'ByzantineAbbreviation':ByzantineAbbreviation,
                         'numExpectedChapters':expectedChapters, 'possibleAlternativeBooks':possibleAlternativeBooks,
-                        'bookName':bookName, 'bookNameEnglishGuide':bookNameEnglishGuide, 'typicalSection':typicalSection }
+                        'bookNameEnglishGuide':bookNameEnglishGuide, 'typicalSection':typicalSection }
             if 'sequenceNumber' in self._compulsoryElements or sequenceNumber:
                 if 'sequenceNumber' in self._uniqueElements: assert intSequenceNumber not in sequenceNumberList # Shouldn't be any duplicates
                 if intSequenceNumber in sequenceNumberList: halt
@@ -865,8 +869,8 @@ def fullDemo() -> None:
     """
     BibleOrgSysGlobals.introduceProgram( __name__, programNameVersion, LAST_MODIFIED_DATE )
 
+    bbcc = BibleBooksCodesConverter().loadAndValidate() # Load the XML
     if BibleOrgSysGlobals.commandLineArguments.export:
-        bbcc = BibleBooksCodesConverter().loadAndValidate() # Load the XML
         bbcc.pickle() # Produce a pickle output file
         bbcc.exportDataToJSON() # Produce a json output file
         # bbcc.exportDataToPython() # Produce the .py tables
@@ -874,10 +878,16 @@ def fullDemo() -> None:
 
     else: # Must be demo mode
         # Demo the converter object
-        bbcc = BibleBooksCodesConverter().loadAndValidate() # Load the XML
         vPrint( 'Quiet', debuggingThisModule, bbcc ) # Just print a summary
-        OAD = bbcc.importDataToPython()['OSISAbbreviationDict']
+        importedData = bbcc.importDataToPython()
         vPrint( 'Quiet', debuggingThisModule, "\nSample output:" )
+        allKeys = importedData.keys()
+        vPrint( 'Quiet', debuggingThisModule, f"\nallKeys: ({len(allKeys)}) {allKeys}" )
+        rND10 = importedData['referenceNumberDict'][10]
+        vPrint( 'Quiet', debuggingThisModule, f"\nreferenceNumberDict[10]: ({len(rND10)}) {rND10}" )
+        rAD_CO1 = importedData['referenceAbbreviationDict']['CO1']
+        vPrint( 'Quiet', debuggingThisModule, f"\nreferenceAbbreviationDict['CO1']: ({len(rAD_CO1)}) {rAD_CO1}" )
+        OAD = importedData['OSISAbbreviationDict']
         vPrint( 'Quiet', debuggingThisModule, f"\nOSISAbbreviationDict: ({len(OAD)}) {sorted(OAD)}" )
         vPrint( 'Quiet', debuggingThisModule, f"\n{OAD['WIS']=}" )
 # end of BibleBooksCodesConverter.fullDemo

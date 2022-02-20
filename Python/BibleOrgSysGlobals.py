@@ -83,6 +83,7 @@ Contains functions:
 
     closedown( PROGRAM_NAME, PROGRAM_VERSION )
 
+    briefDemo()
     fullDemo()
 """
 from gettext import gettext as _
@@ -104,7 +105,7 @@ except ImportError:
     import getpass
 
 
-LAST_MODIFIED_DATE = '2022-02-06' # by RJH
+LAST_MODIFIED_DATE = '2022-02-20' # by RJH
 SHORT_PROGRAM_NAME = "BibleOrgSysGlobals"
 PROGRAM_NAME = "BibleOrgSys (BOS) Globals"
 PROGRAM_VERSION = '0.89'
@@ -474,15 +475,7 @@ def getLatestPythonModificationDate() -> str:
     #collectedFilepaths = []
     latestYYYY, latestMM, latestDD = 1999, 0, 0
     startFolderpath = Path( __file__ ).parent
-    for folderpath in (startFolderpath,
-                       startFolderpath.joinpath( 'Internals/'),
-                       startFolderpath.joinpath( 'InputOutput/'),
-                       startFolderpath.joinpath( 'Reference/'),
-                       startFolderpath.joinpath( 'Formats/'),
-                       startFolderpath.joinpath( 'OriginalLanguages/'),
-                       startFolderpath.joinpath( 'Online/'),
-                       startFolderpath.joinpath( 'Misc/'),
-                       ):
+    for folderpath in (startFolderpath,):
         #dPrint( 'Quiet', debuggingThisModule, f"folderpath = '{folderpath}'" )
         searchString = 'LAST_MODIFIED_DATE = '
         for filename in os.listdir( folderpath ):
