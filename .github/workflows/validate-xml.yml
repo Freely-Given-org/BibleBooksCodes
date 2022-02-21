@@ -9,7 +9,7 @@ jobs:
   create-rng-and-then-validate:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       - name: create-rng-from-rnc
         run: sudo apt-get install trang
         run: trang sourceXML/BibleBooksCodes.rnc derivedFormats/BibleBooksCodes.rng
