@@ -1,16 +1,37 @@
 name: validate-xml
-on: [push]
-jobs:
-  create-rng-from-rnc:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: sudo apt-get install trang
-      - run: trang sourceXML/BibleBooksCodes.rnc derivedFormats/BibleBooksCodes.rng
-  validate-against-rng-and-dtd:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: sudo apt-get install libxml2-utils
-      - run: xmllint --noout --relaxng derivedFormats/BibleBooksCodes.rng --valid sourceXML/BibleBooksCodes.xml
 
+on:
+  push:
+    branches: ['master']
+    paths: 'sourceXML/*'
+
+jobs:
+  create-rng-and-then-validate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      - name: create-rng-from-rnc
+        run: sudo apt-get install trang
+        run: trang sourceXML/BibleBooksCodes.rnc derivedFormats/BibleBooksCodes.rng
+      - name: Commit files # transfer the new schema back to the repo
+        run: |
+          git config --local user.name "RobH123"
+          git add derivedFormats/BibleBooksCodes.rng
+          git commit -m "Updating the .rng schema from the .rnc file"
+      - name: validate-against-rng-and-dtd
+        run: sudo apt-get install libxml2-utils # to install xmllint
+        run: xmllint --noout --relaxng derivedFormats/BibleBooksCodes.rng --valid sourceXML/BibleBooksCodes.xml
+      - name: update-derived-tables
+        run: |
+          cd Python
+          python BibleBooksCodesConverter.py --export
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
+      - name: Commit files # transfer the new derived tables back into the repository
+        run: |
+          git config --local user.name "RobH123"
+          git add derivedFormats/BibleBooksCodes_Tables.*
+          git commit -m "Updating the data tables derived from the XML"

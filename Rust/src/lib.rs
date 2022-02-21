@@ -63,6 +63,9 @@ struct GeneralNumberEntry {
 #[derive(Debug, Deserialize)]
 struct ReferenceAbbreviationEntry {
     referenceNumber: ReferenceNumber,
+    originalLanguageCode: String,
+    bookName: String,
+    shortAbbreviation: Option<String>,
     SBLAbbreviation: Option<String>,
     OSISAbbreviation: Option<String>,
     SwordAbbreviation: Option<String>,
@@ -84,6 +87,9 @@ struct ReferenceAbbreviationEntry {
 #[derive(Debug, Deserialize)]
 struct ReferenceNumberEntry {
     referenceAbbreviation: String,
+    originalLanguageCode: String,
+    bookName: String,
+    shortAbbreviation: Option<String>,
     SBLAbbreviation: Option<String>,
     OSISAbbreviation: Option<String>,
     SwordAbbreviation: Option<String>,
@@ -136,8 +142,8 @@ impl BibleBooksCodes {
         }
     }
 
-    pub fn usfm_num_to_usfm_bbb(&self, usfm_num_str: &str) -> Result<String, Box<dyn Error>> {
-        // println!("usfm_num_to_usfm_bbb for {:?}", usfm_num_str);
+    pub fn usfm_num_to_usfm_abbrev(&self, usfm_num_str: &str) -> Result<String, Box<dyn Error>> {
+        // println!("usfm_num_to_usfm_abbrev for {:?}", usfm_num_str);
         if ! &self.USFMNumberDict.contains_key(usfm_num_str) {
             return Err("Invalid USFM number: '".to_owned() + &usfm_num_str + "'")?; // I never actually figured out why I need the question mark?
         }
@@ -149,7 +155,7 @@ impl BibleBooksCodes {
     }
 
     pub fn usfm_num_to_bbb(&self, usfm_num_str: &str) -> Result<String, Box<dyn Error>> {
-        // println!("usfm_num_to_usfm_bbb for {:?}", usfm_num_str);
+        // println!("usfm_num_to_bbb for {:?}", usfm_num_str);
         if ! &self.USFMNumberDict.contains_key(usfm_num_str) {
             return Err("Invalid USFM number: '".to_owned() + &usfm_num_str + "'")?; // I never actually figured out why I need the question mark?
         }
@@ -170,10 +176,10 @@ fn it_works() {
         // let data_folderpath = Path::new("DataFiles/");
         let data_folderpath = String::from("../");
         let bible_books_codes: BibleBooksCodes = load_from_json(&data_folderpath).unwrap();
-        assert_eq!(
-            bible_books_codes.referenceNumberDict["42"].referenceAbbreviation,
-            "LUK"
-        );
+        assert_eq!(bible_books_codes.referenceNumberDict["42"].referenceAbbreviation, "LUK");
+        assert_eq!(bible_books_codes.usfm_to_bbb("JAS").unwrap(), "JAM");
+        assert_eq!(bible_books_codes.usfm_num_to_usfm_abbrev("41").unwrap(), "Mat");
+        assert_eq!(bible_books_codes.usfm_num_to_bbb("42").unwrap(), "MRK");
     }
 }
 

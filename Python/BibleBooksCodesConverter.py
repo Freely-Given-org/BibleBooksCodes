@@ -36,7 +36,7 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-02-20' # by RJH
+LAST_MODIFIED_DATE = '2022-02-21' # by RJH
 SHORT_PROGRAM_NAME = "BibleBooksCodesConverter"
 PROGRAM_NAME = "Bible Books Codes converter"
 PROGRAM_VERSION = '0.84'
@@ -80,8 +80,8 @@ class BibleBooksCodesConverter:
                                     'BibleditNumber', 'NETBibleAbbreviation', 'DrupalBibleAbbreviation',
                                     'BibleWorksAbbreviation', 'ByzantineAbbreviation',
                                     'possibleAlternativeAbbreviations', 'possibleAlternativeBooks' )
-        self._uniqueElements = ( 'bookNameEnglishGuide', 'referenceAbbreviation', 'referenceNumber', 'sequenceNumber' ) + \
-                    ( 'USXNumber', 'UnboundCode', 'BibleditNumber', 'NETBibleAbbreviation', 'DrupalBibleAbbreviation',
+        self._uniqueElements = ( 'bookName', 'bookNameEnglishGuide', 'referenceAbbreviation', 'referenceNumber', 'sequenceNumber',
+                    'USXNumber', 'UnboundCode', 'BibleditNumber', 'shortAbbreviation', 'NETBibleAbbreviation', 'DrupalBibleAbbreviation',
                       'BibleWorksAbbreviation', 'ByzantineAbbreviation' )
 
         # These are fields that we will fill later
@@ -374,7 +374,7 @@ class BibleBooksCodesConverter:
                         'bookNameEnglishGuide':bookNameEnglishGuide, 'typicalSection':typicalSection }
             if 'sequenceNumber' in self._compulsoryElements or sequenceNumber:
                 if 'sequenceNumber' in self._uniqueElements: assert intSequenceNumber not in sequenceNumberList # Shouldn't be any duplicates
-                if intSequenceNumber in sequenceNumberList: halt
+                if intSequenceNumber in sequenceNumberList: raise f"Have duplicate '{intSequenceNumber}' sequence numbers"
                 else:
                     sequenceNumberList.append( intSequenceNumber ) # Only used for checking duplicates
                     sequenceTupleList.append( (intSequenceNumber,referenceAbbreviation,) ) # We'll sort this later
