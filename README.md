@@ -15,4 +15,14 @@ Note that that's different from your 40 above. Note also that that <i>number</i>
 
 Then you decide to include some [OSIS](https://crosswire.org/osis/) XML files. They can contain two to seven characters like "Ps", "2Cor", and "AddEsth" and are a variant of the [SBL](https://www.sbl-site.org/publications/SBLHandbookofStyle.aspx) abbreviations any spaces removed.
 
-So now you need to map between two different numbering systems as well as two different book abbreviation systems. The data table in this repository provides a base book code and numbering system, and then provides conversions to other systems, including SBL, OSIS, Sword, CCEL, USFM, USX, Unbound Bible, Bibledit, NETBible, DrupalBible, BibleWorks, and the Robinson-Pierpont Byzantine Greek text.
+So now you need to map between two different numbering systems as well as two different book abbreviation systems. The data table in this repository provides a base book code and numbering system, and then provides conversions to other systems, including SBL, OSIS, Sword, CCEL, USFM, USX, Unbound Bible, Bibledit, NETBible, DrupalBible, BibleWorks, and the Robinson-Pierpont Byzantine Greek text books codes.
+
+## Source file
+
+The source file for the data table is XML.
+Although not our favourite format, it does allow commenting unlike JSON,
+and it has good schema support.
+
+## Derived files
+
+JSON, however, is more popular these days, and so the XML data table is converted into multiple JSON Objects (all within a single JSON file). So too with pickled Python dictionaries and more formats to come.

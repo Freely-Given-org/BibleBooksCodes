@@ -14,45 +14,45 @@ use serde::Deserialize;
 // use serde::de::Error;
 //use serde_json::{Map, Value};
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Clone)]
 #[serde(untagged)]
 enum StringOrListOfStrings {
     Abbreviation(String),
     ListOfAbbreviations(Vec<String>),
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Clone)]
 struct ReferenceNumber(u16); // 1..999
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Clone)]
 struct AbbreviationEntry {
     // for Bibleworks, Byzantine
     referenceNumber: ReferenceNumber,
     referenceAbbreviation: String,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Clone)]
 struct AbbreviationOrAbbreviationsEntry {
     // for SBL, OSIS, Sword, CCEL, NET, Drupal
     referenceNumber: ReferenceNumber,
     referenceAbbreviationOrAbbreviations: StringOrListOfStrings,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Clone)]
 struct USFMAbbreviationEntry {
     referenceNumber: ReferenceNumber,
     USFMAbbreviationOrAbbreviations: StringOrListOfStrings,
     USFMNumberStringOrStrings: Option<StringOrListOfStrings>,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Clone)]
 struct USFMNumberEntry {
     referenceNumber: ReferenceNumber,
     referenceAbbreviationOrAbbreviations: StringOrListOfStrings,
     USFMAbbreviationOrAbbreviations: StringOrListOfStrings,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Clone)]
 struct GeneralNumberEntry {
     // for USX, unboundBible, Bibledit
     referenceNumber: ReferenceNumber,
@@ -60,7 +60,7 @@ struct GeneralNumberEntry {
     USFMAbbreviation: String,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Clone)]
 struct ReferenceAbbreviationEntry {
     referenceNumber: ReferenceNumber,
     originalLanguageCode: String,
@@ -84,7 +84,7 @@ struct ReferenceAbbreviationEntry {
     typicalSection: String,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Clone)]
 struct ReferenceNumberEntry {
     referenceAbbreviation: String,
     originalLanguageCode: String,
@@ -108,7 +108,7 @@ struct ReferenceNumberEntry {
     typicalSection: String,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Clone)]
 pub struct BibleBooksCodes { // This is public so we can return it
     BibleWorksAbbreviationDict: HashMap<String, AbbreviationEntry>,
     BibleditNumberDict: HashMap<String, GeneralNumberEntry>,
