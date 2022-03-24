@@ -197,7 +197,7 @@ pub fn load_from_json(data_folderpath: &String) -> Result<BibleBooksCodes, Box<d
     // let mut owned_string: String = "Something went wrong reading the Books Codes JSON file: ".to_owned();
     // owned_string.push_str(&filepath);
     // let the_file_contents = fs::read_to_string(filepath).expect(&owned_string);
-    let the_file_contents = include_str!("../../derivedFormats/BibleBooksCodes_Tables.json");
+    let the_file_contents = include_str!("BibleBooksCodes_Tables.json");
     let bible_books_codes: BibleBooksCodes =
         serde_json::from_str(&the_file_contents).expect("Books codes JSON was not well-formatted");
     println!("    Loaded Bible books codes data for {:?} books.",

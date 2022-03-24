@@ -24,7 +24,10 @@ jobs:
       - name: update-derived-tables
         run: |
           cd Python
+          # Run the Python converter to read the XML and export the derived formats
           python BibleBooksCodesConverter.py --export
+          # We copy the JSON into the Rust src so its contents can go in the crate
+          cp -a ../derivedFormats/BibleBooksCodes_Tables.json  ../Rust/src
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
