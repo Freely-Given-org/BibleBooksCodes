@@ -5,7 +5,7 @@
 // use std::fs::File;
 use std::collections::HashMap;
 use std::error::Error;
-use std::fs;
+// use std::fs;
 
 // use lazy_static::lazy_static;
 
@@ -192,21 +192,19 @@ fn it_works() {
 pub fn load_from_json(data_folderpath: &String) -> Result<BibleBooksCodes, Box<dyn Error>> {
     println!("  In bos_books_codes::load_from_json()…");
 
-    let filepath = data_folderpath.to_owned() + "derivedFormats/BibleBooksCodes_Tables.json";
-    // let the_file = File::open(filepath)?;
-    let the_file_contents =
-        fs::read_to_string(filepath).expect("Something went wrong reading the Books Codes JSON file");
+    // NOTE: The following code doesn't work in a crate because we can't access the src/ folder.
+    // let filepath = data_folderpath.to_owned() + "derivedFormats/BibleBooksCodes_Tables.json";
+    // let mut owned_string: String = "Something went wrong reading the Books Codes JSON file: ".to_owned();
+    // owned_string.push_str(&filepath);
+    // let the_file_contents = fs::read_to_string(filepath).expect(&owned_string);
+    let the_file_contents = include_str!("../../derivedFormats/BibleBooksCodes_Tables.json");
     let bible_books_codes: BibleBooksCodes =
         serde_json::from_str(&the_file_contents).expect("Books codes JSON was not well-formatted");
-    println!(
-        "    Loaded Bible books codes data for {:?} books.",
-        bible_books_codes.referenceNumberDict.len()
-    );
-    println!(
-        "      Book 42 is {:?}: {:?}",
+    println!("    Loaded Bible books codes data for {:?} books.",
+        bible_books_codes.referenceNumberDict.len());
+    println!("      Book 42 is {:?}: {:?}",
         bible_books_codes.referenceNumberDict["42"].referenceAbbreviation,
-        bible_books_codes.referenceNumberDict["42"].bookNameEnglishGuide
-    );
+        bible_books_codes.referenceNumberDict["42"].bookNameEnglishGuide);
 
     Ok(bible_books_codes)
 }
