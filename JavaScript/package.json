@@ -1,0 +1,27 @@
+{
+  "name": "bible_books_codes",
+  "version": "0.1.0",
+  "description": "Handling short codes to represent Bible books",
+  "main": "BibleBooksCodes.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Freely-Given-org/BibleBooksCodes.git"
+  },
+  "keywords": [
+    "Bible",
+    "books",
+    "codes",
+    "USFM",
+    "OSIS",
+    "BibleOrgSys", "BOS", "BBB"
+  ],
+  "author": "Robert Hunt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Freely-Given-org/BibleBooksCodes/issues"
+  },
+  "homepage": "https://github.com/Freely-Given-org/BibleBooksCodes#README.md"
+}

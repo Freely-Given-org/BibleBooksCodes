@@ -184,11 +184,6 @@ fn it_works() {
 }
 
 
-// fn print_type_of<T>(_: &T) {
-//     println!("{}", std::any::type_name::<T>())
-// }
-
-
 pub fn load_from_json(data_folderpath: &String) -> Result<BibleBooksCodes, Box<dyn Error>> {
     println!("  In bos_books_codes::load_from_json()…");
 

@@ -27,7 +27,10 @@ jobs:
           # Run the Python converter to read the XML and export the derived formats
           python BibleBooksCodesConverter.py --export
           # We copy the JSON into the Rust src so its contents can go in the crate
-          cp -a ../derivedFormats/BibleBooksCodes_Tables.json  ../Rust/src
+          cp -a ../derivedFormats/BibleBooksCodes_Tables.json  ../Rust/src/
+          cp -a ../JavaScript/prelude.js  ../JavaScript/BibleBooksCodes_Tables.js
+          cat ../derivedFormats/BibleBooksCodes_Tables.json  >> ../JavaScript/BibleBooksCodes_Tables.js
+          cat ../JavaScript/postscript.js  >> ../JavaScript/BibleBooksCodes_Tables.js
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:

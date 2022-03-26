@@ -41,17 +41,17 @@ from typing import Dict, List, Tuple
 import os
 import logging
 
-if __name__ == '__main__':
-    import sys
-    aboveAboveFolderpath = os.path.dirname( os.path.dirname( os.path.dirname( os.path.abspath( __file__ ) ) ) )
-    if aboveAboveFolderpath not in sys.path:
-        sys.path.insert( 0, aboveAboveFolderpath )
-from BibleOrgSys.Misc.singleton import singleton
-from BibleOrgSys import BibleOrgSysGlobals
-from BibleOrgSys.BibleOrgSysGlobals import fnPrint, vPrint, dPrint
+# if __name__ == '__main__':
+#     import sys
+#     aboveAboveFolderpath = os.path.dirname( os.path.dirname( os.path.dirname( os.path.abspath( __file__ ) ) ) )
+#     if aboveAboveFolderpath not in sys.path:
+#         sys.path.insert( 0, aboveAboveFolderpath )
+from singleton import singleton
+import BibleOrgSysGlobals
+from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-02-18' # by RJH
+LAST_MODIFIED_DATE = '2022-03-25' # by RJH
 SHORT_PROGRAM_NAME = "BibleBooksCodes"
 PROGRAM_NAME = "Bible Books Codes handler"
 PROGRAM_VERSION = '0.87'
@@ -120,7 +120,7 @@ class BibleBooksCodes:
                 elif debuggingThisModule:
                     vPrint( 'Quiet', debuggingThisModule, "BibleBooksCodes JSON file can't be loaded!" )
             # else: # We have to load the XML (much slower)
-            from BibleOrgSys.Reference.Converters.BibleBooksCodesConverter import BibleBooksCodesConverter
+            from BibleBooksCodesConverter import BibleBooksCodesConverter
             if XMLFileOrFilepath is not None:
                 logging.warning( _("Bible books codes are already loaded -- your given filepath of {!r} was ignored").format(XMLFileOrFilepath) )
             bbcc = BibleBooksCodesConverter()
@@ -311,11 +311,12 @@ class BibleBooksCodes:
 
         Also tries the Sword book codes unless strict is set to True.
         """
-        if strict: return self.__DataDicts['OSISAbbreviationDict'][osisAbbreviation.upper()][1]
-        else:
-            try: return self.__DataDicts['OSISAbbreviationDict'][osisAbbreviation.upper()][1]
-            except KeyError: # Maybe Sword has an informal abbreviation???
-                return self.__DataDicts['SwordAbbreviationDict'][osisAbbreviation.upper()][1]
+        if strict:
+            return self.__DataDicts['OSISAbbreviationDict'][osisAbbreviation.upper()][1]
+        # else:
+        try: return self.__DataDicts['OSISAbbreviationDict'][osisAbbreviation.upper()][1]
+        except KeyError: # Maybe Sword has an informal abbreviation???
+            return self.__DataDicts['SwordAbbreviationDict'][osisAbbreviation.upper()][1]
 
     def getBBBFromUSFMAbbreviation( self, USFMAbbreviation:str, strict:bool=False ) -> str:
         """
@@ -652,7 +653,7 @@ class BibleBooksCodes:
             They are not intended to be used for a proper international human interface.
             The first one in the list is supposed to be the more common.
         """
-        return self.__DataDicts['referenceAbbreviationDict'][BBB]['nameEnglish'].split('/',1)[0].strip()
+        return self.__DataDicts['referenceAbbreviationDict'][BBB]['bookNameEnglishGuide'].split('/',1)[0].strip()
     # end of BibleBooksCodes.getEnglishName_NR
 
     def getEnglishNameList_NR( self, BBB:str ): # NR = not recommended (because not completely general/international)
@@ -663,7 +664,7 @@ class BibleBooksCodes:
             They are not intended to be used for a proper international human interface.
             The first one in the list is supposed to be the more common.
         """
-        return [name.strip() for name in self.__DataDicts['referenceAbbreviationDict'][BBB]['nameEnglish'].split('/')]
+        return [name.strip() for name in self.__DataDicts['referenceAbbreviationDict'][BBB]['bookNameEnglishGuide'].split('/')]
     # end of BibleBooksCodes.getEnglishNameList_NR
 
     def isOldTestament_NR( self, BBB:str ): # NR = not recommended (because not completely general/international)
