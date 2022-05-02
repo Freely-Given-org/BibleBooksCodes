@@ -25,8 +25,12 @@ and it has good schema support.
 
 ## Derived files
 
-JSON, however, is more popular these days, and so the XML data table is converted into multiple JSON Objects (all within a single JSON file). So too with pickled Python dictionaries and more formats to come.
+JSON, however, is more popular these days, and so the XML data table is converted into multiple JSON Objects (all within a single JSON file). So too with pickled Python dictionaries and more formats to come. And better documentation to come as well. And schemas for validation.
 
 ## Packages
 
 Python, Rust, and Javascript utility packages are/will-be supplied and available on package managers like [PyPI](https://pypi.org/user/FGorg/), [Crates.io](https://crates.io/crates/bos_books_codes) and [NpmJs](https://www.npmjs.com/).
+
+Note that nothing here is at version 1.0 yet. Firstly, we need to take a look at the API (things like naming and error-handling conventions in each of the programming languages, as well as general things like consistency, and symmetry related to the dataset, etc.) and see how it could/should be improved.
+
+If a developer wants the data available in a package for a different language beyond the above three, we'll be happy to incorporate that into this repo as well.
