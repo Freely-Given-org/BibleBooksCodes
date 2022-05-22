@@ -41,20 +41,15 @@ from typing import Dict, List, Tuple
 import os
 import logging
 
-# if __name__ == '__main__':
-#     import sys
-#     aboveAboveFolderpath = os.path.dirname( os.path.dirname( os.path.dirname( os.path.abspath( __file__ ) ) ) )
-#     if aboveAboveFolderpath not in sys.path:
-#         sys.path.insert( 0, aboveAboveFolderpath )
 from singleton import singleton
 import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-03-25' # by RJH
+LAST_MODIFIED_DATE = '2022-05-06' # by RJH
 SHORT_PROGRAM_NAME = "BibleBooksCodes"
 PROGRAM_NAME = "Bible Books Codes handler"
-PROGRAM_VERSION = '0.87'
+PROGRAM_VERSION = '0.88'
 programNameVersion = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 debuggingThisModule = False
@@ -369,6 +364,13 @@ class BibleBooksCodes:
         #dPrint( 'Quiet', debuggingThisModule, '\naAD2', len(self.__DataDicts['allAbbreviationsDict']), self.__DataDicts['allAbbreviationsDict'] )
         if SomeUppercaseText in self.__DataDicts['allAbbreviationsDict']:
             return self.__DataDicts['allAbbreviationsDict'][SomeUppercaseText]
+
+        if SomeUppercaseText == 'EPJER': return 'LJE' # Special case but TODO: why isn't this one already there???
+        # TODO: We need to find a way to add these into the table
+        if SomeUppercaseText == 'MK': return 'MRK'
+        if SomeUppercaseText == '1THS': return 'TH1'
+        if SomeUppercaseText == '2THS': return 'TH2'
+        if SomeUppercaseText == 'PS151': return 'PS2' # Special case
 
         # Ok, let's try guessing
         matchCount, foundBBB = 0, None

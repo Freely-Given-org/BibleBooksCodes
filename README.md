@@ -1,4 +1,4 @@
-# BibleBooksCodes
+# Bible Books Codes (BibleOrgSys/BOS BibleBooksCodes)
 
 A set of three-character codes for Bible books files and software
 

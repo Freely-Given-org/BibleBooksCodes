@@ -1,8 +1,10 @@
 name: validate-xml
 
 on:
+  workflow_dispatch:
   push:
-    branches: ['master']
+    branches:
+     - main
     paths: 'sourceXML/*'
 
 jobs:
