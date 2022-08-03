@@ -3,7 +3,7 @@
 #
 # BibleOrgSysGlobals.py for BibleBooksCodes
 #
-# Module handling Global variables for our Bible Organisational System
+# Module handling Global functions and variables for our Bible Organisational System
 #
 # Copyright (C) 2010-2022 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
@@ -105,9 +105,9 @@ except ImportError:
     import getpass
 
 
-LAST_MODIFIED_DATE = '2022-02-20' # by RJH
+LAST_MODIFIED_DATE = '2022-07-17' # by RJH
 SHORT_PROGRAM_NAME = "BibleOrgSysGlobals"
-PROGRAM_NAME = "BibleOrgSys (BOS) Globals"
+PROGRAM_NAME = "BibleOrgSys (BOS) Globals for BibleBooksCodes"
 PROGRAM_VERSION = '0.89'
 programNameVersion = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
@@ -213,6 +213,8 @@ def vPrint( requestedLevel:Union[int,str], increaseLevel:Union[bool,int], *args,
     if debugFlag or strictCheckingFlag or debuggingThisModule: assert isinstance( requestedLevel, int )
     if increaseLevel is True: # (could also be an int)
         increaseLevel = 1 # Should always be an int now
+    elif increaseLevel is False: # (could also be an int)
+        increaseLevel = 0 # Should always be an int now
     if debugFlag or strictCheckingFlag or debuggingThisModule: assert isinstance( increaseLevel, int )
     # Make one or more levels more verbose if increaseLevel is set
     if increaseLevel: requestedLevel -= increaseLevel # Doesn't matter if it goes negative
@@ -242,6 +244,9 @@ def fnPrint( increaseLevel:Union[bool,int], *args, **kwargs ) -> None:
 
     Only print the given string, if the verbosity level is correct.
     """
+    if isinstance( increaseLevel, str ):
+        logging.warning( f"Bad call to fnPrint: {increaseLevel=} {args=} {kwargs=}" )
+        return
     if increaseLevel is True: # (could also be an int)
         increaseLevel = 1 # Should always be an int now
     if debugFlag or strictCheckingFlag or debuggingThisModule: assert isinstance( increaseLevel, int )
@@ -767,7 +772,7 @@ def fileCompare( filename1, filename2, folder1=None, folder2=None, printFlag=Tru
     with open( filepath1, 'rt', encoding='utf-8' ) as file1:
         for line in file1:
             lineCount += 1
-            if lineCount==1 and line[0]==chr(65279): #U+FEFF
+            if lineCount==1 and line[0]==BibleOrgSysGlobals.BOM:
                 if printFlag and verbosityLevel > 2:
                     vPrint( 'Quiet', debuggingThisModule, "      fileCompare: Detected Unicode Byte Order Marker (BOM) in file1" )
                 line = line[1:] # Remove the Unicode Byte Order Marker (BOM)
@@ -778,7 +783,7 @@ def fileCompare( filename1, filename2, folder1=None, folder2=None, printFlag=Tru
     with open( filepath2, 'rt', encoding='utf-8' ) as file2:
         for line in file2:
             lineCount += 1
-            if lineCount==1 and line[0]==chr(65279): #U+FEFF
+            if lineCount==1 and line[0]==BibleOrgSysGlobals.BOM:
                 if printFlag and verbosityLevel > 2:
                     vPrint( 'Quiet', debuggingThisModule, "      fileCompare: Detected Unicode Byte Order Marker (BOM) in file2" )
                 line = line[1:] # Remove the Unicode Byte Order Marker (BOM)
@@ -836,7 +841,7 @@ def fileCompareUSFM( filename1, filename2, folder1=None, folder2=None, printFlag
     with open( filepath1, 'rt', encoding='utf-8' ) as file1:
         for line in file1:
             lineCount += 1
-            if lineCount==1 and line[0]==chr(65279): #U+FEFF
+            if lineCount==1 and line[0]==BibleOrgSysGlobals.BOM:
                 if printFlag and verbosityLevel > 2:
                     vPrint( 'Quiet', debuggingThisModule, "      fileCompare: Detected Unicode Byte Order Marker (BOM) in file1" )
                 line = line[1:] # Remove the Unicode Byte Order Marker (BOM)
@@ -847,7 +852,7 @@ def fileCompareUSFM( filename1, filename2, folder1=None, folder2=None, printFlag
     with open( filepath2, 'rt', encoding='utf-8' ) as file2:
         for line in file2:
             lineCount += 1
-            if lineCount==1 and line[0]==chr(65279): #U+FEFF
+            if lineCount==1 and line[0]==BibleOrgSysGlobals.BOM:
                 if printFlag and verbosityLevel > 2:
                     vPrint( 'Quiet', debuggingThisModule, "      fileCompare: Detected Unicode Byte Order Marker (BOM) in file2" )
                 line = line[1:] # Remove the Unicode Byte Order Marker (BOM)
@@ -1419,8 +1424,8 @@ def introduceProgram( theirName:str, theirProgramNameVersion:str, theirLastModif
         vPrint( 'Quiet', debuggingThisModule, theirProgramNameVersion )
 
     vPrint( 'Normal', debuggingThisModule, """  This program comes with ABSOLUTELY NO WARRANTY.
-  It is free software, and you are welcome to redistribute it under certain conditions.
-  See the license in file 'gpl-3.0.txt' for more details.
+  It is free software, and you are welcome to redistribute it freely.
+  See the CC0 licence in file 'LICENSE' for more details.
   """ )
 # end of BibleOrgSysGlobals.introduceProgram function
 
