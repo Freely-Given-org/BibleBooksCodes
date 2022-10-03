@@ -17,8 +17,8 @@ const LAST_MODIFIED_DATE = "2022-02-18";
 const SHORT_PROGRAM_NAME = "BibleBooksCodes";
 const PROGRAM_NAME = "Bible Books Codes handler";
 const PROGRAM_VERSION = "0.87";
-const programNameVersion = `${SHORT_PROGRAM_NAME} v${PROGRAM_VERSION}`;
-const debuggingThisModule = false;
+const PROGRAM_NAME_VERSION = `${SHORT_PROGRAM_NAME} v${PROGRAM_VERSION}`;
+const DEBUGGING_THIS_MODULE = false;
 
 class BibleBooksCodes {
   /*
