@@ -3,7 +3,7 @@
 #
 # BibleOrgSysGlobals.py for BibleBooksCodes
 #
-# Module handling Global variables for our Bible Organisational System
+# Module handling Global functions and variables for our Bible Organisational System
 #
 # Copyright (C) 2010-2022 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
@@ -772,7 +772,7 @@ def fileCompare( filename1, filename2, folder1=None, folder2=None, printFlag=Tru
     with open( filepath1, 'rt', encoding='utf-8' ) as file1:
         for line in file1:
             lineCount += 1
-            if lineCount==1 and line[0]==chr(65279): #U+FEFF
+            if lineCount==1 and line[0]==BibleOrgSysGlobals.BOM:
                 if printFlag and verbosityLevel > 2:
                     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "      fileCompare: Detected Unicode Byte Order Marker (BOM) in file1" )
                 line = line[1:] # Remove the Unicode Byte Order Marker (BOM)
@@ -783,7 +783,7 @@ def fileCompare( filename1, filename2, folder1=None, folder2=None, printFlag=Tru
     with open( filepath2, 'rt', encoding='utf-8' ) as file2:
         for line in file2:
             lineCount += 1
-            if lineCount==1 and line[0]==chr(65279): #U+FEFF
+            if lineCount==1 and line[0]==BibleOrgSysGlobals.BOM:
                 if printFlag and verbosityLevel > 2:
                     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "      fileCompare: Detected Unicode Byte Order Marker (BOM) in file2" )
                 line = line[1:] # Remove the Unicode Byte Order Marker (BOM)
@@ -841,7 +841,7 @@ def fileCompareUSFM( filename1, filename2, folder1=None, folder2=None, printFlag
     with open( filepath1, 'rt', encoding='utf-8' ) as file1:
         for line in file1:
             lineCount += 1
-            if lineCount==1 and line[0]==chr(65279): #U+FEFF
+            if lineCount==1 and line[0]==BibleOrgSysGlobals.BOM:
                 if printFlag and verbosityLevel > 2:
                     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "      fileCompare: Detected Unicode Byte Order Marker (BOM) in file1" )
                 line = line[1:] # Remove the Unicode Byte Order Marker (BOM)
@@ -852,7 +852,7 @@ def fileCompareUSFM( filename1, filename2, folder1=None, folder2=None, printFlag
     with open( filepath2, 'rt', encoding='utf-8' ) as file2:
         for line in file2:
             lineCount += 1
-            if lineCount==1 and line[0]==chr(65279): #U+FEFF
+            if lineCount==1 and line[0]==BibleOrgSysGlobals.BOM:
                 if printFlag and verbosityLevel > 2:
                     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "      fileCompare: Detected Unicode Byte Order Marker (BOM) in file2" )
                 line = line[1:] # Remove the Unicode Byte Order Marker (BOM)
@@ -1423,9 +1423,9 @@ def introduceProgram( theirName:str, theirProgramNameVersion:str, theirLastModif
     else:
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, theirProgramNameVersion )
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, """  This program comes with ABSOLUTELY NO WARRANTY.
-  It is free software, and you are welcome to redistribute it under certain conditions.
-  See the license in file 'gpl-3.0.txt' for more details.
+    vPrint( 'Normal', debuggingThisModule, """  This program comes with ABSOLUTELY NO WARRANTY.
+  It is free software, and you are welcome to redistribute it freely.
+  See the CC0 licence in file 'LICENSE' for more details.
   """ )
 # end of BibleOrgSysGlobals.introduceProgram function
 

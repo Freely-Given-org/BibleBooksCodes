@@ -191,12 +191,12 @@ class BibleBooksCodes {
     return this.dataDicts["referenceAbbreviationDict"][BBB]["USFMAbbreviation"];
   }
 
-  getUSFMNumber(BBB) {
+  getUSFMNumStr(BBB) {
     /*  Return the two-digit USFM number string for the given book code (referenceAbbreviation).  */
     return this.dataDicts["referenceAbbreviationDict"][BBB]["USFMNumberString"];
   }
 
-  getUSXNumber(BBB) {
+  getUSXNumStr(BBB) {
     /*  Return the three-digit USX number string for the given book code (referenceAbbreviation).  */
     return this.dataDicts["referenceAbbreviationDict"][BBB]["USXNumberString"];
   }
@@ -209,7 +209,7 @@ class BibleBooksCodes {
     return this.dataDicts["referenceAbbreviationDict"][BBB]["UnboundCodeString"];
   }
 
-  getBibleditNumber(BBB) {
+  getBibleditNumStr(BBB) {
     /*
     Return the one or two-digit Bibledit number string for the given book code (referenceAbbreviation).
     */

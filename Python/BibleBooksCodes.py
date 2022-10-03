@@ -254,12 +254,12 @@ class BibleBooksCodes:
         return self.__DataDicts['referenceAbbreviationDict'][BBB]['USFMAbbreviation']
 
 
-    def getUSFMNumber( self, BBB:str ) -> str:
+    def getUSFMNumStr( self, BBB:str ) -> str:
         """ Return the two-digit USFM number string for the given book code (referenceAbbreviation). """
         return self.__DataDicts['referenceAbbreviationDict'][BBB]['USFMNumberString']
 
 
-    def getUSXNumber( self, BBB:str ) -> str:
+    def getUSXNumStr( self, BBB:str ) -> str:
         """ Return the three-digit USX number string for the given book code (referenceAbbreviation). """
         return self.__DataDicts['referenceAbbreviationDict'][BBB]['USXNumberString']
 
@@ -272,7 +272,7 @@ class BibleBooksCodes:
         return self.__DataDicts['referenceAbbreviationDict'][BBB]['UnboundCodeString']
 
 
-    def getBibleditNumber( self, BBB:str ) -> str:
+    def getBibleditNumStr( self, BBB:str ) -> str:
         """
         Return the one or two-digit Bibledit number string for the given book code (referenceAbbreviation).
         """
