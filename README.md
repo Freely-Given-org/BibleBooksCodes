@@ -17,6 +17,9 @@ Then you decide to include some [OSIS](https://crosswire.org/osis/) XML files. T
 
 So now you need to map between two different numbering systems as well as two different book abbreviation systems. The data table in this repository provides our own much wider book code and numbering system, and then provides conversions to other systems, including SBL, OSIS, Sword, CCEL, USFM, USX, Unbound Bible, Bibledit, NETBible, DrupalBible, BibleWorks, and the Robinson-Pierpont Byzantine Greek text books codes.
 
+You can see a short list of the BibleOrgSys Bible Books Codes
+[here](https://freely-given.org/Software/BibleOrganisationalSystem/BOSBooksCodes.html).
+
 ## Source file
 
 The source file for the data table is XML.
