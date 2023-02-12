@@ -5,7 +5,7 @@
 #
 # Module handling BibleBooksCodes.xml to produce various derived export formats
 #
-# Copyright (C) 2010-2022 Robert Hunt
+# Copyright (C) 2010-2023 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -36,10 +36,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-05-06' # by RJH
+LAST_MODIFIED_DATE = '2023-02-12' # by RJH
 SHORT_PROGRAM_NAME = "BibleBooksCodesConverter"
 PROGRAM_NAME = "Bible Books Codes converter"
-PROGRAM_VERSION = '0.85'
+PROGRAM_VERSION = '0.86'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -77,11 +77,11 @@ class BibleBooksCodesConverter:
                                     'typicalSection' )
         self._optionalElements = ( 'expectedChapters', 'shortAbbreviation', 'SBLAbbreviation', 'OSISAbbreviation', 'SwordAbbreviation',
                                     'CCELNumber', 'USFMAbbreviation', 'USFMNumber', 'USXNumber', 'UnboundCode',
-                                    'BibleditNumber', 'NETBibleAbbreviation', 'DrupalBibleAbbreviation',
+                                    'BibleditNumber', 'LogosNumber', 'NETBibleAbbreviation', 'DrupalBibleAbbreviation',
                                     'BibleWorksAbbreviation', 'ByzantineAbbreviation',
                                     'possibleAlternativeAbbreviations', 'possibleAlternativeBooks' )
         self._uniqueElements = ( 'bookName', 'bookNameEnglishGuide', 'referenceAbbreviation', 'referenceNumber', 'sequenceNumber',
-                    'USXNumber', 'UnboundCode', 'BibleditNumber', 'shortAbbreviation', 'NETBibleAbbreviation', 'DrupalBibleAbbreviation',
+                    'USXNumber', 'UnboundCode', 'BibleditNumber', 'LogosNumber', 'shortAbbreviation', 'NETBibleAbbreviation', 'DrupalBibleAbbreviation',
                       'BibleWorksAbbreviation', 'ByzantineAbbreviation' )
 
         # These are fields that we will fill later
@@ -302,7 +302,7 @@ class BibleBooksCodesConverter:
 
         # We'll create a number of dictionaries with different elements as the key
         myIDDict, myRefAbbrDict = {}, {}
-        mySBLDict,myOADict,mySwDict,myCCELDict,myUSFMAbbrDict,myUSFMNDict,myUSXNDict,myUCDict,myBENDict,myNETDict,myBWDict,myDrBibDict,myBzDict,myPossAltBooksDict, myENDict, initialAllAbbreviationsDict = {},{},{},{},{},{},{},{},{},{},{},{},{},{}, {}, {}
+        mySBLDict,myOADict,mySwDict,myCCELDict,myUSFMAbbrDict,myUSFMNDict,myUSXNDict,myUCDict,myBENDict,myLNDict,myNETDict,myBWDict,myDrBibDict,myBzDict,myPossAltBooksDict, myENDict, initialAllAbbreviationsDict = {},{},{},{},{},{},{},{},{},{},{},{},{},{},{}, {}, {}
         sequenceNumberList, sequenceTupleList = [], [] # Both have the integer form (not the string form) of the sequenceNumber
         for element in self._XMLTree:
             # Get the required information out of the tree for this element
@@ -331,6 +331,7 @@ class BibleBooksCodesConverter:
             USXNumberString = None if element.find('USXNumber') is None else element.find('USXNumber').text
             UnboundCodeString = None if element.find('UnboundCode') is None else element.find('UnboundCode').text
             BibleditNumberString = None if element.find('BibleditNumber') is None else element.find('BibleditNumber').text
+            LogosNumberString = None if element.find('LogosNumber') is None else element.find('LogosNumber').text
             NETBibleAbbreviation = None if element.find('NETBibleAbbreviation') is None else element.find('NETBibleAbbreviation').text
             DrupalBibleAbbreviation = None if element.find('DrupalBibleAbbreviation') is None else element.find('DrupalBibleAbbreviation').text
             BibleWorksAbbreviation = None if element.find('BibleWorksAbbreviation') is None else element.find('BibleWorksAbbreviation').text
@@ -348,7 +349,7 @@ class BibleBooksCodesConverter:
             #   Add .upper() if you require the abbreviations to be uppercase (or .lower() for lower case)
             #   The referenceAbbreviation is UPPER CASE by definition
             if 'referenceAbbreviation' in self._compulsoryElements or referenceAbbreviation:
-                if 'referenceAbbreviation' in self._uniqueElements: assert referenceAbbreviation not in myRefAbbrDict # Shouldn't be any duplicates
+                if 'referenceAbbreviation' in self._uniqueElements: assert referenceAbbreviation not in myRefAbbrDict, f"{referenceAbbreviation=}" # Shouldn't be any duplicates
                 if referenceAbbreviation in myRefAbbrDict: halt
                 else: myRefAbbrDict[referenceAbbreviation] = {
                         'originalLanguageCode': originalLanguageCode, 'bookName':bookName,
@@ -356,7 +357,7 @@ class BibleBooksCodesConverter:
                         'SBLAbbreviation':SBLAbbreviation, 'OSISAbbreviation':OSISAbbreviation,
                         'SwordAbbreviation':SwordAbbreviation, 'CCELNumberString':CCELNumberString,
                         'USFMAbbreviation':USFMAbbreviation, 'USFMNumberString':USFMNumberString, 'USXNumberString':USXNumberString,
-                        'UnboundCodeString':UnboundCodeString, 'BibleditNumberString':BibleditNumberString,
+                        'UnboundCodeString':UnboundCodeString, 'BibleditNumberString':BibleditNumberString, 'LogosNumberString':LogosNumberString,
                         'NETBibleAbbreviation':NETBibleAbbreviation, 'DrupalBibleAbbreviation':DrupalBibleAbbreviation, 'ByzantineAbbreviation':ByzantineAbbreviation,
                         'numExpectedChapters':expectedChapters, 'possibleAlternativeBooks':possibleAlternativeBooks,
                         'bookNameEnglishGuide':bookNameEnglishGuide, 'typicalSection':typicalSection }
@@ -369,7 +370,7 @@ class BibleBooksCodesConverter:
                         'SBLAbbreviation':SBLAbbreviation, 'OSISAbbreviation':OSISAbbreviation,
                         'SwordAbbreviation':SwordAbbreviation, 'CCELNumberString':CCELNumberString,
                         'USFMAbbreviation':USFMAbbreviation, 'USFMNumberString':USFMNumberString, 'USXNumberString':USXNumberString,
-                        'UnboundCodeString':UnboundCodeString, 'BibleditNumberString':BibleditNumberString,
+                        'UnboundCodeString':UnboundCodeString, 'BibleditNumberString':BibleditNumberString, 'LogosNumberString':LogosNumberString,
                         'NETBibleAbbreviation':NETBibleAbbreviation, 'DrupalBibleAbbreviation':DrupalBibleAbbreviation, 'ByzantineAbbreviation':ByzantineAbbreviation,
                         'numExpectedChapters':expectedChapters, 'possibleAlternativeBooks':possibleAlternativeBooks,
                         'bookNameEnglishGuide':bookNameEnglishGuide, 'typicalSection':typicalSection }
@@ -430,6 +431,11 @@ class BibleBooksCodesConverter:
                 UCNumberString = BibleditNumberString.upper()
                 if UCNumberString in myBENDict: vPrint( 'Quiet', DEBUGGING_THIS_MODULE, UCNumberString, myBENDict ); halt
                 else: myBENDict[UCNumberString] = ( intID, referenceAbbreviation, USFMAbbreviation, )
+            if "LogosNumberString" in self._compulsoryElements or LogosNumberString:
+                if "LogosNumberString" in self._uniqueElements: assert LogosNumberString not in myLNDict  # Shouldn't be any duplicates
+                UCNumberString = LogosNumberString.upper()
+                if UCNumberString in myLNDict: vPrint( 'Quiet', DEBUGGING_THIS_MODULE, UCNumberString, myLNDict ); halt
+                else: myLNDict[UCNumberString] = ( intID, referenceAbbreviation, USFMAbbreviation, )
             if "NETBibleAbbreviation" in self._compulsoryElements or NETBibleAbbreviation:
                 if "NETBibleAbbreviation" in self._uniqueElements: assert NETBibleAbbreviation not in myNETDict  # Shouldn't be any duplicates
                 UCAbbreviation = NETBibleAbbreviation.upper()
@@ -535,7 +541,7 @@ class BibleBooksCodesConverter:
         self.__DataDicts = { 'referenceNumberDict':myIDDict, 'referenceAbbreviationDict':myRefAbbrDict, 'sequenceList':sequenceList,
                         'SBLAbbreviationDict':mySBLDict, 'OSISAbbreviationDict':myOADict, 'SwordAbbreviationDict':mySwDict,
                         'CCELDict':myCCELDict, 'USFMAbbreviationDict':myUSFMAbbrDict, 'USFMNumberDict':myUSFMNDict,
-                        'USXNumberDict':myUSXNDict, 'UnboundCodeDict':myUCDict, 'BibleditNumberDict':myBENDict,
+                        'USXNumberDict':myUSXNDict, 'UnboundCodeDict':myUCDict, 'BibleditNumberDict':myBENDict, 'LogosNumberDict':myLNDict,
                         'NETBibleAbbreviationDict':myNETDict, 'DrupalBibleAbbreviationDict':myDrBibDict,
                         'BibleWorksAbbreviationDict':myBWDict, 'ByzantineAbbreviationDict':myBzDict,
                         'EnglishNameDict':myENDict, 'allAbbreviationsDict':adjAllAbbreviationsDict }
@@ -648,6 +654,7 @@ class BibleBooksCodesConverter:
                     "USXNumberDict":("USXNumberString", "0=referenceNumber (integer 1..255), 1=referenceAbbreviation/BBB (3-uppercase characters), 2=USFMAbbreviationString (3-characters)"),
                     "UnboundCodeDict":("UnboundCodeString", "0=referenceNumber (integer 1..88), 1=referenceAbbreviation/BBB (3-uppercase characters), 2=USFMAbbreviationString (3-characters)"),
                     "BibleditNumberDict":("BibleditNumberString", "0=referenceNumber (integer 1..88), 1=referenceAbbreviation/BBB (3-uppercase characters), 2=USFMAbbreviationString (3-characters)"),
+                    "LogosNumberDict":("LogosNumberString", "0=referenceNumber (integer 1..208), 1=referenceAbbreviation/BBB (3-uppercase characters), 2=USFMAbbreviationString (3-characters)"),
                     "NETBibleAbbreviationDict":("NETBibleAbbreviation", mostEntries),
                     "DrupalBibleAbbreviationDict":("DrupalBibleAbbreviation", mostEntries),
                     "BibleWorksAbbreviationDict":("BibleWorksAbbreviation", mostEntries),
@@ -792,6 +799,7 @@ class BibleBooksCodesConverter:
                 "USXNumberDict":("USXNumberString", "{} USXNumberString[3+1]; {} referenceNumber; {} referenceAbbreviation[3+1]; {} USFMAbbreviation[3+1];".format(CHAR,BYTE,CHAR,CHAR) ),
                 "UnboundCodeDict":("UnboundCodeString", "{} UnboundCodeString[3+1]; {} referenceNumber; {} referenceAbbreviation[3+1]; {} USFMAbbreviation[3+1];".format(CHAR,BYTE,CHAR,CHAR) ),
                 "BibleditNumberDict":("BibleditNumberString", "{} BibleditNumberString[2+1]; {} referenceNumber; {} referenceAbbreviation[3+1]; {} USFMAbbreviation[3+1];".format(CHAR,BYTE,CHAR,CHAR) ),
+                "LogosNumberDict":("LogosNumberString", "{} LogosNumberString[2+1]; {} referenceNumber; {} referenceAbbreviation[3+1]; {} USFMAbbreviation[3+1];".format(CHAR,BYTE,CHAR,CHAR) ),
                 "NETBibleAbbreviationDict":("NETBibleAbbreviation", "{}* NETBibleAbbreviation; {} referenceNumber; {} referenceAbbreviation[3+1];".format(CHAR,BYTE,CHAR) ),
                 "DrupalBibleAbbreviationDict":("DrupalBibleAbbreviation", "{}* DrupalBibleAbbreviation; {} referenceNumber; {} referenceAbbreviation[3+1];".format(CHAR,BYTE,CHAR) ),
                 "ByzantineAbbreviationDict":("ByzantineAbbreviation", "{}* ByzantineAbbreviation; {} referenceNumber; {} referenceAbbreviation[3+1];".format(CHAR,BYTE,CHAR) ),

@@ -5,7 +5,7 @@
 #
 # Module handling Global functions and variables for our Bible Organisational System
 #
-# Copyright (C) 2010-2022 Robert Hunt
+# Copyright (C) 2010-2023 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -105,10 +105,10 @@ except ImportError:
     import getpass
 
 
-LAST_MODIFIED_DATE = '2022-07-17' # by RJH
+LAST_MODIFIED_DATE = '2023-02-12' # by RJH
 SHORT_PROGRAM_NAME = "BibleOrgSysGlobals"
 PROGRAM_NAME = "BibleOrgSys (BOS) Globals for BibleBooksCodes"
-PROGRAM_VERSION = '0.89'
+PROGRAM_VERSION = '0.90'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -1423,7 +1423,7 @@ def introduceProgram( theirName:str, theirProgramNameVersion:str, theirLastModif
     else:
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, theirProgramNameVersion )
 
-    vPrint( 'Normal', debuggingThisModule, """  This program comes with ABSOLUTELY NO WARRANTY.
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, """  This program comes with ABSOLUTELY NO WARRANTY.
   It is free software, and you are welcome to redistribute it freely.
   See the CC0 licence in file 'LICENSE' for more details.
   """ )

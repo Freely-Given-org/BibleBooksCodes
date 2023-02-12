@@ -5,7 +5,7 @@
 #
 # Module handling BibleBooksCodes functions
 #
-# Copyright (C) 2010-2022 Robert Hunt
+# Copyright (C) 2010-2023 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -46,10 +46,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-05-06' # by RJH
+LAST_MODIFIED_DATE = '2023-02-12' # by RJH
 SHORT_PROGRAM_NAME = "BibleBooksCodes"
 PROGRAM_NAME = "Bible Books Codes handler"
-PROGRAM_VERSION = '0.88'
+PROGRAM_VERSION = '0.89'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -277,6 +277,13 @@ class BibleBooksCodes:
         Return the one or two-digit Bibledit number string for the given book code (referenceAbbreviation).
         """
         return self.__DataDicts['referenceAbbreviationDict'][BBB]['BibleditNumberString']
+
+
+    def getLogosNumStr( self, BBB:str ) -> str:
+        """
+        Return the one to three digit Logos number string for the given book code (referenceAbbreviation).
+        """
+        return self.__DataDicts['referenceAbbreviationDict'][BBB]['LogosNumberString']
 
 
     def getNETBibleAbbreviation( self, BBB:str ) -> str:
@@ -755,9 +762,12 @@ def briefDemo() -> None:
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "My BBBs in sequence", len(myBBBs), myBBBs, "now", len(bbc.getSequenceList(myBBBs)), bbc.getSequenceList(myBBBs) )
     for BBB in myBBBs:
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "{} is typically in {} section".format( BBB, bbc.getTypicalSection( BBB ) ) )
+    assert bbc.getUSFMNumStr( 'MAT' ) == '41'
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "USFM triples:", len(bbc.getAllUSFMBooksCodeNumberTriples()), bbc.getAllUSFMBooksCodeNumberTriples() )
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "USX triples:", len(bbc.getAllUSXBooksCodeNumberTriples()), bbc.getAllUSXBooksCodeNumberTriples() )
+    assert bbc.getBibleditNumStr( 'MAT' ) == '40'
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "Bibledit triples:", len(bbc.getAllBibleditBooksCodeNumberTriples()), bbc.getAllBibleditBooksCodeNumberTriples() )
+    assert bbc.getLogosNumStr( 'MAT' ) == '61'
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "Single chapter books (and OSIS):\n  {}\n  {}".format( bbc.getSingleChapterBooksList(), bbc.getOSISSingleChapterBooksList() ) )
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "Possible alternative  books to Esther: {}".format( bbc.getPossibleAlternativeBooksCodes('EST') ) )
     for something in ('PE2', '2Pe', '2 Pet', '2Pet', 'Job', ):
@@ -799,9 +809,12 @@ def fullDemo() -> None:
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "My BBBs in sequence", len(myBBBs), myBBBs, "now", len(bbc.getSequenceList(myBBBs)), bbc.getSequenceList(myBBBs) )
     for BBB in myBBBs:
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "{} is typically in {} section".format( BBB, bbc.getTypicalSection( BBB ) ) )
+    assert bbc.getUSFMNumStr( 'MAT' ) == '41'
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "USFM triples:", len(bbc.getAllUSFMBooksCodeNumberTriples()), bbc.getAllUSFMBooksCodeNumberTriples() )
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "USX triples:", len(bbc.getAllUSXBooksCodeNumberTriples()), bbc.getAllUSXBooksCodeNumberTriples() )
+    assert bbc.getBibleditNumStr( 'MAT' ) == '40'
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "Bibledit triples:", len(bbc.getAllBibleditBooksCodeNumberTriples()), bbc.getAllBibleditBooksCodeNumberTriples() )
+    assert bbc.getLogosNumStr( 'MAT' ) == '61'
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "Single chapter books (and OSIS):\n  {}\n  {}".format( bbc.getSingleChapterBooksList(), bbc.getOSISSingleChapterBooksList() ) )
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "Possible alternative  books to Esther: {}".format( bbc.getPossibleAlternativeBooksCodes('EST') ) )
     for something in ('PE2', '2Pe', '2 Pet', '2Pet', 'Job', ):
