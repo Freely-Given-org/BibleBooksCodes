@@ -37,7 +37,7 @@ BibleOrgSys uses a three-character book code to identify books.
             (and most identifiers in computer languages still require that).
 """
 from gettext import gettext as _
-from typing import Dict, List, Tuple
+from typing import Optional, Dict, List, Tuple
 import os
 import logging
 
@@ -46,10 +46,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-03-15' # by RJH
+LAST_MODIFIED_DATE = '2023-08-07' # by RJH
 SHORT_PROGRAM_NAME = "BibleBooksCodes"
 PROGRAM_NAME = "Bible Books Codes handler"
-PROGRAM_VERSION = '0.92'
+PROGRAM_VERSION = '0.93'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -805,7 +805,7 @@ class BibleBooksCodes:
 
 
     @staticmethod
-    def tidyBBB( BBB:str, titleCase=False ) -> str:
+    def tidyBBB( BBB:str, titleCase:Optional[bool]=False, allowFourChars:Optional[bool]=True ) -> str:
         """
         Change book codes like SA1 to the conventional 1SA
             (or 1Sa using the titleCase flag).
@@ -814,19 +814,40 @@ class BibleBooksCodes:
         """
         assert BBB in BibleBooksCodes(), f"BibleBooksCodes.tidyBBB {BBB=}"
         if titleCase:
+            if allowFourChars:
+                if BBB == 'RUT': return 'Ruth'
+                if BBB == 'EZR': return 'Ezra'
+                if BBB == 'JOL': return 'Joel'
+                if BBB == 'AMO': return 'Amos'
+                if BBB == 'MRK': return 'Mark'
+                if BBB == 'LUK': return 'Luke'
+                if BBB == 'JHN': return 'John'
+                if BBB == 'ACT': return 'Acts'
+                if BBB == 'JDE': return 'Jude'
             return f'{BBB[2]}{BBB[0]}{BBB[1].lower()}' if BBB[2].isdigit() else f'{BBB[0]}{BBB[1:].lower()}'
-        # else: # leave as UPPERCASE
+        
+        # else: # not titeCase so leave as UPPERCASE
+        if allowFourChars:
+            if BBB == 'RUT': return 'RUTH'
+            if BBB == 'EZR': return 'EZRA'
+            if BBB == 'JOL': return 'JOEL'
+            if BBB == 'AMO': return 'AMOS'
+            if BBB == 'MRK': return 'MARK'
+            if BBB == 'LUK': return 'LUKE'
+            if BBB == 'JHN': return 'JOHN'
+            if BBB == 'ACT': return 'ACTS'
+            if BBB == 'JDE': return 'JUDE'
         return f'{BBB[2]}{BBB[:2]}' if BBB[2].isdigit() else BBB
     # end of BibleBooksCodes.tidyBBB
 
     @staticmethod
-    def tidyBBBs( BBBs:List[str], titleCase=False ) -> List[str]:
+    def tidyBBBs( BBBs:List[str], titleCase:Optional[bool]=False, allowFourChars:Optional[bool]=True ) -> List[str]:
         """
         Change a list of book codes like SA1 to the conventional 1SA
             (or 1Sa using the titleCase flag).
         """
         assert all([BBB in BibleBooksCodes() for BBB in BBBs]), f"BibleBooksCodes,tidyBBBs {BBBs=}"
-        return [BibleBooksCodes().tidyBBB( BBB, titleCase ) for BBB in BBBs]
+        return [BibleBooksCodes().tidyBBB( BBB, titleCase, allowFourChars ) for BBB in BBBs]
     # end of BibleBooksCodes.tidyBBBs
 # end of BibleBooksCodes class
 
