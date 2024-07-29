@@ -5,7 +5,7 @@
 #
 # Module handling BibleBooksCodes.xml to produce various derived export formats
 #
-# Copyright (C) 2010-2023 Robert Hunt
+# Copyright (C) 2010-2024 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -32,14 +32,20 @@ from pathlib import Path
 from datetime import datetime
 from xml.etree.ElementTree import ElementTree
 
-import BibleOrgSysGlobals
-from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
+if __name__ == '__main__':
+    import sys
+    aboveAboveAboveFolderpath = os.path.dirname( os.path.dirname( os.path.dirname( os.path.dirname( os.path.abspath( __file__ ) ) ) ) )
+    if aboveAboveAboveFolderpath not in sys.path:
+        sys.path.insert( 0, aboveAboveAboveFolderpath )
+from BibleOrgSys.Misc.singleton import singleton
+from BibleOrgSys import BibleOrgSysGlobals
+from BibleOrgSys.BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-02-13' # by RJH
+LAST_MODIFIED_DATE = '2024-06-30' # by RJH
 SHORT_PROGRAM_NAME = "BibleBooksCodesConverter"
 PROGRAM_NAME = "Bible Books Codes converter"
-PROGRAM_VERSION = '0.91'
+PROGRAM_VERSION = '0.93'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -49,7 +55,7 @@ SPECIAL_BOOK_CODES = ('ALL',) # We use these for other things so check they aren
 
 
 
-#@singleton # Can only ever have one instance
+@singleton # Can only ever have one instance
 class BibleBooksCodesConverter:
     """
     Class for reading, validating, and converting BibleBooksCodes.
@@ -78,13 +84,13 @@ class BibleBooksCodesConverter:
                                     'typicalSection' )
         self._optionalElements = ( 'expectedChapters', 'shortAbbreviation', 'SBLAbbreviation', 'OSISAbbreviation', 'SwordAbbreviation',
                                     'CCELNumber', 'USFMAbbreviation', 'USFMNumber', 'USXNumber', 'UnboundCode',
-                                    'BibleditNumber', 'LogosNumber', 'NETBibleAbbreviation', 'DrupalBibleAbbreviation',
+                                    'BibleditNumber', 'LogosNumber', 'LogosAbbreviation', 'NETBibleAbbreviation', 'DrupalBibleAbbreviation',
                                     'BibleWorksAbbreviation', 'ByzantineAbbreviation',
                                     'possibleAlternativeAbbreviations', 'possibleAlternativeBooks' )
         self._ElementsWithoutDuplicates = ( 'bookName', 'bookNameEnglishGuide', 'referenceAbbreviation', 'referenceNumber', 'sequenceNumber',
                     'shortAbbreviation', 'SBLAbbreviation', 'OSISAbbreviation', 'SwordAbbreviation',
                     'CCELNumber', 'USFMAbbreviation', 'USFMNumber', 'USXNumber', 'UnboundCode',
-                    'BibleditNumber', 'LogosNumber', 'NETBibleAbbreviation', 'DrupalBibleAbbreviation',
+                    'BibleditNumber', 'LogosNumber', 'LogosAbbreviation', 'NETBibleAbbreviation', 'DrupalBibleAbbreviation',
                       'BibleWorksAbbreviation', 'ByzantineAbbreviation' )
 
         # These are fields that we will fill later
@@ -101,7 +107,9 @@ class BibleBooksCodesConverter:
         """
         if self._XMLTree is None: # We mustn't have already have loaded the data
             if XMLFileOrFilepath is None:
-                XMLFileOrFilepath = os.path.join('../sourceXML', self._filenameBase + '.xml')
+                # XMLFileOrFilepath = BibleOrgSysGlobals.BOS_DATAFILES_FOLDERPATH.joinpath( f'{self._filenameBase}.xml' ) # Relative to module, not cwd
+                import importlib.resources # From Python 3.7 onwards -- handles zipped resources also
+                XMLFileOrFilepath = importlib.resources.files('BibleOrgSys.DataFiles').joinpath( f'{self._filenameBase}.xml' )
 
             self.__load( XMLFileOrFilepath )
             if BibleOrgSysGlobals.strictCheckingFlag:
@@ -123,7 +131,7 @@ class BibleBooksCodesConverter:
 
         vPrint( 'Info', DEBUGGING_THIS_MODULE, _("Loading BibleBooksCodes XML file from {!r}…").format( self.__XMLFileOrFilepath ) )
         self._XMLTree = ElementTree().parse( self.__XMLFileOrFilepath )
-        assert self._XMLTree # Fail here if we didn't load anything at all
+        assert len(self._XMLTree) # Fail here if we didn't load anything at all
 
         if self._XMLTree.tag == self._treeTag:
             header = self._XMLTree[0]
@@ -160,7 +168,7 @@ class BibleBooksCodesConverter:
         """
         Check/validate the loaded data.
         """
-        assert self._XMLTree
+        assert len(self._XMLTree)
 
         uniqueDict = {}
         for elementName in self._ElementsWithoutDuplicates: uniqueDict["Element_"+elementName] = []
@@ -299,14 +307,14 @@ class BibleBooksCodesConverter:
         # end of addToAllCodesDict
 
 
-        assert self._XMLTree
-        if self.__DataDicts: # We've already done an import/restructuring -- no need to repeat it
+        assert len(self._XMLTree)
+        if len(self.__DataDicts): # We've already done an import/restructuring -- no need to repeat it
             return self.__DataDicts
 
         # We'll create a number of dictionaries with different elements as the key
         myIDDict, myRefAbbrDict = {}, {}
-        myShortAbbrevDict,mySBLDict,myOADict,mySwDict,myCCELDict,myUSFMAbbrDict,myUSFMNDict,myUSXNDict,myUCDict,myBENDict,myLNDict,myNETDict,myBWDict,myDrBibDict,myBzDict,myPossAltBooksDict, myENDict, initialAllAbbreviationsDict \
-            = {}, {},{},{},{},{},{},{},{},{},{},{},{},{},{},{}, {}, {}
+        myShortAbbrevDict,mySBLDict,myOADict,mySwDict,myCCELDict,myUSFMAbbrDict,myUSFMNDict,myUSXNDict,myUCDict,myBENDict,myLNDict,myLogosDict,myNETDict,myBWDict,myDrBibDict,myBzDict,myPossAltBooksDict, myENDict, initialAllAbbreviationsDict \
+            = {}, {},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}, {}, {}
         sequenceNumberList, sequenceTupleList = [], [] # Both have the integer form (not the string form) of the sequenceNumber
         for element in self._XMLTree:
             # Get the required information out of the tree for this element
@@ -336,6 +344,7 @@ class BibleBooksCodesConverter:
             UnboundCodeString = None if element.find('UnboundCode') is None else element.find('UnboundCode').text
             BibleditNumberString = None if element.find('BibleditNumber') is None else element.find('BibleditNumber').text
             LogosNumberString = None if element.find('LogosNumber') is None else element.find('LogosNumber').text
+            LogosAbbreviation = None if element.find('LogosAbbreviation') is None else element.find('LogosAbbreviation').text
             NETBibleAbbreviation = None if element.find('NETBibleAbbreviation') is None else element.find('NETBibleAbbreviation').text
             DrupalBibleAbbreviation = None if element.find('DrupalBibleAbbreviation') is None else element.find('DrupalBibleAbbreviation').text
             BibleWorksAbbreviation = None if element.find('BibleWorksAbbreviation') is None else element.find('BibleWorksAbbreviation').text
@@ -361,7 +370,8 @@ class BibleBooksCodesConverter:
                         'SBLAbbreviation':SBLAbbreviation, 'OSISAbbreviation':OSISAbbreviation,
                         'SwordAbbreviation':SwordAbbreviation, 'CCELNumberString':CCELNumberString,
                         'USFMAbbreviation':USFMAbbreviation, 'USFMNumberString':USFMNumberString, 'USXNumberString':USXNumberString,
-                        'UnboundCodeString':UnboundCodeString, 'BibleditNumberString':BibleditNumberString, 'LogosNumberString':LogosNumberString,
+                        'UnboundCodeString':UnboundCodeString, 'BibleditNumberString':BibleditNumberString,
+                        'LogosNumberString':LogosNumberString, 'LogosAbbreviation':LogosAbbreviation,
                         'NETBibleAbbreviation':NETBibleAbbreviation, 'DrupalBibleAbbreviation':DrupalBibleAbbreviation, 'ByzantineAbbreviation':ByzantineAbbreviation,
                         'numExpectedChapters':expectedChapters, 'possibleAlternativeBooks':possibleAlternativeBooks,
                         'bookNameEnglishGuide':bookNameEnglishGuide, 'typicalSection':typicalSection }
@@ -375,12 +385,13 @@ class BibleBooksCodesConverter:
                         'SBLAbbreviation':SBLAbbreviation, 'OSISAbbreviation':OSISAbbreviation,
                         'SwordAbbreviation':SwordAbbreviation, 'CCELNumberString':CCELNumberString,
                         'USFMAbbreviation':USFMAbbreviation, 'USFMNumberString':USFMNumberString, 'USXNumberString':USXNumberString,
-                        'UnboundCodeString':UnboundCodeString, 'BibleditNumberString':BibleditNumberString, 'LogosNumberString':LogosNumberString,
+                        'UnboundCodeString':UnboundCodeString, 'BibleditNumberString':BibleditNumberString,
+                        'LogosNumberString':LogosNumberString, 'LogosAbbreviation':LogosAbbreviation,
                         'NETBibleAbbreviation':NETBibleAbbreviation, 'DrupalBibleAbbreviation':DrupalBibleAbbreviation, 'ByzantineAbbreviation':ByzantineAbbreviation,
                         'numExpectedChapters':expectedChapters, 'possibleAlternativeBooks':possibleAlternativeBooks,
                         'bookNameEnglishGuide':bookNameEnglishGuide, 'typicalSection':typicalSection }
             if 'sequenceNumber' in self._compulsoryElements or sequenceNumber:
-                if 'sequenceNumber' in self._ElementsWithoutDuplicates: assert intSequenceNumber not in sequenceNumberList # Shouldn't be any duplicates
+                if 'sequenceNumber' in self._ElementsWithoutDuplicates: assert intSequenceNumber not in sequenceNumberList, f"{intSequenceNumber=} {len(sequenceNumberList)=} {sorted(sequenceNumberList)=}" # Shouldn't be any duplicates
                 if intSequenceNumber in sequenceNumberList: raise f"Have duplicate '{intSequenceNumber}' sequence numbers"
                 else:
                     sequenceNumberList.append( intSequenceNumber ) # Only used for checking duplicates
@@ -447,6 +458,12 @@ class BibleBooksCodesConverter:
                 UCNumberString = LogosNumberString.upper()
                 if UCNumberString in myLNDict: vPrint( 'Quiet', DEBUGGING_THIS_MODULE, UCNumberString, myLNDict ); halt
                 else: myLNDict[UCNumberString] = ( intID, referenceAbbreviation, USFMAbbreviation, )
+            if "LogosAbbreviation" in self._compulsoryElements or LogosAbbreviation:
+                if "LogosAbbreviation" in self._ElementsWithoutDuplicates: assert LogosAbbreviation not in myLogosDict  # Shouldn't be any duplicates
+                UCAbbreviation = LogosAbbreviation.upper()
+                if UCAbbreviation in myLogosDict: myLogosDict[UCAbbreviation] = ( intID, makeList(myLogosDict[UCAbbreviation][1],referenceAbbreviation), )
+                else: myLogosDict[UCAbbreviation] = ( intID, referenceAbbreviation, )
+                addToAllCodesDict( UCAbbreviation, 'Logos', initialAllAbbreviationsDict )
             if "NETBibleAbbreviation" in self._compulsoryElements or NETBibleAbbreviation:
                 if "NETBibleAbbreviation" in self._ElementsWithoutDuplicates: assert NETBibleAbbreviation not in myNETDict  # Shouldn't be any duplicates
                 UCAbbreviation = NETBibleAbbreviation.upper()
@@ -553,7 +570,8 @@ class BibleBooksCodesConverter:
                         'shortAbbreviationDict': myShortAbbrevDict,
                         'SBLAbbreviationDict':mySBLDict, 'OSISAbbreviationDict':myOADict, 'SwordAbbreviationDict':mySwDict,
                         'CCELDict':myCCELDict, 'USFMAbbreviationDict':myUSFMAbbrDict, 'USFMNumberDict':myUSFMNDict,
-                        'USXNumberDict':myUSXNDict, 'UnboundCodeDict':myUCDict, 'BibleditNumberDict':myBENDict, 'LogosNumberDict':myLNDict,
+                        'USXNumberDict':myUSXNDict, 'UnboundCodeDict':myUCDict, 'BibleditNumberDict':myBENDict,
+                        'LogosNumberDict':myLNDict, 'LogosAbbreviationDict':myLogosDict,
                         'NETBibleAbbreviationDict':myNETDict, 'DrupalBibleAbbreviationDict':myDrBibDict,
                         'BibleWorksAbbreviationDict':myBWDict, 'ByzantineAbbreviationDict':myBzDict,
                         'EnglishNameDict':myENDict, 'allAbbreviationsDict':adjAllAbbreviationsDict }
@@ -602,9 +620,9 @@ class BibleBooksCodesConverter:
         """
         import pickle
 
-        assert self._XMLTree
+        assert len(self._XMLTree)
         self.importDataToPython()
-        assert self.__DataDicts
+        assert len(self.__DataDicts)
 
         if not filepath:
             folderpath = Path('../derivedFormats/')
@@ -637,9 +655,9 @@ class BibleBooksCodesConverter:
         # end of exportPythonDictOrList
 
 
-        assert self._XMLTree
+        assert len(self._XMLTree)
         self.importDataToPython()
-        assert self.__DataDicts
+        assert len(self.__DataDicts)
 
         if not filepath:
             folderpath = Path('../derivedFormats/')
@@ -667,7 +685,8 @@ class BibleBooksCodesConverter:
                     "USXNumberDict":("USXNumberString", "0=referenceNumber (integer 1..255), 1=referenceAbbreviation/BBB (3-uppercase characters), 2=USFMAbbreviationString (3-characters)"),
                     "UnboundCodeDict":("UnboundCodeString", "0=referenceNumber (integer 1..88), 1=referenceAbbreviation/BBB (3-uppercase characters), 2=USFMAbbreviationString (3-characters)"),
                     "BibleditNumberDict":("BibleditNumberString", "0=referenceNumber (integer 1..88), 1=referenceAbbreviation/BBB (3-uppercase characters), 2=USFMAbbreviationString (3-characters)"),
-                    "LogosNumberDict":("LogosNumberString", "0=referenceNumber (integer 1..208), 1=referenceAbbreviation/BBB (3-uppercase characters), 2=USFMAbbreviationString (3-characters)"),
+                    "LogosNumberDict":("LogosNumberString", "0=referenceNumber (integer 1..87), 1=referenceAbbreviation/BBB (3-uppercase characters), 2=USFMAbbreviationString (3-characters)"),
+                    "LogosAbbreviationDict":("LogosAbbreviation", mostEntries),
                     "NETBibleAbbreviationDict":("NETBibleAbbreviation", mostEntries),
                     "DrupalBibleAbbreviationDict":("DrupalBibleAbbreviation", mostEntries),
                     "BibleWorksAbbreviationDict":("BibleWorksAbbreviation", mostEntries),
@@ -688,9 +707,9 @@ class BibleBooksCodesConverter:
         """
         import json
 
-        assert self._XMLTree
+        assert len(self._XMLTree)
         self.importDataToPython()
-        assert self.__DataDicts
+        assert len(self.__DataDicts)
 
         if not filepath:
             folderpath = Path('../derivedFormats/')
@@ -761,9 +780,9 @@ class BibleBooksCodesConverter:
         # end of exportPythonDict
 
 
-        assert self._XMLTree
+        assert len(self._XMLTree)
         self.importDataToPython()
-        assert self.__DataDicts
+        assert len(self.__DataDicts)
 
         if not filepath:
             folderpath = Path('../derivedFormats/')
@@ -814,6 +833,7 @@ class BibleBooksCodesConverter:
                 "UnboundCodeDict":("UnboundCodeString", "{} UnboundCodeString[3+1]; {} referenceNumber; {} referenceAbbreviation[3+1]; {} USFMAbbreviation[3+1];".format(CHAR,BYTE,CHAR,CHAR) ),
                 "BibleditNumberDict":("BibleditNumberString", "{} BibleditNumberString[2+1]; {} referenceNumber; {} referenceAbbreviation[3+1]; {} USFMAbbreviation[3+1];".format(CHAR,BYTE,CHAR,CHAR) ),
                 "LogosNumberDict":("LogosNumberString", "{} LogosNumberString[2+1]; {} referenceNumber; {} referenceAbbreviation[3+1]; {} USFMAbbreviation[3+1];".format(CHAR,BYTE,CHAR,CHAR) ),
+                "LogosAbbreviationDict":("LogosAbbreviation", "{}* LogosAbbreviation; {} referenceNumber; {} referenceAbbreviation[3+1];".format(CHAR,BYTE,CHAR) ),
                 "NETBibleAbbreviationDict":("NETBibleAbbreviation", "{}* NETBibleAbbreviation; {} referenceNumber; {} referenceAbbreviation[3+1];".format(CHAR,BYTE,CHAR) ),
                 "DrupalBibleAbbreviationDict":("DrupalBibleAbbreviation", "{}* DrupalBibleAbbreviation; {} referenceNumber; {} referenceAbbreviation[3+1];".format(CHAR,BYTE,CHAR) ),
                 "ByzantineAbbreviationDict":("ByzantineAbbreviation", "{}* ByzantineAbbreviation; {} referenceNumber; {} referenceAbbreviation[3+1];".format(CHAR,BYTE,CHAR) ),

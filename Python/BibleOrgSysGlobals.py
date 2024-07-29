@@ -5,7 +5,7 @@
 #
 # Module handling Global functions and variables for our Bible Organisational System
 #
-# Copyright (C) 2010-2023 Robert Hunt
+# Copyright (C) 2010-2024 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -105,10 +105,10 @@ except ImportError:
     import getpass
 
 
-LAST_MODIFIED_DATE = '2023-02-12' # by RJH
+LAST_MODIFIED_DATE = '2024-06-13' # by RJH
 SHORT_PROGRAM_NAME = "BibleOrgSysGlobals"
 PROGRAM_NAME = "BibleOrgSys (BOS) Globals for BibleBooksCodes"
-PROGRAM_VERSION = '0.90'
+PROGRAM_VERSION = '0.91'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -691,8 +691,7 @@ def peekIntoFile( filenameOrFilepath, folderName=None, numLines:int=1, encoding:
                     if lineNumber >= numLines: return lines # Return a list of lines
         except UnicodeDecodeError: # Could be binary or a different encoding
             #if not filepath.lower().endswith( 'usfm-color.sty' ): # Seems this file isn't UTF-8, but we don't need it here anyway so ignore it
-            thisLogger = logging.warning if DEBUGGING_THIS_MODULE or debugFlag else logging.info
-            thisLogger( f"{'BibleOrgSysGlobals.' if debugFlag else ''}peekIntoFile: Seems we couldn't decode Unicode in {filepath}" )
+            (logging.warning if DEBUGGING_THIS_MODULE or debugFlag else logging.info)( f"{'BibleOrgSysGlobals.' if debugFlag else ''}peekIntoFile: Seems we couldn't decode Unicode in {filepath}" )
 # end of BibleOrgSysGlobals.peekIntoFile
 
 

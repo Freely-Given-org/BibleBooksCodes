@@ -5,7 +5,7 @@
 #
 # Module handling BibleBooksCodes functions
 #
-# Copyright (C) 2010-2023 Robert Hunt
+# Copyright (C) 2010-2024 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -46,24 +46,28 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-08-07' # by RJH
+LAST_MODIFIED_DATE = '2024-07-11' # by RJH
 SHORT_PROGRAM_NAME = "BibleBooksCodes"
 PROGRAM_NAME = "Bible Books Codes handler"
-PROGRAM_VERSION = '0.93'
+PROGRAM_VERSION = '0.95'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
 
 
-BOOKLIST_OT39 = ( 'GEN', 'EXO', 'LEV', 'NUM', 'DEU', 'JOS', 'JDG', 'RUT', 'SA1', 'SA2', 'KI1', 'KI2', 'CH1', 'CH2', \
+BOOKLIST_OT39 = [ 'GEN', 'EXO', 'LEV', 'NUM', 'DEU', 'JOS', 'JDG', 'RUT', 'SA1', 'SA2', 'KI1', 'KI2', 'CH1', 'CH2', \
         'EZR', 'NEH', 'EST', 'JOB', 'PSA', 'PRO', 'ECC', 'SNG', 'ISA', 'JER', 'LAM', 'EZE', 'DAN', \
-        'HOS', 'JOL', 'AMO', 'OBA', 'JNA', 'MIC', 'NAH', 'HAB', 'ZEP', 'HAG', 'ZEC', 'MAL' )
+        'HOS', 'JOL', 'AMO', 'OBA', 'JNA', 'MIC', 'NAH', 'HAB', 'ZEP', 'HAG', 'ZEC', 'MAL' ]
 assert len( BOOKLIST_OT39 ) == 39
-BOOKLIST_NT27 = ( 'MAT', 'MRK', 'LUK', 'JHN', 'ACT', 'ROM', 'CO1', 'CO2', 'GAL', 'EPH', 'PHP', 'COL', \
-        'TH1', 'TH2', 'TI1', 'TI2', 'TIT', 'PHM', 'HEB', 'JAM', 'PE1', 'PE2', 'JN1', 'JN2', 'JN3', 'JDE', 'REV' )
+BOOKLIST_NT27 = [ 'MAT', 'MRK', 'LUK', 'JHN', 'ACT', 'ROM', 'CO1', 'CO2', 'GAL', 'EPH', 'PHP', 'COL', \
+        'TH1', 'TH2', 'TI1', 'TI2', 'TIT', 'PHM', 'HEB', 'JAM', 'PE1', 'PE2', 'JN1', 'JN2', 'JN3', 'JDE', 'REV' ]
 assert len( BOOKLIST_NT27 ) == 27
 BOOKLIST_66 = BOOKLIST_OT39 + BOOKLIST_NT27
 assert len( BOOKLIST_66 ) == 66
+BOOKLIST_DC15 = ['GES','LES', 'TOB', 'JDT', 'ESA', 'WIS', 'SIR', 'BAR', 'LJE', 'PAZ', 'SUS', 'BEL', 'MAN', 'MA1','MA2' ]
+assert len( BOOKLIST_DC15 ) == 15
+BOOKLIST_81 = BOOKLIST_OT39 + BOOKLIST_DC15 + BOOKLIST_NT27
+assert len( BOOKLIST_81 ) == 81
 
 
 @singleton # Can only ever have one instance
@@ -823,6 +827,15 @@ class BibleBooksCodes:
                 if BBB == 'LUK': return 'Luke'
                 if BBB == 'JHN': return 'John'
                 if BBB == 'ACT': return 'Acts'
+                if BBB == 'CO1': return '1Cor'
+                if BBB == 'CO2': return '2Cor'
+                if BBB == 'TI1': return '1Tim'
+                if BBB == 'TI2': return '2Tim'
+                if BBB == 'PE1': return '1Pet'
+                if BBB == 'PE2': return '2Pet'
+                if BBB == 'JN1': return '1Jhn'
+                if BBB == 'JN2': return '2Jhn'
+                if BBB == 'JN3': return '3Jhn'
                 if BBB == 'JDE': return 'Jude'
             return f'{BBB[2]}{BBB[0]}{BBB[1].lower()}' if BBB[2].isdigit() else f'{BBB[0]}{BBB[1:].lower()}'
         
@@ -836,6 +849,15 @@ class BibleBooksCodes:
             if BBB == 'LUK': return 'LUKE'
             if BBB == 'JHN': return 'JOHN'
             if BBB == 'ACT': return 'ACTS'
+            if BBB == 'CO1': return '1COR'
+            if BBB == 'CO2': return '2COR'
+            if BBB == 'TI1': return '1TIM'
+            if BBB == 'TI2': return '2TIM'
+            if BBB == 'PE1': return '1PET'
+            if BBB == 'PE2': return '2PET'
+            if BBB == 'JN1': return '1JHN'
+            if BBB == 'JN2': return '2JHN'
+            if BBB == 'JN3': return '3JHN'
             if BBB == 'JDE': return 'JUDE'
         return f'{BBB[2]}{BBB[:2]}' if BBB[2].isdigit() else BBB
     # end of BibleBooksCodes.tidyBBB
@@ -885,7 +907,7 @@ def briefDemo() -> None:
     assert bbc.getLogosNumStr( 'MAT' ) == '61'
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "Single chapter books (and OSIS):\n  {}\n  {}".format( bbc.getSingleChapterBooksList(), bbc.getOSISSingleChapterBooksList() ) )
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "Possible alternative  books to Esther: {}".format( bbc.getPossibleAlternativeBooksCodes('EST') ) )
-    for someString,expectedBBB in (('PE2','PE2'), ('2Pe','PE2'), ('2 Pet','PE2'), ('2Pet','PE2'), ('Job','JOB'), ('Deut','DEU'), ('Deuteronomy','DEU'), ('EpJer','LJE'), ('1 Kings','KI1'), ('2 Samuel','SA2')):
+    for someString,expectedBBB in (('PE2','PE2'), ('2Pe','PE2'), ('2 Pet','PE2'), ('2Pet','PE2'), ('Job','JOB'), ('Jude','JDE'), ('Deut','DEU'), ('Deuteronomy','DEU'), ('EpJer','LJE'), ('1 Kings','KI1'), ('2 Samuel','SA2')):
         BBB = bbc.getBBBFromText( someString )
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"{someString=} -> {BBB=} ({expectedBBB=})" )
         assert BBB==expectedBBB, f"{someString=} -> {BBB=} ({expectedBBB=})"
@@ -893,6 +915,9 @@ def briefDemo() -> None:
     for osisCode in myOSIS:
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "Osis {!r} -> {}".format( osisCode, bbc.getBBBFromOSISAbbreviation( osisCode ) ) )
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"{BibleBooksCodes().tidyBBBs(['GEN','SA1','CO2','JN3','XXA'])=}" )
+
+    for BBB in BOOKLIST_81:
+        assert bbc.isValidBBB( BBB ), f"BOOKLIST_81 {BBB} is invalid"
 
     sections:Dict[str,List[str]] = {}
     for BBB in bbc:
@@ -935,7 +960,7 @@ def fullDemo() -> None:
     assert bbc.getLogosNumStr( 'MAT' ) == '61'
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "Single chapter books (and OSIS):\n  {}\n  {}".format( bbc.getSingleChapterBooksList(), bbc.getOSISSingleChapterBooksList() ) )
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "Possible alternative  books to Esther: {}".format( bbc.getPossibleAlternativeBooksCodes('EST') ) )
-    for someString,expectedBBB in (('PE2','PE2'), ('2Pe','PE2'), ('2 Pet','PE2'), ('2Pet','PE2'), ('Job','JOB'), ('Deut','DEU'), ('Deuteronomy','DEU'), ('EpJer','LJE'), ('1 Kings','KI1'), ('2 Samuel','SA2')):
+    for someString,expectedBBB in (('PE2','PE2'), ('2Pe','PE2'), ('2 Pet','PE2'), ('2Pet','PE2'), ('Job','JOB'), ('Jude','JDE'), ('Deut','DEU'), ('Deuteronomy','DEU'), ('EpJer','LJE'), ('1 Kings','KI1'), ('2 Samuel','SA2')):
         BBB = bbc.getBBBFromText( someString )
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"{someString=} -> {BBB=} ({expectedBBB=})" )
         assert BBB==expectedBBB, f"{someString=} -> {BBB=} ({expectedBBB=})"
@@ -943,6 +968,9 @@ def fullDemo() -> None:
     for osisCode in myOSIS:
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "Osis {!r} -> {}".format( osisCode, bbc.getBBBFromOSISAbbreviation( osisCode ) ) )
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"{BibleBooksCodes().tidyBBBs(['GEN','SA1','CO2','JN3','XXA'])=}" )
+
+    for BBB in BOOKLIST_81:
+        assert bbc.isValidBBB( BBB ), f"BOOKLIST_81 {BBB} is invalid"
 
     sections:Dict[str,List[str]] = {}
     for BBB in bbc:
