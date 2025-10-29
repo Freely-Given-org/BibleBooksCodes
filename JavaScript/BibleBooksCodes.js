@@ -287,7 +287,7 @@ class BibleBooksCodes {
     return this.dataDicts["DrupalBibleAbbreviationDict"][DrupalBibleCode.upper()][1];
   }
 
-  getBBBFromText(someText) {
+  getBBBFromEnglishText(someText) {
     /*
     Attempt to return the BBB reference abbreviation string for the given book information (text).
      Only works for English.
@@ -295,7 +295,7 @@ class BibleBooksCodes {
      Returns BBB or None.
     */
     let SomeUppercaseText, foundBBB, matchCount;
-    // console.log(`BibleBooksCodes.getBBBFromText( ${someText} )`);
+    // console.log(`BibleBooksCodes.getBBBFromEnglishText( ${someText} )`);
     console.assert(someText && (typeof someText === "string" || someText instanceof String), null);
 
     SomeUppercaseText = someText.toUpperCase();

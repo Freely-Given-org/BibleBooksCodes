@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+# -\*- coding: utf-8 -\*-
+# SPDX-License-Identifier: GPL-3.0-or-later
 #
 # BibleOrgSysGlobals.py for BibleBooksCodes
 #
@@ -87,7 +88,6 @@ Contains functions:
     fullDemo()
 """
 from gettext import gettext as _
-from typing import List, Tuple, Optional, Union
 import sys
 import logging
 import os.path
@@ -112,7 +112,7 @@ PROGRAM_VERSION = '0.91'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
-haltOnXMLWarning = False # Used for XML debugging
+errorOnXMLWarning = False # Used for XML debugging
 
 
 # Global variables
@@ -200,7 +200,7 @@ LEVEL_NAME_DICT = { 'Quiet':1, 'Q':1,
                     'Verbose':4, 'V':4,
                     'Never': 5, # Will only ever print if increaseLevel is set
                     }
-def vPrint( requestedLevel:Union[int,str], increaseLevel:Union[bool,int], *args, **kwargs ) -> None:
+def vPrint( requestedLevel:int|str, increaseLevel:bool|int, *args, **kwargs ) -> None:
     """
     verbose print -- intended for user notifications
                     (unlike the following two functions intended for programmers).
@@ -222,7 +222,7 @@ def vPrint( requestedLevel:Union[int,str], increaseLevel:Union[bool,int], *args,
         print( *args, **kwargs )
 # end of BibleOrgSysGlobals.vPrint function
 
-def dPrint( requestedLevel:Union[int,str], increaseLevel:Union[bool,int], *args, **kwargs ) -> None:
+def dPrint( requestedLevel:int|str, increaseLevel:bool|int, *args, **kwargs ) -> None:
     """
     debug print -- intended for debug display of internal variables.
 
@@ -237,7 +237,7 @@ def dPrint( requestedLevel:Union[int,str], increaseLevel:Union[bool,int], *args,
     vPrint( requestedLevel, increaseLevel, *args, **kwargs )
 # end of BibleOrgSysGlobals.dPrint function
 
-def fnPrint( increaseLevel:Union[bool,int], *args, **kwargs ) -> None:
+def fnPrint( increaseLevel:bool|int, *args, **kwargs ) -> None:
     """
     function print -- intended only for function introduction notifications
                         for debugging of programme flow.
@@ -265,7 +265,7 @@ def fnPrint( increaseLevel:Union[bool,int], *args, **kwargs ) -> None:
 ##########################################################################################################
 #
 
-def findHomeFolderpath() -> Optional[Path]:
+def findHomeFolderpath() -> Path|None:
     """
     Attempt to find the path to the user's home folder and return it.
     """
@@ -363,7 +363,7 @@ loggingConsoleFormat = '%(levelname)s: %(message)s'
 loggingShortFormat = '%(levelname)8s: %(message)s'
 loggingLongFormat = '%(asctime)s %(levelname)8s: %(message)s'
 
-def setupLoggingToFile( SHORT_PROGRAM_NAMEParameter:str, programVersionParameter:str, folderpath:Optional[Path]=None ) -> None:
+def setupLoggingToFile( SHORT_PROGRAM_NAMEParameter:str, programVersionParameter:str, folderpath:Path|None=None ) -> None:
     """
     Sets up the main logfile for the program and returns the full pathname.
 
@@ -401,7 +401,7 @@ def setupLoggingToFile( SHORT_PROGRAM_NAMEParameter:str, programVersionParameter
 # end of BibleOrgSysGlobals.setupLoggingToFile
 
 
-def addConsoleLogging( consoleLoggingLevel:Optional[int]=None ) -> None:
+def addConsoleLogging( consoleLoggingLevel:int|None=None ) -> None:
     """
     Adds a handler to also send ERROR and higher to console (depending on verbosity)
     """
@@ -424,7 +424,7 @@ def addConsoleLogging( consoleLoggingLevel:Optional[int]=None ) -> None:
 # end of BibleOrgSysGlobals.addConsoleLogging
 
 
-def addLogfile( projectName:str, folderName:Optional[Path]=None ) -> Tuple[Path,logging.FileHandler]:
+def addLogfile( projectName:str, folderName:Path|None=None ) -> tuple[Path,logging.FileHandler]:
     """
     Adds an extra project specific log file to the logger.
     """
@@ -640,7 +640,7 @@ def removeAccents( someString:str ) -> str:
 # Make a backup copy of a file that's about to be written by renaming it
 #   Note that this effectively "deletes" the file.
 
-def backupAnyExistingFile( filenameOrFilepath:Union[Path,str], numBackups:int=1, extension:str='bak' ) -> None:
+def backupAnyExistingFile( filenameOrFilepath:Path|str, numBackups:int=1, extension:str='bak' ) -> None:
     """
     Make a backup copy/copies of a file if it exists.
     """
@@ -1002,7 +1002,7 @@ def fileCompareXML( filename1, filename2, folder1=None, folder2=None, printFlag=
 
     # Compare the files
     diffCount = 0
-    location:List[str] = []
+    location:list[str] = []
     compareElements( tree1, tree2 )
     if diffCount:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, "{} differences discovered.".format( diffCount if diffCount<=exitCount else 'Many' ) )
@@ -1059,7 +1059,7 @@ def checkXMLNoAttributes( element, locationString, idString=None, loadErrorsDict
                         .format( (idString+' ') if idString else '', attrib, value, locationString )
         logging.warning( warningString )
         if loadErrorsDict is not None: loadErrorsDict.append( warningString )
-        if strictCheckingFlag or debugFlag and haltOnXMLWarning: halt
+        if strictCheckingFlag or debugFlag and errorOnXMLWarning: halt
 # end of BibleOrgSysGlobals.checkXMLNoAttributes
 
 
@@ -1072,7 +1072,7 @@ def checkXMLNoText( element, locationString, idString=None, loadErrorsDict=None 
                         .format( (idString+' ') if idString else '', element.text, locationString )
         logging.error( errorString )
         if loadErrorsDict is not None: loadErrorsDict.append( errorString )
-        if strictCheckingFlag or debugFlag and haltOnXMLWarning: halt
+        if strictCheckingFlag or debugFlag and errorOnXMLWarning: halt
 # end of BibleOrgSysGlobals.checkXMLNoText
 
 def checkXMLNoTail( element, locationString, idString=None, loadErrorsDict=None ):
@@ -1084,7 +1084,7 @@ def checkXMLNoTail( element, locationString, idString=None, loadErrorsDict=None 
                         .format( (idString+' ') if idString else '', element.tail, locationString )
         logging.warning( warningString )
         if loadErrorsDict is not None: loadErrorsDict.append( warningString )
-        if strictCheckingFlag or debugFlag and haltOnXMLWarning: halt
+        if strictCheckingFlag or debugFlag and errorOnXMLWarning: halt
 # end of BibleOrgSysGlobals.checkXMLNoTail
 
 
@@ -1098,7 +1098,7 @@ def checkXMLNoSubelements( element, locationString, idString=None, loadErrorsDic
         logger = logging.critical if subelement.text else logging.error
         logger( errorString )
         if loadErrorsDict is not None: loadErrorsDict.append( errorString )
-        if strictCheckingFlag or debugFlag and haltOnXMLWarning: halt
+        if strictCheckingFlag or debugFlag and errorOnXMLWarning: halt
 # end of BibleOrgSysGlobals.checkXMLNoSubelements
 
 def checkXMLNoSubelementsWithText( element, locationString, idString=None, loadErrorsDict=None ):
@@ -1114,7 +1114,7 @@ def checkXMLNoSubelementsWithText( element, locationString, idString=None, loadE
                                 element.tail.strip() if element.tail else element.tail )
             logging.warning( warningString )
             if loadErrorsDict is not None: loadErrorsDict.append( warningString )
-            if strictCheckingFlag or debugFlag and haltOnXMLWarning: halt
+            if strictCheckingFlag or debugFlag and errorOnXMLWarning: halt
 # end of BibleOrgSysGlobals.checkXMLNoSubelementsWithText
 
 
@@ -1243,7 +1243,7 @@ def stripWordEndsPunctuation( wordToken:str ) -> str:
 # end of BibleOrgSysGlobals.stripWordEndsPunctuation
 
 
-def removeStringEndings( originalText:str, endingsList:List[str] ) -> str:
+def removeStringEndings( originalText:str, endingsList:list[str] ) -> str:
     """
     Go through the given list of endings (in order)
         and remove any endings from the end of the string.

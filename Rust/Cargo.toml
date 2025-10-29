@@ -1,21 +1,3 @@
-[package]
-name = "bos_books_codes"
-version = "0.1.2"
-authors = ["Robert Hunt <Freely.Given.org+BosBC@gmail.com>"]
-license = "MIT OR Apache-2.0"
-description = """
-A library that handles 3-character Bible Books Codes.
-"""
-readme = "README.md"
-homepage = "https://github.com/Freely-Given-org/BibleBooksCodes"
-repository = "https://github.com/Freely-Given-org/BibleBooksCodes"
-keywords = ["Bible", "books", "codes", "USFM", "OSIS", "BibleOrgSys", "BOS", "BBB"]
-categories = ["command-line-utilities", "text-processing"]
-
-edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
-serde = { version = "1.0", features = ["derive"] }
-serde_json = "1.0"
+[workspace]
+resolver = "3"
+members = ["bos_books_codes", "bos_books_codes_py"]
