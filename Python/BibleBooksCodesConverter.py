@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run
 # -\*- coding: utf-8 -\*-
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
@@ -367,7 +367,7 @@ class BibleBooksCodesConverter:
             #   The referenceAbbreviation is UPPER CASE by definition
             if 'referenceAbbreviation' in self._compulsoryElements or referenceAbbreviation:
                 if 'referenceAbbreviation' in self._ElementsWithoutDuplicates: assert referenceAbbreviation not in myRefAbbrDict, f"{referenceAbbreviation=}" # Shouldn't be any duplicates
-                if referenceAbbreviation in myRefAbbrDict: halt
+                if referenceAbbreviation in myRefAbbrDict: assert False, "We want to stop here"
                 else: myRefAbbrDict[referenceAbbreviation] = {
                         'originalLanguageCode': originalLanguageCode, 'bookName':bookName,
                         'referenceNumber':intID,  'shortAbbreviation':shortAbbreviation,
@@ -381,7 +381,7 @@ class BibleBooksCodesConverter:
                         'bookNameEnglishGuide':bookNameEnglishGuide, 'typicalSection':typicalSection }
             if 'referenceNumber' in self._compulsoryElements or ID:
                 if 'referenceNumber' in self._ElementsWithoutDuplicates: assert intID not in myIDDict # Shouldn't be any duplicates
-                if intID in myIDDict: halt
+                if intID in myIDDict: assert False, "We want to stop here"
                 else: myIDDict[intID] = {
                         'referenceAbbreviation':referenceAbbreviation,
                         'originalLanguageCode': originalLanguageCode, 'bookName':bookName,
@@ -444,23 +444,23 @@ class BibleBooksCodesConverter:
                 if "USXNumberString" in self._ElementsWithoutDuplicates: assert USXNumberString not in myUSXNDict # Shouldn't be any duplicates
                 UCNumberString = USXNumberString.upper()
                 if UCNumberString in myUSXNDict:
-                    if BibleOrgSysGlobals.debugFlag: halt
+                    if BibleOrgSysGlobals.debugFlag: assert False, "We want to stop here"
                 else: myUSXNDict[UCNumberString] = ( intID, referenceAbbreviation, USFMAbbreviation, )
             if "UnboundCodeString" in self._compulsoryElements or UnboundCodeString:
                 if "UnboundCodeString" in self._ElementsWithoutDuplicates: assert UnboundCodeString not in myUCDict # Shouldn't be any duplicates
                 UCCodeString = UnboundCodeString.upper()
                 assert len(UCCodeString)==3 and UCCodeString[0].isdigit() and UCCodeString[1].isdigit() and UCCodeString[2] in ('N','O','A')
-                if UCCodeString in myUCDict: vPrint( 'Quiet', DEBUGGING_THIS_MODULE, UCCodeString, myUCDict ); halt
+                if UCCodeString in myUCDict: vPrint( 'Quiet', DEBUGGING_THIS_MODULE, UCCodeString, myUCDict ); assert False, "We want to stop here"
                 else: myUCDict[UCCodeString] = ( intID, referenceAbbreviation, USFMAbbreviation, )
             if "BibleditNumberString" in self._compulsoryElements or BibleditNumberString:
                 if "BibleditNumberString" in self._ElementsWithoutDuplicates: assert BibleditNumberString not in myBENDict  # Shouldn't be any duplicates
                 UCNumberString = BibleditNumberString.upper()
-                if UCNumberString in myBENDict: vPrint( 'Quiet', DEBUGGING_THIS_MODULE, UCNumberString, myBENDict ); halt
+                if UCNumberString in myBENDict: vPrint( 'Quiet', DEBUGGING_THIS_MODULE, UCNumberString, myBENDict ); assert False, "We want to stop here"
                 else: myBENDict[UCNumberString] = ( intID, referenceAbbreviation, USFMAbbreviation, )
             if "LogosNumberString" in self._compulsoryElements or LogosNumberString:
                 if "LogosNumberString" in self._ElementsWithoutDuplicates: assert LogosNumberString not in myLNDict  # Shouldn't be any duplicates
                 UCNumberString = LogosNumberString.upper()
-                if UCNumberString in myLNDict: vPrint( 'Quiet', DEBUGGING_THIS_MODULE, UCNumberString, myLNDict ); halt
+                if UCNumberString in myLNDict: vPrint( 'Quiet', DEBUGGING_THIS_MODULE, UCNumberString, myLNDict ); assert False, "We want to stop here"
                 else: myLNDict[UCNumberString] = ( intID, referenceAbbreviation, USFMAbbreviation, )
             if "LogosAbbreviation" in self._compulsoryElements or LogosAbbreviation:
                 if "LogosAbbreviation" in self._ElementsWithoutDuplicates: assert LogosAbbreviation not in myLogosDict  # Shouldn't be any duplicates
@@ -492,14 +492,14 @@ class BibleBooksCodesConverter:
                 if "ByzantineAbbreviation" in self._ElementsWithoutDuplicates: assert ByzantineAbbreviation not in myBzDict # Shouldn't be any duplicates
                 UCAbbreviation = ByzantineAbbreviation.upper()
                 if UCAbbreviation in myBzDict:
-                    if BibleOrgSysGlobals.debugFlag: halt
+                    if BibleOrgSysGlobals.debugFlag: assert False, "We want to stop here"
                 else: myBzDict[UCAbbreviation] = ( intID, referenceAbbreviation, )
                 addToAllCodesDict( UCAbbreviation, 'Byzantine', initialAllEnglishAbbreviationsDict )
             if "bookNameEnglishGuide" in self._compulsoryElements:
                 if "bookNameEnglishGuide" in self._ElementsWithoutDuplicates: assert bookNameEnglishGuide not in myENDict # Shouldn't be any duplicates
                 UCName = bookNameEnglishGuide.upper()
                 if UCName in myENDict:
-                    if BibleOrgSysGlobals.debugFlag: halt
+                    if BibleOrgSysGlobals.debugFlag: assert False, "We want to stop here"
                 else: myENDict[UCName] = ( intID, referenceAbbreviation )
             if "possibleAlternativeAbbreviations" in self._compulsoryElements or possibleAlternativeAbbreviations:
                 for possibleAlternativeAbbreviation in possibleAlternativeAbbreviations:
@@ -681,7 +681,7 @@ class BibleBooksCodesConverter:
         for badAbbreviation in toBeRemovedSet:
             del adjAllEnglishAbbreviationsDict[badAbbreviation]
         print( f"Have {len(adjAllEnglishAbbreviationsDict):,} entries in allAbbreviationDict." )
-        # print( f"\n({len(adjAllEnglishAbbreviationsDict)}) {sorted(adjAllEnglishAbbreviationsDict.items())=}" ); halt
+        # print( f"\n({len(adjAllEnglishAbbreviationsDict)}) {sorted(adjAllEnglishAbbreviationsDict.items())=}" ); assert False, "We want to stop here"
         for badName in BAD_LIST:
             assert badName not in adjAllEnglishAbbreviationsDict, f"{badName=}"
 
@@ -699,7 +699,7 @@ class BibleBooksCodesConverter:
         for specialCode in SPECIAL_BOOK_CODES:
             if specialCode in initialAllEnglishAbbreviationsDict:
                 logging.critical( _("Special code {} has been used!").format( repr(specialCode) ) )
-                if BibleOrgSysGlobals.debugFlag: halt
+                if BibleOrgSysGlobals.debugFlag: assert False, "We want to stop here"
 
         assert 'EZT' in myRefAbbrDict
         self.__DataDicts = { 'referenceNumberDict':myIDDict, 'referenceAbbreviationDict':myRefAbbrDict, 'sequenceList':sequenceList,
@@ -1126,7 +1126,8 @@ def fullDemo() -> None:
 # end of BibleBooksCodesConverter.fullDemo
 
 if __name__ == '__main__':
-    from multiprocessing import freeze_support
+    from multiprocessing import set_start_method, freeze_support
+    set_start_method('fork') # The default was changed on POSIX systems from 'fork' to 'forkserver' in Python3.14
     freeze_support() # Multiprocessing support for frozen Windows executables
 
     # Configure basic Bible Organisational System (BOS) set-up

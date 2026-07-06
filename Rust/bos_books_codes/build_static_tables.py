@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run
 # -\*- coding: utf-8 -\*-
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
@@ -134,7 +134,7 @@ if __name__ == '__main__':
         original_language_code: "{row['originalLanguageCode']}",
         original_language_book_name: "{row['bookName']}",
         book_name_English_guide: "{row['bookNameEnglishGuide']}",
-        BOS_reference_abbreviation: "{row['BOSReferenceAbbreviation']}",
+        BOS_book_code: "{row['BOSReferenceAbbreviation']}",
         BOS_reference_number: {row['BOSReferenceNumber']},
         BOS_sequence_number: {row['BOSSequenceNumber']},
         expected_num_chapters: {expected_num_chapters},
@@ -211,7 +211,7 @@ pub struct BibleBooksCodesArrayEntry<'a> {{
     original_language_code: &'a str,
     original_language_book_name: &'a str,
     book_name_English_guide: &'a str,
-    BOS_reference_abbreviation: &'a str,
+    BOS_book_code: &'a str,
     BOS_reference_number: u16,
     BOS_sequence_number: u16,
     expected_num_chapters: OptionalNumberOrTwoNumbers,

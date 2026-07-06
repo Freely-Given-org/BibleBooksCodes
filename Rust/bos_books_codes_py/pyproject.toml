@@ -4,13 +4,18 @@ build-backend = "maturin"
 
 [project]
 name = "bos_books_codes_py"
-requires-python = ">=3.13"
+dynamic = ["version"]  # Tells Python to look elsewhere for the version
+requires-python = ">=3.12"
 classifiers = [
     "Programming Language :: Rust",
     "Programming Language :: Python :: Implementation :: CPython",
     "Programming Language :: Python :: Implementation :: PyPy",
 ]
 dynamic = ["version"]
+
+[tool.uv]
+exclude-newer = "7 days"
+
 [tool.maturin]
 #python-source = "python3.13"
 features = ["pyo3/extension-module"]

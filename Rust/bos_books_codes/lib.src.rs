@@ -31,27 +31,27 @@ impl Error for LookupError<'_> {}
 
 
 #[inline]
-pub fn is_valid_reference_abbreviation(reference_abbreviation: &str) -> bool {
-    REFERENCE_ABBREVIATION_MAP.contains_key(reference_abbreviation)
+pub fn is_valid_bos_book_code(bos_book_code: &str) -> bool {
+    REFERENCE_ABBREVIATION_MAP.contains_key(bos_book_code)
 }
 
 #[inline]
-pub fn reference_abbrev_to_usfm_abbrev<'a>(
-    reference_abbreviation: &str,
+pub fn bos_book_code_to_usfm_abbrev<'a>(
+    bos_book_code: &str,
 ) -> Result<Option<&'static str>, LookupError<'_>> {
-    let array_index = *REFERENCE_ABBREVIATION_MAP.get(reference_abbreviation)
-        .ok_or_else(|| LookupError::AbbrevNotFound("Reference", reference_abbreviation))?;
+    let array_index = *REFERENCE_ABBREVIATION_MAP.get(bos_book_code)
+        .ok_or_else(|| LookupError::AbbrevNotFound("Reference", bos_book_code))?;
 
     Ok(BIBLE_BOOKS_CODES_ARRAY[array_index].USFM_abbreviation)
         // .as_ref()
-        // .ok_or_else(|| Box::new(LookupError::ValueIsNone(reference_abbreviation.to_string())) as Box<dyn Error>)?)
+        // .ok_or_else(|| Box::new(LookupError::ValueIsNone(bos_book_code.to_string())) as Box<dyn Error>)?)
 }
 
 #[inline]
-pub fn usfm_abbrev_to_reference_abbrev<'a>(
+pub fn usfm_abbrev_to_bos_book_code<'a>(
     usfm_abbreviation: &'a str,
 ) -> Result<&'static str, LookupError<'a>> {
-    // println!("usfm_abbrev_to_reference_abbrev for {}", &usfm_abbreviation);
+    // println!("usfm_abbrev_to_bos_book_code for {}", &usfm_abbreviation);
     // let USFM_ABBREVIATION_MAP: HashMap<&str, usize> = hash_map!{ "NEG"=>1,"OXE"=>2,"VEL"=>3,};
     // println!("The unmutable hash map is {:?}", USFM_ABBREVIATION_MAP);
     // let mut USFMAbbreviationDict: HashMap<&str, usize> = HashMap::new();
@@ -69,29 +69,29 @@ pub fn usfm_abbrev_to_reference_abbrev<'a>(
     //     println!("The new hash map is {:?}", USFMAbbreviationDict);
     // }
     if let Some(&array_index) = USFM_ABBREVIATION_MAP.get(usfm_abbreviation) {
-        Ok(BIBLE_BOOKS_CODES_ARRAY[array_index].BOS_reference_abbreviation)
+        Ok(BIBLE_BOOKS_CODES_ARRAY[array_index].BOS_book_code)
     } else if let Some(&array_index) = UPPERCASE_USFM_ABBREVIATION_MAP.get(usfm_abbreviation) {
-        Ok(BIBLE_BOOKS_CODES_ARRAY[array_index].BOS_reference_abbreviation)
+        Ok(BIBLE_BOOKS_CODES_ARRAY[array_index].BOS_book_code)
     } else {
         Err(LookupError::AbbrevNotFound("USFM", usfm_abbreviation))
     }
 }
 
 #[inline]
-pub fn osis_abbrev_to_reference_abbrev<'a>(
-    osis_abbreviation: &'a str,
+pub fn osis_book_code_to_bos_book_code<'a>(
+    osis_book_code: &'a str,
 ) -> Result<&'static str, LookupError<'a>> {
-    if let Some(&array_index) = OSIS_ABBREVIATION_MAP.get(osis_abbreviation) {
-        Ok(BIBLE_BOOKS_CODES_ARRAY[array_index].BOS_reference_abbreviation)
+    if let Some(&array_index) = OSIS_ABBREVIATION_MAP.get(osis_book_code) {
+        Ok(BIBLE_BOOKS_CODES_ARRAY[array_index].BOS_book_code)
     } else {
-        Err(LookupError::AbbrevNotFound("OSIS", osis_abbreviation))
+        Err(LookupError::AbbrevNotFound("OSIS", osis_book_code))
     }
 }
 
-pub fn english_name_to_reference_abbrev(english_name: &str,) -> Option<&'static str> {
+pub fn english_name_to_bos_book_code(english_name: &str,) -> Option<&'static str> {
     let adj_english_name = english_name.to_uppercase();
     if let Some(&array_index) = ENGLISH_NAME_MAP.get(&adj_english_name) {
-        return Some(BIBLE_BOOKS_CODES_ARRAY[array_index].BOS_reference_abbreviation)
+        return Some(BIBLE_BOOKS_CODES_ARRAY[array_index].BOS_book_code)
     }
 
     let pairs = [
@@ -106,7 +106,7 @@ pub fn english_name_to_reference_abbrev(english_name: &str,) -> Option<&'static 
     for (s1, s2) in pairs {
         if adj_english_name.starts_with(s1) {
             if let Some(&array_index) = ENGLISH_NAME_MAP.get(&format!("{}{}", s2, &adj_english_name[s1.len()..])) {
-                return Some(BIBLE_BOOKS_CODES_ARRAY[array_index].BOS_reference_abbreviation)
+                return Some(BIBLE_BOOKS_CODES_ARRAY[array_index].BOS_book_code)
             }
         }
     }
@@ -127,7 +127,7 @@ pub fn english_name_to_reference_abbrev(english_name: &str,) -> Option<&'static 
 //     }
 // }
 
-// pub fn usfm_num_to_reference_abbreviation(usfm_num_str: &str) -> Result<String, Box<dyn Error>> {
+// pub fn usfm_num_to_bos_book_code(usfm_num_str: &str) -> Result<String, Box<dyn Error>> {
 //     println!("usfm_num_to_usfm_bbb for {:?}", usfm_num_str);
 //     if !&self.USFMNumberDict.contains_key(usfm_num_str) {
 //         return Err("Invalid USFM number: '".to_owned() + &usfm_num_str + "'")?; // I never actually figured out why I need the question mark?
@@ -158,57 +158,57 @@ mod tests {
     }
 
     #[test]
-    fn test_is_valid_reference_abbreviation() {
-        assert_eq!(is_valid_reference_abbreviation("SAM"), true);
-        assert_eq!(is_valid_reference_abbreviation("SIM"), false);
+    fn test_is_valid_bos_book_code() {
+        assert_eq!(is_valid_bos_book_code("SAM"), true);
+        assert_eq!(is_valid_bos_book_code("SIM"), false);
     }
 
     #[test]
-    fn test_reference_abbrev_to_usfm_abbrev() {
-        assert_eq!(reference_abbrev_to_usfm_abbrev("EXO"), Ok(Some("Exo")));
-        assert_eq!(reference_abbrev_to_usfm_abbrev("CH1"), Ok(Some("1Ch")));
+    fn test_bos_book_code_to_usfm_abbrev() {
+        assert_eq!(bos_book_code_to_usfm_abbrev("EXO"), Ok(Some("Exo")));
+        assert_eq!(bos_book_code_to_usfm_abbrev("CH1"), Ok(Some("1Ch")));
         println!(
-            "    reference_abbrev_to_usfm_abbrev for 'SAM' got {:?}",
-            reference_abbrev_to_usfm_abbrev("SAM")
+            "    bos_book_code_to_usfm_abbrev for 'SAM' got {:?}",
+            bos_book_code_to_usfm_abbrev("SAM")
         );
         println!(
-            "    reference_abbrev_to_usfm_abbrev for 'XyZ' got {:?}",
-            reference_abbrev_to_usfm_abbrev("XyZ")
+            "    bos_book_code_to_usfm_abbrev for 'XyZ' got {:?}",
+            bos_book_code_to_usfm_abbrev("XyZ")
         );
-        assert_eq!(reference_abbrev_to_usfm_abbrev("SAM"), Ok(None));
-        assert!(matches!(reference_abbrev_to_usfm_abbrev("XyZ"), Err(LookupError::AbbrevNotFound("Reference",ref key)) if *key == "XyZ"));
-        assert!(matches!(reference_abbrev_to_usfm_abbrev("XyZ"), Err(LookupError::AbbrevNotFound("Reference","XyZ"))));
+        assert_eq!(bos_book_code_to_usfm_abbrev("SAM"), Ok(None));
+        assert!(matches!(bos_book_code_to_usfm_abbrev("XyZ"), Err(LookupError::AbbrevNotFound("Reference",ref key)) if *key == "XyZ"));
+        assert!(matches!(bos_book_code_to_usfm_abbrev("XyZ"), Err(LookupError::AbbrevNotFound("Reference","XyZ"))));
     }
 
     #[test]
-    fn test_usfm_to_reference_abbreviation() {
-        assert_eq!(usfm_abbrev_to_reference_abbrev("Exo"), Ok("EXO"));
-        assert_eq!(usfm_abbrev_to_reference_abbrev("1Ki"), Ok("KI1"));
-        assert_eq!(usfm_abbrev_to_reference_abbrev("MAT"), Ok("MAT"));
-        assert_eq!(usfm_abbrev_to_reference_abbrev("1PE"), Ok("PE1"));
-        assert!(usfm_abbrev_to_reference_abbrev("XyZ").is_err());
-        assert!(matches!(usfm_abbrev_to_reference_abbrev("XyZ"), Err(LookupError::AbbrevNotFound("USFM","XyZ"))));
+    fn test_usfm_to_bos_book_code() {
+        assert_eq!(usfm_abbrev_to_bos_book_code("Exo"), Ok("EXO"));
+        assert_eq!(usfm_abbrev_to_bos_book_code("1Ki"), Ok("KI1"));
+        assert_eq!(usfm_abbrev_to_bos_book_code("MAT"), Ok("MAT"));
+        assert_eq!(usfm_abbrev_to_bos_book_code("1PE"), Ok("PE1"));
+        assert!(usfm_abbrev_to_bos_book_code("XyZ").is_err());
+        assert!(matches!(usfm_abbrev_to_bos_book_code("XyZ"), Err(LookupError::AbbrevNotFound("USFM","XyZ"))));
     }
 
     #[test]
-    fn test_osis_to_reference_abbreviation() {
-        assert_eq!(osis_abbrev_to_reference_abbrev("Exod"), Ok("EXO"));
-        assert!(osis_abbrev_to_reference_abbrev("XyZ").is_err());
-        assert!(matches!(osis_abbrev_to_reference_abbrev("XyZ"), Err(LookupError::AbbrevNotFound("OSIS","XyZ"))));
+    fn test_osis_to_bos_book_code() {
+        assert_eq!(osis_book_code_to_bos_book_code("Exod"), Ok("EXO"));
+        assert!(osis_book_code_to_bos_book_code("XyZ").is_err());
+        assert!(matches!(osis_book_code_to_bos_book_code("XyZ"), Err(LookupError::AbbrevNotFound("OSIS","XyZ"))));
     }
 
     #[test]
-    fn test_english_name_to_reference_abbrev() {
-        assert_eq!(english_name_to_reference_abbrev("Exodus"), Some("EXO"));
-        assert_eq!(english_name_to_reference_abbrev("Esther"), Some("EST"));
-        assert_eq!(english_name_to_reference_abbrev("Ester"), Some("EST"));
-        assert_eq!(english_name_to_reference_abbrev("Eccle"), Some("ECC"));
-        assert_eq!(english_name_to_reference_abbrev("1 Cor"), Some("CO1"));
-        assert_eq!(english_name_to_reference_abbrev("1 Co"), Some("CO1"));
-        assert_eq!(english_name_to_reference_abbrev("1Cor"), Some("CO1"));
-        assert_eq!(english_name_to_reference_abbrev("1Co"), Some("CO1"));
-        assert_eq!(english_name_to_reference_abbrev("1.Cor"), Some("CO1"));
-        assert_eq!(english_name_to_reference_abbrev("1.Co"), Some("CO1"));
-        assert_eq!(english_name_to_reference_abbrev("XyZ"), None);
+    fn test_english_name_to_bos_book_code() {
+        assert_eq!(english_name_to_bos_book_code("Exodus"), Some("EXO"));
+        assert_eq!(english_name_to_bos_book_code("Esther"), Some("EST"));
+        assert_eq!(english_name_to_bos_book_code("Ester"), Some("EST"));
+        assert_eq!(english_name_to_bos_book_code("Eccle"), Some("ECC"));
+        assert_eq!(english_name_to_bos_book_code("1 Cor"), Some("CO1"));
+        assert_eq!(english_name_to_bos_book_code("1 Co"), Some("CO1"));
+        assert_eq!(english_name_to_bos_book_code("1Cor"), Some("CO1"));
+        assert_eq!(english_name_to_bos_book_code("1Co"), Some("CO1"));
+        assert_eq!(english_name_to_bos_book_code("1.Cor"), Some("CO1"));
+        assert_eq!(english_name_to_bos_book_code("1.Co"), Some("CO1"));
+        assert_eq!(english_name_to_bos_book_code("XyZ"), None);
     }
 }

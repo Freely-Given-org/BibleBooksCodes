@@ -237,7 +237,7 @@ class BibleBooksCodes {
     return this.dataDicts["referenceAbbreviationDict"][BBB]["ByzantineAbbreviation"];
   }
 
-  getBBBFromOSISAbbreviation(osisAbbreviation, strict = false) {
+  osis_abbrev_to_reference_abbrev(osisAbbreviation, strict = false) {
     /*
     Return the reference abbreviation string for the given OSIS book code string.
      Also tries the Sword book codes unless strict is set to True.

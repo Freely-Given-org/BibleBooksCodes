@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run
 # -\*- coding: utf-8 -\*-
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
@@ -56,7 +56,7 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2025-10-19' # by RJH
+LAST_MODIFIED_DATE = '2025-12-14' # by RJH
 SHORT_PROGRAM_NAME = "BibleBooksCodes"
 PROGRAM_NAME = "Bible Books Codes handler"
 PROGRAM_VERSION = '0.98'
@@ -78,6 +78,10 @@ BOOKLIST_DC15 = ['GES','LES', 'TOB', 'JDT', 'ESA', 'WIS', 'SIR', 'BAR', 'LJE', '
 assert len( BOOKLIST_DC15 ) == 15
 BOOKLIST_81 = BOOKLIST_OT39 + BOOKLIST_DC15 + BOOKLIST_NT27
 assert len( BOOKLIST_81 ) == 81
+BOOKLIST_DC22 = ['GES','LES', 'ES1','ES2','ESG', 'TOB', 'JDT', 'ESA', 'WIS', 'SIR', 'BAR', 'LJE', 'PAZ', 'SUS', 'BEL', 'MAN', 'MA1','MA2','MA3','MA4', 'DAG', 'PS2' ]
+assert len( BOOKLIST_DC22 ) == 22
+BOOKLIST_88 = BOOKLIST_OT39 + BOOKLIST_DC22 + BOOKLIST_NT27
+assert len( BOOKLIST_88 ) == 88
 
 
 @singleton # Can only ever have one instance
@@ -381,7 +385,7 @@ class BibleBooksCodes:
                     return self.__DataDicts['NETBibleAbbreviationDict'][shortAbbreviation.upper()][1]
 
 
-    def getBBBFromOSISAbbreviation( self, osisAbbreviation:str, strict:bool=False ) -> str:
+    def osis_book_code_to_bos_book_code( self, osisAbbreviation:str, strict:bool=False ) -> str:
         """
         Return the reference abbreviation string for the given OSIS book code string.
 
@@ -694,25 +698,25 @@ class BibleBooksCodes:
             S = ''
         except:
             BBB, C, V, S = BCVReferenceTuple
-            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, BCVReferenceTuple ); halt # Need to finish handling BCVReferenceTuple
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, BCVReferenceTuple ); assert False, "We want to stop here" # Need to finish handling BCVReferenceTuple
         result = self.getReferenceNumber( BBB )
 
         try:
             intC = int( C )
         except ValueError:
-            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, repr(C) ); halt # Need to finish handling C
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, repr(C) ); assert False, "We want to stop here" # Need to finish handling C
         result = result * 100 + intC
 
         try:
             intV = int( V.split('-')[0] ) # If it's a verse span e.g., 3-4, just take the first part
         except ValueError:
-            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, repr(V) ); halt # Need to finish handling V
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, repr(V) ); assert False, "We want to stop here" # Need to finish handling V
         result = result * 150 + intV
 
         try:
             intS = {'a':0, 'b':1}[S.lower()] if S else 0
         except ValueError:
-            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, repr(S) ); halt # Need to finish handling S
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, repr(S) ); assert False, "We want to stop here" # Need to finish handling S
         result = result * 10 + intS
 
         return result
@@ -970,7 +974,7 @@ def briefDemo() -> None:
         assert BBB==expectedBBB, f"{someString=} -> {BBB=} ({expectedBBB=})"
     myOSIS = ( 'Gen', '1Kgs', 'Ps', 'Mal', 'Matt', '2John', 'Rev', 'EpLao', '3Meq', )
     for osisCode in myOSIS:
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "Osis {!r} -> {}".format( osisCode, bbc.getBBBFromOSISAbbreviation( osisCode ) ) )
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "Osis {!r} -> {}".format( osisCode, bbc.osis_book_code_to_bos_book_code( osisCode ) ) )
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"{BibleBooksCodes().tidyBBBs(['GEN','SA1','CO2','JN3','XXA'])=}" )
 
     for BBB in BOOKLIST_81:
@@ -1025,7 +1029,7 @@ def fullDemo() -> None:
         assert BBB==expectedBBB, f"{someString=} -> {BBB=} ({expectedBBB=})"
     myOSIS = ( 'Gen', '1Kgs', 'Ps', 'Mal', 'Matt', '2John', 'Rev', 'EpLao', '3Meq', )
     for osisCode in myOSIS:
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "Osis {!r} -> {}".format( osisCode, bbc.getBBBFromOSISAbbreviation( osisCode ) ) )
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "Osis {!r} -> {}".format( osisCode, bbc.osis_book_code_to_bos_book_code( osisCode ) ) )
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"{BibleBooksCodes().tidyBBBs(['GEN','SA1','CO2','JN3','XXA'])=}" )
 
     for BBB in BOOKLIST_81:
@@ -1041,7 +1045,8 @@ def fullDemo() -> None:
 # end of BibleBooksCodes.fullDemo
 
 if __name__ == '__main__':
-    from multiprocessing import freeze_support
+    from multiprocessing import set_start_method, freeze_support
+    set_start_method('fork') # The default was changed on POSIX systems from 'fork' to 'forkserver' in Python3.14
     freeze_support() # Multiprocessing support for frozen Windows executables
 
     # Configure basic Bible Organisational System (BOS) set-up

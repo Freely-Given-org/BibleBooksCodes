@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run
 # -\*- coding: utf-8 -\*-
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
@@ -61,9 +61,9 @@ Contains functions:
     getFlattenedXML( element, locationString, idString=None, level=0 )
     isBlank( elementText )
 
-    applyStringAdjustments( originalText, adjustmentList )
+    applyStringAdjustments( original_text, adjustmentList )
     stripWordEndsPunctuation( wordToken )
-    removeStringEndings( originalText, endingsList )
+    removeStringEndings( original_text, endingsList )
 
     pickleObject( theObject, filename, folderName=None )
     unpickleObject( filename, folderName=None )
@@ -513,7 +513,7 @@ def getLatestPythonModificationDate() -> str:
                                 latestDD = DD
                                 #collectedFilepaths.append( (filepath,lineBit) )
                             break
-    #dPrint( 'Quiet', DEBUGGING_THIS_MODULE, latestYYYY, latestMM, latestDD ); halt
+    #dPrint( 'Quiet', DEBUGGING_THIS_MODULE, latestYYYY, latestMM, latestDD ); assert False, "We want to stop here"
     return f'{latestYYYY}-{latestMM:02}-{latestDD:02}'
 # end of BibleOrgSysGlobals.getLatestPythonModificationDate
 
@@ -1059,7 +1059,7 @@ def checkXMLNoAttributes( element, locationString, idString=None, loadErrorsDict
                         .format( (idString+' ') if idString else '', attrib, value, locationString )
         logging.warning( warningString )
         if loadErrorsDict is not None: loadErrorsDict.append( warningString )
-        if strictCheckingFlag or debugFlag and errorOnXMLWarning: halt
+        if strictCheckingFlag or debugFlag and errorOnXMLWarning: assert False, "We want to stop here"
 # end of BibleOrgSysGlobals.checkXMLNoAttributes
 
 
@@ -1072,7 +1072,7 @@ def checkXMLNoText( element, locationString, idString=None, loadErrorsDict=None 
                         .format( (idString+' ') if idString else '', element.text, locationString )
         logging.error( errorString )
         if loadErrorsDict is not None: loadErrorsDict.append( errorString )
-        if strictCheckingFlag or debugFlag and errorOnXMLWarning: halt
+        if strictCheckingFlag or debugFlag and errorOnXMLWarning: assert False, "We want to stop here"
 # end of BibleOrgSysGlobals.checkXMLNoText
 
 def checkXMLNoTail( element, locationString, idString=None, loadErrorsDict=None ):
@@ -1084,7 +1084,7 @@ def checkXMLNoTail( element, locationString, idString=None, loadErrorsDict=None 
                         .format( (idString+' ') if idString else '', element.tail, locationString )
         logging.warning( warningString )
         if loadErrorsDict is not None: loadErrorsDict.append( warningString )
-        if strictCheckingFlag or debugFlag and errorOnXMLWarning: halt
+        if strictCheckingFlag or debugFlag and errorOnXMLWarning: assert False, "We want to stop here"
 # end of BibleOrgSysGlobals.checkXMLNoTail
 
 
@@ -1098,7 +1098,7 @@ def checkXMLNoSubelements( element, locationString, idString=None, loadErrorsDic
         logger = logging.critical if subelement.text else logging.error
         logger( errorString )
         if loadErrorsDict is not None: loadErrorsDict.append( errorString )
-        if strictCheckingFlag or debugFlag and errorOnXMLWarning: halt
+        if strictCheckingFlag or debugFlag and errorOnXMLWarning: assert False, "We want to stop here"
 # end of BibleOrgSysGlobals.checkXMLNoSubelements
 
 def checkXMLNoSubelementsWithText( element, locationString, idString=None, loadErrorsDict=None ):
@@ -1114,7 +1114,7 @@ def checkXMLNoSubelementsWithText( element, locationString, idString=None, loadE
                                 element.tail.strip() if element.tail else element.tail )
             logging.warning( warningString )
             if loadErrorsDict is not None: loadErrorsDict.append( warningString )
-            if strictCheckingFlag or debugFlag and errorOnXMLWarning: halt
+            if strictCheckingFlag or debugFlag and errorOnXMLWarning: assert False, "We want to stop here"
 # end of BibleOrgSysGlobals.checkXMLNoSubelementsWithText
 
 
@@ -1136,7 +1136,7 @@ def getFlattenedXML( element, locationString, idString=None, level=0 ):
         if attributes: result += ' ' + attributes
         result += '>'
     elif attributes:
-        #dPrint( 'Quiet', DEBUGGING_THIS_MODULE, "We are losing attributes here:", attributes ); halt
+        #dPrint( 'Quiet', DEBUGGING_THIS_MODULE, "We are losing attributes here:", attributes ); assert False, "We want to stop here"
         result += '<' + attributes + '>'
     if element.text: result += element.text
     for subelement in element:
@@ -1169,12 +1169,12 @@ def isBlank( elementText ):
 # Fixing strings
 #
 
-def applyStringAdjustments( originalText, adjustmentList ):
+def applyStringAdjustments( original_text, adjustmentList ):
     """
     Applies the list of adjustments to the text and returns the new text.
 
     The adjustmentList is a list object containing 3-tuples with:
-        1/ index where field should be found (in originalText)
+        1/ index where field should be found (in original_text)
         2/ findString (null for a pure insert)
         3/ replaceString (often a different length)
 
@@ -1185,13 +1185,13 @@ def applyStringAdjustments( originalText, adjustmentList ):
             (note that all of the above indexes refer to the original string before any substitutions)
         gives "A very quick orange fox tripped over the fat dog."
     """
-    text = originalText
+    text = original_text
     offset = 0
     for ix, findStr, replaceStr in sorted(adjustmentList): # sorted with lowest index first
         lenFS, lenRS = len(findStr), len(replaceStr)
         if debugFlag: assert text[ix+offset:ix+offset+lenFS] == findStr # Our find string must be there
         elif text[ix+offset:ix+offset+lenFS] != findStr:
-            logging.error( "applyStringAdjustments programming error -- given bad data for {!r}: {}".format( originalText, adjustmentList ) )
+            logging.error( "applyStringAdjustments programming error -- given bad data for {!r}: {}".format( original_text, adjustmentList ) )
         #dPrint( 'Quiet', DEBUGGING_THIS_MODULE, "before", repr(text) )
         text = text[:ix+offset] + replaceStr + text[ix+offset+lenFS:]
         #dPrint( 'Quiet', DEBUGGING_THIS_MODULE, " after", repr(text) )
@@ -1243,12 +1243,12 @@ def stripWordEndsPunctuation( wordToken:str ) -> str:
 # end of BibleOrgSysGlobals.stripWordEndsPunctuation
 
 
-def removeStringEndings( originalText:str, endingsList:list[str] ) -> str:
+def removeStringEndings( original_text:str, endingsList:list[str] ) -> str:
     """
     Go through the given list of endings (in order)
         and remove any endings from the end of the string.
     """
-    newText = originalText
+    newText = original_text
     for ending in endingsList:
         if newText.endswith( ending ):
             newText = newText[:-len(ending)]
@@ -1552,7 +1552,7 @@ setVerbosity( verbosityString )
     #BibleBooksCodes = BibleBooksCodes().loadData()
     #from BibleOrgSys.Reference.USFM3Markers import USFM3Markers
     #USFMMarkers = USFM3Markers().loadData()
-    #USFMParagraphMarkers = USFMMarkers.getNewlineMarkersList( 'CanonicalText' )
+    #USFMParagraphMarkers = USFMMarkers.get_newline_markers_list( 'CanonicalText' )
     ##dPrint( 'Quiet', DEBUGGING_THIS_MODULE, len(USFMParagraphMarkers), sorted(USFMParagraphMarkers) )
     ##for marker in ( ):
         ##dPrint( 'Quiet', DEBUGGING_THIS_MODULE, marker )
@@ -1563,7 +1563,7 @@ setVerbosity( verbosityString )
     ## now 34 ['cls', 'li1', 'li2', 'li3', 'li4', 'm', 'mi', 'nb', 'p', 'pc', 'ph1', 'ph2', 'ph3', 'ph4',
     ##    'pi1', 'pi2', 'pi3', 'pi4', 'pm', 'pmc', 'pmo', 'pmr', 'pr', 'q1', 'q2', 'q3', 'q4', 'qa', 'qc',
     ##    'qm1', 'qm2', 'qm3', 'qm4', 'qr']
-    ##dPrint( 'Quiet', DEBUGGING_THIS_MODULE, len(USFMParagraphMarkers), sorted(USFMParagraphMarkers) ); halt
+    ##dPrint( 'Quiet', DEBUGGING_THIS_MODULE, len(USFMParagraphMarkers), sorted(USFMParagraphMarkers) ); assert False, "We want to stop here"
 
 
 
@@ -1657,7 +1657,8 @@ def fullDemo() -> None:
 # end of BibleOrgSysGlobals.fullDemo
 
 if __name__ == '__main__':
-    from multiprocessing import freeze_support
+    from multiprocessing import set_start_method, freeze_support
+    set_start_method('fork') # The default was changed on POSIX systems from 'fork' to 'forkserver' in Python3.14
     freeze_support() # Multiprocessing support for frozen Windows executables
 
     # Configure basic Bible Organisational System (BOS) set-up

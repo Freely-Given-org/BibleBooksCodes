@@ -39,7 +39,7 @@ for (const someText of ["PE2", "2Pe", "2 Pet", "2Pet", "Job"])
     console.log(`Text '${someText}' -> ${bbc.getBBBFromEnglishText(someText)}`);
 
 for (const osisCode of ["Gen", "1Kgs", "Ps", "Mal", "Matt", "2John", "Rev", "EpLao", "3Meq"])
-    console.log(`Osis '${osisCode}' -> ${bbc.getBBBFromOSISAbbreviation(osisCode)}`);
+    console.log(`Osis '${osisCode}' -> ${bbc.osis_abbrev_to_reference_abbrev(osisCode)}`);
 
 const sections = {};
 for (const BBB of bbc.getAllReferenceAbbreviations()) {
